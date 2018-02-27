@@ -1,28 +1,52 @@
 \documentclass{book}
 
-\usepackage[paperwidth=31cm, paperheight=200cm, height=2cm, top=0.5cm, left=0.5cm, right=0.5cm, bottom=0.5cm]{geometry}
 
+% Set paper and layout
+%
+\usepackage[paperwidth=31cm, paperheight=200cm, height=2cm, top=0.5cm, left=0.5cm, right=0.5cm, bottom=0.5cm]{geometry}
 \setlength\parskip{-0.05cm} % no extra vertical space between paragraphs
 \setlength\parindent{0cm} % no indent on first lines of paragraphs
 \linespread{1.75} % vertical line-spacing and vertical paragraph spacing
 
+
+% Use Paracol package to do two-column format
+%
 \usepackage[english]{babel} % English as "system" language, paracol demands a specification
 \usepackage{paracol} % \begin{paracol}{...} ... \switchcolumn[...] ... \end{paracol}
 \setlength\columnsep{1cm} % seperation between columns
+\newcommand{\s}{\switchcolumn} % a shorter command to replace \switchcolumn[...] from the paracol-package
 
+
+% Use Hyperref package for URLs
+%
 \usepackage[colorlinks=true,linkcolor=red, urlcolor=red]{hyperref} % color links and url's --- hyperref for hyperlinks in endnotes
 \urlstyle{same} % standard font for url's
+
+
+% Use Endnotes packages, so ``footnotes'' go at end of document rather than the foot of each page
+%
 \usepackage{endnotes} % \endnote{...}
 \addtoendnotes{\vspace*{-1em}} % no extra vertical space between the endnotes-header and the endnotes
 \input{hyperendnotes.sty} % LOADS hyperendnotes.sty
 \def\enoteheading{} % to have endnotes without the usual heading
 
-\usepackage{parnotes} % parnotes
 
-\usepackage{fouriernc} % $\otherpi$
-
-
+% Calc package is necessary.  Does some math on lengths?  
+%
 \usepackage{calc}
+
+% Use Graphicx package to rotate or flip text
+% (eg. \reflectbox{C} --- \rotatebox[origin=c]{180}{V} --- \reflectbox{D})
+%
+\usepackage{graphicx} 
+
+
+% Use math packages for fonts, symbols, etc.
+%
+\usepackage{fouriernc} % for $\otherpi$
+\usepackage{upgreek} % certain upright greek characters
+\usepackage{amsmath} % for $\text{cl.}^{\text{mus}}$
+\usepackage{amssymb} % to have standard symbols for special sets --- to have $\nless$
 
 \newcommand{\smallgg}{\mathop{\sbox0{$\displaystyle\gg$} %
 \raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{0.6}[0.8]{\copy0}}}\displaylimits} %
@@ -34,21 +58,16 @@
 %
 
 \newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
-
 \newcommand{\abs}{\mathop{\rotatebox[origin=c]{180}{V}}}
-
 \newcommand{\mini}{\mathop{\rotatebox[origin=c]{180}{M}}}
-
 \newcommand{\larger}{\mathop{\thinspace > \thinspace}}
 \newcommand{\smaller}{\mathop{\thinspace < \thinspace}}
 \newcommand{\such}{\rotatebox[origin=c]{180}{$\epsilon \thinspace$}}
-
 \newcommand{\mult}{\mathop{\reflectbox{D}}}
 
 \newcommand{\I}{\mathop{\thinspace \textbf{I} \thinspace}}
 \newcommand{\E}{\mathop{\thinspace \textbf{E} \thinspace}}
 \newcommand{\Lfat}{\mathop{\thinspace \textbf{L} \thinspace}}
-
 \newcommand{\D}{\mathop{\thinspace \text{D} \thinspace}}
 \newcommand{\K}{\mathop{\thinspace \text{K} \thinspace}}
 \newcommand{\R}{\mathop{\thinspace \text{R} \thinspace}}
@@ -64,18 +83,14 @@
 
 \def\3p{\thinspace \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}\thinspace} % arranging three points in a triangle
 
-\usepackage{upgreek} % certain upright greek characters
 
-\usepackage{amsmath} % for $\text{cl.}^{\text{mus}}$
+% Use Dashrule package for dashed lines (using \hdashrule)
+%
+\usepackage{dashrule} 
 
-\usepackage{amssymb} % to have standard symbols for special sets --- to have $\nless$
 
-\usepackage{graphicx} % to rotate or flip text (eg. \reflectbox{C} --- \rotatebox[origin=c]{180}{V} --- \reflectbox{D})
-
-\usepackage{dashrule} % to have dashed lines
-
-\newcommand{\s}{\switchcolumn} % a shorter command to replace \switchcolumn[...] from the paracol-package
-
+% Use Xcolor package to grey out unimportant text, etc.
+%
 \usepackage{xcolor}
 \newcommand\na[1]{\textcolor{gray}{#1}} % na for not applicable (these pieces of text are not important for mathematical understand when reading the english text)
 
@@ -87,13 +102,20 @@
 \definecolor{grey}{RGB}{235,235,235}
 \definecolor{grey_edge}{RGB}{173,173,173}
 
+
+% Use Tcolorbox package for headers like ``Propositions'', etc.
+%
 \usepackage[most]{tcolorbox}
 \newtcbox{\metatoggler}{colback=blue,colframe=blue_edge, coltext=white}
 \newtcbox{\toggler}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
 \newtcbox{\mediumtoggler}{colback=grey,colframe=grey_edge, left=3cm, right=3cm}
 \newtcbox{\largetoggler}{colback=grey,colframe=grey_edge, left=5cm, right=5cm}
 
-\begin{document} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \everypar{\hangindent0.5cm}
 

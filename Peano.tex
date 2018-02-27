@@ -1,0 +1,4021 @@
+\documentclass{book}
+
+\usepackage[paperwidth=31cm, paperheight=200cm, height=2cm, top=0.5cm, left=0.5cm, right=0.5cm, bottom=0.5cm]{geometry}
+
+\setlength\parskip{-0.05cm} % no extra vertical space between paragraphs
+\setlength\parindent{0cm} % no indent on first lines of paragraphs
+\linespread{1.75} % vertical line-spacing and vertical paragraph spacing
+
+\usepackage[english]{babel} % English as "system" language, paracol demands a specification
+\usepackage{paracol} % \begin{paracol}{...} ... \switchcolumn[...] ... \end{paracol}
+\setlength\columnsep{1cm} % seperation between columns
+
+\usepackage[colorlinks=true,linkcolor=red, urlcolor=red]{hyperref} % color links and url's --- hyperref for hyperlinks in endnotes
+\urlstyle{same} % standard font for url's
+\usepackage{endnotes} % \endnote{...}
+\addtoendnotes{\vspace*{-1em}} % no extra vertical space between the endnotes-header and the endnotes
+\input{hyperendnotes.sty} % LOADS hyperendnotes.sty
+\def\enoteheading{} % to have endnotes without the usual heading
+
+\usepackage{parnotes} % parnotes
+
+\usepackage{fouriernc} % $\otherpi$
+
+
+\usepackage{calc}
+
+\newcommand{\smallgg}{\mathop{\sbox0{$\displaystyle\gg$} %
+\raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{0.6}[0.8]{\copy0}}}\displaylimits} %
+\newcommand{\C}{\mathop{\sbox0{$\displaystyle$$\reflectbox{C}$} % reflect box mirrors upside-down and left-to-right
+\raisebox{-\height+\ht0-0.05cm}[\ht0][\dp0]{\scalebox{0.8}[0.8]{\copy0}}}\displaylimits} %
+%
+\newcommand{\p}{\mathop{\sbox0{$\displaystyle$$.$}
+\raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{1}[1]{\copy0}}}\displaylimits} % creates a "math"-point to have equal spacing
+%
+
+\newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
+
+\newcommand{\abs}{\mathop{\rotatebox[origin=c]{180}{V}}}
+
+\newcommand{\mini}{\mathop{\rotatebox[origin=c]{180}{M}}}
+
+\newcommand{\larger}{\mathop{\thinspace > \thinspace}}
+\newcommand{\smaller}{\mathop{\thinspace < \thinspace}}
+\newcommand{\such}{\rotatebox[origin=c]{180}{$\epsilon \thinspace$}}
+
+\newcommand{\mult}{\mathop{\reflectbox{D}}}
+
+\newcommand{\I}{\mathop{\thinspace \textbf{I} \thinspace}}
+\newcommand{\E}{\mathop{\thinspace \textbf{E} \thinspace}}
+\newcommand{\Lfat}{\mathop{\thinspace \textbf{L} \thinspace}}
+
+\newcommand{\D}{\mathop{\thinspace \text{D} \thinspace}}
+\newcommand{\K}{\mathop{\thinspace \text{K} \thinspace}}
+\newcommand{\R}{\mathop{\thinspace \text{R} \thinspace}}
+\newcommand{\M}{\mathop{\thinspace \text{M} \thinspace}}
+\newcommand{\N}{\mathop{\thinspace \text{N} \thinspace}}
+\newcommand{\Np}{\mathop{\thinspace \text{Np} \thinspace}}
+\newcommand{\Q}{\mathop{\thinspace \text{Q} \thinspace}}
+\newcommand{\T}{\mathop{\thinspace \text{T} \thinspace}}
+
+\newcommand{\II}{\mathop{\thinspace \textbf{I\hspace{0.02cm}I} \thinspace}}
+\newcommand{\EE}{\mathop{\thinspace \textbf{E\hspace{0.02cm}E} \thinspace}}
+\newcommand{\LfatLfat}{\mathop{\thinspace \textbf{L\hspace{0.02cm}L} \thinspace}}
+
+\def\3p{\thinspace \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}\thinspace} % arranging three points in a triangle
+
+\usepackage{upgreek} % certain upright greek characters
+
+\usepackage{amsmath} % for $\text{cl.}^{\text{mus}}$
+
+\usepackage{amssymb} % to have standard symbols for special sets --- to have $\nless$
+
+\usepackage{graphicx} % to rotate or flip text (eg. \reflectbox{C} --- \rotatebox[origin=c]{180}{V} --- \reflectbox{D})
+
+\usepackage{dashrule} % to have dashed lines
+
+\newcommand{\s}{\switchcolumn} % a shorter command to replace \switchcolumn[...] from the paracol-package
+
+\usepackage{xcolor}
+\newcommand\na[1]{\textcolor{gray}{#1}} % na for not applicable (these pieces of text are not important for mathematical understand when reading the english text)
+
+\newcommand\fn[1]{\textcolor{red}{#1}} % fn for footnote (notations / text which ask for footnote-like attention)
+
+\definecolor{blue}{RGB}{89,141,201}
+\definecolor{blue_edge}{RGB}{53,126,189}
+
+\definecolor{grey}{RGB}{235,235,235}
+\definecolor{grey_edge}{RGB}{173,173,173}
+
+\usepackage[most]{tcolorbox}
+\newtcbox{\metatoggler}{colback=blue,colframe=blue_edge, coltext=white}
+\newtcbox{\toggler}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
+\newtcbox{\mediumtoggler}{colback=grey,colframe=grey_edge, left=3cm, right=3cm}
+\newtcbox{\largetoggler}{colback=grey,colframe=grey_edge, left=5cm, right=5cm}
+
+\begin{document} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\everypar{\hangindent0.5cm}
+
+Below is Giuseppe Peano's \emph{Arithmetices principia} as first published\endnote{H. Kennedy, \emph{Peano. Life and Works of Giuseppe Peano}, San Francisco: Peremptory Publications, 2002, p. 41.}, i.e. as ``\emph{Arithmetices principia, nova methodo exposita}"\endnote{G. Peano, \emph{Arithmetices principia, nova methodo exposita}, Bocca, Torino, 1889.}
+, which appeared translated to English\endnote{These English translations listed are the only ones (to my knowledge) and all the English translations listed in: \\
+I. Grattan-Guiness (ed.), \emph{Landmark Writings in Western Mathematics 1640-1940}, Amsterdam: Elsevier, 2005, p. 614.} in 1967 as ``\emph{The principles of arithmetic, presented by a new method}"\endnote{G. Peano, (1889), ``The principles of arithmetic presented by a new method" in: J. van Heijenoort (ed.), \emph{From Frege to G\"odel. A source book in mathematical logic. 1879-1931}, Cambridge: Harvard University Press, 1967, p. 83-97.}, as well as in 1973\endnote{G. Peano, \emph{Selected works of Giuseppe Peano}, H. Kennedy (ed.), London: George Allen \& Unwin, 1973, p. 101-134.}. This present document\endnote{Written by Vincent Verheyen. Last updated on 17/8/2015. I encourage you to use your reason for good. If you want my support, please contact me via \url{http://vincentverheyen.com/contact}. It is possible to contribute to the flourishing of knowledge, even when you have an intelligence like mine. Thank you and good luck studying. \\
+I would like to thank Mauro Allegranzo and acknowledge his support of this work and his various comments during its creation.} is the only (to my knowledge) side-by-side Latin-English translation of the Latin original. The mathematical notation (in the English, right, column) got updated to currently canonically-used or easy-to-decrypt symbols in the international and/or English mathematical community; which is also a feature currently unseen in any reprint. In the middle of each dotted horizontal line is the number of the page below in the original Latin edition of 1889. Parts irrelevant for the mathematical-content and/or current notation got greyed.
+\vspace{1em}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s I \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number I
+
+\vspace{1em}
+\columnratio{0.5, 0.5} \begin{paracol}{2} \centering
+Arithmetices principia
+\s The principles of arithmetic
+\s*
+Nova methodo exposita
+\s
+Presented by a new method
+\s*
+a
+\s
+by
+\s*
+Ioseph Peano
+\vspace{1em}
+\s
+Giuseppe Peano
+\vspace{1em}
+\s*
+in R. Academia militari professore
+\s
+\na{professor at the Royal Military Academy}
+\s*
+Analysin infinitorum in R. Taurinensi Athen\ae o docente.
+\s
+\na{teaching Analysis of the infinite at the Royal Turin Athenaeum.}
+\s*
+\vspace{1em}
+Labor et honor
+\vspace{1em}
+\s 
+\vspace{1em}
+\na{Work and honor}
+\vspace{1em}
+\s*
+Augustae Taurinorum
+\s
+\na{At Turin}
+\s*
+Ediderunt Fratres Bocca
+\s
+\na{Published by Libreria Bocca}
+\s*
+Regis bibliopolae
+\vspace{1em}
+\s
+...
+\vspace{1em}
+\end{paracol}
+
+\columnratio{0.25, 0.25, 0.25, 0.25}
+\begin{paracol}{4}
+\centering
+Romae \s Florentiae 
+\s 
+\na{At Rome} \s \na{At Florence}
+\s*
+Via del Corse, 216-217. \s Via Oerretani, 8.
+\s
+\na{Via del Corso, 216-217.} \s \na{Via Oerretani, 8.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+1889
+\s
+\na{1889}
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s II \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number II
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+Iuribus servatis
+\s
+\na{Respecting rights}
+\s*
+\vspace{1em}
+Augustae Taurinorum - Typis Vincentii Bona.
+\s
+\vspace{1em}
+\na{At Turin, printed by Vincent Bona}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s III \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm}
+\end{paracol} % page-number III
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{chapter}{Preface}
+\vspace{1em}
+\toggler{Praefatio}
+\s
+\vspace{1em}
+\toggler{Preface}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5} \begin{paracol}{2}
+Quaestiones, quae ad mathematicae fundamenta pertinent, etsi hisce temporibus a multis tractatae, satisfacienti solutione et adhuc carent. Hic difficultas maxime ex sermonis ambiguitate oritur.
+\s Questions pertaining tot the foundations of mathematics, although treated by many these days, still lack a satisfactory solution. The difficulty arises principally from the ambiguity of ordinary language.
+\s*
+Quare summi interest verba ipsa, quibus utimur attente perpendere. Hoc examen mihi proposui, atque mei studii resultatus, et arithmeticae applicationes in hoc scripto expono.
+\s For this reason it is of the greatest concern to consider attentively the words we use. I resolved to do this, and am presenting in this paper the results of my study with applications to arithmetic.
+\s*
+Ideas omnes quae in arithmeticae principiis occurrunt, signis indicavi, ita ut quaelibet propositio his tantum signis enuncietur.
+\s I have indicated by signs all the idea which occur in the fundamentals of arithmetic, so that every proposition is stated with just these signs.
+\s*
+Signa aut ad logicam pertinent, aut proprie ad arithmeticam. Logicae signa quae hic occurrunt, sunt numero ad decem, quamvis non omnia necessaria. Horum signorum usus et proprietas nonnullae in priore parte communi sermone explicantur. Ipsorum theoriam fusius hic exponere nolui. Arithmeticae signa, ubi occurrunt, explicantur.
+\s The signs pertain either to logic or to arithmetic. The signs of logic that occur here are about ten in number, although not all are necessary. The use of these signs and several of their properties are explained in ordinary language in the first part. I did not wish to present their theory more fully here. The signs of arithmetic are explained as they occur.
+\s*
+His notationibus quaelibet propositio formam assumit atque praecisionem, qua in algebra aequationes gaudent, et a propositionibus ita scriptis aliea deducuntur, idque processis qui aequationum resolutioni assimilantur. Hoc caput totius scripti.
+\s With this notation every proposition assumes the form and precision equations enjoy in algebra, and from propositions so written others may be deduced, by a process which resembles the solution of algebraic equations. That is the chief reason for writing this paper.
+\s*
+Sique, confectis signis quibus arithmeticae propositiones scribere possim, in earum tractatione usus sum methodo, quam quia et in aliis studiis sequenda foret, breviter exponam.
+\s Having made up the signs with which I can write arithmetical propositions, in treating them I have used a method which, because it is to be followed in later studies, I shall present briefly.
+\s*
+Ex arithmeticae signis quae caeteris, una cum logicae signis exprimere licet, ideas significant quas definire possumus. Ita omnia definivi signa, si quatuor excipias, quae in explicationibus \S 1 continentur. Si, ut puto, haec ulterius reduci nequeunt, ideas ipsis expressas, ideis quae prius notae supponuntur, definire non licet.
+\s Those arithmetical signs which may be expressed by using others along with signs of logic represent the ideas we can define. Thus I have defined every sign, if you except the four which are contained in the explanations of \S 1. If, as I believe, these cannot be reduced further, then the ideas expressed by them may not be defined by ideas already supposed to be known.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s IV \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number IV
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Propositiones, quae logicae operationibus a caeteris deducuntur, sunt \emph{theoremata}; quae vero non, \emph{axiomata} vocavi. Axiomata hic sunt novem (\S 1), et signorum, quae definitione carent, proprietates fundamentales exprimunt.
+\s
+Propositions which are deduced from others by the operations of logic are theorems; those for which this is not true I have called axioms. There are nine axioms here (\S 1), and they express fundamental properties of the undefined signs.
+\s*
+In \S 1-6 numerorum proprietates communes demonstravi; brevitatis causa, demonstrationes praecedentibus similes omisi; demonstrationum communem formam immutare oportet ut logicae signis exprimantur; haec transformatio interdum difficilior est, tamen inde demonstrationis natura clarissime patet.
+\s
+In \S 1-6 I have proved the ordinary properties of numbers; for the sake of brevity, I have omitted proofs which are similar to preceding ones. The ordinary form of proofs has had to be altered in order that they may be expressed with the signs of logic. This transformation is sometimes rather difficult but the nature of the proof then becomes quite clear. In the following sections I have treated various things so that the power of the method is better seen.
+\s*
+In sequentibus \S \ varia tractavi, ut huius methodi potentia magis videatur.
+\s
+In the following sections I have treated various things so that the power of the method is better seen.
+\s*
+In \S 7 nonnulla theoremata, quae ad numerorum theoriam pertinent, continentur. In \S 8 et 9 rationalium et irrationalium definitiones inveniuntur.
+\s
+In \S 7 are several theorems pertaining tot the theory of numbers. In \S 8 et 9 are found the definitions of rationals and irrationals.
+\s*
+Denique, in \S 10, theoremata exposui nonnulla, quae nova esse puto, ad entium theoriam pertinentia, quae $\text{cl.}^{\text{mus}}$ Cantor \emph{Punktmenge (ensemble de points)} vocavit.
+\s
+Finally, in \S 10 I have given several theorems, which I believe to be new, pertaining to the theory of those entities which Professor Cantor has called \emph{Punktmenge (ensemble de points)}.
+\s*
+In hoc scripto aliorum studiis usus sum. Logicae notationes et propositiones quae in num. II, III et IV continentur, si nonnullas excipias, ad multorum opera, inter quae Boole praecipue, referenda sunt.\endnote{\textbf{Giuseppe Peano's footnote (original):} \\
+Boole: \\
+\quad \emph{The mathematical analysis of logic ...}, Cambridge, 1847. \\
+\quad \emph{The calculus of logic}, Camb. and Dublin Math. Journal, 1848. \\
+\quad \emph{An investigation of the laws of thought ...}, London, 1854. \\
+E. Schr\"oder: \\
+\quad \emph{Der Operationskreis des Logikkalculus}, Leipzig, 1877.
+
+Ipse iam nonnulla quae ad logicam pertinent tractavit in praecedenti opera. \\
+
+\quad \emph{Lehrbuch der Arithmetik und Algebra ...}, Leipzig, 1873.
+
+Boole e Schr\"oder theorias brevissime exposui in meo libro \emph{Calcolo geometrico ...}, Torino, 1888. \\
+Vide: \\
+\quad C. S. Pierce, \emph{On the Algebra of logic}; American Journal, III, 15; VII, 180. \\
+\quad Jevons, \emph{The principles of science}, London, 1883. \\
+\quad Mc.Coll., \emph{The calculus of equivalent statements}, Proceedings of the London Math. Society, 1878, Vol. IX, 9. Vol X, 16.}
+\s
+In this paper I have used the research of others. The notations and propositions of logic which are contained in numbers II, III, and IV, with some exceptions, represent the work of many, among them Boole especially.\endnote{\textbf{Giuseppe Peano's footnote (translated):} \\
+Boole: \\
+\quad \emph{The mathematical analysis of logic ... (Cambridge, 1847.)} \\
+\quad `The calculus of logic,' \emph{Camb. and Dublin Math. J.}, 3 (1848), 193-98. \\
+\quad \emph{An investigation of the laws of thought}  ... (London, 1854). \\
+E. Schr\"oder: \\
+\quad \emph{Der Operationskreis des Logikkalculus} (Leipzig, 1877).
+
+He had already treated several matters pertaining to logic in a preceding work. \\
+
+\quad \emph{Lehrbuch der Arithmetik und Algebra} ... (Leipzig, 1873).
+
+I gave a very brief presentation of the theories of Boole and Schr\"oder in my book \emph{Calcolo geometric} etc. (Torino, 1888). \\
+Cf: \\
+
+\quad C. S. Pierce, `On the Algebra of logic,' \emph{American J. Math.}, 3 (1880), 15-57; 7 (1885), 180-202. \\
+\quad Jevons, \emph{The principles of science} (London, 1883). \\
+\quad Mc.Coll., `The calculus of equivalent statements,' \emph{Proc. London Math. Soc.}, 9 (1878), 9-20; 10 (1878), 16-28.}
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s V \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number V
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Signum $\epsilon$, quod cum signo \reflectbox{C} confundere non licet, inversionis in logica applicationes, et paucas alias institui conventiones, ut ad exprimendam quamlibet propositionem pervenirem.
+\s
+The sign $\in$, which must not be confused with the sign $\subset$, applications of the inverse in logic, and a few other conventions, I have adopted so that I could express any proposition whatever.
+\s*
+In arithmeticae demonstrationibus usus sum libro: H. Grassmann, \emph{Lehrbuch der Arithmetik}, Berlin 1861.
+\s
+In the proofs of arithmetic I used the book H. Grassmann, \emph{Lehrbuch der Arithmetik} (Berlin 1861).
+\s*
+Utilius quoque mihi fuit recens scriptum: R. Dedekind, \emph{Was sind und was sollen die Zahlen}; Braunschweig, 1888, in quo quaestiones, quae ad numerorum fundamenta pertinent, acute examinantur.
+\s
+Also quite useful to me was the recent work by R. Dedekind, Was sind und was sollen die Zahlen (Braunschweig, 1888), in which questions pertaining to the foundations of numbers are acutely examined.
+\s*
+Hic meus libellus ut novae methodi specimen habendus est. Hisce notationibus innumeras alias propositiones, ut quae ad rationales et irrationales pertinent, enunciare et demonstrare possumus. Sed, ut aliae theoriae tractentur, nova signa, quae nova indicant entia, instituere necesse est. Puto vero his tantum logicae signis propositiones cuiuslibet scientiae exprimi posse, dummodo adiungantur signa quae entia huius scientiae representant.
+\s
+My booklet should be taken as a sample of this new method. With these notations we can state and prove innumerable other propositions, such as those which pertain to rationals and irrationals. But in order to treat other theories, it is necessary to adopt new signs to indicate new entities. I believe, however, that with only these signs of logic the propositions of any science can be expressed, so long as the signs which represent the entities of the science are added.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s VI \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number VI
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{chapter}{Table of signs}
+\vspace{1em}
+\toggler{Signorum tabula}
+\s
+\vspace{1em}
+\toggler{Table of signs}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.05, 0.35, 0.1, 0.05, 0.35, 0.1}
+\begin{paracol}{6}
+\raggedright
+\setlength{\columnsep}{1em}
+Signum \s Significatio \s Pag.
+\s Sign \s Meaning \s Pag.
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Logicam signa
+\s
+Signs of logic
+\end{paracol}
+
+\columnratio{0.06, 0.34, 0.1, 0.06, 0.34, 0.1}
+\begin{paracol}{6}
+\raggedright
+\setlength{\columnsep}{1em}
+$P$ \s propositio \s VII
+\s \scriptsize{proposition} \normalsize \s proposition \s VII
+\s* $K$ \s classis \s X
+\s \scriptsize{CLASS} \normalsize \s class \s X
+\s* $\cap$ \s et \s VII, X
+\s $\wedge$ \s and \s VII, X
+\s* $\cup$ \s vel \s VIII, X, XI
+\s $\vee$ \s or \s VIII, X, XI
+\s* $-$ \s non \s VIII, X
+\s $\neg$ \s not \s VIII, X
+\s* \rotatebox[origin=c]{180}{V} \s absurdum \emph{aut} nihil \s VIII, XI
+\s $\bot$ \\ $\varnothing$ \s false \emph{or} \\ \quad nothing \s VIII, XI
+\s* \reflectbox{C} \s deducitur \emph{aut} continetur \s VIII, XI
+\s $\rightarrow$ \\ $\subset$ \s one deduces \emph{or} \\ \quad is contained in \s VIII, XI
+\s* = \s est aequalis \s VIII
+\s = \s equals \s VIII
+\s* $\epsilon$ \s est \s X
+\s $\in$ \\ is a \s is (an element of) \emph{or} \\ is (a) \s X
+\s* $[ \ ]$ \s inversionis signum \s XI
+\s $^{inversed}$ \s sign of the inverse \s XI
+\s* \rotatebox[origin=c]{180}{$\epsilon$} \s qui \emph{vel} $[ \epsilon ]$ \s XII
+\s $\rightarrow$ \\ isn't \s such that \emph{or} \\ \quad isn't
+\s XII
+\s* Th \s Theorema \s XVI
+\s \scriptsize{theorem} \s \normalsize Theorem \s XVI
+\s* Hp \s Hypothesis \s
+\s \scriptsize{hypothesis} \s \normalsize Hypothesis \s
+\s* Ts \s Thesis \s
+\s \scriptsize{thesis} \s \normalsize Thesis \s
+\s* L \s Logica \s
+\s \scriptsize{logic} \s \normalsize Logic \s
+\end{paracol} 
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Arithmeticae signa
+\s
+Signs of arithmetic
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Signa 1, 2, ..., =, $>$, $<$, +, -, $\times$ vulgarem habent significationem. Divisionis signum est /.
+\s
+The signs 1, 2, ..., =, $>$, $<$, +, -, $*$ have their usual meaning. The sign of division is /.
+\end{paracol}
+
+\columnratio{0.06, 0.34, 0.1, 0.06, 0.34, 0.1}
+\begin{paracol}{6}
+\raggedright
+\setlength{\columnsep}{1em}
+$N$ \s numerus integer positivus \s 1
+\s $\mathbb{N}$ \s positive integers \s 1
+\s* $R$ \s num. rationalis positivus \s 12
+\s $\mathbb{R}$ \s postive rational numbers \s 12
+\s* $Q$ \s quantitas, \emph{sive} numerus realis positivus \s 16
+\s $\mathbb{Q}$ \s quantity \emph{or} postive real numbers \s 16
+\s* $\Np$ \s numerus primus \s 9
+\s $\mathbb{P}$ \s prime number \s 9
+\s* M \s maximus \s 6
+\s M$^{\text{aximum}}$ \s maximum \s 6
+\s* \rotatebox[origin=c]{180}{M} \s minimus \s 6
+\s m$_{\text{inimum}}$ \s minimum \s 6
+\s* T \s terminus, \emph{vel} limes summus \s 15
+\s Gr$^{\text{eatest bound}}$ \s terminus \emph{or} greatest bound \s 15
+\s* D \s dividit \s 9
+\s \scriptsize{divides} \s \normalsize divides
+\s 9
+\s* \reflectbox{D} \s est multiplex \s 9
+\s \scriptsize{is divisible} \s \normalsize is divisible \s 9
+\s* $\pi$ \s est primus cum \s 6
+\s \scriptsize{is $\mathbb{P}$rime with} \s \normalsize is prime with \s 6
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Signa composita
+\s
+Composite signs
+\end{paracol}
+
+\columnratio{0.06, 0.34, 0.1, 0.06, 0.34, 0.1}
+\begin{paracol}{6}
+\raggedright
+\setlength{\columnsep}{1em}
+$-<$ \s non est minor \s
+\s $\nless$ \s is not less than \s
+\s* $=\cup>$ \s est aequalis aut maior \s
+\s $\geq$ \s is equal to or greater than \s
+\s* \rotatebox[origin=c]{180}{$\epsilon$} $D$ \s divisor \s
+\s \scriptsize{is a divisor} \s \normalsize{is a divisor} \s
+\s* $M$ \rotatebox[origin=c]{180}{$\epsilon$} $D$ \s maximus divisor \s
+\s \scriptsize{is the greatest divisor} \s \normalsize is the greatest divisor \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s VII \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number VII
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{chapter}{Notations of logic}
+\vspace{1em}
+\largetoggler{Logicae notationes.}
+\s
+\vspace{1em}
+\largetoggler{Notations of logic.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{I. Punctuation}
+\vspace{1em}
+\toggler{I. De punctuatione.}
+\s
+\vspace{1em}
+\toggler{I. Punctuation.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Litteris $a,b,... x,y,... x', y',...$ entia indicamus indeterminata quaecumque. Entia vero determinata signis, sive litteris $P, K, N,...$ indicamus.
+\s
+By the letters $a,b,... x,y,... x', y',...$ we indicate any indeterminate entities. Determinate entities are, however, indicated by the signs, or rather by the letters, $P, K, N,...$
+\s*
+Signa plerumque in eadem linea scribemus. Ut ordo pateat quo ea coniungere oporteat, \emph{parenthesibus} ut in algebra, sive \emph{punctis} $. : \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.} :\hspace{0.1em}:$ etc. utimur.
+\s
+\na{Generally we write signs on the same line. So that it will be clear how they are to be joined, we use \emph{parentheses}, as in algebra, or rather \emph{points} $. : \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.} :\hspace{0.1em}:$ etc.}
+\s*
+Ut formula punctis divisa, intelligatur, primum signa quae nullo puncto seperantur colligenda sunt, postea quae uno puncto, deinde quae duobus punctis, etc.
+\s
+\na{So that a formula divided by points may be understood, first the signs which are not seperated by points are taken together, then those seperated by one point, then those by two points, etc.}
+\s*
+Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd)$; et $ab$ $.$ $cd:ef$ $.$ $gh$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $k$ significat $(((ab)(cd))((ef)(gh)))k$.
+\s
+\na{For example, let $a,b,c,...$ be any signs. Then $(ab)(cd)$ means $(ab)(cd)$; and $\{[(ab)(cd)][(ef)(gh)]\}k$ means $\{[(ab)(cd)][(ef)(gh)]\}k$.}
+\s* Punctuationis signa omittere licet si formulae quae diversa punctuatione existerent eundem habeant sensum; vel si una tantum formula, et ipsa quam scribere volumus, sensum habeat.
+\s \na{The signs of punctuation may be omitted if formulas having different punctuation have the same meaning, or if just one formula, that being the one we wish to write, has meaning.}
+\s* Ut ambiguitatis periculum absit, aritmeticae operationum signis $. :$ nunquam utimur.
+\s \na{To avoid the danger of ambiguity, we never use $. :$ as signs of arithmetical operations.}
+\s* Parenthesum figura una est $( \ )$; si in eadem formula, parentheses et puncta occurant, primum quae parenthesibus continentur, colligantur.
+\s \na{The figure of parentheses is one $( \ )$; if parentheses and points occur in the same formula, whatever is contained in parentheses is to be gathered first.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{II. Propositions}
+\vspace{1em}
+\toggler{II. De propositionibus.}
+\s
+\vspace{1em}
+\toggler{II. Propositions.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Signo $P$ significatur \emph{propositio}.
+\s
+The sign $P$ means \emph{proposition}.
+\s*
+Signum $\cap$ legitur \emph{et}. Sint $a, b$ propositiones; tunc $a \cap b$ est simultanea affirmatio propositionum $a, b$. Brevitatis causa, loco $a \cap b$ vulgo scribemus $a$ $b$.
+\s
+The sign $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a,b$.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s VIII \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number VIII
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propositionis $a$.
+\s The sign $\neg$ is read \emph{not}. Let $a$ be a $P$; then $\neg a$ is the negation of the proposition $a$.
+\s* Signo $\cup$ legitur \emph{vel}. Sint $a,b$ propositiones; tunc $a \cup b$ idem est ac $-:-a$ $.$ $-b$.
+\s The sign $\vee$ is read \emph{or}. Let $a,b$ be propositions; then $a \vee b$ is the same as $\neg[(\neg a) \wedge (\neg b)]$.
+\s* \text{[}Signo $V$ significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.
+\s \na{The sign \scriptsize{true} \normalsize means \emph{true}, or \emph{identity}, but we never use this sign.}
+\s* Signum  $\rotatebox[origin=c]{180}{V}$ significat \emph{falsum}, sive \emph{absurdum}.
+\s The sign $\rotatebox[origin=c]{180}{V}$ means \emph{false}, or \emph{absurd}.
+\s* \text{[}Signum C significat \emph{est consequentia}; ita $b$ C $a$ legitur $b$ \emph{est consequentia propositionis} $a$. Sed hoc signo nunquam utimur\text{]}.
+\s \na{The sign $\leftarrow$ means \emph{is a consequence of}. Thus $b \leftarrow a$ is read $b$ \emph{is a consequence of the proposition} $a$. But we never use this sign.}
+\s* Signum \reflectbox{C} significat \emph{deducitur}; ita $a$ $\reflectbox{C}$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\reflectbox{C}_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\reflectbox{C}_{x,y,...}$, scribemus solum \reflectbox{C}.
+\s The sign $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the indeterminate quantities $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[x,y,...]{}$, we write only $\rightarrow$.
+\s* Signum = significat \emph{est aequalis}. Sint $a,b$ propositiones; tunc $a=b$ idem significat quod $a$ $\reflectbox{C}$ $b$ $.$ $b$ $\reflectbox{C}$ $a$; propositio $a=_{x,y,...} b$ idem significat quod $a$ $ \reflectbox{C}_{x,y,...} b$ $.$ $b$ $\reflectbox{C}_{x,y,...} a$.
+\s The sign = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\underset{x,y,...}=b$ means the same as ($a \xrightarrow[\text{x,y,...}]{} b) \wedge (b \xrightarrow[x,y,...]{} a)$.
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{III. Propositions of logic}
+\vspace{1em}
+\toggler{III. Logicae propositiones.}
+\s
+\vspace{1em}
+\toggler{III. Propositions of logic.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Sint $a,b,c,...$ propositiones. Tunc erit:
+\s
+Let $a,b,c,...$ be propositions. We have:
+\s
+1. \hspace{0.6cm} $a$ \reflectbox{C} $a$
+\s
+1. \hspace{0.6cm} $a \rightarrow a$
+\s
+2. \hspace{0.6cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} : $a$ \reflectbox{C} $c$
+\s
+2. \hspace{0.6cm} $[(a \rightarrow b) \wedge (b \rightarrow c)] \rightarrow (a \rightarrow c)$
+\s
+3. \hspace{0.6cm} $a$ = $b$ . = : $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $a$.
+\s
+3. \hspace{0.6cm} $(a=b)=[(a \rightarrow b) \wedge (b \rightarrow a)]$
+\s
+4. \hspace{0.6cm} $a$ = $a$
+\s
+4. \hspace{0.6cm} $a=a$
+\s
+5. \hspace{0.6cm} $a$ = $b$ . = . $b$ = $a$
+\s
+5. \hspace{0.6cm} $(a=b)=(b=a)$
+\s
+6. \hspace{0.6cm} $a$ = $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} . $a$ \reflectbox{C} $c$
+\s
+6. \hspace{0.6cm} $[(a=b) \wedge (b \rightarrow c)] \rightarrow (a \rightarrow c)$
+\s
+7. \hspace{0.6cm} $a$ \reflectbox{C} $b$ . $b$ = $c$ : \reflectbox{C} . $a$ \reflectbox{C} $c$
+\s
+7. \hspace{0.6cm} $[(a \rightarrow b) \wedge (b=c)] \rightarrow (a \rightarrow c)$
+\s
+8. \hspace{0.6cm} $a$ = $b$ . $b$ = $c$ : \reflectbox{C} . $a$ = $c$
+\s
+8. \hspace{0.6cm} $[(a=b) \wedge (b=c) ] \rightarrow (a=c)$
+\s
+9. \hspace{0.6cm} $a$ = $b$ . \reflectbox{C} . $a$ \reflectbox{C} $b$
+\s
+9. \hspace{0.6cm} $(a=b) \rightarrow (a \rightarrow b)$
+\s
+10. \hspace{0.67cm} $a$ = $b$ . \reflectbox{C} . $b$ \reflectbox{C} $a$
+\s
+10. \hspace{0.67cm} $(a=b) \rightarrow (b \rightarrow a)$
+\s
+\hfill
+\s
+\hfill
+\s
+11. \hspace{0.67cm} $ab$ \reflectbox{C} $a$
+\s
+11. \hspace{0.67cm} $(a \wedge b) \rightarrow a$
+\s
+12. \hspace{0.67cm} $ab$ = $ba$
+\s
+12. \hspace{0.67cm} $(a \wedge b)=(b \wedge a)$
+\s
+13. \hspace{0.67cm} $a$\thinspace $(bc)$ = $(ab)$\thinspace $c$ = $abc$
+\s
+13. \hspace{0.67cm} $(a \wedge (b \wedge c))=((a \wedge b) \wedge c)=(a \wedge b \wedge c)$
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s IX \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number IX
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+14. \hspace{0.67cm} $aa$ = $a$
+\s
+14. \hspace{0.67cm} $(a \wedge a)=a$
+\s
+15. \hspace{0.67cm} $a$ = $b$ . \reflectbox{C} . $ac$ = $bc$
+\s
+15. \hspace{0.67cm} $(a=b) \rightarrow [(a \wedge c)=(b \wedge c)]$
+\s
+16. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . \reflectbox{C} . $ac$ \reflectbox{C} $bc$
+\s
+16. \hspace{0.67cm} $(a \rightarrow b) \rightarrow [(a \wedge c) \rightarrow (b \wedge c)]$
+\s
+17. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . $c$ \reflectbox{C} $d$ : \reflectbox{C} . $ac$ \reflectbox{C} $bd$
+\s
+17. \hspace{0.67cm} $[(a \rightarrow b) \wedge (c \rightarrow d)] \rightarrow [(a \wedge c) \rightarrow (b \wedge d)]$
+\s
+18. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . $a$ \reflectbox{C} $c$ : = . $a$ \reflectbox{C} $bc$
+\s
+18. \hspace{0.67cm} $[(a \rightarrow b) \wedge (a \rightarrow c)]=[(a \rightarrow (b \wedge c)]$
+\s
+19. \hspace{0.67cm} $a$ = $b$ . $c$ = $d$ : \reflectbox{C} . $ac$ = $bd$
+\s
+19. \hspace{0.67cm} $[(a=b) \wedge (c=d)] \rightarrow [(a \wedge c)=(b \wedge d)]$
+\s
+\hfill
+\s
+\hfill
+\s
+20. \hspace{0.67cm} $-(-a)$ = $a$
+\s
+20. \hspace{0.67cm} $\neg(\neg a) = a$
+\s
+21. \hspace{0.67cm} $a$ = $b$ . = . $-a$ = $-b$.
+\s
+21. \hspace{0.67cm} $(a=b)=[(\neg a)=(\neg b)]$
+\s
+22. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $-b$ \reflectbox{C} $-a$ =
+\s
+22. \hspace{0.67cm} $(a \rightarrow b)=[(\neg b) \rightarrow (\neg a)]$
+\s
+\hfill
+\s
+\hfill
+\s
+23. \hspace{0.67cm} $a$ $\cup$ $b$ . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $-$ : $-a$ . $-b$
+\s
+23. \hspace{0.67cm} $(a \vee b) = \{[(\neg[(\neg a) \wedge (\neg b)]\} $
+\s
+24. \hspace{0.67cm} $-(ab)$ = $(-a)$ $\cup$ $(-b)$
+\s
+24. \hspace{0.67cm} $[\neg(a \wedge b)] = [(\neg a) \vee (\neg b)]$
+\s
+25. \hspace{0.67cm} $-(a$ $\cup$ $b)$ = $(-a)$  $(-b)$
+\s
+25. \hspace{0.67cm} $[\neg(a \vee b)] = [(\neg a) \vee (\neg b)]$
+\s
+26. \hspace{0.67cm} $a$ \reflectbox{C} . $a$ $\cup$ $b$
+\s
+26. \hspace{0.67cm} $a \rightarrow (a \vee b)$
+\s
+27. \hspace{0.67cm} $a$ $\cup$ $b$ = $b$ $\cup$ $a$
+\s
+27. \hspace{0.67cm} $(a \vee b) = (b \vee a)$
+\s
+28. \hspace{0.67cm} $a$ $\cup$ $(b$ $\cup$ $c)$ = $(a$ $\cup$ $b)$ $\cup$ $c$ = $a$ $\cup$ $b$ $\cup$ $c$
+\s
+28. \hspace{0.67cm} $[a \vee (b \vee c)] = [(a \vee b) \vee c] = (a \vee b \vee c)$
+\s
+29. \hspace{0.67cm} $a$ $\cup$ $a$ = $a$
+\s
+29. \hspace{0.67cm} $(a \vee a)=a$
+\s
+30. \hspace{0.67cm} $a$ $(b$ $\cup$ $c)$ = $ab$ $\cup$ $ac$
+\s
+30. \hspace{0.67cm} $[a \wedge (b \vee c)]=[(a \wedge b) \vee (a \wedge c)]$
+\s
+31. \hspace{0.67cm} $a$ = $b$ . \reflectbox{C} . $a$ $\cup$ $c$ = $b$ $\cup$ $c$
+\s
+31. \hspace{0.67cm} $(a=b) \rightarrow [(a \vee c) = (b \vee c)]$
+\s
+32. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . \reflectbox{C} . $a$ $\cup$ $c$ \reflectbox{C} $b$ $\cup$ $c$
+\s
+32. \hspace{0.67cm} $(a \rightarrow b) \rightarrow [(a \vee c) \rightarrow (b \vee c)]$
+\s
+33. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . $c$ \reflectbox{C} $d$ : \reflectbox{C} : $a$ $\cup$ $c$ . \reflectbox{C} . $b$ $\cup$ $d$
+\s
+33. \hspace{0.67cm} $[(a \rightarrow b) \wedge (c \rightarrow d)] \rightarrow [(a \vee c) \rightarrow (b \vee d)]$
+\s
+34. \hspace{0.67cm} $b$ \reflectbox{C} $a$ . $c$ \reflectbox{C} $a$ : = . $b$ $\cup$ $c$ \reflectbox{C} $a$
+\s
+34. \hspace{0.67cm} $[(b \rightarrow a) \wedge (c \rightarrow a)] = [(b \vee c) \rightarrow a]$
+\s
+\hfill
+\s
+\hfill
+\s
+35. \hspace{0.67cm} $a-a$ = \rotatebox[origin=c]{180}{V}
+\s
+35. \hspace{0.67cm} $[a \wedge (\neg a)] = \bot$
+\s
+36. \hspace{0.67cm} $a$ \rotatebox[origin=c]{180}{V} = \rotatebox[origin=c]{180}{V}
+\s
+36. \hspace{0.67cm} $(a \wedge \bot) = \bot$
+\s
+37. \hspace{0.67cm} $a$ $\cup$ \rotatebox[origin=c]{180}{V} = a
+\s
+37. \hspace{0.67cm} $(a \vee \bot)=a$
+\s
+38. \hspace{0.67cm} $a$ \reflectbox{C} \rotatebox[origin=c]{180}{V} . = . $a$ = \rotatebox[origin=c]{180}{V}
+\s
+38. \hspace{0.67cm} $(a \rightarrow \bot) = (a = \bot)$
+\s
+39. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $a-b$ = \rotatebox[origin=c]{180}{V}
+\s
+39. \hspace{0.67cm} $(a \rightarrow b) = \{[(a \wedge (\neg b)] = \bot\}$
+\s
+40. \hspace{0.67cm} \rotatebox[origin=c]{180}{V} \reflectbox{C} $a$
+\s
+40. \hspace{0.67cm} $\bot \rightarrow a$
+\s
+41. \hspace{0.67cm} $a$ $\cup$ $b$ = \rotatebox[origin=c]{180}{V} . = : $a$ = \rotatebox[origin=c]{180}{V} . $b$ = \rotatebox[origin=c]{180}{V}
+\s
+41. \hspace{0.67cm} $[(a \vee b)= \bot]=[(a= \bot) \wedge (b= \bot)]$
+\s
+\hfill
+\s
+\hfill
+\s
+42. \hspace{0.67cm} $a$ \reflectbox{C} . $b$ \reflectbox{C} $c$ : = : $ab$ \reflectbox{C} $c$
+\s
+42. \hspace{0.67cm} $[a \rightarrow (b \rightarrow c)] = [(a \wedge b) \rightarrow c]$
+\s
+43. \hspace{0.67cm} $a$ \reflectbox{C} . $b$ = $c$ : = . $ab$ = $ac$
+\s
+43. \hspace{0.67cm} $[a \rightarrow (b=c)]=[(a \wedge b)=(a \wedge c)]$
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s X \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number X
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\quad Sit $\alpha$ quoddam relationis signum (ex. gr. $=$, \reflectbox{C}), ita ut $a$ $\alpha$ $b$ sit quaedam propositio. Tunc loco $-$ . $a$ $\alpha$ $b$ scribemus $a$ $-$ $\alpha$ $b$; scilicet:
+\s
+\quad Let $\alpha$ be the sign of some relation (eg., $=, \rightarrow$) so that $a$ $\alpha$ $b$ is a proposition. Then instead of $\neg(a$ $\alpha$ $b)$, we write $a$ $\not\alpha$ $b$. Thus:
+\s*
+\hspace{1.06cm} $a$ $-$ = $b$ . = : $-$ . $a$ = $b$
+\s
+\hspace{1.06cm} $(a \not= b)=[\neg (a=b)]$
+\s*
+\hspace{1.06cm} $a$ $-$ \reflectbox{C} $b$ . = : $-$ . $a$ \reflectbox{C} $b$
+\s
+\hspace{1.06cm} $ (a \not\rightarrow b) = [(\neg (a \rightarrow b)]$
+\s*
+\quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\rotatebox[origin=c]{180}{V}$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ \reflectbox{C} significat {\emph{non deducitur}}.
+\s
+Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\text{x}}= \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
+\s*
+\quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . \reflectbox{C} $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
+\s
+\quad Similarly, if $\alpha$ and $\beta$ are signs of relations, instead of $(a$ $\alpha$ $b) \wedge (a$ $\beta$ $b)$, and $(a$ $\alpha$ $b) \vee (a$ $\beta$ $b)$ we may write $a$ $(\alpha \wedge \beta)$ $b$ and $a$ $(\alpha \vee \beta)$ $b$. Thus, if $a$ and $b$ are propositions, the formula $a$ $(\rightarrow \wedge \not=)$ $b$ says: from $a$ {\emph{one deduces}} $b$, but not vice versa.
+\s*
+\hspace{1.06cm} $a$ . \reflectbox{C} $-$ = . $b$ : = : $a$ \reflectbox{C} $b$ . $b$ $-$ $\reflectbox{C}$ $a$
+\s
+\hspace{1.06cm} $[a$ $(\rightarrow \wedge \not=)$ $b] = [(a \rightarrow b) \wedge (b \not\rightarrow a)]$
+\s*
+\quad Formulae:
+\s
+\quad Formulas:
+\s*
+\hspace{1.06cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $c$ . $a$ $-$ \reflectbox{C} $c$ : = $\rotatebox[origin=c]{180}{V}$
+\s
+\hspace{1.06cm} $[(a \rightarrow b) \wedge (b \rightarrow c) \wedge (a \not\rightarrow c)] = \bot$
+\s*
+\hspace{1.06cm} $a$ = $b$ . $b$ = $c$ . $a$ $-$ = $c$ : = $\rotatebox[origin=c]{180}{V}$
+\s
+\hspace{1.06cm} $[(a=b) \wedge (b=c) \wedge (a \not= c)] = \bot$
+\s*
+\hspace{1.06cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $-$ = $c$ : \reflectbox{C} . $a$ \reflectbox{C} $-$ = $c$
+\s
+\hspace{1.06cm} $\{(a \rightarrow b) \wedge [b$ $(\rightarrow \wedge \not=)$ $c]\} \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$
+\s*
+\hspace{1.06cm} $a$ \reflectbox{C} $-$ = $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} . $a$ \reflectbox{C} $-$ = $c$
+\s
+\hspace{1.06cm} $[a$ $(\rightarrow \wedge \not=)$ $b] \wedge (b \rightarrow c)\} \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$
+\s*
+\quad Sed his notationibus raro utimur.
+\s
+\quad But we shall rarely use these notations.
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{IV. Classes}
+\vspace{1em}
+\toggler{IV. De classibus.}
+\s
+\vspace{1em}
+\toggler{IV. Classes.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\quad Signo K significatur {\emph{classis}}, sive entium aggregatio.
+\s
+\quad The sign \scriptsize{CLASS} \normalsize means {\emph{class}}, or aggregate of entities.
+\s*
+\quad Signum \scalebox{0.7}[0.9]{$\in$} significat {\emph{est}}. Ita $a$ \scalebox{0.7}[0.9]{$\in$} $b$ legitur $a$ {\emph{est quoddam}} $b$; $a$ $\epsilon$ K significat $a$ {\emph{est quaedam classis}}; $a$ \scalebox{0.7}[0.9]{$\in$} P significat $a$ {\emph{est quaedam propositio}}.
+\s
+\quad The sign $\in$ means {\emph{is an element of}}. Thus $a \in b$ is read $a$ {\emph{is an element of}} $b$\na{; $A$ is a \scriptsize{CLASS} \normalsize means {\emph{$A$ is a class}}; $a$ is a \scriptsize{proposition} \normalsize means {\emph{a is a proposition}}}.
+\s*
+\quad Loco $-(a$ \scalebox{0.7}[0.9]{$\in$} $b)$ scribemus $a$ $-$ \scalebox{0.7}[0.9]{$\in$} $b$; signum $-$ \scalebox{0.7}[0.9]{$\in$} significat {\emph{non est}}; scilicet:
+\s
+\quad Instead of $\neg(a \in b)$ we shall write $a \not\in b$. The sign $\not\in$ means {\emph{is not}}; thus:
+\s*
+44. \hspace{0.67cm} $a$ $-$ \scalebox{0.7}[0.9]{$\in$} $b$ . = : $-$ . $a$ \scalebox{0.7}[0.9]{$\in$} $b$
+\s
+44. \hspace{0.67cm} $(a \not\in b) = [\neg(a \in b)]$
+\s*
+\quad Signum $a$, $b$, $c$ \scalebox{0.7}[0.9]{$\in$} $m$ significat: $a$, $b$ et $c$ sunt $m$; scilicet:
+\s
+\quad The sign $(a, b, c) \in m$ means: $a$, $b$, and $c$ are in $m$; thus:
+\s*
+45. \hspace{0.67cm} $a$, $b$, $c$ \scalebox{0.7}[0.9]{$\in$} $m$ . = : $a$ \scalebox{0.7}[0.9]{$\in$} $m$ . $b$ \scalebox{0.7}[0.9]{$\in$} $m$ . c \scalebox{0.7}[0.9]{$\in$} $m$
+\s
+45. \hspace{0.67cm} $[(a, b, c) \in m] = [(a \in m) \wedge (b \in m) \wedge (c \in m)]$
+\s*
+\quad Sit $a$ classis; tunc $-a$ significatur classis indiviuis constituta quae non sunt $a$.
+\s
+\quad Let $A$ be a class. Then $\overline{A}$ means that class made up of individuals that are not in $A$. 
+\s*
+46. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} : $x$ \scalebox{0.7}[0.9]{$\in$} $-$ $a$ . = . $x$ $-$ \scalebox{0.7}[0.9]{$\in$} $a$
+\s
+46. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow [(x \in \overline{A}) = (x \not\in A)]$
+\s*
+\quad Sint $a$, $b$ classes; $a$ \scalebox{0.8}[0.6]{$\cap$} $b$, sive $a$ $b$, est classis individuis constituta
+\s
+\quad Let $A, B$ be classes. Then $A \cap B$, or $A \wedge B$, is the class composed of individuals
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XI \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XI
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis constituta qui sunt $a$ vel $b$.
+\s
+which are at the same time in $a$ and $b$; $a \cup b$ is the class composed of individuals which are in $a$ or $b$.
+\s*
+47. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+\s
+47. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (a \cap b)] = [(x \in a) \wedge (x \in b)]\}$
+\s*
+48. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ $\cup$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $\cup$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $\cup$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+\s
+48. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (a \cup b)] = [(x \in a) \vee (x \in b)]\}$
+\s*
+\quad Signum \rotatebox[origin=c]{180}{V} indicat classem quae nullum continet individuum. Ita:
+\s
+\quad The sign $\varnothing$ indicates the class which contains no individuals. Thus:
+\s*
+49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ = \rotatebox[origin=c]{180}{V} : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  \rotatebox[origin=c]{180}{V}
+\s
+49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot])\}$ 
+\s*
+\quad [Signo V, quod classem ex omnibus individuis constitutam, de quibus quaestio est, indieat, non utimur].
+\s
+\quad \na{[We shall not use the sign \scriptsize{true} \normalsize, which indicates the class composed of all individuals being considered].}
+\s*
+\quad Signum \reflectbox{C} significat {\emph{continetur}}. Ita $a$ \reflectbox{C} $b$ significat {\emph{classis a continetur in classi b}}.
+\s
+\quad The sign $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the class a is contained in the class b}}.
+\s*
+50. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ \reflectbox{C} $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . \reflectbox{C}\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+\s
+50. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall \text{x}]{} (x \in B)]\}$
+\s*
+\quad [Formula $b$ \scalebox{0.8}{C} $a$ significare potest {\emph{classis b continet classem a}}; at signo  \scalebox{0.8}{C} non utiumur].
+\s
+\quad \na{[The formula $B \supset A$ could mean {\emph{the class B contains the class A}}, but we shall not use the sign $\supset$].}
+\s*
+Hic signa \rotatebox[origin=c]{180}{V} et \reflectbox{C} significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
+\s
+\na{The signs $(\bot / \varnothing)$ and $(\rightarrow / \subset)$ have meanings here which are slightly different from the preceding, but no ambiguity will arise, for if propositions are being considered, the signs are read \emph{absurd} $(\bot)$ and \emph{one deduces} $(\rightarrow)$, but if classes are being considered, they are read \emph{empty} $(\varnothing)$ and \emph{is contained} $(\subset)$.}
+\s*
+\quad Formula $a$ = $b$, si $a$ et $b$ sint classes, significat $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $a$. Itaque
+\s
+\raggedright
+\quad The formula $\text{C}_1=\text{C}_2$, if $\text{C}_1$ and $\text{C}_2$ are classes, means $(\text{C}_1 \subset \text{C}_2) \wedge (\text{C}_2 \subset \text{C}_1)$. Thus
+\s*
+51. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ = $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+\s
+51. \hspace{0.67cm} $\text{C}_1$, $\text{C}_2$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(\text{C}_1 = \text{C}_2) = [(x \in \text{C}_1) \underset{\forall \text{x}}=  (x \in \text{C}_2)]\}$
+\s*
+Propositiones 1...41 quoque subsistunt, si $a$, $b$... classes indicant; praeterea est:
+\s
+Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
+\s*
+52. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . \reflectbox{C} . $b$ \scalebox{0.7}[0.9]{$\in$} \text{K}
+\s
+52. \hspace{0.67cm} $(a \in B) \rightarrow$ B is a \scriptsize{CLASS} \normalsize
+\s*
+53. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . \reflectbox{C} . $b$ $-$ = \rotatebox[origin=c]{180}{V}
+\s
+53. \hspace{0.67cm} $(a \in B) \rightarrow (B \not= \varnothing)$
+\s*
+54. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} $b$ . $b$ = $c$ : \reflectbox{C} . $a$ \scalebox{0.7}[0.9]{$\in$} $c$
+\s
+54. \hspace{0.67cm} $[(a \in B) \wedge (B = C)] \rightarrow (a \subset C)$
+\s*
+55. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} . $a$ \scalebox{0.7}[0.9]{$\in$} $c$
+\s
+55. \hspace{0.67cm} $[(a \in B) \wedge (B \subset C)] \rightarrow (a \subset C)$
+\s*
+\quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
+\s
+\quad Let $\text{C}$ be a class, and $\text{C}_{subset}$ be a class which is contained in $\text{C}$; then we say that $\text{C}_{subset}$ is an individual of the class $\text{C}$, if $\text{C}_{subset}$ consists of only one individual. That is:
+\s*
+56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ \reflectbox{C} $s$ : \reflectbox{C} :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $k$ $-$ $=$ \rotatebox[origin=c]{180}{V} : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . \reflectbox{C}\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
+\s
+56. \hspace{0.67cm} $[\text{C}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $(\text{C}_{subset} \subset \text{C})] \rightarrow \Big\{(\text{C}_{subset} \in \text{C}) = \big\{(\text{C}_{subset} \not= \varnothing) \wedge \{[(x,y) \in \text{C}_{subset}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{V. The inverse}
+\vspace{1em}
+\toggler{V. De inversione.}
+\s
+\vspace{1em}
+\toggler{V. The inverse.}
+\end{paracol}
+
+\raggedright
+\begin{tikzpicture}[overlay]
+\draw (19.68,-0.4) -- (19.9,-0.4); % inverse sign
+\end{tikzpicture}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\quad Inversionis signum est $\scalebox{1.5}[0.8]{[\scalebox{0.2}{ \ }]}$, eiusque usum in sequenti numero explicabimus. Hic tantum casus particulares exponimus.
+\s
+\quad The sign of the inverse is {\tiny{ ..  }}, and we shall explain its use in the following section. Here we give some particular examples.
+\s*
+\quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x]$ \scalebox{0.7}[0.9]{$\in$} $a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
+\s
+\quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\overline{x} \in a$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
+\s*
+57. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} : $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ . \scalebox{0.7}[0.9]{$\in$} K
+\s
+57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow [( \overline{x} \in a )$ is a \scriptsize{CLASS} \normalsize $]$
+\s*
+58. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{K} . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $x$ \scalebox{0.7}[0.9]{$\in$} $a$ : = $a$
+\s
+58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{[ \overline{x} \wedge ( x \in A )] = A \}$
+\s*
+59. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x$ \scalebox{0.7}[0.9]{$\in$} . $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ : = $a$
+\s
+59. \hspace{0.67cm}  $a$ is a \scriptsize{proposition} \normalsize $\rightarrow [(x \in \overline{x} \in a) = a]$
+\s*
+\quad Sint $\alpha$, $\beta$ propositiones indeterminatum continentes $x$; erit:
+\s
+\quad Let $\alpha, \beta$ be propositions containing the indeterminate $x$. We will have:
+\s*
+60. \hspace{0.67cm} $[x\scalebox{0.7}[0.9]{$\in$}]$ ($\alpha$ $\beta$) = ($[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha)$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$)
+\s
+60. \hspace{0.67cm} $[\overline{x} \in (\alpha \wedge \beta)]=[(\overline{x} \in \alpha) \wedge (\overline{x} \in \beta)]$
+\s*
+61. \hspace{0.67cm} $[x\scalebox{0.7}[0.9]{$\in$}]$ $-$ $\alpha$ = $-$ $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$
+\s
+61. \hspace{0.67cm} $(\overline{x} \not\in \alpha)=[(\neg \overline{x}) \in \alpha]$
+\s*
+62. \hspace{0.67cm} $[x\scalebox{0.7}[0.9]{$\in$}]$ ($\alpha$ $\cup$ $\beta$) = $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $\cup$ $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
+\s
+62. \hspace{0.67cm} $[\overline{x} \not\in (\alpha \cup \beta)]=[(\overline{x} \in \alpha) \cup (\overline{x} \in \beta)]$
+\s*
+63. \hspace{0.67cm} $\alpha$ \reflectbox{C}\scalebox{0.7}{$x$} $\beta$ . = . $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  \reflectbox{C} $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
+\s
+63. \hspace{0.67cm} $(\alpha$ $\fn{(} \xrightarrow[\forall x]{} \fn{/} \underset{\forall \text{x}}\subset \fn{)}$ $\beta) = [(\overline{x} \in \alpha)$ $\fn{(} \rightarrow \fn{/} \subset \fn{)}$ $(\overline{x} \in \beta)]$
+\s*
+64. \hspace{0.67cm} $\alpha$ =\scalebox{0.7}{$x$} $\beta$ . = . $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ = $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
+\s
+64. \hspace{0.67cm} $(\alpha \underset{\forall \text{x}}= \beta) = [(\overline{x} \in \alpha) = (\overline{x} \in \beta)]$
+\s*
+\quad 2. Sint $x,y$ entia quacumque; system ex ente $x$ et ex ente $y$ compositum ut novum ens consideramus, et signo $(x,y)$ indicamus; similiterque si entium numerus maior fit. Sit $\alpha$ propositio indeterminata continens $x,y$; tunc $[(x,y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ significat classem entibus $(x,y)$ constitutam, quae conditioni $\alpha$ satisfaciunt. Erit:
+\s
+\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the sign $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the indeterminate $x,y$; then $[(x,y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:
+\s*
+65. \hspace{0.67cm} $\alpha$ \reflectbox{C}\scalebox{0.7}{$x, y$} $\beta$ . = . $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  \reflectbox{C} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
+\s
+65.
+\s*
+66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} : $-$ = \rotatebox[origin=c]{180}{V}
+\s
+66.
+\s*
+\quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\reflectbox{C}$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\scalebox{0.7}[0.9]{$\in$}]$, signo $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ utimur. Ita $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, et signum $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
+\s
+\quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the sign $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ instead of the sign $[\scalebox{0.7}[0.9]{$\in$}]$. Thus, $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, and the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ is read \emph{the objects that}. For example, let $y$ be a number; then $\forall x$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the sign \emph{D} means \emph{divides} or \emph{is a divisor of}, the formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
+\s*
+\quad 4. Sit $\alpha$ formula indeterminate continens $x$. Tunc scriptura $x' [x] \alpha$, quae legitur $x'$ \emph{loco} $x$ \emph{in} $\alpha$ \emph{substituto}, formulam indicat quae obtinetur si in $\alpha$, loco $x$, $x'$ legimus. Deducitur $x [x] \alpha = \alpha$.
+\s
+\quad 4. Let $\alpha$ be a formula containing the indeterminate $x$. Then the expression $x' [x] \alpha$, which is read $x'$ \emph{being substituted for} $x$ \emph{in} $\alpha$, denotes the formula obtained if, in $\alpha$, we read $x'$ for $x$. It follows that $x [x] \alpha = \alpha$.
+\s*
+\quad 5. Sit $\alpha$ formula, quae indeterminata $x,y,...$ continet. Tunc
+\s
+\quad 5. Let $\alpha$ be a formula that contains the indeterminates $x,y,...$ Then
+\s*
+\hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
+\s
+\hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XIII \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XIII
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+quae legitur $x'y',...$ \emph{loco} $x,y,...$ \emph{in} $\alpha$ \emph{substitutis}, formulam indicat quae obtinetur si in $\alpha$ loco $x,y,...$, litterae $x'y',...$ scribantur. Deducitur $(x,y)$ $[x,y]$ $\alpha = \alpha$.
+\s
+which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, denotes the formula obtained if, in $\alpha$, the letters $x_{1}',y',...$ are written for $x,y,...$ It follows that $(x,y)$ $[x,y]$ $\alpha = \alpha$.
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{VI. Functions}
+\vspace{1em}
+\toggler{VI. De functionibus.}
+\s
+\vspace{1em}
+\toggler{VI. Functions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Logicae notationes quae praecedunt exprimendae cuilibet arithmeticae propositioni sufficiunt, iisdemque tantum utimur. Hic notationes alias nonnullas breviter explicamus, quae utiles fieri possunt.
+\s
+The symbols of logic introduced above suffice to express any proposition of arithmetic, and we shall only these.We explain here briefly some other symbols that may be useful.
+\s*
+Sit $s$ quaedam classis; supponimus aequalitatem inter entia systematis $s$ definitam, quae conditionibus satisfaciat:
+\s
+Let $S$ be a class; we assume that equality is defined between the objects of the system $s$ so as to satisfy the conditions:
+\s*
+\hspace{1.06cm} $a=a$
+\s
+\hspace{1.06cm} $a=a$.
+\s*
+\hspace{1.06cm} $a=b$ $.$ $=$ $.$ $b=a$
+\s
+\hspace{1.06cm} $(a=b)$ $=$ $(b=a)$
+\s*
+\hspace{1.06cm} $a=b$ . $b=c$ $:$ $\reflectbox{C}$ $.$ $a=c$
+\s
+\hspace{1.06cm} $[(a=b)$ $\wedge$ $(b=c)]$ $\rightarrow$ $a=c$
+\s*
+Sit $\upvarphi$ signum, sive signorum aggregatus, ita ut si $x$ est ens classis $s$, scriptura $\upvarphi$ $x$ novum indicet ens; supponimus quoque aequalitatem inter entia $\upvarphi$ $x$ definitam; et si $x$ et $y$ sunt entia classis $s$, et est $x=y$, supponimus deduci posse $\upvarphi$ $x$ $=$ $\upvarphi$ $y$. Tunc signum $\upvarphi$ dicitur esse \emph{functionis praesignum in classi} $s$, et scribemus $\upvarphi$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $F'$ $s$.
+\s
+Let $\upvarphi$ be a sign or an aggregate of signs such that, if $x$ is an object of the class $S$, the expression $\upvarphi$ $x$ denotes a new object; we assume also that equality is defined between the objects $\upvarphi$ $x$; further, if $x$ and $y$ are objects of the class $S$ and if $x = y$, we assume it is possible to deduce $\upvarphi$ $x = \upvarphi$ $y$. Then the sign $\upvarphi$ is said to be a \emph{function presign in the class S}, and we write $\upvarphi$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $F'$ $s$.
+\s*
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
+\s
+...
+\s*
+Verum si, cum sit $x$ quodlibet ens classis $s$, scriptura $x\upvarphi$ novum indicet ens, et, ex, $x$ $=$ $y$ deducitur $x\upvarphi$ $=$ $y\upvarphi$, tunc dicimus $\upvarphi$ esse \emph{functionis postsignum in classi} $s$ et scribemus $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s'$F.
+\s
+If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a new object and $x\upvarphi = y\upvarphi$ follows from $x=y$, then we say that $\upvarphi$ is a \emph{function postsign in the class S}, and we write $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s'$F.
+\s*
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
+\s
+...
+\s*
+\emph{Exempla}. Sit $a$ numerus; tunc $a$ $+$ est functionis praesignum in numerorum classe, et $+$ $a$ est functionis postsignum; quicumque enim est numerus $x$, formulae $a$ $+$ $x$ et $x$ $+$ $a$ novos indicant numeros, et ex $x$ $=$ $y$ deducitur $a$ $+$ $x$ $=$ $a$ $+$ $y$, et $x$ $+$ $a$ $=$ $y$ $+$ $a$. Itaque
+\s
+\emph{Examples}. Let $a$ be a number; then $a+$ is a function presign in the class of numbers, and $+a$ is a function postsign; for any number $x$, formulas $a+x$ and $x+a$ denote new numbers; $a+x=a+y$ and $x+a=y+a$ follow from $x=y$. Thus
+\s*
+\hspace{1.06cm} $a$ $\scalebox{0.7}[0.9]{$\in$} \N . \C : a + . \in .$ $F' \N$
+\s
+\hspace{1.06cm}
+\s*
+\hspace{1.06cm} $a$ $\scalebox{0.7}[0.9]{$\in$} \N .$ $\reflectbox{C}$ $:$ $+$ $a$ $.$ $\scalebox{0.7}[0.9]{$\in$}$ $.$ $N$ $'F$
+\s
+...
+\s*
+\hfill
+\s
+\hfill
+\s*
+Sit $\upvarphi$ functionis praesignum in classe $s$. Tunc $[\upvarphi] y$ classem significat iis $x$ constitutam, quae conditioni $\upvarphi x$ $=$ $y$ satisfaciunt; scilicet:
+\s
+Let $\upvarphi$ be a function presign in the class $S$. Then $[\upvarphi] y$ denotes the class composed of $x$ that satisfy the condition $\upvarphi x = y$; that is,
+\s*
+\emph{Def}. \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $:$ $[\upvarphi]y$ $.$ $=$ $.$ $[x \scalebox{0.7}[0.9]{$\in$}]$ $(\upvarphi x$ $=$ $y)$
+\s
+\emph{Def}. \hspace{0.25cm}
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XIV \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XIV
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Classis $[\upvarphi] y$ vel unum vel plura, vel etiam nullum individuum continere potest. Erit:
+\s
+The class $[\upvarphi] y$ may contain one or several individuals, or none at all. We have:
+\s*
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $:$ $y$ $=$ $\upvarphi$ $x$ $.$ $=$ $.$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $[\upvarphi] y$
+\s
+...
+\s*
+Si vero $\upvarphi y$ uno tantum constat individuo, erit $y$ $=$ $\upvarphi x$ $.$ $=$ $.$ $x$ $=$ $[\upvarphi] y$
+\s
+But if $\upvarphi y$ consists of just one individual, we have $y$ $=$ $\upvarphi x$ $.$ $=$ $.$ $x$ $=$ $[\upvarphi] y$
+\s*
+Sit $\upvarphi$ functions postsignum; similiter ponimus:
+\s
+Let $\upvarphi$ be a function postsign; we write similarly:
+\s*
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $y$ $| \upvarphi |$ $=$ $| x\scalebox{0.7}[0.9]{$\in$} |$ $(x \upvarphi = y)$.
+\s
+...
+\s*
+Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logica iam exposuimus. Nam si $\alpha$ est propositio indeterminatum continens $x$, atque $A$ est classis individuis $x$ composita quae conditioni $\alpha$ satisfaciunt, erit $x$ $\scalebox{0.7}[0.9]{$\in$}$ $a$ $.$ $=$ $\alpha$, tunc $a$ $=$ $[x$\scalebox{0.7}[0.9]{$\in$}$]$ $\alpha$, ut in V, i.
+\s
+The sign $[$ $]$ is called \emph{inversion sign}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the indeterminate $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\scalebox{0.7}[0.9]{$\in$}$ $A$ $.$ $=$ $\alpha$, and then $A$ $=$ $[x$\scalebox{0.7}[0.9]{$\in$}$]$ $\alpha$, as in V, i.
+\s*
+Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
+\s
+Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x] x'$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha [x] x'$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
+\s*
+Similiter, sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis postsignum, ut $x \upvarphi = \alpha$; deducitur $\upvarphi = [x] \alpha$; tunc, si $x'$ est novum ens, erit $x' \upvarphi = x' [x] \alpha$, scilicet $x' [x] \alpha$ rursum indicat id quod obtinetur si in $\alpha$, loco $x, x'$ legatur, ut in V, 4.
+\s
+Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = [x] \alpha$. Then, if $x'$ is a new object, have $x' \upvarphi = x' [x] \alpha$; that is, $x' [x] \alpha$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
+\s*
+Alios quoque usus in logica signum $[ ]$ habere potest, quos breviter esponimus, quum ipsis non utamur. Sint $a$ et $b$ duae classes; tunc $[a \cap ]b$ sive $b[ \cap a]$ classes indicat $x$, quae conditioni $b = a \cap x$, sive $b = x \cap a$ satisfaciunt. Si $b$ in $a$ non continetur, nulla classis huic conditioni satifacit; si $b$ in $a$ continetur, signum $b [ \cap a ]$ omnes indicat classes quae $b$ continent atque in $b \cup - a$ continentur.
+\s
+The sign $[ ]$ can have other uses in logic, which we present only briefly, since we shall not use it in these ways. Let $a$ and $b$ be two classes; then $[a \cap ]b$ sive $b[ \cap a]$, or $b[ \cap a]$ denotes the classes $x$ that satisfy the condition $b = a \cap x$, or $b = x \cap a$. If $b$ is not contained in $a$, no class satisfies this condition; if $b$ is contained in $a$, the sign $b [ \cap a ]$ denotes all classes that contain $b$ and are contained in $b \cup - a$.
+\s*
+In Arithmetica, sint $a, b$ numeri; tunc $[b + a]$ sive $[a +] b$ numerum indicat $x$, qui conditioni $b = x + a$, sive $b = a + x$ satisfacit, nempe $b - a$. Similiter erit $b [ \times a ] = [a \times ] b = b / a$. Et in analysi hoc signum usuvenire potest; itaque
+\s
+In arithmetic, let $a$ and $b$ be numbers; then $[b + a]$ or $[a +] b$ denotes the number $x$ that satisfies the condition $b = x + a$, or $b = a + x$, that is $b - a$. Similarly we have $b [ \times a ] = [a \times ] b = b / a$. This sign can even find a use in analysis; thus
+\end{paracol}
+
+\columnratio{0.25, 0.25, 0.25, 0.25}
+\begin{paracol}{4}
+\hspace{0.54cm} $y = sin$ $x$ $.$ = $.$ $x \scalebox{0.7}[0.9]{$\in$}$ $[sin]$ $y$
+\s
+(loco $x = arc$ $sin$ $y).$
+\s
+...
+\s
+...
+\s*
+\hspace{0.54cm} $d F (x) = f(x) dx$ $.$ $=$ $.$ $F$ $(x)\scalebox{0.7}[0.9]{$\in$}$ $[d]$ $f(x)dx$
+\s
+(loco $F(x) = \int{f(x)dx}).$ 
+\s
+...
+\s
+...
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\hfill
+\s
+\hfill
+\s*
+Sit rursum $\upvarphi$ functionis praesignum in classi $s$, sitque $k$ classis
+\s
+Let $\upvarphi$ again be a function presign in a class $S$ and let $C$ be a class
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XV \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XV
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+in $s$ contenta; tunc $\upvarphi k$ classem indicat omnibus $\upvarphi x$ compositam, ubi $x$ sunt entia classis $k$; scilicet
+\s
+contained in $S$; then $\upvarphi C$ denotes the class consisting of all $\upvarphi x$, where the $x$ are the objects of class $C$; that is
+\s*
+\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+\s
+\emph{Def}. \hspace{0.25cm}
+\s*
+Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+\s
+Or \hspace{0.25cm}
+\s*
+\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $.$ $k$ $\upvarphi$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+\s
+\emph{Def.} \hspace{0.25cm}
+\s*
+Itaque, si $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' s$, tunc $\upvarphi$ $s$ classem indicat omnibus $\upvarphi$ $x$ constitutam, ubi $x$ sint entia classis $s$. Erit:
+\s
+Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $s$ denotes the class composed of all $\upvarphi$ $x$, where the $x$ are objects of the class $S$. We have:
+\s*
+\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s$ . $y \in \upvarphi s : \reflectbox{C} : \upvarphi [\upvarphi] y = y$
+\s
+...
+\s*
+\hspace{1.06cm} $s \in K$ . $a, b \in K$ . $a$ $\reflectbox{C}$ $s$ . $b$ $\reflectbox{C}$ $s$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi (a \cup b) = (\upvarphi a) \cup (\upvarphi b)$
+\s
+...
+\s*
+\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi \rotatebox[origin=c]{180}{V} = \rotatebox[origin=c]{180}{V}$
+\s
+...
+\s*
+\hspace{1.06cm} $s \in K$ . $a,b \in K$ . $b$ $\reflectbox{C}$ $s$ . $a$ $\reflectbox{C}$ $b$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi a$ $\reflectbox{C}$ $\upvarphi b$
+\s
+...
+\s*
+\hspace{1.06cm} $s \in K$ . $a,b \in K$ . $a$ $\reflectbox{C}$ $s$ . $b$ $\reflectbox{C}$ $s$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi (ab)$ $\reflectbox{C}$ $(\upvarphi a)(\upvarphi b)$
+\s
+...
+\s*
+Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \in K a$ idem significat quod $x \in K$ . $x$ $\reflectbox{C}$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
+\s
+Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\reflectbox{C}$ $a$. We shall sometimes use this convention; thus $K N$ means \emph{a class of numbers}.
+\s*
+Similiter, si $a$ est classis, $K \cup a$ indicat classes quae $a$ continent. Sit $a$ numerus; tunc $a + N$, sive $N + a$, \emph{numeros} indicat \emph{numero a maiores}; $a \times N$, sive $N \times a$, sive $N a$ indicat \emph{multiplices numeri a}; $a^N$ indicat \emph{potestas numeri} $a$; $N^2$, $N^3$, ... indicat \emph{numeros quadratos}, vel \emph{numeros cubos},...
+\s
+Similarly, if $A$ is a class, $K \cup A$ indicates the classes that contain $A$. Let $a$ be a number; then $a + N$, or $N + a$, denotes \emph{the numbers greater than the number} $a$; $a \times N$, or $N \times a$, or $N a$ denotes \emph{the multiples of the number} $a$; $a^N$ denotes \emph{the powers of the number} $a$; $N^2$, $N^3$, ... denote \emph{the squares}, \emph{the cubes},...
+\s*
+\hfill
+\s
+\hfill
+\s*
+Functional signorum aequalitatem, productum, potestas, ita definire licet:
+\s
+Equality, product and powers can be defined thus for function signs:
+\s*
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi, \psi \in F' s :$ $\reflectbox{C}$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $\varphi = \psi$ : $=$ : $x \in s$ . $\reflectbox{C}$ . $\varphi x = \psi x$
+\s
+\emph{Def.} \hspace{0.25cm}
+\s*
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in F' s$ $.$ $\psi \in F' \varphi s$ . $x \in s$ : $\reflectbox{C}$ . $\psi \varphi x = \psi (\varphi x)$
+\s
+\emph{Def.} \hspace{0.25cm}
+\s*
+Itaque, in definitionis hypothesi, erit $\psi \varphi$ novum functionis praesignum; idque \emph{productum signorum} $\psi$ \emph{et} $\varphi$ vocatur.
+\s
+Thus, if we assume this definition, we have the new function presign $\psi \varphi$; it is called the \emph{product of the signs} $\psi$ and $\varphi$.
+\s*
+Similiterque, si $\varphi$, $\psi$ sunt functionis postsigna.
+\s
+Similarly if $\varphi$, $\psi$ are function postsigns.
+\s*
+Haec valet propositio:
+\s
+The following proposition holds:
+\s*
+\hspace{1.06cm} $s \in K$ . $\varphi \in F' s$ . $\varphi s$ $\reflectbox{C}$ $s : \reflectbox{C} : \varphi \varphi s$ $\reflectbox{C}$ $s$ . $\varphi \varphi \varphi s$ $\reflectbox{C}$ $s$. etc.
+\s
+...
+\s*
+Funcitones $\varphi \varphi, \varphi \varphi \varphi,...$ \emph{iteraiae} vocantur, et communiter signis $\varphi^2, \varphi^3,...$ indicantur, ut operationis $\varphi$ potestates.
+\s
+The functions $\varphi \varphi, \varphi \varphi \varphi,...$ are said to be \emph{iterated} and are generally denoted by the signs $\varphi^2, \varphi^3,...$ as powers of the operation $\varphi$.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XVI \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XVI
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+Si vero $\varphi$ est functionis postsignum, ha faciliori notatione, absque ambiguitate, uti licet:
+\s
+But if $\varphi$ is a function postsign, we can use the following more convenient notation without ambiguity:
+\s*
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in s 'F$ . $s \varphi$ $\reflectbox{C}$ $s : \reflectbox{C} : \varphi 1 = \varphi$ . $\varphi 2 = \varphi \varphi$ . $\varphi 3 = \varphi \varphi \varphi$. etc.
+\s
+\emph{Def.} \hspace{0.25cm}
+\s*
+In definitionis hypothesi, si $m, n \in N$, erit $\varphi$ $(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
+\s
+Assuming this definition, if $m, n \in N$, we have $\varphi$ $(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
+\s*
+Si hac definitione in Arithmetica utimur, haec invenimus. Numerum qui sequitur numerum $a$ signo faciliori $a +$ indicare possumus; tunc $a + 1, a+2,...$ et, si $b$ est numerus, $a + b$, sensum habent $a +, a + +,...$ quod a definitione in \S 1 patet. Propositionem 6 in \S 1 scribere possumus $N +$ $\reflectbox{C}$ $N$. Si $a, b, c$ sunt numeri, tunc $a : + b$ . $c$ significat $a + b c$, et $a : \times b$ . $c$ significat $a b^c$.
+\s
+If we use this definition in arithmetice, we obtain the following. We can denote the number that follows the number $a$ by the more convenient sign $a+$; then $a + 1$, $a + 2$,..., and, if $b$ is a number, $a + b$, have the meaning of $a +$, $a ++$,..., which is clear from the definition in \S 1 below. Proposition 6 in \S 1 can be written $N +$ $\reflectbox{C}$ $N$. If $a, b, c$ are numbers, then $a : + b$ . $c$ means $a + b c$, and $a : \times b$ . $c$ means $a b^c$.
+\s*
+Multi aliis proprietatibus gaudent functionem signa, praesertim si conditioni satisfaciunt: $\varphi x = \varphi y$ . $\reflectbox{C}$ . $x = y$. Functionis signum quod huic conditioni satisfacit vocatur a clarrissimo Dedekind \emph{simile} (ähnliche Abbildung).
+\s
+Function signs possess many other properties, especially if they satisfy the condition: $\varphi x = \varphi y$ . $\reflectbox{C}$ . $x = y$. A function sign that satisfies this condition is called \emph{equivalent}\endnote{The 2 other translation, mentioned at the beginning of this current document, translated "ähnlich" literally to "similar", instead of "equivalent". However, additional information can be found in a footnote of the first translation: \\
+
+\quad \emph{"Today "similar" has another meaning and instead we would say "equivalent"."} \\
+
+G. Peano, (1889), ``The principles of arithmetic presented by a new method" in: J. van Heijenoort (ed.), \emph{From Frege to G\"odel. A source book in mathematical logic. 1879-1931}, Cambridge: Harvard University Press, 1967, p. 93.} by Dedekind (ähnliche Abbildung).
+\s*
+Sed his exponendis locus deest.
+\s
+But we lack the space to present these properties.
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{Remarks}
+\vspace{1em}
+\toggler{Declarationes.}
+\s
+\vspace{1em}
+\toggler{Remarks.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\emph{Defenitio}, vel breviter \emph{Def.} est propositio formam habens $x = a$, sive $\alpha$ $\reflectbox{C}$ . $x = a$, ubi $\alpha$ est signorum aggregatus sensum habens notum; $x$ est signum, vel signorum aggregatus significatione adhuc carnes; $\alpha$ vero est conditio sub qua definitio datur.
+\s
+A \emph{Definition}, or \emph{Def.} for short, is a proposition of the form $x=a$ or $\alpha$ $\reflectbox{C}$ . $x = a$, where $a$ is an aggregate of signs having a known meaning, $x$ is a sign or an aggregate of signs, hitherto without meaning, and $\alpha$ is the condition under which the definition is given.
+\s*
+\emph{Theorema}, (Theor. vel Th) est propositio quae demonstratur. Si theorema formam habet $\alpha$ $\reflectbox{C}$ $\beta$, ubi $\alpha$ et $\beta$ sunt propositiones, tunc $\alpha$ dicitur \emph{Hypothesis} (Hyp. vel breviter Hp.), $\beta$ vero \emph{Thesis} (Thes. vel Ts.). Hyp. ac Ts. a Theorematis forma pendent; nam si loco $\alpha$ $\reflectbox{C}$ $\beta$ scribemus $- \beta$ $\reflectbox{C}$ $- \alpha$, erit $- \beta$ Hp, et $- \alpha$ Ts.; si vero scribemus $\alpha - \beta = \rotatebox[origin=c]{180}{V}$, Hp. ac Ts. absunt.
+\s
+A \emph{theorem} (Theor. or Th.) is aproposition that is \emph{proved}. If a theorem has the form $\alpha$ $\reflectbox{C}$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\reflectbox{C}$ $\beta$ instead of $- \beta$ $\reflectbox{C}$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \rotatebox[origin=c]{180}{V}$, Hp. and Ts. do not exist.
+\s*
+In quolibet $\S$ signum P quod quidam numerus sequatur, propositionem indicat eiusdem $\S$ hoc numero signatam. Logicae propositiones indicantur signo L et propositiones numero.
+\s
+In any $\S$ below, the sign P followed by a number denotes the proposition indicated by that number in the same $\S$. Propositions of logic are indicated by the sign L and the number of the proposition.
+\s*
+Formulae quae in una linea non continentur, in altera linea, nullo interposito signo, sequuntur.
+\s
+Formulas that do not fit on one line are continued on the next line without any intervening sign.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 1
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{chapter}{The principles of arithmetic}
+\vspace{1em}
+\largetoggler{Arithmetices Principia.}
+\s
+\vspace{1em}
+\largetoggler{The Principles of Arithmetic.}
+\s*
+\phantomsection
+\addcontentsline{toc}{section}{\S1. Numbers and addition}
+\vspace{1em}
+\mediumtoggler{\S1. De numeris et de additione.}
+\s
+\vspace{1em}
+\mediumtoggler{\S1. Numbers and addition.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explanations}
+\vspace{1em}
+\toggler{\emph{Explicationes.}}
+\s
+\vspace{1em}
+\toggler{\emph{Explanations.}}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.05, 0.1, 0.25, 0.1, 0.05, 0.1, 0.25}
+\begin{paracol}{8}
+\centering Signo \s $\N$ \s significatur \s \raggedright \emph{numerus (integer positivus)}.
+\s
+\centering The sign \s $\N$ \s means \s \raggedright \emph{number (positive integer)}.
+\s*
+\centering $\smallgg$ \s $1$ \s $\smallgg$ \s \raggedright \emph{unitas}.
+\s
+\centering $\smallgg$ \s $1$ \s $\smallgg$ \s \raggedright \emph{unity}.
+\s*
+\centering $\smallgg$ \s $a + 1$ \s $\smallgg$ \s \raggedright \emph{sequens} $a$, sive $a$ \emph{plus} $1$.
+\s
+\centering $\smallgg$ \s $a + 1$ \s $\smallgg$ \s \raggedright \emph{the successor of} $a$, or $a$ \emph{plus} $1$.
+\s*
+\centering $\smallgg$ \s $=$  \s $\smallgg$ \s \raggedright \emph{est aequalis}. Hoc ut novum signum considerandum est, etsi logicae signi figuram habeat.
+\s
+\centering $\smallgg$ \s $=$ \s $\smallgg$ \s \raggedright \emph{is equal to}. This must be considered as a new sign, although it has the appearance of a sign of logic.
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Axioms}
+\vspace{1em}
+\toggler{Axiomata.}
+\s
+\vspace{1em}
+\toggler{Axioms.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+1. \hspace{0.6cm} $1 \in N$
+\s
+...
+\s*
+2. \hspace{0.6cm} $a \in \N \p \C \p a = a$
+\s
+...
+\s*
+3. \hspace{0.6cm} $a,b,c \in \N \p \C : a = b \p = \p b = a$
+\s
+...
+\s*
+4. \hspace{0.6cm} $a,b \in \N \p \C \3p a = b \p b = c : \C \p a = c$
+\s
+...
+\s*
+5. \hspace{0.6cm} $a = b \p b \in \N : \C \p a \in N$
+\s
+...
+\s*
+6. \hspace{0.6cm} $a \in \N \p \C \p a + 1 \in N$
+\s
+...
+\s*
+7. \hspace{0.6cm} $a, b \in \N \p \C : a = b \p = \p a + 1 = b + 1$
+\s
+...
+\s*
+8. \hspace{0.6cm} $a \in \N \p \C \p a + 1 \no = 1$
+\s
+...
+\s*
+9. \hspace{0.6cm} $k \in K \3p 1 \in k \3p x \in \N \p x \in k : \C_x \p x + 1 \in k : : \C \p \N \C k$
+\s
+...
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+10. \hspace{0.67cm} $2 = 1 + 1;$ $3 = 2 + 1;$ $4 = 3 +1;$ etc.
+\s
+...
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 2 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 2
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+11. \hspace{0.67cm} $2 \in N$.
+\s
+...
+\s*
+\vspace{1em}
+\emph{Demonstratio:}
+\vspace{1em}
+\s
+\emph{Proof:}
+\end{paracol}
+
+\columnratio{0.26, 0.18, 0.06, 0.27, 0.18, 0.06}
+\begin{paracol}{6}
+\raggedright
+\setlength{\columnsep}{1em}
+$P 1 \p \C :$ \s $1 \in N$ \s (1)
+\s
+.... \s .... \s (1)
+\s*
+$1 [a] (P6) \p \C :$ \s $1 \in \N \p \C \p 1 + 1 \in N$ \s (2)
+\s
+... \s ... \s (2)
+\s*
+$(1)(2) \p \C :$ \s $1 + 1 \in N$ \s (3)
+\s
+... \s ... \s (3)
+\s*
+$P 10 \p \C :$ \s $2 = 1 + 1$ \s (4)
+\s
+... \s ... \s (4)
+\s*
+$(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \in N$ \s (Theor.)
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\vspace{1em}
+\emph{Nota.} - Huius facillimae demonstrationis gradus omnes ecplicite scripsimus. Brevitatis causa ipsam ita scribemus:
+\vspace{1em}
+\s
+\vspace{1em}
+\emph{Note.} - We have explicitly written every step of this very easy proof. For the sake of brevity, we shall write it as follows:
+\vspace{1em}
+\s*
+$\hspace{1.4cm} P 1 \p 1 [a] (P 6) : \C : 1 +1 \in \N \p P 10 \p (2, 1+1) [a, b] (P 5) : \C : Th$
+\s
+...
+\s*
+vel
+\s
+...
+\s*
+$\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \in \N \p P 10 \p P 5 : \C : Th$
+\s
+...
+\s*
+12. \hspace{0.67cm} $3, 4,... \in N$
+\s
+...
+\s*
+13. \hspace{0.67cm} $a,b,c,d \in \N \p a = b \p b = c \p c = d : \C : a = d$
+\s
+...
+\s*
+\emph{Dem.} \hspace{0.27cm} $Hyp. P 4 : \C : a,c,d \in \N \p a = c \p c = d \p P4 : \C : Thes.$
+\s
+...
+\s*
+14. \hspace{0.67cm} $a,b,c \in \N \p a = b \p b = c \p a \no = c : = \abs$
+\s
+...
+\s*
+\emph{Dem.} \hspace{0.27cm} $P4 \p L 39 : \C \p Theor$.
+\s
+...
+\s*
+15. \hspace{0.67cm} $a,b,c \in \N \p a = b \p b \no = c : \C \p a \no = c$
+\s
+...
+\s*
+16. \hspace{0.67cm} $a,b \in \N \p a + 1 = b + 1 : \C \p a = b$
+\s
+...
+\s*
+17. \hspace{0.67cm} $a,b \in \N \p \C : a \no = b \p = \p a + 1 \no = b + 1$
+\s
+...
+\s*
+\emph{Dem.} \hspace{0.27cm} $P7 \p L21 : \C \p Theor$
+\s
+...
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definition}
+\vspace{1em}
+\toggler{Definitio.}
+\s
+\vspace{1em}
+\toggler{Definition.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+18. \hspace{0.67cm} $a,b \in \N \p \C \p a + (b + 1) = (a + b) + 1$
+\s
+...
+\s*
+\vspace{1em}
+\emph{Nota.} - Hanc definitionem ita legere oportet: si $a$ et $b$ sunt numeri, et $(a + b) + 1$ sensum habet (scilicet si $a + b$ est numerus), sed $a + (b + 1)$ nondum definitus est, tunc $a + (b + 1)$ significat numerum qui $a + b$ sequitur.
+\vspace{1em}
+\s
+\vspace{1em}
+\emph{Note.} - This definition should be read: if $a$ and $b$ are numbers, and $(a + b) + 1$ has meaning (that is, if $a + b$ is a number), but $a + (b + 1)$ has not yet been defined, then $a + (b + 1)$ indicates the number that follows $a + b$.
+\vspace{1em}
+\s*
+Ab hac definitione, et a praecedentibus deducitur:
+\vspace{1em}
+\s
+From this definition, and the preceding, we deduce that:
+\vspace{1em}
+\s*
+\hspace{1.4cm} $a \in \N \p \C \3p a + 2 = a + (1 + 1) = (a + 1) + 1$
+\s
+...
+\s*
+\hspace{1.4cm} $a \in \N \p \C \3p a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 3 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 3
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+19. \s $a, b \in \N \p \C \p a + b \in N$. \s
+\s
+... \s ... \s ...
+\s*
+\emph{Dem.} \s $a \in \N \p$ P6 $: \C : a + 1 \in \N : \C : 1 \in [b \in]$ Ts. \s (1)
+\s
+... \s ... \s ...
+\s*
+\s $a \in \N \p \C :: b \in \N \p b \in [b \in]$ Ts $: \C : a + b \in \N \p$ P6 $: \C : (a + b) + 1 \in \N \p$ P18 $: \C : a + (b + 1) \in \N : \C : (b + 1) \in [b \in]$ Ts. \s (2)
+\s
+... \s ... \s ...
+\s*
+\s $a \in \N \p (1) \p (2) \p \C : : 1 \in [b \in]$ Ts $\3p b \in \N \p b \in [b \in]$ Ts $: \C : b + 1 \in [b \in]$ Ts $\3p ([b \in]$ Ts $) [k]$ P9 $: : \C : \N \C [b \in]$ Ts $\p$ (L50) $:: \C : b \in \N \p C$ Ts. \s (3)
+\s
+... \s ... \s ...
+\s*
+\s $(3) \p$ (L42) $: C : a,b \in \N \p \C \p$ Thesis \s (Th.)
+\s
+... \s ... \s ...
+\s*
+20. \emph{Def.} \s $a + b + c = (a + b) + c$ \s
+\s
+... \s ... \s ...
+\s*
+21. \s $a,b,c \in \N \p \C \p a + b + c \in N$ \s
+\s
+... \s ... \s ...
+\s*
+22. \s $a,b,c \in \N \p \C : a = b \p = \p a + c = b + c$ \s
+\s
+... \s ... \s ...
+\s*
+\emph{Dem.} \s $a,b \in \N \p$ P7 $: \C \p 1 \in [c \in]$ Ts. \s (1)
+\s
+... \s ... \s ...
+\s*
+\s $a,b \in \N \p \C :: c \in \N \p c \in [c \in]$ Ts $\3p \C \3p a = b \p = \p a + c = b + c : a + c , b + c \in \N : a + c = b + c \p = \p a + c + 1 = b + c + 1 \3p \C \3p a = b \p = \p a + (c + 1) = b + (c + 1) \3p \C \3p (c + 1) \in [C\in]$ Ts. \s (2)
+\s
+... \s ... \s ...
+\s*
+\s $a,b \in \N \p (1) \p (2) : \C :: 1 \in [c \in]$ Ts $\3p c \in [c \in]$ Ts $ \p \C \p (c + 1) \in [c \in]$ Ts $:: \C :: c \in \N \p \C \p$ Ts. \s (3)
+\s
+... \s ... \s ...
+\s*
+23. \s $a,b,c \in \N \p \C \p a + (b + c) = a + b + c$ \s
+\s
+... \s ... \s ...
+\s*
+\emph{Dem.} \s $a,b \in \N \p$ P18 $\p$ P20 $: \C \p 1 \in [c \in]$ Ts. \s (1)
+\s
+... \s ... \s ...
+\s*
+\s $a,b \in \N \p \C \3p c \in \N \p c \in [c \in]$ Ts $: \C : a + (b +c) = a + b + c \p$ P7 $: \C : a + (b + c) + 1 = a + b + c + 1 \p$ P18 $: \C : a + (b + (c + 1)) = a + b + (c + 1) : \C \p c + 1 \in [c \in]$ Ts. \s (2)
+\s
+... \s ... \s ...
+\s*
+\s $(1)(2)$ (P9) $\p \C \p$ Theor. \s
+\s
+... \s ... \s ...
+\s*
+24. \s $a \in \N \p \C \p 1 + a = a + 1$ \s
+\s
+... \s ... \s ...
+\s*
+\emph{Dem.} \s P2 $\p \C \p 1 \in [a \in]$ Ts. \s (1)
+\s
+... \s ... \s ...
+\s*
+\s $a \in \N \p a \in [a \in]$ Ts $: \C : 1 + 1 = a + 1 : \C : 1 + (a + 1) = (a + 1) + 1 : \C : (a + 1) \in [a \in]$ Ts. \s (2)
+\s
+... \s ... \s ...
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+... \s ... \s ...
+\s*
+24'. \s $a,b \in \N \p \C \p 1 + a + b = a + 1 + b$ \s
+\s
+... \s ... \s ...
+\s*
+\emph{Dem.} \s Hyp. P24 $: \C \C 1 + a = a + 1 \p$ P22 $: \C \p$ Thesis. \s
+\s
+... \s ... \s ...
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 4 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 4
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+25. \s $a,b \in \N \p \C \p a + b = b + a$. \s
+\s
+... \s ... \s ...
+\s*
+\emph{Dem.} \s $a \in \N \p$ P24 $: \C : 1 \in [b \in]$ Ts. \s (1)
+\s
+... \s ... \s ...
+\s*
+\s $a \in \N \p \C \3p b \in \N \p b \in [b \in]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = (a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \in [b \in]$ Ts. \s (2)
+\s
+... \s ... \s ...
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+... \s ... \s ...
+\s*
+26. \s $a,b,c \in \N \p \C : a = b \p = \p c + a = c + b$. \s
+\s
+... \s ... \s ...
+\s*
+27. \s $a,b,c \in \N \p \C : a + b + c = a + c + b$. \s
+\s
+... \s ... \s ...
+\s*
+28. \s $a,b,c,d \in \N \p a = b \p c = d : \C \p a + c = b + d$. \s
+\s
+... \s ... \s ...
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S2. Substraction}
+\vspace{1em}
+\mediumtoggler{\S2. De substractione.}
+\s
+\vspace{1em}
+\mediumtoggler{\S2. Substraction.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explanations}
+\vspace{1em}
+\toggler{Explicationes.}
+\s
+\vspace{1em}
+\toggler{Explanations.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.1, 0.1, 0.2, 0.1, 0.1, 0.1, 0.2}
+\begin{paracol}{8}
+\centering Signo \s $-$ \s legitur \s \raggedright \emph{minus}.
+\s
+\centering The sign \s $-$ \s is read \s \raggedright \emph{minus}.
+\s*
+\centering $\smallgg$ \s $<$ \s $\smallgg$ \s \raggedright \emph{est minor.}
+\s
+\centering $\smallgg$ \s $<$ \s $\smallgg$ \s \raggedright \emph{is less than.}
+\s*
+\centering $\smallgg$ \s $>$ \s $\smallgg$ \s \raggedright \emph{est maior.}
+\s
+\centering $\smallgg$ \s $>$ \s $\smallgg$ \s \raggedright \emph{is greater than.}
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+1. \s $a,b \in \N \p \C : b - a = \N [x \in] (x + a = b)$. \s
+\s
+\s \s
+\s*
+2. \s $a,b \in \N \p \C : a < b \p = \p b - a \no = \abs$. \s
+\s
+\s \s
+\s*
+3. \s $a,b \in \N \p \C : b > a \p = \p a < b$. \s
+\s
+\s \s
+\s*
+\s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+4. \s $a,b,a',b' \in \N \p a = a' \p b = b' : \C : b - a = b' - a'$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C : x + a = b \p = \p x + a' = b' : \C \p$ Thesis. \s
+\s
+\s \s
+\s*
+5. \s $a,b \in \N \p \C : a < b \p = \p b - a \in N$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $a,b \in \N : \C \3p x,y \in b - a \p \C_{x,y} : x, y \in \N \p x + a = b \p y + a = b \p$ \S1 P22 $: \C : x = y$. \s (1)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a < b \p$ P2 $\p (1) : \C \3p b - a \no = \abs : x,y \in b - a \p \C \p x = y : (N, b - a) [s,k]$ (L56) $\3p \C \3p b - a \in N$. \s (2)
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 5 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 5
+
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+\s $a,b \in \N \p b - a \in \N \p$ (L56) $: \C : b - a \no = \abs : \C : a < b$. \s (3)
+\s
+\s \s
+\s*
+\s $(2)(3) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+6. \s $a,b \in \N \p a < b : \C \p b - a + a = b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p$ P5 $\p$ P1 $: \C : b - a \in \N \p (b - a) \in [x \in] (x + a = b) : \C :$ Thes. \s
+\s
+\s \s
+\s*
+7. \s $a,b,c \in \N \p \C : c = b - a \p = \p c + a = b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \S 1$ P22 $\p$ P6 $: \C : c = b - a \p = \p c + a = b - a + a \p = \p c + a = b$. \s
+\s
+\s \s
+\s*
+8. \s $a,b \in \N \p \C \p a + b - a = b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $(a + b, b)[b, c]$ P7 $\p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+9. \s $a,b,c \in \N \p a < b : \C : c + (b - a) = c + b - a$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p$ P6 $: \C : (b - a) + a = b : \C : c + (b - a) + a = c + b \p$ P7 $: \C :$ Thesis. \s
+\s
+\s \s
+\s*
+10. \s $a,b,c \in \N \p a > b + c : \C \p a - (b + c) = a - b - c$. \s
+\s
+\s \s
+\s*
+11. \s $a,b,c \in \N \p b > c \p a > b - c : \C \p a - (b - c) = a + c - b$. \s
+\s
+\s \s
+\s*
+12. \s $a,b,a',b' \in \N \p a = a' \p b = b' : \C : a < b \p = \p a' < b'$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C \p b - a = b' - a' \p \C \p b - a \in \N = b' - a' \in \N \p \C \p$ Thes. \s
+\s
+\s \s
+\s*
+13. \s $a,b \in \N \p \C \p a < a + b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p P8 : \C : a + b - a = b : \C \p a + b - a \in \N \p$ P5 $: \C :$ Thesis. \s
+\s
+\s \s
+\s*
+14. \s $a,b,c \in \N \p a < b \p b < c : \C \p a < c$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C : b - a \in \N \p c - b \in : \C : (b - a) + (c - b) \in \N : \C : c - a \in \N : \C \p$ Thesis. \s
+\s
+\s \s
+\s*
+15. \s $a,b,c \in \N \p \C : a < b \p = \p a + c < b + c$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C : a < b \p = \p b - a \in \N \p = \p (b + c) - (a + c) \in \N \p = \p a + c < b + c$. \s
+\s
+\s \s
+\s*
+16. \s $a,b,a',b' \in \N \p a < b \p a' < b' : \C \p a + a' < b + b'$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C : a + a' < b + a' \p b + a' < b + b' : \C \p$ Thesis. \s
+\s
+\s \s
+\s*
+17. \s $a,b,c \in \N \p a < b < c : \C \p c - a > c - b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C b - a \in \N \p c - b \in \N \p (c - b) + (b - a) = c - a : \C \p$ Thesis. \s
+\s
+\s \s
+\s*
+18. \s $a \in \N \p \C : a = 1 \p \cup \p a > 1$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $1 \in [a \in]$ Thesis. \s
+\s
+\s \s
+\s*
+\s $a \in \N \p$ P13 $: \C : a + 1 > 1 : \C : a + 1 \in [a \in]$ Thesis. \s
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 6 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 6
+
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+19. \s $a,b \in \N \p \C \p a + b \no = b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $a \in \N \p \S1$ P8 $: \C : a + 1 \no = 1 : \C : 1 \in [b \in]$ Thesis. \s (1)
+\s
+\s \s
+\s*
+\s $a \in \N \p b \in \N \p b \in [b \in]$ Ts $: \C : a + b \no = b \p \S1$ P17 $: \C : a + (b + 1) \no = b + 1 : \C : b + 1 \in [b \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+20. \s $a,b \in \N \p a < b \p a = b : = \abs$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $: \C : b - a \in \N \p (b - a) + a = a \p$ P19 $: \C : \abs$. \s
+\s
+\s \s
+\s*
+21. \s $a,b \in \N \p a > b \p a = b : = \abs$. \s
+\s
+\s \s
+\s*
+22. \s $a,b \in \N \p a > b \p a < b : = \abs$. \s
+\s
+\s \s
+\s*
+23. \s $a,b \in \N : \C : a < b \p \cup \p a = b \p \cup \p a > b$. \s
+\s
+\s \s
+\s*
+\emph{Dem} \s $a \in \N \p$ P18 $: \C \p 1 \in [b \in]$ Ts. \s (1)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a < b : \C \p a < b + 1$. \s (2)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a = b : \C \p a < b + 1$. \s (3)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a > b : \C : a - b \in \N \p$ P18 $: \C : a - b = 1 \p \cup \p a - b > 1$. \s (4)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a - b = 1 : \C \p a = b + 1$. \s (5)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a - b > 1 : \C \p a > b + 1$. \s (6)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a > b \p (4)(5)(6) : \C : a = b + 1 \p \cup \p a > b + 1 \p$ \s (7)
+\s
+\s \s
+\s*
+\s $a,b \in \N : a > b \p \cup \p a = b \p \cup \p a > b : (2)(3)(7) \3p \C \3p a < b + 1 \p \cup \p a = b + 1 \p \cup \p a > b + 1$. \s (8)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p b \in [b \in]$ Ts $\p (8) : \C : b + 1 \in [b \in]$ Ts. \s (9)
+\s
+\s \s
+\s*
+\s $(1)(9) \p \C \p$ Theor. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S3. Maxima and minima}
+\vspace{1em}
+\mediumtoggler{\S3. De maximis et minimis.}
+\s
+\vspace{1em}
+\mediumtoggler{\S3. Maxima and minima.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explanations}
+\vspace{1em}
+\toggler{Explicationes.}
+\vspace{1em}
+\s
+\vspace{1em}
+\toggler{Explanations.}
+\vspace{1em}
+\s*
+Sit $a \in K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
+\s
+Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \emph{greatest among} $a$, and $\mini a$ is read \emph{least among a}.
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+1. \s $a \in K \N \p \C : M a = [x \in] (x \in a \3p a \p \in \larger x : = \abs$. \s
+\s
+\s \s
+\s*
+2. \s $a \in K \N \p \C : \mini a = [x \in] (x \in a \3p a \p \in \smaller x : = \abs$. \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 7 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 7
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+3. \s $n \in \N \p a \in K \N \p a \no = \abs \p a \such \larger n = \abs : \C \p M a \in N$. \s
+\s
+\s \s
+\s*
+\emph{Dem}. \s $a \in K \N \p a \no = \abs \p a \such \larger 1 = \abs : \C : a = 1 : \C \p M a = 1 : \C \p M a \in N$. \s (1)
+\s
+\s \s
+\s*
+\s $(1) \C : 1 \in [n \in]$ (Hp $\C$ Ts). \s (2)
+\s
+\s \s
+\s*
+\s $n \in \N \p a \in K \N \p a \such \larger n + 1 = \abs \p n + 1 \in a : \C : n + 1 = M a : \C : M a \in N$. \s (3)
+\s
+\s \s
+\s*
+\s $n \in \N \p a \in K \N \p a \such \larger n + 1 = \abs \p n + 1 \no \in a : \C : a \such \larger n = \abs$. \s (4)
+\s
+\s \s
+\s*
+\s $n \in [n \in]$ (Hp $\C$ Ts) $\p a \in K \N \p a \such > n + 1 = \abs \p n + 1 \no \in a : \C : M a \in N$. \s (5)
+\s
+\s \s
+\s*
+\s $n \in [n \in]$ (Hp $\C$ Ts) $. (6) : \C \p (n+ 1) \in [n \in]$ (Hp $\C$ Ts). \s (7)
+\s
+\s \s
+\s*
+\s $(2)(7) \p \S1$ P9 $: \C : n \in \N \p \C \p$ Hp $\C$ Ts. \s (Th.)
+\s
+\s \s
+\s*
+4. \s $a \in K \N \p a \no = \abs : \C \p \mini a \in N$. \s
+\s
+\s \s
+\s*
+5. \s $a \in K \N \p \C : \mini a = M [x \in] (a \such \smaller x = \abs)$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S4. Multiplication}
+\vspace{1em}
+\mediumtoggler{\S4. De multiplicatione.}
+\s
+\vspace{1em}
+\mediumtoggler{\S4. Multiplication.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+1. \s $a \in \N \p \C \p a \times 1 = a$. \s
+\s
+\s \s
+\s*
+2. \s $a,b \in \N \p \C \p a \times (b + 1) = a \times b + a$. \s
+\s
+\s \s
+\s*
+\s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$. \s
+\s
+...
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
+\begin{paracol}{6}
+\raggedright
+3. \s $a,b \in \N \p \C \p ab \in N$. \s
+\s
+\s \s
+\s*
+\emph{Dem}. \s $a,b \in \N  \p$ P1 $: \C : a \times 1 \in \N : \C \p 1 \in [b \in]$ Ts. \s
+\s
+\s \s
+\s*
+\s $a,b \in \N \p b \in [b \in]$ Ts $: \C : a \times b \in \N \p \S 1$ P19 $: \C : ab + a \in \N \p$ P1 $: \C : a (b + 1) \in \N : \C : b + 1 \in [b \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 8 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 8
+
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+4. \s $a,b,c \in \N \p \C \p (a + b) c = a c ± b c$. \s
+\s
+\s \s
+\s*
+\emph{Nota.} \s Haec est prop. $5^a$ Euclidis elem. libri VII. \s
+\s
+\emph{Note.} \s This is prop. $5^a$ of Euclid's elem. book VII. \s
+\s*
+\emph{Dem.} \s $a,b \in \N \p$ P1 $: \C : 1 \in [c \in]$ Ts. \s (1)
+\s
+\s \s
+\s*
+\s $a,b,c \in \N \p c \in [c \in]$ Ts $: \C : (a + b) c = a c + b c \p \S1$ P22 $: \C : (a + b) c + a + b = ac + bc + a + b \p$ P2 $: \C : (a + b) (c + 1) = a (c + 1) + b (c + 1) : \C : c + 1 \in [c \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+5. \s $a \in \N \p \C \p 1 \times a = a \p$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $1 \in [a \in]$ Ts. \s (1)
+\s
+\s \s
+\s*
+\s $a \in [a \in]$ Ts $\p \C \p 1 \times a = a \p \C \p 1 \times a + 1 = a + 1 \p \times \p 1 \times (a + 1) = a + 1 \p \C \p a + 1 \in [a \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+6. \s $a,b \in \N \p \C \p b a + a = (b + 1) a$. \s
+\s
+\s \s
+\s*
+7. \s $a,b \in \N \p \C \p ab = ba$. \s (Eucl. VII, 16)
+\s
+\s \s
+\s*
+\emph{Dem.} \s $a \in \N \p$ P5 $\p$ P1 $: \C \p a \times 1 = a = 1 \times a : \C : 1 \in [b \in]$ Ts. \s (1)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p b \in [b \in]$ Ts $: \C : ab = ba : \C : ab + a = ba + a \p$ P1 $\p $P6$ : \C : a (b + 1) = (b + 1) a : \C : b + 1 \in [b \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+8. \s $a,b,c \in \N \p \C \p a (b + c) = ab + ac$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P4 $\p$ P7 $: \C \p$ Theor. \s
+\s
+\s \s
+\s*
+9. \s $a,b,c \in \N \p a = b : \C : ac = bc$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $a,b \in \N \p a = b :: \C :: 1 \in [c \in]$ Ts $\3p c \in [c \in]$ Ts $\p \C : ac = bc \p a = b : \C : ac + a = bc + b : \C : a (c + 1) = b (c + 1) : \C : c + 1 \in [c \in]$ Ts $:: \C : c \in \N \p \C \p$ Ts. \s
+\s
+\s \s
+\s*
+10. \s $a,b,c \in \N : a \smaller b : \C \p (b-a)c = bc - ac$. \s (Eucl. VII, 7)
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C : b - a \in \N \p (b-a) + a = b : \C : (b-a)c + ac=bc : \C : (b-a)c = bc-ac$. \s
+\s
+\s \s
+\s*
+11. \s $a,b,c \in \N \p a \smaller b : \C : ac \smaller bc$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp $\p \C : b - a \in \N \p$ P3 $: \C : (b-a) c \in \N \p$ P10 $: \C : bc - ac \in \N : \C$ Thesis. \s
+\s
+\s \s
+\s*
+12. \s $a,b,c \in \N \p \C \3p a \smaller b \p = \p ac \smaller bc : a = b \p = \p ac = bc : a \larger b \p = \p ac \larger bc$. \s
+\s
+\s \s
+\s*
+13. \s $a,b,a',b' \in \N \p a \smaller a' \p b \smaller b' : \C : ab \smaller a'b'$. \s
+\s
+\s \s
+\s*
+14. \s $a,b \in \N : \C \p ab \p \larger \cup = \p a$. \s
+\s
+\s \s
+\s*
+15. \s $a,b,c \in \N \p \C \p a(bc)=abc$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 9 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 9
+
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+\emph{Dem.} \s $a,b \in \N \p$ P1 $: \C : 1 \in [c \in]$ Ts. \s (1)
+\s
+\s \s
+\s*
+\s $a,b,c \in \N \p c \in [c \in]$ Ts $: \C : a(bc) = abc : \C : a(bc) + ab = abc + ab : \C : a (bc + b) = ab (c+ 1) : \C : a (b (c +1)) = ab (c + 1) : \C : c + 1 \in [c \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S5. Powers}
+\vspace{1em}
+\mediumtoggler{\S5. De potestatibus.}
+\s
+\vspace{1em}
+\mediumtoggler{\S5. Powers.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+1. \s $a \in \N \p \C \p a^1 = a$. \s
+\s
+\s \s
+\s*
+2. \s $a,b \in \N \p \C \p a^{b+1} = a^{b} a$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+3. \s $a,b \in \N \p \C \p a^{b} \in N$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $a \in \N \p$ P1 $: \C \p 1 \in [b \in]$ Ts. \s (1)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p b \in [b \in]$ Ts $: \C : a^b \in \N \p \S4 $P3$ : \C : a^b a \in \N \p$ P1$: \C : a^{b+1} \in \N : \C : b + 1 \in [b \in]$ Ts. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p.$ Theor. \s
+\s
+\s \s
+\s*
+4. \s $a \in \N \p \C \p 1^{a} = 1$. \s
+\s
+\s \s
+\s*
+5. \s $a,b,c \in \N \p \C \p a^{b + c} = a^b a^c$. \s
+\s
+\s \s
+\s*
+6. \s $a,b,c \in \N \p \C \p (ab)^c = a^c b^c$. \s
+\s
+\s \s
+\s*
+7. \s $a,b,c \in \N \p \C \p (a^b)^c = a^{bc}$. \s
+\s
+\s \s
+\s*
+8. \s $a,b,c \in \N \p \C \3p a \smaller b \p = \p a^c \smaller b^c : a = b \p = \p a^c = b^c : a \larger b \p = \p a^c \larger b^c$. \s
+\s
+\s \s
+\s*
+9. \s $a,b,c \in \N \p a \larger 1 \p \C \3p b \smaller c \p = \p a^b \smaller a^c : b = c \p = \p a^b = a^c : b \larger c \p = \p a^b \larger a^c$.
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S6. Division}
+\vspace{1em}
+\mediumtoggler{\S6. De divisione.}
+\s
+\vspace{1em}
+\mediumtoggler{\S6. Division.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explications}
+\vspace{1em}
+\toggler{Explicationes.}
+\s
+\vspace{1em}
+\toggler{Explications.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.12, 0.06, 0.06, 0.26, 0.12, 0.06, 0.06, 0.26}
+\begin{paracol}{8}
+\centering Signum \s \raggedright $/$ \s \centering legatur \s \raggedright \emph{divisus per.}
+\s
+\centering The sign \s \raggedright $/$ \s \centering is read \s \raggedright \emph{divided by.}
+\s*
+\centering $\smallgg$ \s \raggedright $\D$ \s \centering $\smallgg$ \s \raggedright \emph{dividit}, sive \emph{est divisor.}
+\s
+\centering $\smallgg$ \s \raggedright $\D$ \s \centering $\smallgg$ \s \raggedright \emph{divides}, or \emph{is a divisor of.}
+\s*
+\centering $\smallgg$ \s \raggedright $\mult$ \s \centering $\smallgg$ \s \raggedright \emph{est multiplex.}
+\s
+\centering $\smallgg$ \s \raggedright $\mult$ \s \centering $\smallgg$ \s \raggedright \emph{is a multiple of.}
+\s*
+\centering $\smallgg$ \s \raggedright $\Np$ \s \centering $\smallgg$ \s \raggedright \emph{numerus primus.}
+\s
+\centering $\smallgg$ \s \raggedright $\Np$ \s \centering $\smallgg$ \s \raggedright \emph{prime number.}
+\s*
+\centering $\smallgg$ \s \raggedright $\otherpi$ \s \centering $\smallgg$ \s \raggedright \emph{est primus cum.}
+\s
+\centering $\smallgg$ \s \raggedright $\otherpi$ \s \centering $\smallgg$ \s \raggedright \emph{is prime with.}
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 10 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 10
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+1. \s $a,b \in \N \p \C : b / a = \N [x \in] (xa=b)$. \s
+\s
+\s \s
+\s*
+2. \s $a,b \in \N \p \C : a D b \p = \p b / a \no = \abs$. \s
+\s
+\s \s
+\s*
+3. \s $a,b \in \N \p \C : b \mult a \p = \p a D b$. \s
+\s
+\s \s
+\s*
+4. \s $\Np = \N [x \in] (\such D x \p \such \larger 1 \p \such \smaller x : = \abs)$. \s
+\s
+\s \s
+\s*
+5. \s $a,b \in \N \p \C :: a \pi b \3p = \3p \such D a \p \such D b \p \such \larger 1 : = \abs$. \s
+\s
+\s \s
+\s*
+6. \s $a,b \in \N \p \C \3p \such D (a,b) : = : \such D a \p \cap \p \such D b$. \s
+\s
+\s \s
+\s*
+7. \s $a,b \in \N \p \C \3p \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
+\s
+\s \s
+\s*
+\s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.4, 0.1, 0.4}
+\begin{paracol}{4}
+\raggedright
+\emph{Nota.} \s Haec theoremata ut in substractione demonstrantur.
+\s
+\emph{Note.} \s These theorems are proved as for subtraction.
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+8. \s $a,b,a',b' \in \N \p a = a' \p b = b' : \C \p a / b = a' / b'$. \s
+\s
+\s \s
+\s*
+9. \s $a,b,a',b' \in \N \p a = a' \p b = b' : \C : a D b \p = \p a' D b'$. \s
+\s
+\s \s
+\s*
+10. \s $a,b,c \in \N \p \C : ac = b \p = \p c = b / a$. \s
+\s
+\s \s
+\s*
+11. \s $a,b \in \N \p \C : a D b \p = \p b / a \in N$. \s
+\s
+\s \s
+\s*
+12. \s $a \in \N \p \C \p a / 1 = a$. \s
+\s
+\s \s
+\s*
+13. \s $a \in \N \p \C \p a / a = 1$. \s
+\s
+\s \s
+\s*
+14. \s $a \in \N \p \C \p 1 D a$. \s
+\s
+\s \s
+\s*
+15. \s $a \in \N \p \C \p a D a$. \s
+\s
+\s \s
+\s*
+16. \s $a,b \in \N \p ab / b = a$. \s
+\s
+\s \s
+\s*
+17. \s $a,b \in \N \p a D b : \C \p a (b/a) = b$. \s
+\s
+\s \s
+\s*
+18. \s $a,b,c \in \N \p c D b : \C \p a (b/c) = ab / c$. \s
+\s
+\s \s
+\s*
+19. \s $a,b,c \in \N \p a \mult bc : \C : a / (bc) = a / b / c$. \s
+\s
+\s \s
+\s*
+20. \s $a,b,c \in \N \p a \mult b \p b \mult c : \C \p a / (b/c) = a / b \times c$. \s
+\s
+\s \s
+\s*
+21. \s $a,m,n \in \N \p m \larger n : \C \p a^m / a^n = a^{m-n}$. \s
+\s
+\s \s
+\s*
+22. \s $a,b \in \N \p \C \p a D ab$. \s
+\s
+\s \s
+\s*
+23. \s $a,b,c \in \N \p a D b \p b D c : \C \p a D c$. \s
+\s
+\s \s
+\s*
+24. \s $a,b,c \in \N \p a D b D c : \C \p c / a \mult c / b$. \s
+\s
+\s \s
+\s*
+25. \s $a,b,c \in \N \p c D a \p c D b : \C \p (a + b) / c = a / c + b / c$. \s
+\s
+\s \s
+\s*
+26. \s $a,b,c \in \N \p c D a \p c D b \p a \larger b : \C : (a - b) / c = a / c - b / c$. \s
+\s
+\s \s
+\s*
+27. \s $a,b,c, \in \N \p c D a \p c D b : \C \p c D a + b$. \s
+\s
+\s \s
+\s*
+28. \s $a,b,c \in \N \p c D a \p c D b \p a \larger b : \C \p c D a - b$. \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 11 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 11
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+29. \s $a,b,c,m,n \in \N \p c D a \p c D b : \C \p c D ma + nb$. \s
+\s
+\s \s
+\s*
+30. \s $a,b,c,m,n \in \N \p c D a \p c D b \p ma \larger nb : \C \p c D ma - nb$. \s
+\s
+\s \s
+\s*
+31. \s $a,b \in \N \p a D b : \C : a \p \smaller \cup = \p b$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp . P11 $\p$ P17 $\p$ \S4 P14 $: \C : b / a \in \N \p a (b / a) = b \p a \smaller \cup = a (b / a) : \C \p$ Thesis. \s
+\s
+\s \s
+\s*
+32. \s $a,b \in \N \p a D b \p b D a : \C \p a = b$. \s
+\s
+\s \s
+\s*
+33. \s $a \in \N \p \C \p M \such D a = a$. \s
+\s
+\s \s
+\s*
+34. \s $a,b \in \N \p a > b : \C \p \such  D (a,b) = \such D (b,a - b)$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hyp. P28 $: \C \3p x D a \p x D b : \C : x D b \p x D (a-b)$ \s (1)
+\s
+\s \s
+\s*
+\s Hyp. P27 $: \C \3p x D b \p x D (a-b) : \C : x D b \p x D (b+(a-b)) : \C : x D b \p x D a$. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \C :$ Hyp. $\C \3p x D a \p x D b : = : x D b \p x D(a-b)$. \s (Th.)
+\s
+\s \s
+\s*
+35. \s $a,b \in \N \p \C : M \such D (a,b) \in N$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $1 D a \p 1 D b : \C : \such D (a,b) \no = \abs$. \s (1)
+\s
+\s \s
+\s*
+\s $\such D (a,b) \p \such \larger a : = \abs$. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \S3$ P3 $: \C \p$ Th. \s
+\s
+\s \s
+\s*
+36. \s $a,b \in \N \p \C \p \such D (a,b) = \such D M \such D (a,b).$ \s (Eucl. VII, 2)
+\s
+\s \s
+\s*
+\emph{Dem.} \s $k = \N [c \in]$ (Hp. $a \smaller c \p b \smaller c : \C \p$ Ts.). \s (1)
+\s
+\s \s
+\s*
+\s $a \in \N \p b \in \N \p a \smaller 1 \p b \smaller 1 : = \abs$. \s (2)
+\s
+\s \s
+\s*
+\s $ (1)(2) \p \C \p 1 \in K$. \s (3)
+\s
+\s \s
+\s*
+\s $a,b \in \N \p a \smaller c + 1 \p b \smaller c + 1 : \C \3p a \smaller c \p b \smaller c : \cup : a = c \p b \smaller c : \cup : a \smaller c \p b = c : \cup : a = c \p b = c$. \s (4)
+\s
+\s \s
+\s*
+\s $c \in k \p a,b \in \N \p a < c \p b < c : \C :$ Ts. \s (5)
+\s
+\s \s
+\s*
+\s $c \in k \p a,b \in \N \p a = c \p b \smaller c : \C : c \in k \p b \smaller c /p a - b \smaller c \p \such D (a,b) = \such D (b,a-b) : \C : \such D (b, a-b) = \such D m \such D (b,a-b) : \C : \such D (a,b) = \such D M \such D (a,b) : \C :$ Ts. \s (6)
+\s
+\s \s
+\s*
+\s $(a,b) [b,a] (6) \C \p c \in k \p a,b \in \N \p a \smaller c \p b = c : \C :$ Ts. \s (7)
+\s
+\s \s
+\s*
+\s $c \in k \p a,b \in \N \p a = c \p b = c : \C : \such D (a,b) = \such D c = \such D M \such D c = \such D M \such D (a,b) : \C :$ Ts. \s (8)
+\s
+\s \s
+\s*
+\s $(4)(5)(6)(7)(8) \p \C \p c \in k \p a,b \in \N \p a \smaller c + 1 \p b \smaller c + 1 : \C :$ Ts. \s (9)
+\s
+\s \s
+\s*
+\s $(9) \C \p c \in k \p \C \p (c + 1) \in k$. \s (10)
+\s
+\s \s
+\s*
+\s $(1)(10) \p \C \3p c \in \N \p$ Hp. $a \smaller c \p b \smaller c : \C :$ Ts. \s (11)
+\s
+\s \s
+\s*
+\s $(a + b) [c] (11) \p \C :$ Hp. $ \C \p$ Ts. \s (Th.)
+\s
+\s \s
+\s*
+37. \s $a,b,m \in \N \p \C \p M \such D (am, bm) = m \times M \such D (a,b)$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 12 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 12
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S7. Various theorems}
+\vspace{1em}
+\mediumtoggler{\S7. Theoremata varia.}
+\s
+\vspace{1em}
+\mediumtoggler{\S7. Various theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+1. \s $a,b \in \N \p a^2 + b^2 \mult 7 : \C : a \mult 7 \p b \mult 7$. \s
+\s
+\s \s
+\s*
+2. \s $x \in \N \p \C \p x (x + 1) \mult 2$. \s
+\s
+\s \s
+\s*
+3. \s $x \in \N \p \C \p x (x + 1) (x + 2) \mult 6$. \s
+\s
+\s \s
+\s*
+4. \s $x \in \N \p \C \p x (x + 1) (2x + 1) \mult 6$. \s
+\s
+\s \s
+\s*
+5. \s $x \in \N \p \C : x \p \pi \p x + 1$. \s
+\s
+\s \s
+\s*
+6. \s $x \in \N \p \C : 2x - 1 \p \pi \p 2x + 1$. \s
+\s
+\s \s
+\s*
+7. \s $x \in \N \p \C \p (2x + 1)^2 - 1 \mult 8$. \s
+\s
+\s \s
+\s*
+8. \s $a \in \N \p a \larger 1 : \C \3p \Np \p \such \larger 1 \p \such D a : \no = \abs$. \s (Eucl. VII, 31)
+\s
+\s \s
+\s*
+9. \s $a,b \in \N \3p b^2 \larger a \3p \such D a \p \such \larger 1 \p \such \smaller b : = \abs :: \C \p a \in \Np$. \s
+\s
+\s \s
+\s*
+10. \s $a,b \in \N \p a \in \Np \p a \no D b : \C : a \pi b$. \s (Eucl. VII, 29)
+\s
+\s \s
+\s*
+11. \s $a,b,c \in \N \p a D bc \p a \pi b : \C \p a D c$. \s
+\s
+\s \s
+\s*
+12. \s $a,b \in \N \p m = M \such D (a,b) : \C : a / m \pi \p b / m$. \s
+\s
+\s \s
+\s*
+13. \s $ a \in \Np \p b,c \in \N \p a D b c : \C : a D b \p \cup \p a D c$. \s (Eucl. VII, 30)
+\s
+\s \s
+\s*
+14. \s $a \in \Np \p b,n \in \N : \C : a D b^n \p = \p a D b$. \s (Eucl. IX, 12)
+\s
+\s \s
+\s*
+15. \s $a,b,c \in \N \p a \pi b \p c D a : \C : c \pi b$. \s (Eucl. VII, 23)
+\s
+\s \s
+\s*
+16. \s $ a,b,c \in \N \p \C \3p a \pi b \p a \pi c : = : a \pi bc$. \s (Eucl. VII, 24)
+\s
+\s \s
+\s*
+17. \s $a,b,c \in \N \p b \pi c \p b D a \p c D a : \C \p bc D a$. \s
+\s
+\s \s
+\s*
+18. \s $a,b,c \in \N \ p a \pi b : \C : \such D (ac, b) = \such D (c,b)$. \s
+\s
+\s \s
+\s*
+19. \s $a,b \in \N \p \C \p \mini \such \mult (a,b) \in N$. \s
+\s
+\s \s
+\s*
+20. \s $a,b \in \N \p \C \p \mini \such \mult (a,b) = ab / M \such D (a,b)$. \s (Eucl. VII, 34)
+\s
+\s \s
+\s*
+21. \s $ a,b,c \in \N \p c \mult a \p c \mult b : \C : c \mult \mini \such D (a,b)$. \s (Eucl. VII, 35)
+\s
+\s \s
+\s*
+22. \s $x \in \N \p x < 41 : \C \p 41 - x + x^2 \in \Np$. \s
+\s
+\s \s
+\s*
+23. \s $M \p \Np : = \abs$. \s (Eucl. IX, 20)
+\s
+\s \s
+\s*
+23. \s $n \in \Np \p a \in \N \p a \no \mult n : \C \p a^{n-1} - 1 \mult n$. \s (Fermat)
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S8. Rational numbers}
+\vspace{1em}
+\mediumtoggler{\S8. Numerorum rationes.}
+\s
+\vspace{1em}
+\mediumtoggler{\S8.Rational numbers.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explications}
+\vspace{1em}
+\toggler{Explicationes.}
+\s
+\vspace{1em}
+\toggler{Explications.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Si $p,q \in \N$, tunc $\frac{p}{q}$ legitur \emph{ratio numeri} $p$ \emph{numero} $q$.
+\s
+If $p,q \in \N$, then $\frac{p}{q}$ is read \emph{the ratio of the number} $p$ {to the number} $q$.
+\s*
+Signum $\R$ legitur \emph{duorum numerorum ratio}, et indicat numeros rationales positivos.
+\s
+The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive rational numbers.
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 13 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 13
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+1. \s $m,p,q \in \N \p \C \p m \frac{p}{q} = m p / q$. \s
+\s
+\s \s
+\s*
+2. \s $p,q,p',q' \in \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \3p x \in \N \p x \frac{p}{q}, x \frac{p'}{q'} \in \N : \C_x \p x \frac{p}{q} = x \frac{p'}{q'}$. \s
+\s
+\s \s
+\s*
+3. \s $R = :: [x \in] \3p p, q \in \N \p \frac{p}{q} = x : \no = \abs$. \s
+\s
+\s \s
+\s*
+4. \s $p \in \N \p \C \p \frac{p}{1} = p$. \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+5. \s $p,q,p',q' \in \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \p pq' = p'q$. \s (Eucl. VII, 19)
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. $\frac{p}{q} = \frac{p'}{q'} : \C \3p qq', qq' \frac{p}{q}, qq' \frac{p'}{q'} \in \N \p$ P2 $\3p \C \3p qq' \frac{p}{q} = qq' \frac{p'}{q'} \p qq' \frac{p}{q} = pq' \p qq' \frac{p'}{q'} = p'q \3p \C \3p pq' = p'q$. \s (1)
+\s
+\s \s
+\s*
+\s Hp. $pq' = p'q \3p \C \3p x \in \N \p x \frac{p}{q}, x \frac{p'}{q'} \in \N : \C_x : x p'q' = x p'q : \C : (x \frac{p}{q}) qq' = (x \frac{p'}{q'}) qq' : \C : x \frac{p}{q} = x \frac{p'}{q'}$. \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Th. \s
+\s
+\s \s
+\s*
+6. \s $m,p,q \in \N \p \C \p \frac{p}{q} = \frac{mp}{mq}$. \s (Eucl. VII, 17)
+\s
+\s \s
+\s*
+7. \s $p,q \in \N \p m \in \N \p m D p \p m D q : \C \p \frac{p}{q} = \frac{p/m}{q/m}$. \s
+\s
+\s \s
+\s*
+8. \s $p,q,p',q' \in \N \p p \pi q \p p' \pi q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p = p' \p q =q'$. \s
+\s
+\s \s
+\s*
+9. \s $p,q,p',q' \in \N \p p' \pi q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p' / p = q' / q = M \such D (p,q)$. \s
+\s
+\s \s
+\s*
+10. \s $p,q,p',q' \in \N \p \frac{p}{q} = \frac{p'}{q'} \p p \pi q \p q' \smaller q : = \abs$. \s (Eucl. VII, 21)
+\s
+\s \s
+\s*
+11. \s $p,q,p',q' \in \N : \C : \frac{p}{q} = \frac{p'}{q'} \p = \p \frac{p}{p'} = \frac{q}{q'} \p = \p \frac{q}{p} = \frac{q'}{p'}$. \s (Eucl. VII, 13)
+\s
+\s \s
+\s*
+12. \s $p,q \in \N \p \C :: [m \in] : m \in \N \p m \frac{p}{q} \in \N \3p \no = \abs$. \s
+\s
+\s \s
+\s*
+12'. \s $a \in \R \p \C :: [m \in] : m \in \N \p ma \in \N \3p \no = \abs$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 14 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 14
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+13. \s $p,q,p',q' \in \N \p \C :: [(r,s,l) \in] : r,s,t \in \N \p \frac{p}{q} = \frac{r}{t} \p \frac{p'}{q'} = \frac{s}{t} \3p \no = \abs$. \s
+\s
+\s \s
+\s*
+13'. \s $a,b \in \R \p \C :: [(r,s,t) \in] : r,s,t \in \N \p a = \frac{r}{t} \p b = \frac{s}{t} \3p \no = \abs$. \s
+\s
+\s \s
+\s*
+14. \s $a,b,c \in \R \p \C :: [(m,n,p,q) \in] : m,n,p,q \in \N \p a = \frac{m}{q} \p b = \frac{n}{q} \p c = \frac{p}{q} \3p \no = \abs$. \s
+\s
+\s \s
+\s*
+15. \s $p,q,r \in \N \p a = \frac{p}{r} \p b = \frac{q}{r} : \C : a = b \p = \p p = q$. \s
+\s
+\s \s
+\s*
+16. \s $m \in \N \p a,b \in \R \p a = b \p ma \in \N : \C \p mb \in N$. \s
+\s
+\s \s
+\s*
+17. \s $a,b,c \in \R \p \C \3p a = a$. \s
+\s
+\s \s
+\s*
+\s $\hspace{1.72cm} \C \3p a = b \p = \p b = a$. \s
+\s
+\s \s
+\s*
+\s $\hspace{1.72cm} \C \3p a = b \p b = c : \C \p a = c$. \s
+\s
+\s \s
+\s*
+18. \s $N \C \R$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+19. \s $a,b \in \R \p \C :: a \smaller b \p = \3p x \in \N \p xa, xb \in \N : \C \p xa < xb$. \s
+\s
+\s \s
+\s*
+20. \s $a,b \in \R \p \C : b \larger a \p = \p a \smaller b$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+21. \s $p,q,r \in \N \p a = \frac{p}{r} \p b = \frac{q}{r} : \C : a \smaller b \p = \p p \smaller q$. \s
+\s
+\s \s
+\s*
+22. \s $p,q,p',q' \in \N \p \C : \frac{p}{q} \smaller \frac{p'}{q'} \p = \p pq' \smaller p'q$. \s
+\s
+\s \s
+\s*
+23. \s $p,q,r \in \N \p a = \frac{r}{p} \p b = \frac{r}{q} : \C : a \smaller b \p = \p p > q$. \s
+\s
+\s \s
+\s*
+24. \s $p,q,p',q' \in \N \p \frac{p}{q} \smaller \frac{p'}{q'} : \C \p \frac{p}{q} \smaller \frac{p + p'}{q + q'} \smaller \frac{p'}{q'}$. \s
+\s
+\s \s
+\s*
+25. \s $a \in \R \p \C \3p ? \p \such \larger a : \no = \abs$. \s
+\s
+\s \s
+\s*
+26. \s $a \in \R \p \C \3p \R \p \such \smaller a : \no = \abs$. \s
+\s
+\s \s
+\s*
+27. \s $a,b \in \R \p a \smaller b : \C \3p \R \p \such \larger a \p \such \smaller b : \no = \abs$. \s
+\s
+\s \s
+\s*
+28. \s $a,b \in \R : \C \3p a \smaller b \p a = b : = \abs$. \s
+\s
+\s \s
+\s*
+\s $\hspace{1.5cm} \C \3p a \larger b \p a = b : = \abs$. \s
+\s
+\s \s
+\s*
+\s $\hspace{1.5cm} \C \3p a \smaller b \p a \larger b : = \abs$. \s
+\s
+\s \s
+\s*
+\s $\hspace{1.5cm} \C \3p a \no \smaller b \p a \no = b \p a \no \larger b : = \abs$. \s
+\s
+\s \s
+\s*
+29. \s $a,b,c \in \R : \C \3p a \smaller \cup = b \p b \smaller c : \C : a \smaller c$. \s
+\s
+\s \s
+\s*
+\s $\hspace{1.7cm} \C \3p a \smaller b \p b \smaller \cup = c : \C : a \smaller c$. \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 15 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 15
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+30. \s $a,b \in \R \p \C \p a + b = [c \in] (c \in  \R \3p x \in \N \p x a, x b, x c \in \N : \C_x \p xa + xb = xc)$. \s
+\s
+\s \s
+\s*
+31. \s $a,b \in \R \p \C :: b - a = \3p [x \in] (x \in \R \p a + x = b)$. \s
+\s
+\s \s
+\s*
+32. \s $a,b \in \R \p \C \p ab = [c \in] (c \in \R \3p x \in \N \p xa, (xa)b, xc \in \N : \C_x \p (xa) b = xc)$. \s
+\s
+\s \s
+\s*
+33. \s $a,b \in \R \p \C \p b / a = [x \in] (x \in \R \p ax = b)$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+34. \s $p,q,r \in \N \p \C \frac{p}{r} + \frac{q}{r} = \frac{p + q}{r}$. \s
+\s
+\s \s
+\s*
+35. \s $a,b \in \R \p \C \p a + b \in \R$. \s
+\s
+\s \s
+\s*
+36. \s $p,q,r \in \N \p p \smaller q : \C \p \frac{q}{r} - \frac{p}{r} = \frac{q-p}{r}$. \s
+\s
+\s \s
+\s*
+37. \s $a,b \in \R \p a \smaller b : \C \p b - a \in \R$. \s
+\s
+\s \s
+\s*
+38. \s $p,q,p',q' \in \N \p \C \p \frac{p}{q} \frac{p'}{q'} = \frac{pp'}{qq'}$. \s
+\s
+\s \s
+\s*
+39. \s $a,b \in \R \p \C \p ab \in \R$. \s
+\s
+\s \s
+\s*
+40. \s $p,q,p',q' \in \N \p \C \p \frac{p}{q} / \frac{p'}{q'} = \frac{pq'}{p'q}$. \s
+\s
+\s \s
+\s*
+41. \s $a,b \in \R \p \C \p b / a \in \R$. \s
+\s
+\s \s
+\s*
+42. \s $p,q \in \N \p \C \p \frac{p}{q} = \frac{p}{q}$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S9. The system of rationals. Irrationals}
+\vspace{1em}
+\mediumtoggler{\S9. Rationalum systemata. Irrationales.}
+\s
+\vspace{1em}
+\mediumtoggler{\S9. The system of rationals. Irrationals.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explanation}
+\vspace{1em}
+\toggler{Explicatio.}
+\s
+\vspace{1em}
+\toggler{Explanation.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Si $a \in \K \R$, signum $\T a$ legitur \emph{terminus summus}, vel \emph{limes summus classis} $a$. Supra hoc novum ens relationes ac operationes tantum definimus.
+\s
+If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper limit of the class} $a$. We shall define only a few relations and operations on this new entity.
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+1. \s $a \in \K \R \p x \in \R : \C :: x \smaller \T a \p = \3p a \p \such \larger x : \no = \abs$. \s
+\s
+\s \s
+\s*
+2. \s $a \in \K \R \p x \in \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \in \R \p u \smaller x : \C_x \3p a \p \such \larger u : \no = \abs$. \s
+\s
+\s \s
+\s*
+3. \s $a \in \K \R \p x \in \R : \C \3p x \larger \T a \p = : x -\no \smaller \T a \p x \no = \T a$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 16 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 16
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorem}
+\vspace{1em}
+\toggler{Theorema.}
+\s
+\vspace{1em}
+\toggler{Theorem.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+4. \s $x \in \R \p \C :: x = \3p \T : \R \p \such \smaller x$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Explanation}
+\vspace{1em}
+\toggler{Explicatio.}
+\s
+\vspace{1em}
+\toggler{Explanation.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Signum $\Q$ legitur \emph{quantitas}, numerosque indicat reales positivos, rationales aut irrationales, $0$ et $\infty$ exceptis.
+\s
+The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, rational or irrational, with the exception of $0$ and $\infty$.
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+5. \s $\Q = [x \in] (a \in K \R : a \no = \abs : \R \in \larger \T a \p \min = \abs : \T a = x \3p \no = \abs)$. \s
+\s
+\s \s
+\s*
+6. \s $a,b \in \Q \p \C :: a = b \p = \3p \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
+\s
+\s \s
+\s*
+7. \s $a,b \in \Q \p \C :: a \smaller b \p = \3p \R \p \such \larger a \p \such \smaller b : = \no = \abs$. \s
+\s
+\s \s
+\s*
+8. \s $a,b \in \Q \p \C : b \larger a \p = \p a \smaller b$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+9. \s $a \in \Q \p \C \3p \R \p \such \smaller a : \no = \abs$. \s
+\s
+\s \s
+\s*
+10. \s $a \in \Q \p \C \3p \R \p \such \larger a : \no = \abs$. \s
+\s
+\s \s
+\s*
+11. \s $\R \C \Q$. \s
+\s
+\s \s
+\s*
+\vspace{1em}
+\s Subsistunt quoque propositiones quae a P17, 28, 29 in \S8 obtinentur, si loco $\R$ legatur $\Q$. \s
+\s
+\vspace{1em}
+\s The propositions obtained from P17, 28, 29 in \S8 also hold, by reading $\Q$ for $\R$. \s
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+12. \s $a,b \in Q \p \C \p a + b = T [z \in] ([(x,y) \in] : x,y \in \R \p x \smaller a \p y \smaller b \p x + y = z \3p \no = \abs)$. \s
+\s
+\s \s
+\s*
+13. \s $a,b \in Q \p \C \p ab = T [z \in] ([x,y) \in] : x,y \in \R \p x \smaller a \p y \smaller b \p xy = z \3p \no = \abs)$. \s
+\s
+\s \s
+\s*
+\vspace{1em}
+\s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \in \R$. \s
+\s
+\vspace{1em}
+\s In order for these definitions to have meaning, it must be proved that propositions 12 and 13 hold, if $a,b \in \R$. \s
+\s*
+\vspace{1em}
+\s Substractionem et divisionem ut operationes inversas additiones et multiplicationis definire licet, illarumque proprietas demonstrare. \s
+\s
+\vspace{1em}
+\s Subtraction and division could be defined as the inverse operations to addition and multiplication, and their properties could be proved. \s
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{section}{\S10. System of quantities}
+\vspace{1em}
+\mediumtoggler{\S10. Quantitatum systemata.}
+\s
+\vspace{1em}
+\mediumtoggler{\S10. System of quantities.}
+\s*
+\phantomsection
+\addcontentsline{toc}{subsection}{Explanations}
+\vspace{1em}
+\toggler{Explicationes.}
+\s
+\vspace{1em}
+\toggler{Explanations.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\raggedright
+Si $a \in \K \Q$, signa $\I a, \E a, \Lfat a$ leguntur: \emph{interior, exterior, limes classis} $a$.
+\s
+If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exterior, limit of the class} $a$.
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 17 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 17
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Definitions}
+\vspace{1em}
+\toggler{Definitiones.}
+\s
+\vspace{1em}
+\toggler{Definitions.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+1. \s $a \in \K \Q \p \C \I a = \Q [x \in] ([u,v) \in] :: u,v \in \Q \3p u \smaller x \smaller v \3p \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
+\s
+\s \s
+\s*
+2. \s $a \in \K \Q \p \C \p \E a = \I (\no a)$. \s
+\s
+\s \s
+\s*
+3. \s $a \in \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$. \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.5, 0.5}
+\begin{paracol}{2}
+\centering
+\phantomsection
+\addcontentsline{toc}{subsection}{Theorems}
+\vspace{1em}
+\toggler{Theoremata.}
+\s
+\vspace{1em}
+\toggler{Theorems.}
+\end{paracol}
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+4. \s $a \in \K \Q \p x,u,v \in Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C a) : \C \p x \in \I a$. \s
+\s
+\s \s
+\s*
+5. \s $a \in \K \Q \p x \in \I a : \C : [(u,v) \in] (u,v \in \Q \3p u \smaller x \smaller v \3p \such \larger u \p \such \smaller v : \C : a) \no = \abs$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P1 $=$ (P4)(P5). \s
+\s
+\s \s
+\s*
+6. \s $a \in \K \Q \p u,v \in \Q \p (\such \larger u \p \such \smaller v : \C a) \3p \C \3p \such \larger u \p \such \smaller v : \C \I a$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P6 $=$ P4. \s
+\s
+\s \s
+\s*
+7. \s $a \in \K \Q \p \C \p \I a \C a$. \s
+\s
+\s \s
+\s*
+8. \s $ a \in \K \Q \p \C \p \II a = \I a$. \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. $(\I a) [a]$ P7 $: \C \p \II a \C \I a$ \s (1)
+\s
+\s \s
+\s*
+\s Hp. $x,u,v \in \Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C a) \p$ P6 $: \C : u,v \in \Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C \I a)$ \s (2)
+\s
+\s \s
+\s*
+\s Hp. $x \in \I a \p (2) : \C : x \in \II a$ \s (3)
+\s
+\s \s
+\s*
+\s Hp. $(3) : \C : \I a \II a$ \s (4)
+\s
+\s \s
+\s*
+\s Hp. $(1) \p (4) : \C :$ Ts. \s (Theor.)
+\s
+\s \s
+\s*
+9. \s $a,b \in \K \Q \p a \C b : \C \p \I a \C \I b$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. $x,u,v \in \Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C a) : \C \3p \such \larger u \p \such \smaller v : \C b$ \s (1)
+\s
+\s \s
+\s*
+\s Hp. $x \in \I a : \C : x \in \I b$ \s (Theor.)
+\s
+\s \s
+\s*
+10. \s $a,b \in \K \Q : \C : \I (ab) \C \I a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $(ab, a) [a,b]$ P9 $\p = \p$ P10 \s
+\s
+\s \s
+\s*
+11. \s $a,b \in \K \Q \p \C \p \I (ab) \C (\I a) (\I b)$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P11 $= :$ P10 $\p \cap \p (b,a) [a,b]$ P10 \s
+\s
+\s \s
+\s*
+12. \s $a,b \in \K \Q \p \C \p \I a \C \I (a \cup b)$ \s
+\s
+\s \s
+\s*
+13. \s $a,b \in \K \Q \p \C \p \I a \cup \I b \C \I (a \cup b)$ \s
+\s
+\s \s
+\s*
+14. \s $a,b \in \K \Q \p \C \p \I (ab) = (\I a)(\I b)$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P11 $: \C \p \I (ab) \C (\I a)(\I b)$ \s (1)
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 18 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 18
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+\s Hp. $x \in \Q \p u,v \in \Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C a) \p u',v' \in \Q \p u' \smaller x \smaller v' \p (\such \larger u' \p \such \smaller v' : \C b) \p u'' = M (u \cup u') \p v'' = \mini (v,v') : \C : u'', v'' \in Q \p u '' \smaller x \smaller v'' \p (\such \larger u'' \p \such \larger v'' : \C : ab)$ \s (2)
+\s
+\s \s
+\s*
+\s Hp. $x \in \I a \p x \in \I b \p (2) : \C \p x \in \I (ab)$ \s (3)
+\s
+\s \s
+\s*
+\s Hp. $(3) : \C : (\I a)(\I b) \C \I (ab)$ \s (4)
+\s
+\s \s
+\s*
+\s Hp. $(1) \p (4) : \C \p$ Ts. \s
+\s
+\s \s
+\s*
+15. \s $a \in \K \Q \p \C \p \E a \C - a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P15 $= (\no a) [a]$ P7 \s
+\s
+\s \s
+\s*
+16. \s $a \in \K \Q \p \C \3p \I a \p \E a : = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P7 $.$ P15 $: \C \3p \I a \p \E a : \C : a \no a : = \abs$ \s
+\s
+\s \s
+\s*
+17. \s $a \in \K \Q \p \C \p \I \E a = \E a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P17 $= (\no a) [a]$ P8 \s
+\s
+\s \s
+\s*
+18. \s $a,b \in \K \Q \p b \C a : \C \p \E a \C \E b$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P18 $= (\no a, \no b) [a,b]$ P9 \s
+\s
+\s \s
+\s*
+19. \s $a,b \in \K \Q \p \C : \E a \cup \E b \p \C \E (ab)$ \s
+\s
+\s \s
+\s*
+20. \s $a,b \in \K \Q \p \C \p \E (a \cup b) = (\E a) (\E b)$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P20 $= (\no a, \no b) [a,b]$ P14 \s
+\s
+\s \s
+\s*
+21. \s $a \in \K \Q \p \C \p \Lfat (\no a) = \Lfat a$ \s
+\s
+\s \s
+\s*
+22. \s $a \in \K \Q \p \C \3p \I a \p \Lfat a : = \abs$ \s
+\s
+\s \s
+\s*
+\s $\hspace{1.68cm} \C \3p \E a \p \Lfat a : = \abs$ \s
+\s
+\s \s
+\s* 
+\s $\hspace{1.68cm} \C \3p \no \I a \p \no \E a \p \no \Lfat a : = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P22 $=$ P3 \s
+\s
+\s \s
+\s*
+23. \s $a \in \K \Q \p \C : a \C \p \I a \cup \Lfat a$ \s
+\s
+\s \s
+\s*
+24. \s $a \in \K \Q \p \C \p \I (a \Lfat a) = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P14 $\p$ P7 $\p$ P22 $: \C : \I (a \Lfat a) \p = \p \I a \I \Lfat a \p \C \p \I a \Lfat a \p = \p \abs$ \s
+\s
+\s \s
+\s*
+25. \s $a,b \in \K \Q \p a \C b : \C : \Lfat a \p \C \p \I b \cup \Lfat b$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P18 $: \C : \E b \C \E a : \C : \I a \cup \Lfat a \p \C \p \I b \cup \Lfat b : \C \p$ Ts. \s
+\s
+\s \s
+\s*
+26. \s $a,b \in \K \Q \p \C : \Lfat (ab) \C \p \I a \Lfat b \cup \I b \Lfat a \cup \Lfat a \Lfat b$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. $\C : ab \C a \p ab \C b \p$ P25 $: \C : \Lfat (ab) \C \I a \cup \Lfat a \p \Lfat (ab) \C \I b \cup \Lfat b : \C : \Lfat (ab) \C (\I a \cup \Lfat a) (\I b \cup \Lfat b) \p \Lfat (ab) (\I a) (\I b) = \Lfat (ab) \I (ab) = \abs : \C :$ Ts. \s
+\s
+\s \s
+\s*
+26' \s $a,b \in \K \Q \p \C \p \Lfat (ab) \C \Lfat a \cup \Lfat b$ \s
+\s
+\s \s
+\s*
+27. \s $a,b \in \K \Q \p \C : \Lfat (a \cup b) = \Lfat a \E b \cup \Lfat b \E a \cup \Lfat a \Lfat b $ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P27 $= (\no a, \no b) [a,b]$ P26 \s
+\s
+\s \s
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 19 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 19
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+27'. \s $a,b \in \K \Q \p \C : \Lfat (a \cup b) \C \Lfat a \cup \Lfat b$ \s
+\s
+\s \s
+\s*
+28. \s $a \in \K \Q \p \C \p \Lfat \I a \C \Lfat a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P7 $: \C : \I a \C a \p$ P25 $: \C : \Lfat \I a \C \I a \cup \Lfat a$ \s (1)
+\s
+\s \s
+\s*
+\s Hp. P8 $\p$ P22 $: \C \p \Lfat \I a \I a = \Lfat \I a \II a = \abs$ \s (2)
+\s
+\s \s
+\s*
+\s $(1)(2) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+28'. \s $a \in \K \Q \p \C \Lfat \E a \C \Lfat a$ \s
+\s
+\s \s
+\s*
+29. \s $a \in \K \Q \p \C \p \LfatLfat a \C \Lfat \I a \cup \Lfat \E a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. $÷C : \LfatLfat a = \Lfat (\I a \cup \E a) \p$ P27' $: \C \p$ Ts. \s
+\s
+\s \s
+\s*
+29'. \s $a \in \K \Q \p \C \p \LfatLfat a \C \Lfat a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P29 $\p$ P28 $\p$ P28' $: \C \p$ Theor. \s
+\s
+\s \s
+\s*
+30. \s $a \in \K \Q \p \C \p \Lfat a = \I\Lfat a \cup \LfatLfat a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P23 $: \C \p \Lfat a \C \I\Lfat a \cup \LfatLfat a$ \s (1)
+\s
+\s \s
+\s*
+\s Hp. P7 $: \C \p \I \Lfat a \C \Lfat a$ \s (2)
+\s
+\s \s
+\s*
+\s Hp. P29' $: \C \p \LfatLfat a \C \Lfat a$ \s (3)
+\s
+\s \s
+\s*
+\s $(1)(2)(3) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+31. \s $a \in \K \Q \p \C \p \Lfat \I \Lfat a \C \LfatLfat a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P31 $= (\Lfat a) [a]$ P28 \s
+\s
+\s \s
+\s*
+32. \s $a \in \K \Q \p \C \p \I \LfatLfat a = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P29' $: \C : \LfatLfat a = \Lfat a \LfatLfat a \p (\Lfat a) [a]$ P24 $: \C$ Ts. \s
+\s
+\s \s
+\s*
+33. \s $a \in \K \Q \p \C : \I\Lfat\I\Lfat a = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P31 $\p$ P32 $: \C \p P33$ \s
+\s
+\s \s
+\s*
+34. \s $a \in \K \Q \p \C \p \LfatLfat\Lfat a = \LfatLfat a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s $(\Lfat a) [a]$ P30 $/p$ P32 $: \C \p$ Theor. \s
+\s
+\s \s
+\s*
+35. \s $a,b \in \K \Q \p \C \p \I a \Lfat b \C \Lfat (ab)$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P14 $: \C \p \I a \Lfat b \I (ab) = \I a \I b \Lfat b = \abs$ \s (1)
+\s
+\s \s (1)
+\s*
+\s Hp. P2 $\p$ P14 $: \C \p \I a \Lfat b \E (ab) = \I a \Lfat b \I (\no a \cup \no b) = \I (a \no b) \Lfat b = \I a \E b \Lfat b = \abs$ \s (2)
+\s
+\s \s (2)
+\s*
+\s $(1)(2) \C$ Theor. \s
+\s
+\s \s
+\s*
+36. \s $a,b \in \K \Q \p \C \p \I a \Lfat b \cup \I b \Lfat a \C \Lfat ab$. \s (Vide P26)
+\s
+\s \s (Cf. p. 26)
+\s*
+\emph{Dem.} \s P36 $= :$ P35 $\p (b,a) [a,b]$ P35 \s
+\s
+\s \s
+\s*
+37. \s $a,b \in \K \Q \p \C \p \E a \Lfat b \cup \E b \Lfat a \cup \Lfat (a \cup b)$. \s (Vide P27)
+\s
+\s \s (Cf. p. 27)
+\s*
+\emph{Dem.} \s P37 $= (\no a, \no b)[a,b]$ P36 \s
+\s
+\s \s
+\s*
+38. \s $a,b \in \K \Q \p \C \p \I (a \cup b) \C \I a \cup \I b \cup \Lfat a \Lfat b$ \s (Vide P13)
+\s
+\s \s (Cf. p. 13)
+\s*
+\emph{Dem.} \s Hp. $\C \p \I (a \cup b) \C (\I a \cup \Lfat a \cup \E a) (\I b \cup \Lfat b \cup \E b)$ \s (1)
+\s
+\s \s  (1)
+\s*
+\s Hp. P20 $\p$ P16 $: \C \p \I (a \cup b) \E a \E b = \I (a \cup b) \E (a \cup b) = \abs$ \s (2)
+\s
+\s \s (2)
+\end{paracol}
+
+\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 20 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 20
+
+\vspace{1em}
+\columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
+\begin{paracol}{6}
+\raggedright
+\s Hp. P37$: \C : \I (a \cup b) (\E a \Lfat b \cup \E b \Lfat a) \p \C \p \I (a \cup b) \Lfat (a \cup b) \p = \abs$ \s (3)
+\s
+\s \s (3)
+\s*
+\s $(1)(2)(3) \p \C \p$ Theor. \s
+\s
+\s \s
+\s*
+38'. \s $a,b \in \K \Q \p \C \p \E (ab) \C \E a \cup \E b \cup \Lfat a \Lfat b$ \s (Vide P19)
+\s
+\s \s (Cf. p. 19)
+\s*
+39. \s $a \in \K \Q \p \C \p \I\Lfat a \Lfat\I a = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P36 $: \C : \I\Lfat a \Lfat\I a \C \Lfat (\Lfat a \I a) = \abs$ \s
+\s
+\s \s
+\s*
+40. \s $a \in \K \Q \p \C \p \Lfat \I a \C \LfatLfat a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P28 $\p$ P30 $\p$ P39 $: \C$ Theor. \s
+\s
+\s \s
+\s*
+40'. \s $a \in \K \Q \p \C \p \Lfat \E a \C \LfatLfat a$ \s
+\s
+\s \s
+\s*
+41. \s $a \in \K \Q \p \C \LfatLfat a = \Lfat\I a \cup \Lfat\E a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P29 $\p$ P40 $\p$ P40' $: \C \p$ Theor. \s
+\s
+\s \s
+\s*
+42. \s $a \in \K \Q \p \C \p \I\Lfat\I a = \abs$ \s
+\s
+\s \s
+\s*
+\s $\hspace{1.68cm} \C \p \I\Lfat\E a = \abs$ \s
+\s
+\s \s
+\s*
+\s $\hspace{1.68cm} \C \p \LfatLfat\I a = \Lfat\I a$ \s
+\s
+\s \s
+\s*
+\s $\hspace{1.68cm} \C \p \LfatLfat\E a = \Lfat\E a$ \s
+\s
+\s \s
+\s*
+43. \s $a,b \in \K \Q \p \C \p \I (\I a \cup \I b) = \I a \cup \I b$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P7 $: \C \p \I (\I a \cup \I b) \C \I a \cup \I b$ \s (1)
+\s
+\s \s (1)
+\s*
+\s Hp. P8 $\p$ P13 $: \C : \I a \cup \I b \p = \p \II a \cup \II b \p \C \p \I (\I a \cup \I b)$ \s (2)
+\s
+\s \s (2)
+\s*
+\s $(1)(2) \C$ Theor. \s
+\s
+\s \s
+\s*
+44. \s $a,b \in \K \Q \p \C \p \I (\LfatLfat a \cup \LfatLfat b) = \abs$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s Hp. P38 $\p$ P32 $\p$ P34 $: \C \p \I (\LfatLfat a \cup \LfatLfat b) \C \LfatLfat a \LfatLfat b \C \LfatLfat a$ \s (1)
+\s
+\s \s (1)
+\s*
+\s Hp. $(1) \p$ P8 $: \C \p \I (\LfatLfat a \cup \LfatLfat b) \cup \I \LfatLfat a = \abs$ \s
+\s
+\s \s
+\s*
+45. \s $a \in \K \Q \p \C \p \I (\I a \cup \E a) = \I a \cup \E a$ \s
+\s
+\s \s
+\s*
+\emph{Dem.} \s P8 $\p$ P17 $\p (\no a) [b]$ P43 $: \C \p$ Theor. \s
+\s
+\s \s
+\s*
+45'. \s $a \in \K \Q \p \C \p \E\Lfat a = \I a \cup \E a$ \s
+\s
+\s \s
+\s*
+46. \s $a \in \K \Q \p \C \p \E\I a = \no (\I a \cup \Lfat\I a)$ \s
+\s
+\s \s
+\s*
+46'. \s $a \in \K \Q \p \C \p \EE a = \no (\E a \cup \Lfat\E a)$ \s
+\s
+46'. \s \s
+\end{paracol}
+
+\vspace{1em}
+\columnratio{1} \begin{paracol}{1} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % end of page-numbering
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Footnotes}
+\vspace{1em}
+\metatoggler{\textbf{Footnotes}}
+\theendnotes
+\end{document}

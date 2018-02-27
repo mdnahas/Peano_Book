@@ -1,0 +1,10 @@
+# Emacs files
+\#*\#
+*~
+
+# LaTeX output
+*.dvi
+*.aux
+*.ent
+*.log
+*.out

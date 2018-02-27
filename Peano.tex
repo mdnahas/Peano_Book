@@ -112,9 +112,16 @@
 \newtcbox{\largetoggler}{colback=grey,colframe=grey_edge, left=5cm, right=5cm}
 
 
+% Define commands for document structure
+%
+\newcommand{\peanopage}[1]{\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s #1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol}}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 \everypar{\hangindent0.5cm}
@@ -125,7 +132,7 @@ I. Grattan-Guiness (ed.), \emph{Landmark Writings in Western Mathematics 1640-19
 I would like to thank Mauro Allegranzo and acknowledge his support of this work and his various comments during its creation.} is the only (to my knowledge) side-by-side Latin-English translation of the Latin original. The mathematical notation (in the English, right, column) got updated to currently canonically-used or easy-to-decrypt symbols in the international and/or English mathematical community; which is also a feature currently unseen in any reprint. In the middle of each dotted horizontal line is the number of the page below in the original Latin edition of 1889. Parts irrelevant for the mathematical-content and/or current notation got greyed.
 \vspace{1em}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s I \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number I
+\peanopage{I} % page-number I
 
 \vspace{1em}
 \columnratio{0.5, 0.5} \begin{paracol}{2} \centering
@@ -197,7 +204,7 @@ Via del Corse, 216-217. \s Via Oerretani, 8.
 \na{1889}
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s II \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number II
+\peanopage{II} % page-number II
 
 \vspace{1em}
 \columnratio{0.5, 0.5}
@@ -215,8 +222,7 @@ Augustae Taurinorum - Typis Vincentii Bona.
 \end{paracol}
 
 \vspace{1em}
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s III \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm}
-\end{paracol} % page-number III
+\peanopage{III} % page-number III
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -254,7 +260,7 @@ Ex arithmeticae signis quae caeteris, una cum logicae signis exprimere licet, id
 \s Those arithmetical signs which may be expressed by using others along with signs of logic represent the ideas we can define. Thus I have defined every sign, if you except the four which are contained in the explanations of \S 1. If, as I believe, these cannot be reduced further, then the ideas expressed by them may not be defined by ideas already supposed to be known.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s IV \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number IV
+\peanopage{IV} % page-number IV
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -316,7 +322,7 @@ Cf: \\
 \quad Mc.Coll., `The calculus of equivalent statements,' \emph{Proc. London Math. Soc.}, 9 (1878), 9-20; 10 (1878), 16-28.}
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s V \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number V
+\peanopage{V} % page-number V
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -337,7 +343,7 @@ Hic meus libellus ut novae methodi specimen habendus est. Hisce notationibus inn
 My booklet should be taken as a sample of this new method. With these notations we can state and prove innumerable other propositions, such as those which pertain to rationals and irrationals. But in order to treat other theories, it is necessary to adopt new signs to indicate new entities. I believe, however, that with only these signs of logic the propositions of any science can be expressed, so long as the signs which represent the entities of the science are added.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s VI \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number VI
+\peanopage{VI} % page-number VI
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -473,7 +479,7 @@ $-<$ \s non est minor \s
 \s \scriptsize{is the greatest divisor} \s \normalsize is the greatest divisor \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s VII \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number VII
+\peanopage{VII} % page-number VII
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -548,7 +554,7 @@ Signum $\cap$ legitur \emph{et}. Sint $a, b$ propositiones; tunc $a \cap b$ est 
 The sign $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a,b$.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s VIII \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number VIII
+\peanopage{VIII} % page-number VIII
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -643,7 +649,7 @@ Let $a,b,c,...$ be propositions. We have:
 13. \hspace{0.67cm} $(a \wedge (b \wedge c))=((a \wedge b) \wedge c)=(a \wedge b \wedge c)$
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s IX \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number IX
+\peanopage{IX} % page-number IX
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -784,7 +790,7 @@ Let $a,b,c,...$ be propositions. We have:
 43. \hspace{0.67cm} $[a \rightarrow (b=c)]=[(a \wedge b)=(a \wedge c)]$
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s X \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number X
+\peanopage{X} % page-number X
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -888,7 +894,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \quad Let $A, B$ be classes. Then $A \cap B$, or $A \wedge B$, is the class composed of individuals
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XI \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XI
+\peanopage{XI} % page-number XI
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1062,7 +1068,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XIII \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XIII
+\peanopage{XIII} % page-number XIII
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1147,7 +1153,7 @@ Let $\upvarphi$ be a function presign in the class $S$. Then $[\upvarphi] y$ den
 \emph{Def}. \hspace{0.25cm}
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XIV \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XIV
+\peanopage{XIV} % page-number XIV
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1222,7 +1228,7 @@ Sit rursum $\upvarphi$ functionis praesignum in classi $s$, sitque $k$ classis
 Let $\upvarphi$ again be a function presign in a class $S$ and let $C$ be a class
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XV \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XV
+\peanopage{XV} % page-number XV
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1311,7 +1317,7 @@ Funcitones $\varphi \varphi, \varphi \varphi \varphi,...$ \emph{iteraiae} vocant
 The functions $\varphi \varphi, \varphi \varphi \varphi,...$ are said to be \emph{iterated} and are generally denoted by the signs $\varphi^2, \varphi^3,...$ as powers of the operation $\varphi$.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s XVI \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number XVI
+\peanopage{XVI} % page-number XVI
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1376,7 +1382,7 @@ Formulae quae in una linea non continentur, in altera linea, nullo interposito s
 Formulas that do not fit on one line are continued on the next line without any intervening sign.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 1
+\peanopage{1} % page-number 1
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1499,7 +1505,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 ...
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 2 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 2
+\peanopage{2} % page-number 2
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1649,7 +1655,7 @@ From this definition, and the preceding, we deduce that:
 \hspace{1.4cm} $a \in \N \p \C \3p a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 3 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 3
+\peanopage{3} % page-number 3
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -1752,7 +1758,7 @@ From this definition, and the preceding, we deduce that:
 ... \s ... \s ...
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 4 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 4
+\peanopage{4} % page-number 4
 
 \vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
@@ -1890,7 +1896,7 @@ From this definition, and the preceding, we deduce that:
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 5 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 5
+\peanopage{5} % page-number 5
 
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
@@ -2008,7 +2014,7 @@ From this definition, and the preceding, we deduce that:
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 6 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 6
+\peanopage{6} % page-number 6
 
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
@@ -2135,7 +2141,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 2. \s $a \in K \N \p \C : \mini a = [x \in] (x \in a \3p a \p \in \smaller x : = \abs$. \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 7 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 7
+\peanopage{7} % page-number 7
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -2264,7 +2270,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 8 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 8
+\peanopage{8} % page-number 8
 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
@@ -2374,7 +2380,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 9 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 9
+\peanopage{9} % page-number 9
 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
@@ -2524,7 +2530,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering $\smallgg$ \s \raggedright $\otherpi$ \s \centering $\smallgg$ \s \raggedright \emph{is prime with.}
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 10 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 10
+\peanopage{10} % page-number 10
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -2683,7 +2689,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 28. \s $a,b,c \in \N \p c D a \p c D b \p a \larger b : \C \p c D a - b$. \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 11 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 11
+\peanopage{11} % page-number 11
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -2802,7 +2808,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 12 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 12
+\peanopage{12} % page-number 12
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -2949,7 +2955,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \end{paracol}
 
 \vspace{1em}
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 13 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 13
+\peanopage{13} % page-number 13
 
 \vspace{1em}
 \columnratio{0.5, 0.5}
@@ -3048,7 +3054,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 14 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 14
+\peanopage{14} % page-number 14
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3183,7 +3189,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s $\hspace{1.7cm} \C \3p a \smaller b \p b \smaller \cup = c : \C : a \smaller c$. \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 15 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 15
+\peanopage{15} % page-number 15
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -3330,7 +3336,7 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 16 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 16
+\peanopage{16} % page-number 16
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -3511,7 +3517,7 @@ Si $a \in \K \Q$, signa $\I a, \E a, \Lfat a$ leguntur: \emph{interior, exterior
 If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exterior, limit of the class} $a$.
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 17 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 17
+\peanopage{17} % page-number 17
 
 \columnratio{0.5, 0.5}
 \begin{paracol}{2}
@@ -3651,7 +3657,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 18 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 18
+\peanopage{18} % page-number 18
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3778,7 +3784,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s \s
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 19 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 19
+\peanopage{19} % page-number 19
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3921,7 +3927,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s \s (2)
 \end{paracol}
 
-\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s 20 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % page-number 20
+\peanopage{20} % page-number 20
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}

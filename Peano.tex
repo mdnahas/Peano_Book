@@ -140,17 +140,66 @@
 
 
 % Disable page numbering.
-% With tight margins, the numbers were in weird locations.
-% Probably want to re-enable this later, if we can.
+%   With tight margins, the numbers were in weird locations.
+%   Probably want to re-enable this later, if we can.
 \pagenumbering{gobble}
 
 
-\everypar{\hangindent0.5cm}
+% Title Page
+%
+{ \centering
 
+  \Large Giuseppe Peano's
+
+  \normalsize Classic Mathematical Text
+
+  \Huge Arithmetices principia, nova methodo exposita
+
+  \Large OR
+
+  \Huge ``The Principles of Arithmetic, Presented by a New Method''
+
+  \normalsize presented
+
+  \Large in the original Latin
+
+  \normalsize AND
+
+  \Large in parallel English Translation
+
+  \vspace{1cm}
+
+  \normalsize Original Translation By:
+
+  \Large Vincent Verheyen
+
+  \vspace{1cm}
+
+  \normalsize Contributions By:
+
+  % ADD YOUR NAME HERE
+  \normalsize Michael Nahas
+
+  \vfill
+
+  \normalsize This document was compiled \today.
+
+  \normalsize This document is licensed under Creative Commons Attribution-ShareAlike 4.0
+
+  \normalsize This document is hosted at \url{https://github.com/mdnahas/Peano_Book}
+
+} % end of centering
+\newpage  
+
+  
+
+\everypar{\hangindent0.5cm}
 Below is Giuseppe Peano's \emph{Arithmetices principia} as first published\endnote{H. Kennedy, \emph{Peano. Life and Works of Giuseppe Peano}, San Francisco: Peremptory Publications, 2002, p. 41.}, i.e. as ``\emph{Arithmetices principia, nova methodo exposita}"\endnote{G. Peano, \emph{Arithmetices principia, nova methodo exposita}, Bocca, Torino, 1889.}
 , which appeared translated to English\endnote{These English translations listed are the only ones (to my knowledge) and all the English translations listed in: \\
 I. Grattan-Guiness (ed.), \emph{Landmark Writings in Western Mathematics 1640-1940}, Amsterdam: Elsevier, 2005, p. 614.} in 1967 as ``\emph{The principles of arithmetic, presented by a new method}"\endnote{G. Peano, (1889), ``The principles of arithmetic presented by a new method" in: J. van Heijenoort (ed.), \emph{From Frege to G\"odel. A source book in mathematical logic. 1879-1931}, Cambridge: Harvard University Press, 1967, p. 83-97.}, as well as in 1973\endnote{G. Peano, \emph{Selected works of Giuseppe Peano}, H. Kennedy (ed.), London: George Allen \& Unwin, 1973, p. 101-134.}. This present document\endnote{Written by Vincent Verheyen. Last updated on 17/8/2015. I encourage you to use your reason for good. If you want my support, please contact me via \url{http://vincentverheyen.com/contact}. It is possible to contribute to the flourishing of knowledge, even when you have an intelligence like mine. Thank you and good luck studying. \\
 I would like to thank Mauro Allegranzo and acknowledge his support of this work and his various comments during its creation.} is the only (to my knowledge) side-by-side Latin-English translation of the Latin original. The mathematical notation (in the English, right, column) got updated to currently canonically-used or easy-to-decrypt symbols in the international and/or English mathematical community; which is also a feature currently unseen in any reprint. In the middle of each dotted horizontal line is the number of the page below in the original Latin edition of 1889. Parts irrelevant for the mathematical-content and/or current notation got greyed.
+
+
 \vspace{1em}
 
 \peanoPage{I} % page-number I

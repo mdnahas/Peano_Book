@@ -29,6 +29,7 @@
 %
 \usepackage{calc}
 
+
 % Use Graphicx package to rotate or flip text
 % (eg. \reflectbox{C} --- \rotatebox[origin=c]{180}{V} --- \reflectbox{D})
 %
@@ -42,17 +43,19 @@
 \usepackage{amsmath} % for $\text{cl.}^{\text{mus}}$
 \usepackage{amssymb} % to have standard symbols for special sets --- to have $\nless$
 
-
-\newcommand{\dittoMarkLatin}{\mathop{\sbox0{$\displaystyle\gg$} %
-    \raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{0.6}[0.8]{\copy0}}}\displaylimits} %
+\newcommand{\dittoMarkLatin}{\guillemotright}
 \newcommand{\dittoMarkEnglish}{''}
 
-\newcommand{\C}{\mathop{\sbox0{$\displaystyle$$\reflectbox{C}$} % reflect box mirrors upside-down and left-to-right
+% Peano's reverse C, that is used for implication.
+\newcommand{\C}{\mathop{\sbox0{$\displaystyle$$\reflectbox{C}$} % reflect box mirrors upside-down and left-to-right    
 \raisebox{-\height+\ht0-0.05cm}[\ht0][\dp0]{\scalebox{0.8}[0.8]{\copy0}}}\displaylimits} %
-%
+% Peano's one dot, used to indicate precidence in equations
 \newcommand{\p}{\mathop{\sbox0{$\displaystyle$$.$}
 \raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{1}[1]{\copy0}}}\displaylimits} % creates a "math"-point to have equal spacing
-%
+% Peano's 2 dots is just a colon :, and is used to indicate precidence in equations
+% Peano's 3 dots, used to indicate precidence in equations
+\def\3p{\thinspace \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}\thinspace} % arranging three points in a triangle
+
 
 \newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
 \newcommand{\abs}{\mathop{\rotatebox[origin=c]{180}{V}}}
@@ -78,7 +81,6 @@
 \newcommand{\EE}{\mathop{\thinspace \textbf{E\hspace{0.02cm}E} \thinspace}}
 \newcommand{\LfatLfat}{\mathop{\thinspace \textbf{L\hspace{0.02cm}L} \thinspace}}
 
-\def\3p{\thinspace \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}\thinspace} % arranging three points in a triangle
 
 
 % Use Dashrule package for dashed lines (using \hdashrule)
@@ -89,9 +91,13 @@
 % Use Xcolor package to grey out unimportant text, etc.
 %
 \usepackage{xcolor}
-\newcommand\na[1]{\textcolor{gray}{#1}} % na for not applicable (these pieces of text are not important for mathematical understand when reading the english text)
 
-\newcommand\fn[1]{\textcolor{red}{#1}} % fn for footnote (notations / text which ask for footnote-like attention)
+% na for not applicable
+% (these pieces of text are not important for mathematical
+%  understand when reading the english text)
+\newcommand\na[1]{\textcolor{gray}{#1}} 
+% fn for footnote (notations / text which ask for footnote-like attention)
+\newcommand\fn[1]{\textcolor{red}{#1}} 
 
 \definecolor{blue}{RGB}{89,141,201}
 \definecolor{blue_edge}{RGB}{53,126,189}
@@ -134,6 +140,7 @@
                  \let\LAT\undefined
                  \end{paracol}
                }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 

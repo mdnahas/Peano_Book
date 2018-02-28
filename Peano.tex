@@ -110,16 +110,16 @@
 % Use Tcolorbox package for headers like ``Propositions'', etc.
 %
 \usepackage[most]{tcolorbox}
-\newtcbox{\metatoggler}{colback=blue,colframe=blue_edge, coltext=white}
-\newtcbox{\toggler}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
-\newtcbox{\mediumtoggler}{colback=grey,colframe=grey_edge, left=3cm, right=3cm}
-\newtcbox{\largetoggler}{colback=grey,colframe=grey_edge, left=5cm, right=5cm}
+\newtcbox{\footnoteHeading}{colback=blue,colframe=blue_edge, coltext=white}
+\newtcbox{\peanoHeadingSmall}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
+\newtcbox{\peanoHeadingMedium}{colback=grey,colframe=grey_edge, left=3cm, right=3cm}
+\newtcbox{\peanoHeadingLarge}{colback=grey,colframe=grey_edge, left=5cm, right=5cm}
 
 
 % Define commands for document structure
 %
 % Command for the end of each page of Peano's original book
-\newcommand{\peanopage}[1]{\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s #1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol}}
+\newcommand{\peanoPage}[1]{\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s #1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol}}
 %
 % FANCY LaTeX!  Create translation environment and commands \LAT and \ENG that only work inside it.
 \newenvironment{translateTwoCol}
@@ -153,7 +153,7 @@ I. Grattan-Guiness (ed.), \emph{Landmark Writings in Western Mathematics 1640-19
 I would like to thank Mauro Allegranzo and acknowledge his support of this work and his various comments during its creation.} is the only (to my knowledge) side-by-side Latin-English translation of the Latin original. The mathematical notation (in the English, right, column) got updated to currently canonically-used or easy-to-decrypt symbols in the international and/or English mathematical community; which is also a feature currently unseen in any reprint. In the middle of each dotted horizontal line is the number of the page below in the original Latin edition of 1889. Parts irrelevant for the mathematical-content and/or current notation got greyed.
 \vspace{1em}
 
-\peanopage{I} % page-number I
+\peanoPage{I} % page-number I
 
 \vspace{1em}
 
@@ -227,7 +227,7 @@ Via del Corse, 216-217. \s Via Oerretani, 8.
 \na{1889}
 \end{translateTwoCol}
 
-\peanopage{II} % page-number II
+\peanoPage{II} % page-number II
 
 \vspace{1em}
 \begin{translateTwoCol}
@@ -244,17 +244,17 @@ Augustae Taurinorum - Typis Vincentii Bona.
 \end{translateTwoCol}
 
 \vspace{1em}
-\peanopage{III} % page-number III
+\peanoPage{III} % page-number III
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{Preface}
 \vspace{1em}
-\toggler{Praefatio}
+\peanoHeadingSmall{Praefatio}
 \ENG
 \vspace{1em}
-\toggler{Preface}
+\peanoHeadingSmall{Preface}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -281,7 +281,7 @@ Ex arithmeticae signis quae caeteris, una cum logicae signis exprimere licet, id
 \ENG Those arithmetical signs which may be expressed by using others along with signs of logic represent the ideas we can define. Thus I have defined every sign, if you except the four which are contained in the explanations of \S 1. If, as I believe, these cannot be reduced further, then the ideas expressed by them may not be defined by ideas already supposed to be known.
 \end{translateTwoCol}
 
-\peanopage{IV} % page-number IV
+\peanoPage{IV} % page-number IV
 
 \begin{translateTwoCol}
 Propositiones, quae logicae operationibus a caeteris deducuntur, sunt \emph{theoremata}; quae vero non, \emph{axiomata} vocavi. Axiomata hic sunt novem (\S 1), et signorum, quae definitione carent, proprietates fundamentales exprimunt.
@@ -342,7 +342,7 @@ Cf: \\
 \quad Mc.Coll., `The calculus of equivalent statements,' \emph{Proc. London Math. Soc.}, 9 (1878), 9-20; 10 (1878), 16-28.}
 \end{translateTwoCol}
 
-\peanopage{V} % page-number V
+\peanoPage{V} % page-number V
 
 \begin{translateTwoCol}
 Signum $\epsilon$, quod cum signo \reflectbox{C} confundere non licet, inversionis in logica applicationes, et paucas alias institui conventiones, ut ad exprimendam quamlibet propositionem pervenirem.
@@ -362,17 +362,17 @@ Hic meus libellus ut novae methodi specimen habendus est. Hisce notationibus inn
 My booklet should be taken as a sample of this new method. With these notations we can state and prove innumerable other propositions, such as those which pertain to rationals and irrationals. But in order to treat other theories, it is necessary to adopt new signs to indicate new entities. I believe, however, that with only these signs of logic the propositions of any science can be expressed, so long as the signs which represent the entities of the science are added.
 \end{translateTwoCol}
 
-\peanopage{VI} % page-number VI
+\peanoPage{VI} % page-number VI
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{Table of signs}
 \vspace{1em}
-\toggler{Signorum tabula}
+\peanoHeadingSmall{Signorum tabula}
 \ENG
 \vspace{1em}
-\toggler{Table of signs}
+\peanoHeadingSmall{Table of signs}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -493,17 +493,17 @@ $-<$ \s non est minor \s
 \s \scriptsize{is the greatest divisor} \s \normalsize is the greatest divisor \s
 \end{paracol}
 
-\peanopage{VII} % page-number VII
+\peanoPage{VII} % page-number VII
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{Notations of logic}
 \vspace{1em}
-\largetoggler{Logicae notationes.}
+\peanoHeadingLarge{Logicae notationes.}
 \ENG
 \vspace{1em}
-\largetoggler{Notations of logic.}
+\peanoHeadingLarge{Notations of logic.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -511,10 +511,10 @@ $-<$ \s non est minor \s
 \phantomsection
 \addcontentsline{toc}{section}{I. Punctuation}
 \vspace{1em}
-\toggler{I. De punctuatione.}
+\peanoHeadingSmall{I. De punctuatione.}
 \ENG
 \vspace{1em}
-\toggler{I. Punctuation.}
+\peanoHeadingSmall{I. Punctuation.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -547,10 +547,10 @@ Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd
 \phantomsection
 \addcontentsline{toc}{section}{II. Propositions}
 \vspace{1em}
-\toggler{II. De propositionibus.}
+\peanoHeadingSmall{II. De propositionibus.}
 \ENG
 \vspace{1em}
-\toggler{II. Propositions.}
+\peanoHeadingSmall{II. Propositions.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -563,7 +563,7 @@ Signum $\cap$ legitur \emph{et}. Sint $a, b$ propositiones; tunc $a \cap b$ est 
 The sign $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a,b$.
 \end{translateTwoCol}
 
-\peanopage{VIII} % page-number VIII
+\peanoPage{VIII} % page-number VIII
 
 \begin{translateTwoCol}
 Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propositionis $a$.
@@ -587,10 +587,10 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \phantomsection
 \addcontentsline{toc}{section}{III. Propositions of logic}
 \vspace{1em}
-\toggler{III. Logicae propositiones.}
+\peanoHeadingSmall{III. Logicae propositiones.}
 \ENG
 \vspace{1em}
-\toggler{III. Propositions of logic.}
+\peanoHeadingSmall{III. Propositions of logic.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -655,7 +655,7 @@ Let $a,b,c,...$ be propositions. We have:
 13. \hspace{0.67cm} $(a \wedge (b \wedge c))=((a \wedge b) \wedge c)=(a \wedge b \wedge c)$
 \end{translateTwoCol}
 
-\peanopage{IX} % page-number IX
+\peanoPage{IX} % page-number IX
 
 \begin{translateTwoCol}
 14. \hspace{0.67cm} $aa$ = $a$
@@ -795,7 +795,7 @@ Let $a,b,c,...$ be propositions. We have:
 43. \hspace{0.67cm} $[a \rightarrow (b=c)]=[(a \wedge b)=(a \wedge c)]$
 \end{translateTwoCol}
 
-\peanopage{X} % page-number X
+\peanoPage{X} % page-number X
 
 \begin{translateTwoCol}
 \quad Sit $\alpha$ quoddam relationis signum (ex. gr. $=$, \reflectbox{C}), ita ut $a$ $\alpha$ $b$ sit quaedam propositio. Tunc loco $-$ . $a$ $\alpha$ $b$ scribemus $a$ $-$ $\alpha$ $b$; scilicet:
@@ -852,10 +852,10 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \phantomsection
 \addcontentsline{toc}{section}{IV. Classes}
 \vspace{1em}
-\toggler{IV. De classibus.}
+\peanoHeadingSmall{IV. De classibus.}
 \ENG
 \vspace{1em}
-\toggler{IV. Classes.}
+\peanoHeadingSmall{IV. Classes.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -896,7 +896,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \quad Let $A, B$ be classes. Then $A \cap B$, or $A \wedge B$, is the class composed of individuals
 \end{translateTwoCol}
 
-\peanopage{XI} % page-number XI
+\peanoPage{XI} % page-number XI
 
 \begin{translateTwoCol}
 quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis constituta qui sunt $a$ vel $b$.
@@ -982,10 +982,10 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \phantomsection
 \addcontentsline{toc}{section}{V. The inverse}
 \vspace{1em}
-\toggler{V. De inversione.}
+\peanoHeadingSmall{V. De inversione.}
 \ENG
 \vspace{1em}
-\toggler{V. The inverse.}
+\peanoHeadingSmall{V. The inverse.}
 \raggedright
 \quad \fn{NOTE: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \end{translateTwoCol}
@@ -1064,7 +1064,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
 \end{translateTwoCol}
 
-\peanopage{XIII} % page-number XIII
+\peanoPage{XIII} % page-number XIII
 
 \begin{translateTwoCol}
 quae legitur $x'y',...$ \emph{loco} $x,y,...$ \emph{in} $\alpha$ \emph{substitutis}, formulam indicat quae obtinetur si in $\alpha$ loco $x,y,...$, litterae $x'y',...$ scribantur. Deducitur $(x,y)$ $[x,y]$ $\alpha = \alpha$.
@@ -1077,10 +1077,10 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 \phantomsection
 \addcontentsline{toc}{section}{VI. Functions}
 \vspace{1em}
-\toggler{VI. De functionibus.}
+\peanoHeadingSmall{VI. De functionibus.}
 \ENG
 \vspace{1em}
-\toggler{VI. Functions.}
+\peanoHeadingSmall{VI. Functions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1146,7 +1146,7 @@ Let $\upvarphi$ be a function presign in the class $S$. Then $[\upvarphi] y$ den
 \emph{Def}. \hspace{0.25cm}
 \end{translateTwoCol}
 
-\peanopage{XIV} % page-number XIV
+\peanoPage{XIV} % page-number XIV
 
 \begin{translateTwoCol}
 Classis $[\upvarphi] y$ vel unum vel plura, vel etiam nullum individuum continere potest. Erit:
@@ -1219,7 +1219,7 @@ Sit rursum $\upvarphi$ functionis praesignum in classi $s$, sitque $k$ classis
 Let $\upvarphi$ again be a function presign in a class $S$ and let $C$ be a class
 \end{translateTwoCol}
 
-\peanopage{XV} % page-number XV
+\peanoPage{XV} % page-number XV
 
 \begin{translateTwoCol}
 in $s$ contenta; tunc $\upvarphi k$ classem indicat omnibus $\upvarphi x$ compositam, ubi $x$ sunt entia classis $k$; scilicet
@@ -1307,7 +1307,7 @@ Funcitones $\varphi \varphi, \varphi \varphi \varphi,...$ \emph{iteraiae} vocant
 The functions $\varphi \varphi, \varphi \varphi \varphi,...$ are said to be \emph{iterated} and are generally denoted by the signs $\varphi^2, \varphi^3,...$ as powers of the operation $\varphi$.
 \end{translateTwoCol}
 
-\peanopage{XVI} % page-number XVI
+\peanoPage{XVI} % page-number XVI
 
 \begin{translateTwoCol}
 Si vero $\varphi$ est functionis postsignum, ha faciliori notatione, absque ambiguitate, uti licet:
@@ -1344,10 +1344,10 @@ But we lack the space to present these properties.
 \phantomsection
 \addcontentsline{toc}{section}{Remarks}
 \vspace{1em}
-\toggler{Declarationes.}
+\peanoHeadingSmall{Declarationes.}
 \ENG
 \vspace{1em}
-\toggler{Remarks.}
+\peanoHeadingSmall{Remarks.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1369,33 +1369,33 @@ Formulae quae in una linea non continentur, in altera linea, nullo interposito s
 Formulas that do not fit on one line are continued on the next line without any intervening sign.
 \end{translateTwoCol}
 
-\peanopage{1} % page-number 1
+\peanoPage{1} % page-number 1
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{The principles of arithmetic}
 \vspace{1em}
-\largetoggler{Arithmetices Principia.}
+\peanoHeadingLarge{Arithmetices Principia.}
 \ENG
 \vspace{1em}
-\largetoggler{The Principles of Arithmetic.}
+\peanoHeadingLarge{The Principles of Arithmetic.}
 \LAT
 \phantomsection
 \addcontentsline{toc}{section}{\S1. Numbers and addition}
 \vspace{1em}
-\mediumtoggler{\S1. De numeris et de additione.}
+\peanoHeadingMedium{\S1. De numeris et de additione.}
 \ENG
 \vspace{1em}
-\mediumtoggler{\S1. Numbers and addition.}
+\peanoHeadingMedium{\S1. Numbers and addition.}
 \LAT
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
 \vspace{1em}
-\toggler{\emph{Explicationes.}}
+\peanoHeadingSmall{\emph{Explicationes.}}
 \ENG
 \vspace{1em}
-\toggler{\emph{Explanations.}}
+\peanoHeadingSmall{\emph{Explanations.}}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1424,10 +1424,10 @@ Formulas that do not fit on one line are continued on the next line without any 
 \phantomsection
 \addcontentsline{toc}{subsection}{Axioms}
 \vspace{1em}
-\toggler{Axiomata.}
+\peanoHeadingSmall{Axiomata.}
 \ENG
 \vspace{1em}
-\toggler{Axioms.}
+\peanoHeadingSmall{Axioms.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1474,10 +1474,10 @@ Formulas that do not fit on one line are continued on the next line without any 
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \ENG
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1487,17 +1487,17 @@ Formulas that do not fit on one line are continued on the next line without any 
 ...
 \end{translateTwoCol}
 
-\peanopage{2} % page-number 2
+\peanoPage{2} % page-number 2
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \ENG
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1599,10 +1599,10 @@ $\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \in \N \p P 10 \p P 5 : \C : Th$
 \phantomsection
 \addcontentsline{toc}{subsection}{Definition}
 \vspace{1em}
-\toggler{Definitio.}
+\peanoHeadingSmall{Definitio.}
 \ENG
 \vspace{1em}
-\toggler{Definition.}
+\peanoHeadingSmall{Definition.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1632,17 +1632,17 @@ From this definition, and the preceding, we deduce that:
 \hspace{1.4cm} $a \in \N \p \C \3p a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
 \end{translateTwoCol}
 
-\peanopage{3} % page-number 3
+\peanoPage{3} % page-number 3
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \ENG
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1734,7 +1734,7 @@ From this definition, and the preceding, we deduce that:
 ... \s ... \s ...
 \end{paracol}
 
-\peanopage{4} % page-number 4
+\peanoPage{4} % page-number 4
 
 \vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
@@ -1773,18 +1773,18 @@ From this definition, and the preceding, we deduce that:
 \phantomsection
 \addcontentsline{toc}{section}{\S2. Substraction}
 \vspace{1em}
-\mediumtoggler{\S2. De substractione.}
+\peanoHeadingMedium{\S2. De substractione.}
 \ENG
 \vspace{1em}
-\mediumtoggler{\S2. Substraction.}
+\peanoHeadingMedium{\S2. Substraction.}
 \LAT
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
 \vspace{1em}
-\toggler{Explicationes.}
+\peanoHeadingSmall{Explicationes.}
 \ENG
 \vspace{1em}
-\toggler{Explanations.}
+\peanoHeadingSmall{Explanations.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1808,10 +1808,10 @@ From this definition, and the preceding, we deduce that:
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \ENG
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1839,10 +1839,10 @@ From this definition, and the preceding, we deduce that:
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \ENG
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -1869,7 +1869,7 @@ From this definition, and the preceding, we deduce that:
 \s \s
 \end{paracol}
 
-\peanopage{5} % page-number 5
+\peanoPage{5} % page-number 5
 
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
@@ -1987,7 +1987,7 @@ From this definition, and the preceding, we deduce that:
 \s \s
 \end{paracol}
 
-\peanopage{6} % page-number 6
+\peanoPage{6} % page-number 6
 
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
@@ -2074,19 +2074,19 @@ From this definition, and the preceding, we deduce that:
 \phantomsection
 \addcontentsline{toc}{section}{\S3. Maxima and minima}
 \vspace{1em}
-\mediumtoggler{\S3. De maximis et minimis.}
+\peanoHeadingMedium{\S3. De maximis et minimis.}
 \s
 \vspace{1em}
-\mediumtoggler{\S3. Maxima and minima.}
+\peanoHeadingMedium{\S3. Maxima and minima.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
 \vspace{1em}
-\toggler{Explicationes.}
+\peanoHeadingSmall{Explicationes.}
 \vspace{1em}
 \s
 \vspace{1em}
-\toggler{Explanations.}
+\peanoHeadingSmall{Explanations.}
 \vspace{1em}
 \s*
 Sit $a \in K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
@@ -2096,10 +2096,10 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2113,17 +2113,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 2. \s $a \in K \N \p \C : \mini a = [x \in] (x \in a \3p a \p \in \smaller x : = \abs$. \s
 \end{paracol}
 
-\peanopage{7} % page-number 7
+\peanoPage{7} % page-number 7
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2176,18 +2176,18 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{section}{\S4. Multiplication}
 \vspace{1em}
-\mediumtoggler{\S4. De multiplicatione.}
+\peanoHeadingMedium{\S4. De multiplicatione.}
 \s
 \vspace{1em}
-\mediumtoggler{\S4. Multiplication.}
+\peanoHeadingMedium{\S4. Multiplication.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2212,10 +2212,10 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2239,7 +2239,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s \s
 \end{paracol}
 
-\peanopage{8} % page-number 8
+\peanoPage{8} % page-number 8
 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
@@ -2349,7 +2349,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s \s
 \end{paracol}
 
-\peanopage{9} % page-number 9
+\peanoPage{9} % page-number 9
 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
@@ -2372,18 +2372,18 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{section}{\S5. Powers}
 \vspace{1em}
-\mediumtoggler{\S5. De potestatibus.}
+\peanoHeadingMedium{\S5. De potestatibus.}
 \s
 \vspace{1em}
-\mediumtoggler{\S5. Powers.}
+\peanoHeadingMedium{\S5. Powers.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2404,10 +2404,10 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2458,18 +2458,18 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{section}{\S6. Division}
 \vspace{1em}
-\mediumtoggler{\S6. De divisione.}
+\peanoHeadingMedium{\S6. De divisione.}
 \s
 \vspace{1em}
-\mediumtoggler{\S6. Division.}
+\peanoHeadingMedium{\S6. Division.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explications}
 \vspace{1em}
-\toggler{Explicationes.}
+\peanoHeadingSmall{Explicationes.}
 \s
 \vspace{1em}
-\toggler{Explications.}
+\peanoHeadingSmall{Explications.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2496,17 +2496,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering \dittoMarkEnglish \s \raggedright $\otherpi$ \s \centering \dittoMarkEnglish \s \raggedright \emph{is prime with.}
 \end{paracol}
 
-\peanopage{10} % page-number 10
+\peanoPage{10} % page-number 10
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2551,10 +2551,10 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2653,7 +2653,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 28. \s $a,b,c \in \N \p c D a \p c D b \p a \larger b : \C \p c D a - b$. \s
 \end{paracol}
 
-\peanopage{11} % page-number 11
+\peanoPage{11} % page-number 11
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -2772,17 +2772,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s \s
 \end{paracol}
 
-\peanopage{12} % page-number 12
+\peanoPage{12} % page-number 12
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S7. Various theorems}
 \vspace{1em}
-\mediumtoggler{\S7. Theoremata varia.}
+\peanoHeadingMedium{\S7. Theoremata varia.}
 \s
 \vspace{1em}
-\mediumtoggler{\S7. Various theorems.}
+\peanoHeadingMedium{\S7. Various theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2889,18 +2889,18 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \phantomsection
 \addcontentsline{toc}{section}{\S8. Rational numbers}
 \vspace{1em}
-\mediumtoggler{\S8. Numerorum rationes.}
+\peanoHeadingMedium{\S8. Numerorum rationes.}
 \s
 \vspace{1em}
-\mediumtoggler{\S8.Rational numbers.}
+\peanoHeadingMedium{\S8.Rational numbers.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explications}
 \vspace{1em}
-\toggler{Explicationes.}
+\peanoHeadingSmall{Explicationes.}
 \s
 \vspace{1em}
-\toggler{Explications.}
+\peanoHeadingSmall{Explications.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2916,7 +2916,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \end{translateTwoCol}
 
 \vspace{1em}
-\peanopage{13} % page-number 13
+\peanoPage{13} % page-number 13
 
 \vspace{1em}
 \begin{translateTwoCol}
@@ -2924,10 +2924,10 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -2954,10 +2954,10 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3013,7 +3013,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s \s
 \end{paracol}
 
-\peanopage{14} % page-number 14
+\peanoPage{14} % page-number 14
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3061,10 +3061,10 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3085,10 +3085,10 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3146,17 +3146,17 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s $\hspace{1.7cm} \C \3p a \smaller b \p b \smaller \cup = c : \C : a \smaller c$. \s
 \end{paracol}
 
-\peanopage{15} % page-number 15
+\peanoPage{15} % page-number 15
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3185,10 +3185,10 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3237,18 +3237,18 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \phantomsection
 \addcontentsline{toc}{section}{\S9. The system of rationals. Irrationals}
 \vspace{1em}
-\mediumtoggler{\S9. Rationalum systemata. Irrationales.}
+\peanoHeadingMedium{\S9. Rationalum systemata. Irrationales.}
 \s
 \vspace{1em}
-\mediumtoggler{\S9. The system of rationals. Irrationals.}
+\peanoHeadingMedium{\S9. The system of rationals. Irrationals.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanation}
 \vspace{1em}
-\toggler{Explicatio.}
+\peanoHeadingSmall{Explicatio.}
 \s
 \vspace{1em}
-\toggler{Explanation.}
+\peanoHeadingSmall{Explanation.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3265,10 +3265,10 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3288,17 +3288,17 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \s \s
 \end{paracol}
 
-\peanopage{16} % page-number 16
+\peanoPage{16} % page-number 16
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorem}
 \vspace{1em}
-\toggler{Theorema.}
+\peanoHeadingSmall{Theorema.}
 \s
 \vspace{1em}
-\toggler{Theorem.}
+\peanoHeadingSmall{Theorem.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3315,10 +3315,10 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanation}
 \vspace{1em}
-\toggler{Explicatio.}
+\peanoHeadingSmall{Explicatio.}
 \s
 \vspace{1em}
-\toggler{Explanation.}
+\peanoHeadingSmall{Explanation.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3335,10 +3335,10 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3367,10 +3367,10 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3402,10 +3402,10 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3439,18 +3439,18 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \phantomsection
 \addcontentsline{toc}{section}{\S10. System of quantities}
 \vspace{1em}
-\mediumtoggler{\S10. Quantitatum systemata.}
+\peanoHeadingMedium{\S10. Quantitatum systemata.}
 \s
 \vspace{1em}
-\mediumtoggler{\S10. System of quantities.}
+\peanoHeadingMedium{\S10. System of quantities.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
 \vspace{1em}
-\toggler{Explicationes.}
+\peanoHeadingSmall{Explicationes.}
 \s
 \vspace{1em}
-\toggler{Explanations.}
+\peanoHeadingSmall{Explanations.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3461,17 +3461,17 @@ Si $a \in \K \Q$, signa $\I a, \E a, \Lfat a$ leguntur: \emph{interior, exterior
 If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exterior, limit of the class} $a$.
 \end{translateTwoCol}
 
-\peanopage{17} % page-number 17
+\peanoPage{17} % page-number 17
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
 \vspace{1em}
-\toggler{Definitiones.}
+\peanoHeadingSmall{Definitiones.}
 \s
 \vspace{1em}
-\toggler{Definitions.}
+\peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3496,10 +3496,10 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
 \vspace{1em}
-\toggler{Theoremata.}
+\peanoHeadingSmall{Theoremata.}
 \s
 \vspace{1em}
-\toggler{Theorems.}
+\peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -3599,7 +3599,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s \s
 \end{paracol}
 
-\peanopage{18} % page-number 18
+\peanoPage{18} % page-number 18
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3726,7 +3726,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s \s
 \end{paracol}
 
-\peanopage{19} % page-number 19
+\peanoPage{19} % page-number 19
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3869,7 +3869,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s \s (2)
 \end{paracol}
 
-\peanopage{20} % page-number 20
+\peanoPage{20} % page-number 20
 
 \vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
@@ -3986,6 +3986,6 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \phantomsection
 \addcontentsline{toc}{chapter}{Footnotes}
 \vspace{1em}
-\metatoggler{\textbf{Footnotes}}
+\footnoteHeading{\textbf{Footnotes}}
 \theendnotes
 \end{document}

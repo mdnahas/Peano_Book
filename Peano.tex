@@ -847,7 +847,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 39. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $a-b$ = \rotatebox[origin=c]{180}{V}
 \ENG
-39. \hspace{0.67cm} $(a \rightarrow b) = \{[(a \wedge (\neg b)] = \bot\}$
+39. \hspace{0.67cm} $(a \rightarrow b) = [(a \wedge \neg b) = \bot]$
 \LAT
 40. \hspace{0.67cm} \rotatebox[origin=c]{180}{V} \reflectbox{C} $a$
 \ENG
@@ -1126,11 +1126,11 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\reflectbox{C}$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\scalebox{0.7}[0.9]{$\in$}]$, signo $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ utimur. Ita $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, et signum $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
-\quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the sign $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ instead of the sign $[\scalebox{0.7}[0.9]{$\in$}]$. Thus, $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, and the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ is read \emph{the objects that}. For example, let $y$ be a number; then $\forall x$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the sign \emph{D} means \emph{divides} or \emph{is a divisor of}, the formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
+\quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the sign $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ instead of the sign $[\scalebox{0.7}[0.9]{$\in$}]$. Thus, $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ is read \emph{the objects that}. For example, let $y$ be a number; then $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the sign \emph{D} means \emph{divides} or \emph{is a divisor of}, the formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\scalebox{0.7}[0.9]{$\in$}$ $(\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.
 \LAT
 \quad 4. Sit $\alpha$ formula indeterminate continens $x$. Tunc scriptura $x' [x] \alpha$, quae legitur $x'$ \emph{loco} $x$ \emph{in} $\alpha$ \emph{substituto}, formulam indicat quae obtinetur si in $\alpha$, loco $x$, $x'$ legimus. Deducitur $x [x] \alpha = \alpha$.
 \ENG
-\quad 4. Let $\alpha$ be a formula containing the indeterminate $x$. Then the expression $x' [x] \alpha$, which is read $x'$ \emph{being substituted for} $x$ \emph{in} $\alpha$, denotes the formula obtained if, in $\alpha$, we read $x'$ for $x$. It follows that $x [x] \alpha = \alpha$.
+\quad 4. Let $\alpha$ be a formula containing the indeterminate $x$. Then the expression $\alpha [ x := x' ]$, which is read $x'$ \emph{being substituted for} $x$ \emph{in} $\alpha$, denotes the formula obtained if, in $\alpha$, we read $x'$ for $x$. It follows that $\alpha[x := x] = \alpha$.
 \LAT
 \quad 5. Sit $\alpha$ formula, quae indeterminata $x,y,...$ continet. Tunc
 \ENG
@@ -1138,7 +1138,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
 \ENG
-\hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
+\hspace{1.06cm} $\alpha[x:=x', y:=y', \ldots]$,
 \end{translateTwoCol}
 
 \peanoPage{XIII} % page-number XIII
@@ -1146,7 +1146,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \begin{translateTwoCol}
 quae legitur $x'y',...$ \emph{loco} $x,y,...$ \emph{in} $\alpha$ \emph{substitutis}, formulam indicat quae obtinetur si in $\alpha$ loco $x,y,...$, litterae $x'y',...$ scribantur. Deducitur $(x,y)$ $[x,y]$ $\alpha = \alpha$.
 \ENG
-which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, denotes the formula obtained if, in $\alpha$, the letters $x_{1}',y',...$ are written for $x,y,...$ It follows that $(x,y)$ $[x,y]$ $\alpha = \alpha$.
+which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, denotes the formula obtained if, in $\alpha$, the letters $x',y',...$ are written for $x,y,...$ It follows that $\alpha[x:=x,y:=y] = \alpha$.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1250,6 +1250,7 @@ Let $\upvarphi$ be a function postsign; we write similarly:
 \LAT
 Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logica iam exposuimus. Nam si $\alpha$ est propositio indeterminatum continens $x$, atque $A$ est classis individuis $x$ composita quae conditioni $\alpha$ satisfaciunt, erit $x$ $\scalebox{0.7}[0.9]{$\in$}$ $a$ $.$ $=$ $\alpha$, tunc $a$ $=$ $[x$\scalebox{0.7}[0.9]{$\in$}$]$ $\alpha$, ut in V, i.
 \ENG
+\fn{TODO: Needs to use modern set-builder notation.}
 The sign $[$ $]$ is called \emph{inversion sign}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the indeterminate $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\scalebox{0.7}[0.9]{$\in$}$ $A$ $.$ $=$ $\alpha$, and then $A$ $=$ $[x$\scalebox{0.7}[0.9]{$\in$}$]$ $\alpha$, as in V, i.
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.

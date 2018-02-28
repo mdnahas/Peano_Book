@@ -17,12 +17,6 @@
 \newcommand{\s}{\switchcolumn} % a shorter command to replace \switchcolumn[...] from the paracol-package
 
 
-% Use Hyperref package for URLs
-%
-\usepackage[colorlinks=true,linkcolor=red, urlcolor=red]{hyperref} % color links and url's --- hyperref for hyperlinks in endnotes
-\urlstyle{same} % standard font for url's
-
-
 % Use Endnotes packages, so ``footnotes'' go at end of document rather than the foot of each page
 %
 \usepackage{endnotes} % \endnote{...}
@@ -114,6 +108,13 @@
 \newtcbox{\peanoHeadingSmall}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
 \newtcbox{\peanoHeadingMedium}{colback=grey,colframe=grey_edge, left=2.25cm, right=2.25cm}
 \newtcbox{\peanoHeadingLarge}{colback=grey,colframe=grey_edge, left=3.5cm, right=3.5cm}
+
+
+% Use Hyperref package for URLs
+%   ShareLaTeX.com said ``Usually [hyperref] has to be the last package to be imported''
+%
+\usepackage[colorlinks=true,linkcolor=red, urlcolor=red]{hyperref} % color links and url's --- hyperref for hyperlinks in endnotes
+\urlstyle{same} % standard font for url's
 
 
 % Define commands for document structure

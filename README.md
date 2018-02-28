@@ -2,7 +2,7 @@
 
 This repository hold an English translation, with original Latin, of Guiseppe Peano's "Arithmetices Principia, Nova Methodo Exposita" or "The Principles of Arithmetic, Presented by a New Method".  This short book is from 1889 and it laid out the axioms of elementary arithmetic that are still used today.
 
-## Compiling
+## Compiling to PDF
 
 Install [LaTeX](https://www.latex-project.org/get/)
 
@@ -43,7 +43,4 @@ even when you have an intelligence like mine. Thank you and good luck studying.
 
 ## Project Goals
 
-* Create title/author page and move note from footnote 6 to it
 * Change page size to allow A4 or Letter. (Original had 31cm by 200cm pages.)  Probably lay out text side-by-side on landscape paper
-* Removed dependence on hyperendnotes package
-* Add mathematical commentary (most likely in a color other than black; not much room for margin notes)

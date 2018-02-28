@@ -57,7 +57,6 @@
 \newcommand{\pppNoSpace}{\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}} % arranging three points in a triangle
 \newcommand{\ppp}{\thinspace \pppNoSpace\thinspace} % arranging three points in a triangle
 
-
 \newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
 \newcommand{\abs}{\mathop{\rotatebox[origin=c]{180}{V}}}
 \newcommand{\mini}{\mathop{\rotatebox[origin=c]{180}{M}}}
@@ -490,7 +489,7 @@ $P$ \s propositio \s VII
 \s $\vee$ \s or \s VIII, X, XI
 \s* $-$ \s non \s VIII, X
 \s $\neg$ \s not \s VIII, X
-\s* \rotatebox[origin=c]{180}{V} \s absurdum \emph{aut} nihil \s VIII, XI
+\s* $\abs$ \s absurdum \emph{aut} nihil \s VIII, XI
 \s $\bot$ \\ $\varnothing$ \s false \emph{or} \\ \quad nothing \s VIII, XI
 \s* \reflectbox{C} \s deducitur \emph{aut} continetur \s VIII, XI
 \s $\rightarrow$ \\ $\subset$ \s one deduces \emph{or} \\ \quad is contained in \s VIII, XI
@@ -654,9 +653,9 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \ENG The sign $\neg$ is read \emph{not}. Let $a$ be a $P$; then $\neg a$ is the negation of the proposition $a$.
 \LAT Signo $\cup$ legitur \emph{vel}. Sint $a,b$ propositiones; tunc $a \cup b$ idem est ac $-:-a$ $.$ $-b$.
 \ENG The sign $\vee$ is read \emph{or}. Let $a,b$ be propositions; then $a \vee b$ is the same as $\neg[(\neg a) \wedge (\neg b)]$.
-\LAT \text{[}Signo $V$ significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.
+\LAT \text{[}Signo $V$ significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.  % TODO: The math V here should be upright, not slanted
 \ENG \na{The sign $\top$  means \emph{true}, or \emph{identity}, but we never use this sign.}
-\LAT Signum  $\rotatebox[origin=c]{180}{V}$ significat \emph{falsum}, sive \emph{absurdum}.
+\LAT Signum  $\abs$ significat \emph{falsum}, sive \emph{absurdum}.
 \ENG The sign $\bot$ means \emph{false}, or \emph{absurd}.
 \LAT \text{[}Signum C significat \emph{est consequentia}; ita $b$ C $a$ legitur $b$ \emph{est consequentia propositionis} $a$. Sed hoc signo nunquam utimur\text{]}.
 \ENG \na{The sign $\leftarrow$ means \emph{is a consequence of}. Thus $b \leftarrow a$ is read $b$ \emph{is a consequence of the proposition} $a$. But we never use this sign.}
@@ -838,31 +837,31 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hfill
 \LAT
-35. \hspace{0.67cm} $a-a$ = \rotatebox[origin=c]{180}{V}
+35. \hspace{0.67cm} $a-a$ = $\abs$
 \ENG
 35. \hspace{0.67cm} $[a \wedge (\neg a)] = \bot$
 \LAT
-36. \hspace{0.67cm} $a$ \rotatebox[origin=c]{180}{V} = \rotatebox[origin=c]{180}{V}
+36. \hspace{0.67cm} $a$ $\abs$ = $\abs$
 \ENG
 36. \hspace{0.67cm} $(a \wedge \bot) = \bot$
 \LAT
-37. \hspace{0.67cm} $a$ $\cup$ \rotatebox[origin=c]{180}{V} = a
+37. \hspace{0.67cm} $a$ $\cup$ $\abs$ = a
 \ENG
 37. \hspace{0.67cm} $(a \vee \bot)=a$
 \LAT
-38. \hspace{0.67cm} $a$ \reflectbox{C} \rotatebox[origin=c]{180}{V} . = . $a$ = \rotatebox[origin=c]{180}{V}
+38. \hspace{0.67cm} $a$ \reflectbox{C} $\abs$ . = . $a$ = $\abs$
 \ENG
 38. \hspace{0.67cm} $(a \rightarrow \bot) = (a = \bot)$
 \LAT
-39. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $a-b$ = \rotatebox[origin=c]{180}{V}
+39. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $a-b$ = $\abs$
 \ENG
 39. \hspace{0.67cm} $(a \rightarrow b) = [(a \wedge \neg b) = \bot]$
 \LAT
-40. \hspace{0.67cm} \rotatebox[origin=c]{180}{V} \reflectbox{C} $a$
+40. \hspace{0.67cm} $\abs$ \reflectbox{C} $a$
 \ENG
 40. \hspace{0.67cm} $\bot \rightarrow a$
 \LAT
-41. \hspace{0.67cm} $a$ $\cup$ $b$ = \rotatebox[origin=c]{180}{V} . = : $a$ = \rotatebox[origin=c]{180}{V} . $b$ = \rotatebox[origin=c]{180}{V}
+41. \hspace{0.67cm} $a$ $\cup$ $b$ = $\abs$ . = : $a$ = $\abs$ . $b$ = $\abs$
 \ENG
 41. \hspace{0.67cm} $[(a \vee b)= \bot]=[(a= \bot) \wedge (b= \bot)]$
 \LAT
@@ -894,7 +893,7 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hspace{1.06cm} $ (a \not\rightarrow b) = \neg (a \rightarrow b)$
 \LAT
-\quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\rotatebox[origin=c]{180}{V}$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ \reflectbox{C} significat {\emph{non deducitur}}.
+\quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ \reflectbox{C} significat {\emph{non deducitur}}.
 \ENG
 Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\text{x}}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
 \LAT
@@ -910,11 +909,11 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \quad Formulas:
 \LAT
-\hspace{1.06cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $c$ . $a$ $-$ \reflectbox{C} $c$ : = $\rotatebox[origin=c]{180}{V}$
+\hspace{1.06cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $c$ . $a$ $-$ \reflectbox{C} $c$ : = $\abs$
 \ENG
 \hspace{1.06cm} $[(a \rightarrow b) \wedge (b \rightarrow c) \wedge (a \not\rightarrow c)] = \bot$
 \LAT
-\hspace{1.06cm} $a$ = $b$ . $b$ = $c$ . $a$ $-$ = $c$ : = $\rotatebox[origin=c]{180}{V}$
+\hspace{1.06cm} $a$ = $b$ . $b$ = $c$ . $a$ $-$ = $c$ : = $\abs$
 \ENG
 \hspace{1.06cm} $[(a=b) \wedge (b=c) \wedge (a \not= c)] = \bot$
 \LAT
@@ -997,11 +996,11 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 48. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]\}$
 \LAT
-\quad Signum \rotatebox[origin=c]{180}{V} indicat classem quae nullum continet individuum. Ita:
+\quad Signum $\abs$ indicat classem quae nullum continet individuum. Ita:
 \ENG
 \quad The sign $\varnothing$ indicates the class which contains no individuals. Thus:
 \LAT
-49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ = \rotatebox[origin=c]{180}{V} : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  \rotatebox[origin=c]{180}{V}
+49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ = $\abs$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
 \ENG
 49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot])\}$ 
 \LAT
@@ -1022,7 +1021,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad \na{[The formula $B \supset A$ could mean {\emph{the class B contains the class A}}, but we shall not use the sign $\supset$].}
 \LAT
-Hic signa \rotatebox[origin=c]{180}{V} et \reflectbox{C} significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
+Hic signa $\abs$ et \reflectbox{C} significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
 \ENG
 \na{The signs $(\bot / \varnothing)$ and $(\rightarrow / \subset)$ have meanings here which are slightly different from the preceding, but no ambiguity will arise, for if propositions are being considered, the signs are read \emph{absurd} $(\bot)$ and \emph{one deduces} $(\rightarrow)$, but if classes are being considered, they are read \emph{empty} $(\varnothing)$ and \emph{is contained} $(\subset)$.}
 \LAT
@@ -1043,7 +1042,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 52. \hspace{0.67cm} $(a \in B) \rightarrow$ B is a \scriptsize{CLASS} \normalsize
 \LAT
-53. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . \reflectbox{C} . $b$ $-$ = \rotatebox[origin=c]{180}{V}
+53. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . \reflectbox{C} . $b$ $-$ = $\abs$
 \ENG
 53. \hspace{0.67cm} $(a \in B) \rightarrow (B \not= \varnothing)$
 \LAT
@@ -1059,7 +1058,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad Let $\text{C}$ be a class, and $\text{C}_{subset}$ be a class which is contained in $\text{C}$; then we say that $\text{C}_{subset}$ is an individual of the class $\text{C}$, if $\text{C}_{subset}$ consists of only one individual. That is:
 \LAT
-56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ \reflectbox{C} $s$ : \reflectbox{C} :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\pppNoSpace$ $k$ $-$ $=$ \rotatebox[origin=c]{180}{V} : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . \reflectbox{C}\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
+56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ \reflectbox{C} $s$ : \reflectbox{C} :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . \reflectbox{C}\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
 56. \hspace{0.67cm} $[\text{C}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $(\text{C}_{subset} \subset \text{C})] \rightarrow \Big\{(\text{C}_{subset} \in \text{C}) = \big\{(\text{C}_{subset} \not= \varnothing) \wedge \{[(x,y) \in \text{C}_{subset}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
 \end{translateTwoCol}
@@ -1130,7 +1129,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 65. \hspace{0.67cm} $\alpha \xrightarrow[\forall x,y]{} \beta = \{(x,y) | \alpha\} \subset \{(x,y) | \beta \}$
 \LAT
-66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} . = $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} : $-$ = \rotatebox[origin=c]{180}{V}
+66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = $\abs$ . = $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = $\abs$ : $-$ = $\abs$
 \ENG
 66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$
 \LAT
@@ -1317,15 +1316,15 @@ in $s$ contenta; tunc $\upvarphi k$ classem indicat omnibus $\upvarphi x$ compos
 \ENG
 contained in $S$; then $\upvarphi C$ denotes the class consisting of all $\upvarphi x$, where the $x$ are the objects of class $C$; that is
 \LAT
-\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\abs$)
 \ENG
 \emph{Def}. \hspace{0.25cm}  %TODO
 \LAT
-Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\pppNoSpace$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\pppNoSpace$ $-$ $=$ $\abs$)
 \ENG
 Or \hspace{0.25cm}  %TODO
 \LAT
-\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $.$ $k$ $\upvarphi$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $.$ $k$ $\upvarphi$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\abs$)
 \ENG
 \emph{Def.} \hspace{0.25cm} %TODO
 \LAT
@@ -1341,7 +1340,7 @@ Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $s$ d
 \ENG
 ... %TODO
 \LAT
-\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi \rotatebox[origin=c]{180}{V} = \rotatebox[origin=c]{180}{V}$
+\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi \abs = \abs$
 \ENG
 ... %TODO
 \LAT
@@ -1447,9 +1446,9 @@ But we lack the space to present these properties.
 \ENG
 A \emph{Definition}, or \emph{Def.} for short, is a proposition of the form $x=a$ or $\alpha$ $\reflectbox{C}$ . $x = a$, where $a$ is an aggregate of signs having a known meaning, $x$ is a sign or an aggregate of signs, hitherto without meaning, and $\alpha$ is the condition under which the definition is given.
 \LAT
-\emph{Theorema}, (Theor. vel Th) est propositio quae demonstratur. Si theorema formam habet $\alpha$ $\reflectbox{C}$ $\beta$, ubi $\alpha$ et $\beta$ sunt propositiones, tunc $\alpha$ dicitur \emph{Hypothesis} (Hyp. vel breviter Hp.), $\beta$ vero \emph{Thesis} (Thes. vel Ts.). Hyp. ac Ts. a Theorematis forma pendent; nam si loco $\alpha$ $\reflectbox{C}$ $\beta$ scribemus $- \beta$ $\reflectbox{C}$ $- \alpha$, erit $- \beta$ Hp, et $- \alpha$ Ts.; si vero scribemus $\alpha - \beta = \rotatebox[origin=c]{180}{V}$, Hp. ac Ts. absunt.
+\emph{Theorema}, (Theor. vel Th) est propositio quae demonstratur. Si theorema formam habet $\alpha$ $\reflectbox{C}$ $\beta$, ubi $\alpha$ et $\beta$ sunt propositiones, tunc $\alpha$ dicitur \emph{Hypothesis} (Hyp. vel breviter Hp.), $\beta$ vero \emph{Thesis} (Thes. vel Ts.). Hyp. ac Ts. a Theorematis forma pendent; nam si loco $\alpha$ $\reflectbox{C}$ $\beta$ scribemus $- \beta$ $\reflectbox{C}$ $- \alpha$, erit $- \beta$ Hp, et $- \alpha$ Ts.; si vero scribemus $\alpha - \beta = \abs$, Hp. ac Ts. absunt.
 \ENG
-A \emph{theorem} (Theor. or Th.) is aproposition that is \emph{proved}. If a theorem has the form $\alpha$ $\reflectbox{C}$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\reflectbox{C}$ $\beta$ instead of $- \beta$ $\reflectbox{C}$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \rotatebox[origin=c]{180}{V}$, Hp. and Ts. do not exist.
+A \emph{theorem} (Theor. or Th.) is aproposition that is \emph{proved}. If a theorem has the form $\alpha$ $\reflectbox{C}$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\reflectbox{C}$ $\beta$ instead of $- \beta$ $\reflectbox{C}$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \abs$, Hp. and Ts. do not exist.
 \LAT
 In quolibet $\S$ signum P quod quidam numerus sequatur, propositionem indicat eiusdem $\S$ hoc numero signatam. Logicae propositiones indicantur signo L et propositiones numero.
 \ENG

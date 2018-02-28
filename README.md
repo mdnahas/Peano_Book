@@ -9,12 +9,15 @@ Install [LaTeX](https://www.latex-project.org/get/)
 Start a command prompt or terminal window
 
 If you have pdflatex, run:
+```
    pdflatex Peano
+```
 
 Otherwise:
+```
    latex Peano
    dvipdfm Peano
-
+```
 
 ## License
 

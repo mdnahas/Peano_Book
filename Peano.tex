@@ -978,34 +978,29 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \vspace{1em}
 \toggler{V. The inverse.}
+\quad \fn{NOTE: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \end{translateTwoCol}
-
-\raggedright
-\begin{tikzpicture}[overlay]
-\draw (19.68,-0.4) -- (19.9,-0.4); % inverse sign
-\end{tikzpicture}
 
 \begin{translateTwoCol}
 \quad Inversionis signum est $\scalebox{1.5}[0.8]{[\scalebox{0.2}{ \ }]}$, eiusque usum in sequenti numero explicabimus. Hic tantum casus particulares exponimus.
 \ENG
-\quad \fn{By inverse, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
-\quad The sign of the inverse is {\tiny{ ..  }}, and we shall explain its use in the following section. Here we give some particular examples.
+\quad The sign of the inverse is $\{x | \ldots\}$, and we shall explain its use in the following section. Here we give some particular examples.
 \LAT
 \quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x]$ \scalebox{0.7}[0.9]{$\in$} $a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
 \ENG
-\quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\overline{x} \in a$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
+\quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
 \LAT
 57. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} : $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ . \scalebox{0.7}[0.9]{$\in$} K
 \ENG
-57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow [( \overline{x} \in a )$ is a \scriptsize{CLASS} \normalsize $]$
+57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow \{x | a \}$ is a \scriptsize{CLASS} \normalsize 
 \LAT
 58. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{K} . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $x$ \scalebox{0.7}[0.9]{$\in$} $a$ : = $a$
 \ENG
-58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{[ \overline{x} \wedge ( x \in A )] = A \}$
+58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{ x | x \in A \} = A $
 \LAT
 59. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x$ \scalebox{0.7}[0.9]{$\in$} . $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ : = $a$
 \ENG
-59. \hspace{0.67cm}  $a$ is a \scriptsize{proposition} \normalsize $\rightarrow [(x \in \overline{x} \in a) = a]$
+59. \hspace{0.67cm}  $a$ is a \scriptsize{proposition} \normalsize $\rightarrow (x \in \{x | a \}) = a$
 \LAT
 \quad Sint $\alpha$, $\beta$ propositiones indeterminatum continentes $x$; erit:
 \ENG
@@ -1013,35 +1008,35 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 60. \hspace{0.67cm} $[x\scalebox{0.7}[0.9]{$\in$}]$ ($\alpha$ $\beta$) = ($[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha)$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$)
 \ENG
-60. \hspace{0.67cm} $[\overline{x} \in (\alpha \wedge \beta)]=[(\overline{x} \in \alpha) \wedge (\overline{x} \in \beta)]$
+60. \hspace{0.67cm} $\{x | \alpha \wedge \beta\}=\{x|\alpha\} \cap \{x | \beta\}$
 \LAT
 61. \hspace{0.67cm} $[x\scalebox{0.7}[0.9]{$\in$}]$ $-$ $\alpha$ = $-$ $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$
 \ENG
-61. \hspace{0.67cm} $(\overline{x} \not\in \alpha)=[(\neg \overline{x}) \in \alpha]$
+61. \hspace{0.67cm} $\{x | \neg \alpha \} = \overline{\{x | \alpha\}}$
 \LAT
 62. \hspace{0.67cm} $[x\scalebox{0.7}[0.9]{$\in$}]$ ($\alpha$ $\cup$ $\beta$) = $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $\cup$ $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
 \ENG
-62. \hspace{0.67cm} $[\overline{x} \not\in (\alpha \cup \beta)]=[(\overline{x} \in \alpha) \cup (\overline{x} \in \beta)]$
+62. \hspace{0.67cm} $\{ x | \alpha \vee \beta \} = \{ x | \alpha \} \cup \{ x | \beta \}$
 \LAT
 63. \hspace{0.67cm} $\alpha$ \reflectbox{C}\scalebox{0.7}{$x$} $\beta$ . = . $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  \reflectbox{C} $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
 \ENG
-63. \hspace{0.67cm} $(\alpha$ $\fn{(} \xrightarrow[\forall x]{} \fn{/} \underset{\forall \text{x}}\subset \fn{)}$ $\beta) = [(\overline{x} \in \alpha)$ $\fn{(} \rightarrow \fn{/} \subset \fn{)}$ $(\overline{x} \in \beta)]$
+63. \hspace{0.67cm} $\alpha \xrightarrow[\forall x]{} \beta = \{x | \alpha\} \subset \{x | \beta \}$
 \LAT
 64. \hspace{0.67cm} $\alpha$ =\scalebox{0.7}{$x$} $\beta$ . = . $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ = $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
 \ENG
-64. \hspace{0.67cm} $(\alpha \underset{\forall \text{x}}= \beta) = [(\overline{x} \in \alpha) = (\overline{x} \in \beta)]$
+64. \hspace{0.67cm} $(\alpha \underset{\forall \text{x}}= \beta) = (\{ x |  \alpha\} = \{x | \beta \} )$
 \LAT
 \quad 2. Sint $x,y$ entia quacumque; system ex ente $x$ et ex ente $y$ compositum ut novum ens consideramus, et signo $(x,y)$ indicamus; similiterque si entium numerus maior fit. Sit $\alpha$ propositio indeterminata continens $x,y$; tunc $[(x,y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ significat classem entibus $(x,y)$ constitutam, quae conditioni $\alpha$ satisfaciunt. Erit:
 \ENG
-\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the sign $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the indeterminate $x,y$; then $[(x,y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:
+\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the sign $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the indeterminate $x,y$; then $\{(x,y) | \alpha \}$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:
 \LAT
 65. \hspace{0.67cm} $\alpha$ \reflectbox{C}\scalebox{0.7}{$x, y$} $\beta$ . = . $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  \reflectbox{C} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
 \ENG
-65.
+65. \hspace{0.67cm} $\alpha \xrightarrow[\forall x,y]{} \beta = \{(x,y) | \alpha\} \subset \{(x,y) | \beta \}$
 \LAT
 66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} : $-$ = \rotatebox[origin=c]{180}{V}
 \ENG
-66.
+66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\reflectbox{C}$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\scalebox{0.7}[0.9]{$\in$}]$, signo $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ utimur. Ita $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, et signum $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG

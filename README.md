@@ -1,6 +1,6 @@
 # English Translation of "Arithmetices Principia, Nova Methodo Exposita"
 
-This repository hold an English translation, with original Latin, of Guiseppe Peano's "Arithmetices Principia, Nova Methodo Exposita" or "The Principles of Arithmetic, Presented by a New Method".  This short book is from 1889 and it laid out the axioms of elementary arithmetic that are still used today.
+This repository holds an English translation, with original Latin, of Guiseppe Peano's "Arithmetices Principia, Nova Methodo Exposita" or "The Principles of Arithmetic, Presented by a New Method".  This treatise is from 1889 and it laid out the axioms of elementary arithmetic that are still used today.
 
 ## Compiling to PDF
 
@@ -41,6 +41,3 @@ even when you have an intelligence like mine. Thank you and good luck studying.
 "I would like to thank Mauro Allegranzo and acknowledge his support of this work and his various comments during its creation."
 
 
-## Project Goals
-
-* Change page size to allow A4 or Letter. (Original had 31cm by 200cm pages.)  Probably lay out text side-by-side on landscape paper

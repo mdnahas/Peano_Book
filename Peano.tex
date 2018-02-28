@@ -1250,20 +1250,21 @@ Let $\upvarphi$ be a function postsign; we write similarly:
 \LAT
 Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logica iam exposuimus. Nam si $\alpha$ est propositio indeterminatum continens $x$, atque $A$ est classis individuis $x$ composita quae conditioni $\alpha$ satisfaciunt, erit $x$ $\scalebox{0.7}[0.9]{$\in$}$ $a$ $.$ $=$ $\alpha$, tunc $a$ $=$ $[x$\scalebox{0.7}[0.9]{$\in$}$]$ $\alpha$, ut in V, i.
 \ENG
-\fn{TODO: Needs to use modern set-builder notation.}
-The sign $[$ $]$ is called \emph{inversion sign}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the indeterminate $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\scalebox{0.7}[0.9]{$\in$}$ $A$ $.$ $=$ $\alpha$, and then $A$ $=$ $[x$\scalebox{0.7}[0.9]{$\in$}$]$ $\alpha$, as in V, i.
+The sign $\{ x | \ldots \}$ is called \emph{inversion sign}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the indeterminate $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\scalebox{0.7}[0.9]{$\in$}$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i.
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
-Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x] x'$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha [x] x'$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
+Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
+% TODO: ADD COMMENT THAT THE ABOVE DOESN'T WORK WITH PEANO'S SYNTACTIC TRICK
 \LAT
 Similiter, sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis postsignum, ut $x \upvarphi = \alpha$; deducitur $\upvarphi = [x] \alpha$; tunc, si $x'$ est novum ens, erit $x' \upvarphi = x' [x] \alpha$, scilicet $x' [x] \alpha$ rursum indicat id quod obtinetur si in $\alpha$, loco $x, x'$ legatur, ut in V, 4.
 \ENG
-Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = [x] \alpha$. Then, if $x'$ is a new object, have $x' \upvarphi = x' [x] \alpha$; that is, $x' [x] \alpha$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
+Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x' [x] \alpha$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
+% TODO: ADD COMMENT SAYING THIS DOESN'T WORK.  HOW DO BOTH WORK IN PEANO'S NOTATION???!!!
 \LAT
 Alios quoque usus in logica signum $[ ]$ habere potest, quos breviter esponimus, quum ipsis non utamur. Sint $a$ et $b$ duae classes; tunc $[a \cap ]b$ sive $b[ \cap a]$ classes indicat $x$, quae conditioni $b = a \cap x$, sive $b = x \cap a$ satisfaciunt. Si $b$ in $a$ non continetur, nulla classis huic conditioni satifacit; si $b$ in $a$ continetur, signum $b [ \cap a ]$ omnes indicat classes quae $b$ continent atque in $b \cup - a$ continentur.
 \ENG
-The sign $[ ]$ can have other uses in logic, which we present only briefly, since we shall not use it in these ways. Let $a$ and $b$ be two classes; then $[a \cap ]b$ sive $b[ \cap a]$, or $b[ \cap a]$ denotes the classes $x$ that satisfy the condition $b = a \cap x$, or $b = x \cap a$. If $b$ is not contained in $a$, no class satisfies this condition; if $b$ is contained in $a$, the sign $b [ \cap a ]$ denotes all classes that contain $b$ and are contained in $b \cup - a$.
+The sign $[ ]$ can have other uses in logic, which we present only briefly, since we shall not use it in these ways. Let $A$ and $B$ be two classes; then $[A \cap ]B$ or $B[ \cap A]$ denotes the classes $X$ that satisfy the condition $B = A \cap X$, or $B = X \cap A$. If $B$ is not contained in $A$, no class satisfies this condition; if $B$ is contained in $A$, the sign $B [ \cap A ]$ denotes all classes that contain $B$ and are contained in $B \cup  \overline{A}$.
 \LAT
 In Arithmetica, sint $a, b$ numeri; tunc $[b + a]$ sive $[a +] b$ numerum indicat $x$, qui conditioni $b = x + a$, sive $b = a + x$ satisfacit, nempe $b - a$. Similiter erit $b [ \times a ] = [a \times ] b = b / a$. Et in analysi hoc signum usuvenire potest; itaque
 \ENG
@@ -1308,15 +1309,15 @@ contained in $S$; then $\upvarphi C$ denotes the class consisting of all $\upvar
 \LAT
 \emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
 \ENG
-\emph{Def}. \hspace{0.25cm}
+\emph{Def}. \hspace{0.25cm}  %TODO
 \LAT
 Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
 \ENG
-Or \hspace{0.25cm}
+Or \hspace{0.25cm}  %TODO
 \LAT
 \emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $.$ $k$ $\upvarphi$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
 \ENG
-\emph{Def.} \hspace{0.25cm}
+\emph{Def.} \hspace{0.25cm} %TODO
 \LAT
 Itaque, si $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' s$, tunc $\upvarphi$ $s$ classem indicat omnibus $\upvarphi$ $x$ constitutam, ubi $x$ sint entia classis $s$. Erit:
 \ENG
@@ -1324,23 +1325,23 @@ Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $s$ d
 \LAT
 \hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s$ . $y \in \upvarphi s : \reflectbox{C} : \upvarphi [\upvarphi] y = y$
 \ENG
-...
+... %TODO
 \LAT
 \hspace{1.06cm} $s \in K$ . $a, b \in K$ . $a$ $\reflectbox{C}$ $s$ . $b$ $\reflectbox{C}$ $s$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi (a \cup b) = (\upvarphi a) \cup (\upvarphi b)$
 \ENG
-...
+... %TODO
 \LAT
 \hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi \rotatebox[origin=c]{180}{V} = \rotatebox[origin=c]{180}{V}$
 \ENG
-...
+... %TODO
 \LAT
 \hspace{1.06cm} $s \in K$ . $a,b \in K$ . $b$ $\reflectbox{C}$ $s$ . $a$ $\reflectbox{C}$ $b$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi a$ $\reflectbox{C}$ $\upvarphi b$
 \ENG
-...
+... %TODO
 \LAT
 \hspace{1.06cm} $s \in K$ . $a,b \in K$ . $a$ $\reflectbox{C}$ $s$ . $b$ $\reflectbox{C}$ $s$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi (ab)$ $\reflectbox{C}$ $(\upvarphi a)(\upvarphi b)$
 \ENG
-...
+... %TODO
 \LAT
 Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \in K a$ idem significat quod $x \in K$ . $x$ $\reflectbox{C}$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
 \ENG
@@ -1360,11 +1361,11 @@ Equality, product and powers can be defined thus for function signs:
 \LAT
 \emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi, \psi \in F' s :$ $\reflectbox{C}$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $\varphi = \psi$ : $=$ : $x \in s$ . $\reflectbox{C}$ . $\varphi x = \psi x$
 \ENG
-\emph{Def.} \hspace{0.25cm}
+\emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
 \emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in F' s$ $.$ $\psi \in F' \varphi s$ . $x \in s$ : $\reflectbox{C}$ . $\psi \varphi x = \psi (\varphi x)$
 \ENG
-\emph{Def.} \hspace{0.25cm}
+\emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
 Itaque, in definitionis hypothesi, erit $\psi \varphi$ novum functionis praesignum; idque \emph{productum signorum} $\psi$ \emph{et} $\varphi$ vocatur.
 \ENG
@@ -1396,7 +1397,7 @@ But if $\varphi$ is a function postsign, we can use the following more convenien
 \LAT
 \emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in s 'F$ . $s \varphi$ $\reflectbox{C}$ $s : \reflectbox{C} : \varphi 1 = \varphi$ . $\varphi 2 = \varphi \varphi$ . $\varphi 3 = \varphi \varphi \varphi$. etc.
 \ENG
-\emph{Def.} \hspace{0.25cm}
+\emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
 In definitionis hypothesi, si $m, n \in N$, erit $\varphi$ $(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
 \ENG

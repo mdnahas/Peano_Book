@@ -47,7 +47,7 @@
 \newcommand{\dittoMarkEnglish}{''}
 
 % Peano's reverse C, that is used for implication.
-\newcommand{\C}{\mathop{\sbox0{$\displaystyle$$\reflectbox{C}$} % reflect box mirrors upside-down and left-to-right    
+\newcommand{\C}{\mathop{\sbox0{$\displaystyle$$\reflectbox{C}$} % reflect box mirrors upside-down and left-to-right
 \raisebox{-\height+\ht0-0.05cm}[\ht0][\dp0]{\scalebox{0.8}[0.8]{\copy0}}}\displaylimits} %
 % Peano's one dot, used to indicate precidence in equations
 \newcommand{\p}{\mathop{\sbox0{$\displaystyle$$.$}
@@ -498,7 +498,7 @@ $P$ \s propositio \s VII
 \s* $\epsilon$ \s est \s X
 \s $\in$ \\ is a \s is (an element of) \emph{or} \\ is (a) \s X
 \s* $[ \ ]$ \s inversionis signum \s XI
-\s $^{inversed}$ \s sign of the inverse \s XI
+\s $\{ x | \ldots \}$ \s sign of the inverse \s XI
 \s* \rotatebox[origin=c]{180}{$\epsilon$} \s qui \emph{vel} $[ \epsilon ]$ \s XII
 \s $\rightarrow$ \\ isn't \s such that \emph{or} \\ \quad isn't
 \s XII
@@ -887,15 +887,15 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 \hspace{1.06cm} $a$ $-$ = $b$ . = : $-$ . $a$ = $b$
 \ENG
-\hspace{1.06cm} $(a \not= b)=[\neg (a=b)]$
+\hspace{1.06cm} $(a \not= b) = \neg (a=b)$
 \LAT
 \hspace{1.06cm} $a$ $-$ \reflectbox{C} $b$ . = : $-$ . $a$ \reflectbox{C} $b$
 \ENG
-\hspace{1.06cm} $ (a \not\rightarrow b) = [(\neg (a \rightarrow b)]$
+\hspace{1.06cm} $ (a \not\rightarrow b) = \neg (a \rightarrow b)$
 \LAT
 \quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\rotatebox[origin=c]{180}{V}$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ \reflectbox{C} significat {\emph{non deducitur}}.
 \ENG
-Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\text{x}}= \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
+Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\text{x}}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
 \LAT
 \quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . \reflectbox{C} $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
 \ENG
@@ -1007,6 +1007,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \quad [Signo V, quod classem ex omnibus individuis constitutam, de quibus quaestio est, indieat, non utimur].
 \ENG
 \quad \na{[We shall not use the sign \scriptsize{true} \normalsize, which indicates the class composed of all individuals being considered].}
+% TODO Find a replacement for ``true'' above
 \LAT
 \quad Signum \reflectbox{C} significat {\emph{continetur}}. Ita $a$ \reflectbox{C} $b$ significat {\emph{classis a continetur in classi b}}.
 \ENG

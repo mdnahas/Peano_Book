@@ -3,7 +3,8 @@
 
 % Set paper and layout
 %
-\usepackage[paperwidth=31cm, paperheight=200cm, height=2cm, top=0.5cm, left=0.5cm, right=0.5cm, bottom=0.5cm]{geometry}
+\usepackage[a4paper, landscape, top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+%\usepackage[paperwidth=31cm, paperheight=200cm, height=2cm, top=0.5cm, left=0.5cm, right=0.5cm, bottom=0.5cm]{geometry}
 \setlength\parskip{-0.05cm} % no extra vertical space between paragraphs
 \setlength\parindent{0cm} % no indent on first lines of paragraphs
 \linespread{1.75} % vertical line-spacing and vertical paragraph spacing
@@ -13,7 +14,7 @@
 %
 \usepackage[english]{babel} % English as "system" language, paracol demands a specification
 \usepackage{paracol} % \begin{paracol}{...} ... \switchcolumn[...] ... \end{paracol}
-\setlength\columnsep{1cm} % seperation between columns
+\setlength\columnsep{1.5cm} % seperation between columns
 \newcommand{\s}{\switchcolumn} % a shorter command to replace \switchcolumn[...] from the paracol-package
 
 
@@ -138,6 +139,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+% Disable page numbering.
+% With tight margins, the numbers were in weird locations.
+% Probably want to re-enable this later, if we can.
+\pagenumbering{gobble}
 
 
 \everypar{\hangindent0.5cm}
@@ -981,6 +986,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \vspace{1em}
 \toggler{V. The inverse.}
+\raggedright
 \quad \fn{NOTE: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \end{translateTwoCol}
 

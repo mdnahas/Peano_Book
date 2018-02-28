@@ -54,7 +54,8 @@
 \raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{1}[1]{\copy0}}}\displaylimits} % creates a "math"-point to have equal spacing
 % Peano's 2 dots is just a colon :, and is used to indicate precidence in equations
 % Peano's 3 dots, used to indicate precidence in equations
-\def\3p{\thinspace \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}\thinspace} % arranging three points in a triangle
+\newcommand{\pppNoSpace}{\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}} % arranging three points in a triangle
+\newcommand{\ppp}{\thinspace \pppNoSpace\thinspace} % arranging three points in a triangle
 
 
 \newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
@@ -606,15 +607,15 @@ Litteris $a,b,... x,y,... x', y',...$ entia indicamus indeterminata quaecumque. 
 \ENG
 By the letters $a,b,... x,y,... x', y',...$ we indicate any indeterminate entities. Determinate entities are, however, indicated by the signs, or rather by the letters, $P, K, N,...$
 \LAT
-Signa plerumque in eadem linea scribemus. Ut ordo pateat quo ea coniungere oporteat, \emph{parenthesibus} ut in algebra, sive \emph{punctis} $. : \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.} :\hspace{0.1em}:$ etc. utimur.
+Signa plerumque in eadem linea scribemus. Ut ordo pateat quo ea coniungere oporteat, \emph{parenthesibus} ut in algebra, sive \emph{punctis} $. : \pppNoSpace :\hspace{0.1em}:$ etc. utimur.
 \ENG
-\na{Generally we write signs on the same line. So that it will be clear how they are to be joined, we use \emph{parentheses}, as in algebra, or rather \emph{points} $. : \leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.} :\hspace{0.1em}:$ etc.}
+\na{Generally we write signs on the same line. So that it will be clear how they are to be joined, we use \emph{parentheses}, as in algebra, or rather \emph{points} $. : \pppNoSpace :\hspace{0.1em}:$ etc.}
 \LAT
 Ut formula punctis divisa, intelligatur, primum signa quae nullo puncto seperantur colligenda sunt, postea quae uno puncto, deinde quae duobus punctis, etc.
 \ENG
 \na{So that a formula divided by points may be understood, first the signs which are not seperated by points are taken together, then those seperated by one point, then those by two points, etc.}
 \LAT
-Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd)$; et $ab$ $.$ $cd:ef$ $.$ $gh$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $k$ significat $(((ab)(cd))((ef)(gh)))k$.
+Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd)$; et $ab$ $.$ $cd:ef$ $.$ $gh$ $\pppNoSpace$ $k$ significat $(((ab)(cd))((ef)(gh)))k$.
 \ENG
 \na{For example, let $a,b,c,...$ be any signs. Then $(ab)(cd)$ means $(ab)(cd)$; and $\{[(ab)(cd)][(ef)(gh)]\}k$ means $\{[(ab)(cd)][(ef)(gh)]\}k$.}
 \LAT Punctuationis signa omittere licet si formulae quae diversa punctuatione existerent eundem habeant sensum; vel si una tantum formula, et ipsa quam scribere volumus, sensum habeat.
@@ -785,7 +786,7 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hfill
 \LAT
-23. \hspace{0.67cm} $a$ $\cup$ $b$ . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $-$ : $-a$ . $-b$
+23. \hspace{0.67cm} $a$ $\cup$ $b$ . = $\pppNoSpace$ $-$ : $-a$ . $-b$
 \ENG
 23. \hspace{0.67cm} $(a \vee b) = \{[(\neg[(\neg a) \wedge (\neg b)]\} $
 \LAT
@@ -988,11 +989,11 @@ quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis consti
 \ENG
 which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of individuals which are in $A$ or $B$.
 \LAT
-47. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+47. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 47. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]\}$
 \LAT
-48. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ $\cup$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $\cup$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $\cup$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+48. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ $\cup$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $\cup$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $\cup$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 48. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]\}$
 \LAT
@@ -1000,7 +1001,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad The sign $\varnothing$ indicates the class which contains no individuals. Thus:
 \LAT
-49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ = \rotatebox[origin=c]{180}{V} : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  \rotatebox[origin=c]{180}{V}
+49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ = \rotatebox[origin=c]{180}{V} : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  \rotatebox[origin=c]{180}{V}
 \ENG
 49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot])\}$ 
 \LAT
@@ -1013,7 +1014,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad The sign $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the class a is contained in the class b}}.
 \LAT
-50. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ \reflectbox{C} $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . \reflectbox{C}\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+50. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ \reflectbox{C} $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . \reflectbox{C}\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 50. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall \text{x}]{} (x \in B)]\}$
 \LAT
@@ -1030,7 +1031,7 @@ Hic signa \rotatebox[origin=c]{180}{V} et \reflectbox{C} significationem habent 
 \raggedright
 \quad The formula $A = B$, if $A$ and $B$ are classes, means $(A \subset B) \wedge (B \subset A)$. Thus
 \LAT
-51. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ = $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+51. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ = $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 51. \hspace{0.67cm} $A$, $B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A = B) = [(x \in A) \underset{\forall \text{x}}=  (x \in B)]\}$
 \LAT
@@ -1058,7 +1059,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad Let $\text{C}$ be a class, and $\text{C}_{subset}$ be a class which is contained in $\text{C}$; then we say that $\text{C}_{subset}$ is an individual of the class $\text{C}$, if $\text{C}_{subset}$ consists of only one individual. That is:
 \LAT
-56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ \reflectbox{C} $s$ : \reflectbox{C} :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $k$ $-$ $=$ \rotatebox[origin=c]{180}{V} : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . \reflectbox{C}\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
+56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ \reflectbox{C} $s$ : \reflectbox{C} :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\pppNoSpace$ $k$ $-$ $=$ \rotatebox[origin=c]{180}{V} : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . \reflectbox{C}\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
 56. \hspace{0.67cm} $[\text{C}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $(\text{C}_{subset} \subset \text{C})] \rightarrow \Big\{(\text{C}_{subset} \in \text{C}) = \big\{(\text{C}_{subset} \not= \varnothing) \wedge \{[(x,y) \in \text{C}_{subset}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
 \end{translateTwoCol}
@@ -1089,11 +1090,11 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow \{x | a \}$ is a \scriptsize{CLASS} \normalsize 
 \LAT
-58. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{K} . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $x$ \scalebox{0.7}[0.9]{$\in$} $a$ : = $a$
+58. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{K} . \reflectbox{C} $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $x$ \scalebox{0.7}[0.9]{$\in$} $a$ : = $a$
 \ENG
 58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{ x | x \in A \} = A $
 \LAT
-59. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x$ \scalebox{0.7}[0.9]{$\in$} . $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ : = $a$
+59. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} $\pppNoSpace$ $x$ \scalebox{0.7}[0.9]{$\in$} . $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ : = $a$
 \ENG
 59. \hspace{0.67cm}  $a$ is a \scriptsize{proposition} \normalsize $\rightarrow (x \in \{x | a \}) = a$
 \LAT
@@ -1129,7 +1130,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 65. \hspace{0.67cm} $\alpha \xrightarrow[\forall x,y]{} \beta = \{(x,y) | \alpha\} \subset \{(x,y) | \beta \}$
 \LAT
-66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} . = $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} : $-$ = \rotatebox[origin=c]{180}{V}
+66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} . = $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = \rotatebox[origin=c]{180}{V} : $-$ = \rotatebox[origin=c]{180}{V}
 \ENG
 66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$
 \LAT
@@ -1197,7 +1198,7 @@ Sit $\upvarphi$ signum, sive signorum aggregatus, ita ut si $x$ est ens classis 
 \ENG
 Let $\upvarphi$ be a sign or an aggregate of signs such that, if $x$ is an object of the class $S$, the expression $\upvarphi$ $x$ denotes a new object; we assume also that equality is defined between the objects $\upvarphi$ $x$; further, if $x$ and $y$ are objects of the class $S$ and if $x = y$, we assume it is possible to deduce $\upvarphi$ $x = \upvarphi$ $y$. Then the sign $\upvarphi$ is said to be a \emph{function presign in the class S}, and we write $\upvarphi$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $F'$ $s$.
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\pppNoSpace$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
 \ENG
 ...
 \LAT
@@ -1205,7 +1206,7 @@ Verum si, cum sit $x$ quodlibet ens classis $s$, scriptura $x\upvarphi$ novum in
 \ENG
 If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a new object and $x\upvarphi = y\upvarphi$ follows from $x=y$, then we say that $\upvarphi$ is a \emph{function postsign in the class S}, and we write $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s'$F.
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\pppNoSpace$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
 \ENG
 ...
 \LAT
@@ -1253,7 +1254,7 @@ Sit $\upvarphi$ functions postsignum; similiter ponimus:
 \ENG
 Let $\upvarphi$ be a function postsign; we write similarly:
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $y$ $| \upvarphi |$ $=$ $| x\scalebox{0.7}[0.9]{$\in$} |$ $(x \upvarphi = y)$.
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $\pppNoSpace$ $y$ $| \upvarphi |$ $=$ $| x\scalebox{0.7}[0.9]{$\in$} |$ $(x \upvarphi = y)$.
 \ENG
 ...
 \LAT
@@ -1320,7 +1321,7 @@ contained in $S$; then $\upvarphi C$ denotes the class consisting of all $\upvar
 \ENG
 \emph{Def}. \hspace{0.25cm}  %TODO
 \LAT
-Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
+Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\pppNoSpace$ $-$ $=$ $\rotatebox[origin=c]{180}{V}$)
 \ENG
 Or \hspace{0.25cm}  %TODO
 \LAT
@@ -1368,7 +1369,7 @@ Functional signorum aequalitatem, productum, potestas, ita definire licet:
 \ENG
 Equality, product and powers can be defined thus for function signs:
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi, \psi \in F' s :$ $\reflectbox{C}$ $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $\varphi = \psi$ : $=$ : $x \in s$ . $\reflectbox{C}$ . $\varphi x = \psi x$
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi, \psi \in F' s :$ $\reflectbox{C}$ $\pppNoSpace$ $\varphi = \psi$ : $=$ : $x \in s$ . $\reflectbox{C}$ . $\varphi x = \psi x$
 \ENG
 \emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
@@ -1536,7 +1537,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \ENG
 ...
 \LAT
-4. \hspace{0.6cm} $a,b \in \N \p \C \3p a = b \p b = c : \C \p a = c$
+4. \hspace{0.6cm} $a,b \in \N \p \C \ppp a = b \p b = c : \C \p a = c$
 \ENG
 ...
 \LAT
@@ -1556,7 +1557,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \ENG
 ...
 \LAT
-9. \hspace{0.6cm} $k \in K \3p 1 \in k \3p x \in \N \p x \in k : \C_x \p x + 1 \in k : : \C \p \N \C k$
+9. \hspace{0.6cm} $k \in K \ppp 1 \in k \ppp x \in \N \p x \in k : \C_x \p x + 1 \in k : : \C \p \N \C k$
 \ENG
 ...
 \end{translateTwoCol}
@@ -1717,11 +1718,11 @@ Ab hac definitione, et a praecedentibus deducitur:
 From this definition, and the preceding, we deduce that:
 \vspace{1em}
 \LAT
-\hspace{1.4cm} $a \in \N \p \C \3p a + 2 = a + (1 + 1) = (a + 1) + 1$
+\hspace{1.4cm} $a \in \N \p \C \ppp a + 2 = a + (1 + 1) = (a + 1) + 1$
 \ENG
 ...
 \LAT
-\hspace{1.4cm} $a \in \N \p \C \3p a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
+\hspace{1.4cm} $a \in \N \p \C \ppp a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
 \end{translateTwoCol}
 
 \peanoPage{3} % page-number 3
@@ -1753,7 +1754,7 @@ From this definition, and the preceding, we deduce that:
 \s
 ... \s ... \s ...
 \s*
-\s $a \in \N \p (1) \p (2) \p \C : : 1 \in [b \in]$ Ts $\3p b \in \N \p b \in [b \in]$ Ts $: \C : b + 1 \in [b \in]$ Ts $\3p ([b \in]$ Ts $) [k]$ P9 $: : \C : \N \C [b \in]$ Ts $\p$ (L50) $:: \C : b \in \N \p C$ Ts. \s (3)
+\s $a \in \N \p (1) \p (2) \p \C : : 1 \in [b \in]$ Ts $\ppp b \in \N \p b \in [b \in]$ Ts $: \C : b + 1 \in [b \in]$ Ts $\ppp ([b \in]$ Ts $) [k]$ P9 $: : \C : \N \C [b \in]$ Ts $\p$ (L50) $:: \C : b \in \N \p C$ Ts. \s (3)
 \s
 ... \s ... \s ...
 \s*
@@ -1777,11 +1778,11 @@ From this definition, and the preceding, we deduce that:
 \s
 ... \s ... \s ...
 \s*
-\s $a,b \in \N \p \C :: c \in \N \p c \in [c \in]$ Ts $\3p \C \3p a = b \p = \p a + c = b + c : a + c , b + c \in \N : a + c = b + c \p = \p a + c + 1 = b + c + 1 \3p \C \3p a = b \p = \p a + (c + 1) = b + (c + 1) \3p \C \3p (c + 1) \in [C\in]$ Ts. \s (2)
+\s $a,b \in \N \p \C :: c \in \N \p c \in [c \in]$ Ts $\ppp \C \ppp a = b \p = \p a + c = b + c : a + c , b + c \in \N : a + c = b + c \p = \p a + c + 1 = b + c + 1 \ppp \C \ppp a = b \p = \p a + (c + 1) = b + (c + 1) \ppp \C \ppp (c + 1) \in [C\in]$ Ts. \s (2)
 \s
 ... \s ... \s ...
 \s*
-\s $a,b \in \N \p (1) \p (2) : \C :: 1 \in [c \in]$ Ts $\3p c \in [c \in]$ Ts $ \p \C \p (c + 1) \in [c \in]$ Ts $:: \C :: c \in \N \p \C \p$ Ts. \s (3)
+\s $a,b \in \N \p (1) \p (2) : \C :: 1 \in [c \in]$ Ts $\ppp c \in [c \in]$ Ts $ \p \C \p (c + 1) \in [c \in]$ Ts $:: \C :: c \in \N \p \C \p$ Ts. \s (3)
 \s
 ... \s ... \s ...
 \s*
@@ -1793,7 +1794,7 @@ From this definition, and the preceding, we deduce that:
 \s
 ... \s ... \s ...
 \s*
-\s $a,b \in \N \p \C \3p c \in \N \p c \in [c \in]$ Ts $: \C : a + (b +c) = a + b + c \p$ P7 $: \C : a + (b + c) + 1 = a + b + c + 1 \p$ P18 $: \C : a + (b + (c + 1)) = a + b + (c + 1) : \C \p c + 1 \in [c \in]$ Ts. \s (2)
+\s $a,b \in \N \p \C \ppp c \in \N \p c \in [c \in]$ Ts $: \C : a + (b +c) = a + b + c \p$ P7 $: \C : a + (b + c) + 1 = a + b + c + 1 \p$ P18 $: \C : a + (b + (c + 1)) = a + b + (c + 1) : \C \p c + 1 \in [c \in]$ Ts. \s (2)
 \s
 ... \s ... \s ...
 \s*
@@ -1839,7 +1840,7 @@ From this definition, and the preceding, we deduce that:
 \s
 ... \s ... \s ...
 \s*
-\s $a \in \N \p \C \3p b \in \N \p b \in [b \in]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = (a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \in [b \in]$ Ts. \s (2)
+\s $a \in \N \p \C \ppp b \in \N \p b \in [b \in]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = (a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \in [b \in]$ Ts. \s (2)
 \s
 ... \s ... \s ...
 \s*
@@ -1953,11 +1954,11 @@ From this definition, and the preceding, we deduce that:
 \s
 \s \s
 \s*
-\emph{Dem.} \s $a,b \in \N : \C \3p x,y \in b - a \p \C_{x,y} : x, y \in \N \p x + a = b \p y + a = b \p$ \S1 P22 $: \C : x = y$. \s (1)
+\emph{Dem.} \s $a,b \in \N : \C \ppp x,y \in b - a \p \C_{x,y} : x, y \in \N \p x + a = b \p y + a = b \p$ \S1 P22 $: \C : x = y$. \s (1)
 \s
 \s \s
 \s*
-\s $a,b \in \N \p a < b \p$ P2 $\p (1) : \C \3p b - a \no = \abs : x,y \in b - a \p \C \p x = y : (N, b - a) [s,k]$ (L56) $\3p \C \3p b - a \in N$. \s (2)
+\s $a,b \in \N \p a < b \p$ P2 $\p (1) : \C \ppp b - a \no = \abs : x,y \in b - a \p \C \p x = y : (N, b - a) [s,k]$ (L56) $\ppp \C \ppp b - a \in N$. \s (2)
 \s \s
 \end{paracol}
 
@@ -2148,7 +2149,7 @@ From this definition, and the preceding, we deduce that:
 \s
 \s \s
 \s*
-\s $a,b \in \N : a > b \p \cup \p a = b \p \cup \p a > b : (2)(3)(7) \3p \C \3p a < b + 1 \p \cup \p a = b + 1 \p \cup \p a > b + 1$. \s (8)
+\s $a,b \in \N : a > b \p \cup \p a = b \p \cup \p a > b : (2)(3)(7) \ppp \C \ppp a < b + 1 \p \cup \p a = b + 1 \p \cup \p a > b + 1$. \s (8)
 \s
 \s \s
 \s*
@@ -2198,11 +2199,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
-1. \s $a \in K \N \p \C : M a = [x \in] (x \in a \3p a \p \in \larger x : = \abs$. \s
+1. \s $a \in K \N \p \C : M a = [x \in] (x \in a \ppp a \p \in \larger x : = \abs$. \s
 \s
 \s \s
 \s*
-2. \s $a \in K \N \p \C : \mini a = [x \in] (x \in a \3p a \p \in \smaller x : = \abs$. \s
+2. \s $a \in K \N \p \C : \mini a = [x \in] (x \in a \ppp a \p \in \smaller x : = \abs$. \s
 \end{paracol}
 
 \peanoPage{7} % page-number 7
@@ -2404,7 +2405,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-\emph{Dem.} \s $a,b \in \N \p a = b :: \C :: 1 \in [c \in]$ Ts $\3p c \in [c \in]$ Ts $\p \C : ac = bc \p a = b : \C : ac + a = bc + b : \C : a (c + 1) = b (c + 1) : \C : c + 1 \in [c \in]$ Ts $:: \C : c \in \N \p \C \p$ Ts. \s
+\emph{Dem.} \s $a,b \in \N \p a = b :: \C :: 1 \in [c \in]$ Ts $\ppp c \in [c \in]$ Ts $\p \C : ac = bc \p a = b : \C : ac + a = bc + b : \C : a (c + 1) = b (c + 1) : \C : c + 1 \in [c \in]$ Ts $:: \C : c \in \N \p \C \p$ Ts. \s
 \s
 \s \s
 \s*
@@ -2424,7 +2425,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-12. \s $a,b,c \in \N \p \C \3p a \smaller b \p = \p ac \smaller bc : a = b \p = \p ac = bc : a \larger b \p = \p ac \larger bc$. \s
+12. \s $a,b,c \in \N \p \C \ppp a \smaller b \p = \p ac \smaller bc : a = b \p = \p ac = bc : a \larger b \p = \p ac \larger bc$. \s
 \s
 \s \s
 \s*
@@ -2538,11 +2539,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-8. \s $a,b,c \in \N \p \C \3p a \smaller b \p = \p a^c \smaller b^c : a = b \p = \p a^c = b^c : a \larger b \p = \p a^c \larger b^c$. \s
+8. \s $a,b,c \in \N \p \C \ppp a \smaller b \p = \p a^c \smaller b^c : a = b \p = \p a^c = b^c : a \larger b \p = \p a^c \larger b^c$. \s
 \s
 \s \s
 \s*
-9. \s $a,b,c \in \N \p a \larger 1 \p \C \3p b \smaller c \p = \p a^b \smaller a^c : b = c \p = \p a^b = a^c : b \larger c \p = \p a^b \larger a^c$.
+9. \s $a,b,c \in \N \p a \larger 1 \p \C \ppp b \smaller c \p = \p a^b \smaller a^c : b = c \p = \p a^b = a^c : b \larger c \p = \p a^b \larger a^c$.
 \end{paracol}
 
 \begin{translateTwoCol}
@@ -2621,15 +2622,15 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-5. \s $a,b \in \N \p \C :: a \pi b \3p = \3p \such D a \p \such D b \p \such \larger 1 : = \abs$. \s
+5. \s $a,b \in \N \p \C :: a \pi b \ppp = \ppp \such D a \p \such D b \p \such \larger 1 : = \abs$. \s
 \s
 \s \s
 \s*
-6. \s $a,b \in \N \p \C \3p \such D (a,b) : = : \such D a \p \cap \p \such D b$. \s
+6. \s $a,b \in \N \p \C \ppp \such D (a,b) : = : \such D a \p \cap \p \such D b$. \s
 \s
 \s \s
 \s*
-7. \s $a,b \in \N \p \C \3p \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
+7. \s $a,b \in \N \p \C \ppp \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
 \s
 \s \s
 \s*
@@ -2779,15 +2780,15 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-\emph{Dem.} \s Hyp. P28 $: \C \3p x D a \p x D b : \C : x D b \p x D (a-b)$ \s (1)
+\emph{Dem.} \s Hyp. P28 $: \C \ppp x D a \p x D b : \C : x D b \p x D (a-b)$ \s (1)
 \s
 \s \s
 \s*
-\s Hyp. P27 $: \C \3p x D b \p x D (a-b) : \C : x D b \p x D (b+(a-b)) : \C : x D b \p x D a$. \s (2)
+\s Hyp. P27 $: \C \ppp x D b \p x D (a-b) : \C : x D b \p x D (b+(a-b)) : \C : x D b \p x D a$. \s (2)
 \s
 \s \s
 \s*
-\s $(1)(2) \C :$ Hyp. $\C \3p x D a \p x D b : = : x D b \p x D(a-b)$. \s (Th.)
+\s $(1)(2) \C :$ Hyp. $\C \ppp x D a \p x D b : = : x D b \p x D(a-b)$. \s (Th.)
 \s
 \s \s
 \s*
@@ -2823,7 +2824,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-\s $a,b \in \N \p a \smaller c + 1 \p b \smaller c + 1 : \C \3p a \smaller c \p b \smaller c : \cup : a = c \p b \smaller c : \cup : a \smaller c \p b = c : \cup : a = c \p b = c$. \s (4)
+\s $a,b \in \N \p a \smaller c + 1 \p b \smaller c + 1 : \C \ppp a \smaller c \p b \smaller c : \cup : a = c \p b \smaller c : \cup : a \smaller c \p b = c : \cup : a = c \p b = c$. \s (4)
 \s
 \s \s
 \s*
@@ -2851,7 +2852,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-\s $(1)(10) \p \C \3p c \in \N \p$ Hp. $a \smaller c \p b \smaller c : \C :$ Ts. \s (11)
+\s $(1)(10) \p \C \ppp c \in \N \p$ Hp. $a \smaller c \p b \smaller c : \C :$ Ts. \s (11)
 \s
 \s \s
 \s*
@@ -2909,11 +2910,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-8. \s $a \in \N \p a \larger 1 : \C \3p \Np \p \such \larger 1 \p \such D a : \no = \abs$. \s (Eucl. VII, 31)
+8. \s $a \in \N \p a \larger 1 : \C \ppp \Np \p \such \larger 1 \p \such D a : \no = \abs$. \s (Eucl. VII, 31)
 \s
 \s \s
 \s*
-9. \s $a,b \in \N \3p b^2 \larger a \3p \such D a \p \such \larger 1 \p \such \smaller b : = \abs :: \C \p a \in \Np$. \s
+9. \s $a,b \in \N \ppp b^2 \larger a \ppp \such D a \p \such \larger 1 \p \such \smaller b : = \abs :: \C \p a \in \Np$. \s
 \s
 \s \s
 \s*
@@ -2941,7 +2942,7 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s
 \s \s
 \s*
-16. \s $ a,b,c \in \N \p \C \3p a \pi b \p a \pi c : = : a \pi bc$. \s (Eucl. VII, 24)
+16. \s $ a,b,c \in \N \p \C \ppp a \pi b \p a \pi c : = : a \pi bc$. \s (Eucl. VII, 24)
 \s
 \s \s
 \s*
@@ -3030,11 +3031,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s
 \s \s
 \s*
-2. \s $p,q,p',q' \in \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \3p x \in \N \p x \frac{p}{q}, x \frac{p'}{q'} \in \N : \C_x \p x \frac{p}{q} = x \frac{p'}{q'}$. \s
+2. \s $p,q,p',q' \in \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \ppp x \in \N \p x \frac{p}{q}, x \frac{p'}{q'} \in \N : \C_x \p x \frac{p}{q} = x \frac{p'}{q'}$. \s
 \s
 \s \s
 \s*
-3. \s $R = :: [x \in] \3p p, q \in \N \p \frac{p}{q} = x : \no = \abs$. \s
+3. \s $R = :: [x \in] \ppp p, q \in \N \p \frac{p}{q} = x : \no = \abs$. \s
 \s
 \s \s
 \s*
@@ -3060,11 +3061,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s
 \s \s
 \s*
-\emph{Dem.} \s Hp. $\frac{p}{q} = \frac{p'}{q'} : \C \3p qq', qq' \frac{p}{q}, qq' \frac{p'}{q'} \in \N \p$ P2 $\3p \C \3p qq' \frac{p}{q} = qq' \frac{p'}{q'} \p qq' \frac{p}{q} = pq' \p qq' \frac{p'}{q'} = p'q \3p \C \3p pq' = p'q$. \s (1)
+\emph{Dem.} \s Hp. $\frac{p}{q} = \frac{p'}{q'} : \C \ppp qq', qq' \frac{p}{q}, qq' \frac{p'}{q'} \in \N \p$ P2 $\ppp \C \ppp qq' \frac{p}{q} = qq' \frac{p'}{q'} \p qq' \frac{p}{q} = pq' \p qq' \frac{p'}{q'} = p'q \ppp \C \ppp pq' = p'q$. \s (1)
 \s
 \s \s
 \s*
-\s Hp. $pq' = p'q \3p \C \3p x \in \N \p x \frac{p}{q}, x \frac{p'}{q'} \in \N : \C_x : x p'q' = x p'q : \C : (x \frac{p}{q}) qq' = (x \frac{p'}{q'}) qq' : \C : x \frac{p}{q} = x \frac{p'}{q'}$. \s (2)
+\s Hp. $pq' = p'q \ppp \C \ppp x \in \N \p x \frac{p}{q}, x \frac{p'}{q'} \in \N : \C_x : x p'q' = x p'q : \C : (x \frac{p}{q}) qq' = (x \frac{p'}{q'}) qq' : \C : x \frac{p}{q} = x \frac{p'}{q'}$. \s (2)
 \s
 \s \s
 \s*
@@ -3096,11 +3097,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s
 \s \s
 \s*
-12. \s $p,q \in \N \p \C :: [m \in] : m \in \N \p m \frac{p}{q} \in \N \3p \no = \abs$. \s
+12. \s $p,q \in \N \p \C :: [m \in] : m \in \N \p m \frac{p}{q} \in \N \ppp \no = \abs$. \s
 \s
 \s \s
 \s*
-12'. \s $a \in \R \p \C :: [m \in] : m \in \N \p ma \in \N \3p \no = \abs$. \s
+12'. \s $a \in \R \p \C :: [m \in] : m \in \N \p ma \in \N \ppp \no = \abs$. \s
 \s
 \s \s
 \end{paracol}
@@ -3111,15 +3112,15 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-13. \s $p,q,p',q' \in \N \p \C :: [(r,s,l) \in] : r,s,t \in \N \p \frac{p}{q} = \frac{r}{t} \p \frac{p'}{q'} = \frac{s}{t} \3p \no = \abs$. \s
+13. \s $p,q,p',q' \in \N \p \C :: [(r,s,l) \in] : r,s,t \in \N \p \frac{p}{q} = \frac{r}{t} \p \frac{p'}{q'} = \frac{s}{t} \ppp \no = \abs$. \s
 \s
 \s \s
 \s*
-13'. \s $a,b \in \R \p \C :: [(r,s,t) \in] : r,s,t \in \N \p a = \frac{r}{t} \p b = \frac{s}{t} \3p \no = \abs$. \s
+13'. \s $a,b \in \R \p \C :: [(r,s,t) \in] : r,s,t \in \N \p a = \frac{r}{t} \p b = \frac{s}{t} \ppp \no = \abs$. \s
 \s
 \s \s
 \s*
-14. \s $a,b,c \in \R \p \C :: [(m,n,p,q) \in] : m,n,p,q \in \N \p a = \frac{m}{q} \p b = \frac{n}{q} \p c = \frac{p}{q} \3p \no = \abs$. \s
+14. \s $a,b,c \in \R \p \C :: [(m,n,p,q) \in] : m,n,p,q \in \N \p a = \frac{m}{q} \p b = \frac{n}{q} \p c = \frac{p}{q} \ppp \no = \abs$. \s
 \s
 \s \s
 \s*
@@ -3131,15 +3132,15 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s
 \s \s
 \s*
-17. \s $a,b,c \in \R \p \C \3p a = a$. \s
+17. \s $a,b,c \in \R \p \C \ppp a = a$. \s
 \s
 \s \s
 \s*
-\s $\hspace{1.72cm} \C \3p a = b \p = \p b = a$. \s
+\s $\hspace{1.72cm} \C \ppp a = b \p = \p b = a$. \s
 \s
 \s \s
 \s*
-\s $\hspace{1.72cm} \C \3p a = b \p b = c : \C \p a = c$. \s
+\s $\hspace{1.72cm} \C \ppp a = b \p b = c : \C \p a = c$. \s
 \s
 \s \s
 \s*
@@ -3163,7 +3164,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-19. \s $a,b \in \R \p \C :: a \smaller b \p = \3p x \in \N \p xa, xb \in \N : \C \p xa < xb$. \s
+19. \s $a,b \in \R \p \C :: a \smaller b \p = \ppp x \in \N \p xa, xb \in \N : \C \p xa < xb$. \s
 \s
 \s \s
 \s*
@@ -3203,39 +3204,39 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \s
 \s \s
 \s*
-25. \s $a \in \R \p \C \3p ? \p \such \larger a : \no = \abs$. \s
+25. \s $a \in \R \p \C \ppp ? \p \such \larger a : \no = \abs$. \s
 \s
 \s \s
 \s*
-26. \s $a \in \R \p \C \3p \R \p \such \smaller a : \no = \abs$. \s
+26. \s $a \in \R \p \C \ppp \R \p \such \smaller a : \no = \abs$. \s
 \s
 \s \s
 \s*
-27. \s $a,b \in \R \p a \smaller b : \C \3p \R \p \such \larger a \p \such \smaller b : \no = \abs$. \s
+27. \s $a,b \in \R \p a \smaller b : \C \ppp \R \p \such \larger a \p \such \smaller b : \no = \abs$. \s
 \s
 \s \s
 \s*
-28. \s $a,b \in \R : \C \3p a \smaller b \p a = b : = \abs$. \s
+28. \s $a,b \in \R : \C \ppp a \smaller b \p a = b : = \abs$. \s
 \s
 \s \s
 \s*
-\s $\hspace{1.5cm} \C \3p a \larger b \p a = b : = \abs$. \s
+\s $\hspace{1.5cm} \C \ppp a \larger b \p a = b : = \abs$. \s
 \s
 \s \s
 \s*
-\s $\hspace{1.5cm} \C \3p a \smaller b \p a \larger b : = \abs$. \s
+\s $\hspace{1.5cm} \C \ppp a \smaller b \p a \larger b : = \abs$. \s
 \s
 \s \s
 \s*
-\s $\hspace{1.5cm} \C \3p a \no \smaller b \p a \no = b \p a \no \larger b : = \abs$. \s
+\s $\hspace{1.5cm} \C \ppp a \no \smaller b \p a \no = b \p a \no \larger b : = \abs$. \s
 \s
 \s \s
 \s*
-29. \s $a,b,c \in \R : \C \3p a \smaller \cup = b \p b \smaller c : \C : a \smaller c$. \s
+29. \s $a,b,c \in \R : \C \ppp a \smaller \cup = b \p b \smaller c : \C : a \smaller c$. \s
 \s
 \s \s
 \s*
-\s $\hspace{1.7cm} \C \3p a \smaller b \p b \smaller \cup = c : \C : a \smaller c$. \s
+\s $\hspace{1.7cm} \C \ppp a \smaller b \p b \smaller \cup = c : \C : a \smaller c$. \s
 \end{paracol}
 
 \peanoPage{15} % page-number 15
@@ -3255,15 +3256,15 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-30. \s $a,b \in \R \p \C \p a + b = [c \in] (c \in  \R \3p x \in \N \p x a, x b, x c \in \N : \C_x \p xa + xb = xc)$. \s
+30. \s $a,b \in \R \p \C \p a + b = [c \in] (c \in  \R \ppp x \in \N \p x a, x b, x c \in \N : \C_x \p xa + xb = xc)$. \s
 \s
 \s \s
 \s*
-31. \s $a,b \in \R \p \C :: b - a = \3p [x \in] (x \in \R \p a + x = b)$. \s
+31. \s $a,b \in \R \p \C :: b - a = \ppp [x \in] (x \in \R \p a + x = b)$. \s
 \s
 \s \s
 \s*
-32. \s $a,b \in \R \p \C \p ab = [c \in] (c \in \R \3p x \in \N \p xa, (xa)b, xc \in \N : \C_x \p (xa) b = xc)$. \s
+32. \s $a,b \in \R \p \C \p ab = [c \in] (c \in \R \ppp x \in \N \p xa, (xa)b, xc \in \N : \C_x \p (xa) b = xc)$. \s
 \s
 \s \s
 \s*
@@ -3367,15 +3368,15 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-1. \s $a \in \K \R \p x \in \R : \C :: x \smaller \T a \p = \3p a \p \such \larger x : \no = \abs$. \s
+1. \s $a \in \K \R \p x \in \R : \C :: x \smaller \T a \p = \ppp a \p \such \larger x : \no = \abs$. \s
 \s
 \s \s
 \s*
-2. \s $a \in \K \R \p x \in \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \in \R \p u \smaller x : \C_x \3p a \p \such \larger u : \no = \abs$. \s
+2. \s $a \in \K \R \p x \in \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \in \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
 \s
 \s \s
 \s*
-3. \s $a \in \K \R \p x \in \R : \C \3p x \larger \T a \p = : x -\no \smaller \T a \p x \no = \T a$. \s
+3. \s $a \in \K \R \p x \in \R : \C \ppp x \larger \T a \p = : x -\no \smaller \T a \p x \no = \T a$. \s
 \s
 \s \s
 \end{paracol}
@@ -3397,7 +3398,7 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-4. \s $x \in \R \p \C :: x = \3p \T : \R \p \such \smaller x$. \s
+4. \s $x \in \R \p \C :: x = \ppp \T : \R \p \such \smaller x$. \s
 \s
 \s \s
 \end{paracol}
@@ -3437,15 +3438,15 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-5. \s $\Q = [x \in] (a \in K \R : a \no = \abs : \R \in \larger \T a \p \min = \abs : \T a = x \3p \no = \abs)$. \s
+5. \s $\Q = [x \in] (a \in K \R : a \no = \abs : \R \in \larger \T a \p \min = \abs : \T a = x \ppp \no = \abs)$. \s
 \s
 \s \s
 \s*
-6. \s $a,b \in \Q \p \C :: a = b \p = \3p \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
+6. \s $a,b \in \Q \p \C :: a = b \p = \ppp \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
 \s
 \s \s
 \s*
-7. \s $a,b \in \Q \p \C :: a \smaller b \p = \3p \R \p \such \larger a \p \such \smaller b : = \no = \abs$. \s
+7. \s $a,b \in \Q \p \C :: a \smaller b \p = \ppp \R \p \such \larger a \p \such \smaller b : = \no = \abs$. \s
 \s
 \s \s
 \s*
@@ -3469,11 +3470,11 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-9. \s $a \in \Q \p \C \3p \R \p \such \smaller a : \no = \abs$. \s
+9. \s $a \in \Q \p \C \ppp \R \p \such \smaller a : \no = \abs$. \s
 \s
 \s \s
 \s*
-10. \s $a \in \Q \p \C \3p \R \p \such \larger a : \no = \abs$. \s
+10. \s $a \in \Q \p \C \ppp \R \p \such \larger a : \no = \abs$. \s
 \s
 \s \s
 \s*
@@ -3504,11 +3505,11 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-12. \s $a,b \in Q \p \C \p a + b = T [z \in] ([(x,y) \in] : x,y \in \R \p x \smaller a \p y \smaller b \p x + y = z \3p \no = \abs)$. \s
+12. \s $a,b \in Q \p \C \p a + b = T [z \in] ([(x,y) \in] : x,y \in \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
 \s
 \s \s
 \s*
-13. \s $a,b \in Q \p \C \p ab = T [z \in] ([x,y) \in] : x,y \in \R \p x \smaller a \p y \smaller b \p xy = z \3p \no = \abs)$. \s
+13. \s $a,b \in Q \p \C \p ab = T [z \in] ([x,y) \in] : x,y \in \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
 \s
 \s \s
 \s*
@@ -3570,7 +3571,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-1. \s $a \in \K \Q \p \C \I a = \Q [x \in] ([u,v) \in] :: u,v \in \Q \3p u \smaller x \smaller v \3p \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
+1. \s $a \in \K \Q \p \C \I a = \Q [x \in] ([u,v) \in] :: u,v \in \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
 \s
 \s \s
 \s*
@@ -3602,7 +3603,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s
 \s \s
 \s*
-5. \s $a \in \K \Q \p x \in \I a : \C : [(u,v) \in] (u,v \in \Q \3p u \smaller x \smaller v \3p \such \larger u \p \such \smaller v : \C : a) \no = \abs$. \s
+5. \s $a \in \K \Q \p x \in \I a : \C : [(u,v) \in] (u,v \in \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a) \no = \abs$. \s
 \s
 \s \s
 \s*
@@ -3610,7 +3611,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s
 \s \s
 \s*
-6. \s $a \in \K \Q \p u,v \in \Q \p (\such \larger u \p \such \smaller v : \C a) \3p \C \3p \such \larger u \p \such \smaller v : \C \I a$. \s
+6. \s $a \in \K \Q \p u,v \in \Q \p (\such \larger u \p \such \smaller v : \C a) \ppp \C \ppp \such \larger u \p \such \smaller v : \C \I a$. \s
 \s
 \s \s
 \s*
@@ -3650,7 +3651,7 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s
 \s \s
 \s*
-\emph{Dem.} \s Hp. $x,u,v \in \Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C a) : \C \3p \such \larger u \p \such \smaller v : \C b$ \s (1)
+\emph{Dem.} \s Hp. $x,u,v \in \Q \p u \smaller x \smaller v \p (\such \larger u \p \such \smaller v : \C a) : \C \ppp \such \larger u \p \such \smaller v : \C b$ \s (1)
 \s
 \s \s
 \s*
@@ -3721,11 +3722,11 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s
 \s \s
 \s*
-16. \s $a \in \K \Q \p \C \3p \I a \p \E a : = \abs$ \s
+16. \s $a \in \K \Q \p \C \ppp \I a \p \E a : = \abs$ \s
 \s
 \s \s
 \s*
-\emph{Dem.} \s Hp. P7 $.$ P15 $: \C \3p \I a \p \E a : \C : a \no a : = \abs$ \s
+\emph{Dem.} \s Hp. P7 $.$ P15 $: \C \ppp \I a \p \E a : \C : a \no a : = \abs$ \s
 \s
 \s \s
 \s*
@@ -3761,15 +3762,15 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \s
 \s \s
 \s*
-22. \s $a \in \K \Q \p \C \3p \I a \p \Lfat a : = \abs$ \s
+22. \s $a \in \K \Q \p \C \ppp \I a \p \Lfat a : = \abs$ \s
 \s
 \s \s
 \s*
-\s $\hspace{1.68cm} \C \3p \E a \p \Lfat a : = \abs$ \s
+\s $\hspace{1.68cm} \C \ppp \E a \p \Lfat a : = \abs$ \s
 \s
 \s \s
 \s* 
-\s $\hspace{1.68cm} \C \3p \no \I a \p \no \E a \p \no \Lfat a : = \abs$ \s
+\s $\hspace{1.68cm} \C \ppp \no \I a \p \no \E a \p \no \Lfat a : = \abs$ \s
 \s
 \s \s
 \s*

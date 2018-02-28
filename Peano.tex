@@ -109,7 +109,8 @@
 % Use Tcolorbox package for headers like ``Propositions'', etc.
 %
 \usepackage[most]{tcolorbox}
-\newtcbox{\footnoteHeading}{colback=blue,colframe=blue_edge, coltext=white}
+% NOTE: You cannot start a command with ``end'', so ``eend''
+\newtcbox{\eendnoteHeading}{colback=blue,colframe=blue_edge, coltext=white}
 \newtcbox{\peanoHeadingSmall}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
 \newtcbox{\peanoHeadingMedium}{colback=grey,colframe=grey_edge, left=2.25cm, right=2.25cm}
 \newtcbox{\peanoHeadingLarge}{colback=grey,colframe=grey_edge, left=3.5cm, right=3.5cm}
@@ -202,6 +203,10 @@
 \begin{paracol}{3}
   \switchcolumn[1] % use center column
 
+  { \Large About the Translation}
+
+   \vspace{0.25cm}
+  
 %  \everypar{\hangindent0.5cm}
    Below is Giuseppe Peano's \emph{Arithmetices principia} as first published\footnote{H. Kennedy, \emph{Peano. Life and Works of Giuseppe Peano}, San Francisco: Peremptory Publications, 2002, p. 41.}, i.e. as ``\emph{Arithmetices principia, nova methodo exposita}"\footnote{G. Peano, \emph{Arithmetices principia, nova methodo exposita}, Bocca, Torino, 1889.} , which appeared translated to English\footnote{These English translations listed are the only ones (to my knowledge) and all the English translations listed in: \\
    I. Grattan-Guiness (ed.), \emph{Landmark Writings in Western Mathematics 1640-1940}, Amsterdam: Elsevier, 2005, p. 614.} in 1967 as ``\emph{The principles of arithmetic, presented by a new method}"\footnote{G. Peano, (1889), ``The principles of arithmetic presented by a new method" in: J. van Heijenoort (ed.), \emph{From Frege to G\"odel. A source book in mathematical logic. 1879-1931}, Cambridge: Harvard University Press, 1967, p. 83-97.}, as well as in 1973\footnote{G. Peano, \emph{Selected works of Giuseppe Peano}, H. Kennedy (ed.), London: George Allen \& Unwin, 1973, p. 101-134.}.
@@ -641,9 +646,9 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \LAT Signo $\cup$ legitur \emph{vel}. Sint $a,b$ propositiones; tunc $a \cup b$ idem est ac $-:-a$ $.$ $-b$.
 \ENG The sign $\vee$ is read \emph{or}. Let $a,b$ be propositions; then $a \vee b$ is the same as $\neg[(\neg a) \wedge (\neg b)]$.
 \LAT \text{[}Signo $V$ significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.
-\ENG \na{The sign \scriptsize{true} \normalsize means \emph{true}, or \emph{identity}, but we never use this sign.}
+\ENG \na{The sign $\top$  means \emph{true}, or \emph{identity}, but we never use this sign.}
 \LAT Signum  $\rotatebox[origin=c]{180}{V}$ significat \emph{falsum}, sive \emph{absurdum}.
-\ENG The sign $\rotatebox[origin=c]{180}{V}$ means \emph{false}, or \emph{absurd}.
+\ENG The sign $\bot$ means \emph{false}, or \emph{absurd}.
 \LAT \text{[}Signum C significat \emph{est consequentia}; ita $b$ C $a$ legitur $b$ \emph{est consequentia propositionis} $a$. Sed hoc signo nunquam utimur\text{]}.
 \ENG \na{The sign $\leftarrow$ means \emph{is a consequence of}. Thus $b \leftarrow a$ is read $b$ \emph{is a consequence of the proposition} $a$. But we never use this sign.}
 \LAT Signum \reflectbox{C} significat \emph{deducitur}; ita $a$ $\reflectbox{C}$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\reflectbox{C}_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\reflectbox{C}_{x,y,...}$, scribemus solum \reflectbox{C}.
@@ -965,7 +970,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \LAT
 \quad Sint $a$, $b$ classes; $a$ \scalebox{0.8}[0.6]{$\cap$} $b$, sive $a$ $b$, est classis individuis constituta
 \ENG
-\quad Let $A, B$ be classes. Then $A \cap B$, or $A \wedge B$, is the class composed of individuals
+\quad Let $A, B$ be classes. Then $A \cap B$\na{, or $A B$,} is the class composed of individuals
 \end{translateTwoCol}
 
 \peanoPage{XI} % page-number XI
@@ -973,7 +978,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \begin{translateTwoCol}
 quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis constituta qui sunt $a$ vel $b$.
 \ENG
-which are at the same time in $a$ and $b$; $a \cup b$ is the class composed of individuals which are in $a$ or $b$.
+which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of individuals which are in $A$ or $B$.
 \LAT
 47. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}$ $a$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
@@ -1154,7 +1159,7 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 \vspace{1em}
 \peanoHeadingSmall{VI. Functions.}
 \raggedright
-\quad \fn{NOTE: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a value.}
+\quad \fn{NOTE: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
 \end{translateTwoCol}
 
 \vspace{1em}
@@ -4060,8 +4065,8 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \columnratio{1} \begin{paracol}{1} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol} % end of page-numbering
 
 \phantomsection
-\addcontentsline{toc}{chapter}{Footnotes}
+\addcontentsline{toc}{chapter}{Endnotes}
 \vspace{1em}
-\footnoteHeading{\textbf{Footnotes}}
+\eendnoteHeading{\textbf{Endnotes}}
 \theendnotes
 \end{document}

@@ -106,21 +106,38 @@
 \definecolor{grey_edge}{RGB}{173,173,173}
 
 
-% Use Tcolorbox package for headers like ``Propositions'', etc.
-%
-\usepackage[most]{tcolorbox}
-% NOTE: You cannot start a command with ``end'', so ``eend''
-\newtcbox{\eendnoteHeading}{colback=blue,colframe=blue_edge, coltext=white}
-\newtcbox{\peanoHeadingSmall}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
-\newtcbox{\peanoHeadingMedium}{colback=grey,colframe=grey_edge, left=2.25cm, right=2.25cm}
-\newtcbox{\peanoHeadingLarge}{colback=grey,colframe=grey_edge, left=3.5cm, right=3.5cm}
-
-
 % Use Hyperref package for URLs
 %   ShareLaTeX.com said ``Usually [hyperref] has to be the last package to be imported''
 %
 \usepackage[colorlinks=true,linkcolor=red, urlcolor=red]{hyperref} % color links and url's --- hyperref for hyperlinks in endnotes
 \urlstyle{same} % standard font for url's
+
+
+%% Section headers originally used the tcolorbox package,
+%% but it repeatedly caused ``Arithmetic Overflow'' errors.
+%%
+%%% Use Tcolorbox package for headers like ``Propositions'', etc.
+%%%
+%%\usepackage[most]{tcolorbox}
+%%% NOTE: You cannot start a command with ``end'', so ``eend''
+%%\newtcbox{\eendnoteHeading}{colback=blue,colframe=blue_edge, coltext=white}
+%%\newtcbox{\peanoHeadingSmall}{colback=grey,colframe=grey_edge, left=1cm, right=1cm}
+%%\newtcbox{\peanoHeadingMedium}{colback=grey,colframe=grey_edge, left=2.25cm, right=2.25cm}
+%%\newtcbox{\peanoHeadingLarge}{colback=grey,colframe=grey_edge, left=3.5cm, right=3.5cm}
+
+% Heading commands
+%    - assumes it is already in a centered format.
+%
+\newcommand\peanoHeadingSmall[1]{ \vspace{0.75cm} \textit{#1} \nopagebreak[4]
+
+\vspace{0.25cm} \nopagebreak[1]}
+\newcommand\peanoHeadingMedium[1]{ \vspace{1cm} {\Large #1} \nopagebreak[4]
+
+  \noindent\rule{1cm}{0.4pt} \nopagebreak[1]}
+\newcommand\peanoHeadingLarge[1]{ \vspace{2cm} {\Large \textbf{\uppercase{#1}} \nopagebreak[4]}
+
+  \noindent\rule{2cm}{0.4pt} \nopagebreak[1]}
+\newcommand\eendnoteHeading[1]{ {\Large #1} \nopagebreak[1]}
 
 
 % Define commands for document structure
@@ -333,14 +350,11 @@ Augustae Taurinorum - Typis Vincentii Bona.
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{Preface}
-\vspace{1em}
-\peanoHeadingSmall{Praefatio}
+\peanoHeadingLarge{Praefatio}
 \ENG
-\vspace{1em}
-\peanoHeadingSmall{Preface}
+\peanoHeadingLarge{Preface}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 Quaestiones, quae ad mathematicae fundamenta pertinent, etsi hisce temporibus a multis tractatae, satisfacienti solutione et adhuc carent. Hic difficultas maxime ex sermonis ambiguitate oritur.
 \ENG Questions pertaining to the foundations of mathematics, although treated by many these days, still lack a satisfactory solution. The difficulty arises principally from the ambiguity of ordinary language.
@@ -451,14 +465,11 @@ My booklet should be taken as a sample of this new method. With these notations 
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{Table of signs}
-\vspace{1em}
-\peanoHeadingSmall{Signorum tabula}
+\peanoHeadingMedium{Signorum tabula}
 \ENG
-\vspace{1em}
-\peanoHeadingSmall{Table of signs}
+\peanoHeadingMedium{Table of signs}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.05, 0.35, 0.1, 0.05, 0.35, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -582,25 +593,20 @@ $-<$ \s non est minor \s
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{Notations of logic}
-\vspace{1em}
-\peanoHeadingLarge{Logicae notationes.}
+\peanoHeadingMedium{Logicae notationes.}
 \ENG
-\vspace{1em}
-\peanoHeadingLarge{Notations of logic.}
+\peanoHeadingMedium{Notations of logic.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{I. Punctuation}
-\vspace{1em}
 \peanoHeadingSmall{I. De punctuatione.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{I. Punctuation.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 Litteris $a,b,... x,y,... x', y',...$ entia indicamus indeterminata quaecumque. Entia vero determinata signis, sive litteris $P, K, N,...$ indicamus.
 \ENG
@@ -629,10 +635,8 @@ Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{II. Propositions}
-\vspace{1em}
 \peanoHeadingSmall{II. De propositionibus.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{II. Propositions.}
 \end{translateTwoCol}
 
@@ -669,10 +673,8 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{III. Propositions of logic}
-\vspace{1em}
 \peanoHeadingSmall{III. Logicae propositiones.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{III. Propositions of logic.}
 \end{translateTwoCol}
 
@@ -934,13 +936,12 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{IV. Classes}
-\vspace{1em}
 \peanoHeadingSmall{IV. De classibus.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{IV. Classes.}
+
 \raggedright
-\quad \fn{NOTE: Peano's ``Class'' is similar to modern ``sets''. }
+\quad \fn{COMMENTARY: Peano's ``Class'' is similar to modern ``sets''. }
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1067,13 +1068,12 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{V. The inverse}
-\vspace{1em}
 \peanoHeadingSmall{V. De inversione.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{V. The inverse.}
+
 \raggedright
-\quad \fn{NOTE: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
+\fn{COMMENTARY: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1162,16 +1162,14 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{VI. Functions}
-\vspace{1em}
 \peanoHeadingSmall{VI. De functionibus.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{VI. Functions.}
+
 \raggedright
-\quad \fn{NOTE: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
+\fn{COMMENTARY: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 Logicae notationes quae praecedunt exprimendae cuilibet arithmeticae propositioni sufficiunt, iisdemque tantum utimur. Hic notationes alias nonnullas breviter explicamus, quae utiles fieri possunt.
 \ENG
@@ -1433,14 +1431,11 @@ But we lack the space to present these properties.
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{Remarks}
-\vspace{1em}
 \peanoHeadingSmall{Declarationes.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Remarks.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 \emph{Defenitio}, vel breviter \emph{Def.} est propositio formam habens $x = a$, sive $\alpha$ $\C$ . $x = a$, ubi $\alpha$ est signorum aggregatus sensum habens notum; $x$ est signum, vel signorum aggregatus significatione adhuc carnes; $\alpha$ vero est conditio sub qua definitio datur.
 \ENG
@@ -1465,32 +1460,26 @@ Formulas that do not fit on one line are continued on the next line without any 
 \centering
 \phantomsection
 \addcontentsline{toc}{chapter}{The principles of arithmetic}
-\vspace{1em}
 \peanoHeadingLarge{Arithmetices Principia.}
 \ENG
-\vspace{1em}
 \peanoHeadingLarge{The Principles of Arithmetic.}
 \LAT
 \phantomsection
 \addcontentsline{toc}{section}{\S1. Numbers and addition}
-\vspace{1em}
 \peanoHeadingMedium{\S1. De numeris et de additione.}
 \ENG
-\vspace{1em}
 \peanoHeadingMedium{\S1. Numbers and addition.}
 \LAT
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
-\vspace{1em}
-\peanoHeadingSmall{\emph{Explicationes.}}
+\peanoHeadingSmall{Explicationes.}
 \ENG
-\vspace{1em}
-\peanoHeadingSmall{\emph{Explanations.}}
+\peanoHeadingSmall{Explanations.}
+
 \raggedright
-\quad \fn{NOTE: Peano starts his natural numbers at 1; most modern versions start at 0.  Also, Peano calls it ``successor'' (``sequens'') but does not use the modern convention of using ``S'' for it.}
+\fn{COMMENTARY: Peano starts his natural numbers at 1; most modern versions start at 0.  Also, while Peano calls it ``successor'' (``sequens''), he does not use the modern convention of using ``S'' for it.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.05, 0.1, 0.25, 0.1, 0.05, 0.1, 0.25}
 \begin{paracol}{8}
 \centering Signo \s $\N$ \s significatur \s \raggedright \emph{numerus (integer positivus)}.
@@ -1515,14 +1504,11 @@ Formulas that do not fit on one line are continued on the next line without any 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Axioms}
-\vspace{1em}
 \peanoHeadingSmall{Axiomata.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Axioms.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 1. \hspace{0.6cm} $1 \in N$
 \ENG
@@ -1565,14 +1551,11 @@ Formulas that do not fit on one line are continued on the next line without any 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 10. \hspace{0.67cm} $2 = 1 + 1;$ $3 = 2 + 1;$ $4 = 3 +1;$ etc.
 \ENG
@@ -1585,14 +1568,11 @@ Formulas that do not fit on one line are continued on the next line without any 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 11. \hspace{0.67cm} $2 \in N$.
 \ENG
@@ -1690,14 +1670,11 @@ $\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \in \N \p P 10 \p P 5 : \C : Th$
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definition}
-\vspace{1em}
 \peanoHeadingSmall{Definitio.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Definition.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 18. \hspace{0.67cm} $a,b \in \N \p \C \p a + (b + 1) = (a + b) + 1$
 \ENG
@@ -1730,14 +1707,11 @@ From this definition, and the preceding, we deduce that:
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -1864,22 +1838,17 @@ From this definition, and the preceding, we deduce that:
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S2. Substraction}
-\vspace{1em}
 \peanoHeadingMedium{\S2. De substractione.}
 \ENG
-\vspace{1em}
 \peanoHeadingMedium{\S2. Substraction.}
 \LAT
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
-\vspace{1em}
 \peanoHeadingSmall{Explicationes.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Explanations.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.1, 0.1, 0.2, 0.1, 0.1, 0.1, 0.2}
 \begin{paracol}{8}
 \centering Signo \s $-$ \s legitur \s \raggedright \emph{minus}.
@@ -1899,14 +1868,11 @@ From this definition, and the preceding, we deduce that:
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -1930,14 +1896,11 @@ From this definition, and the preceding, we deduce that:
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \ENG
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -2165,21 +2128,15 @@ From this definition, and the preceding, we deduce that:
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S3. Maxima and minima}
-\vspace{1em}
 \peanoHeadingMedium{\S3. De maximis et minimis.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S3. Maxima and minima.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
-\vspace{1em}
 \peanoHeadingSmall{Explicationes.}
-\vspace{1em}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Explanations.}
-\vspace{1em}
 \s*
 Sit $a \in K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
 \s
@@ -2187,14 +2144,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -2211,14 +2165,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -2267,22 +2218,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S4. Multiplication}
-\vspace{1em}
 \peanoHeadingMedium{\S4. De multiplicatione.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S4. Multiplication.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -2303,14 +2249,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
@@ -2463,22 +2406,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S5. Powers}
-\vspace{1em}
 \peanoHeadingMedium{\S5. De potestatibus.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S5. Powers.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -2495,14 +2433,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -2549,22 +2484,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S6. Division}
-\vspace{1em}
 \peanoHeadingMedium{\S6. De divisione.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S6. Division.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explications}
-\vspace{1em}
 \peanoHeadingSmall{Explicationes.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Explications.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.12, 0.06, 0.06, 0.26, 0.12, 0.06, 0.06, 0.26}
 \begin{paracol}{8}
 \centering Signum \s \raggedright $/$ \s \centering legatur \s \raggedright \emph{divisus per.}
@@ -2594,14 +2524,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -2642,14 +2569,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.4, 0.1, 0.4}
 \begin{paracol}{4}
 \raggedright
@@ -2658,7 +2582,6 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \emph{Note.} \s These theorems are proved as for subtraction.
 \end{paracol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -2870,14 +2793,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S7. Various theorems}
-\vspace{1em}
 \peanoHeadingMedium{\S7. Theoremata varia.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S7. Various theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -2980,22 +2900,17 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S8. Rational numbers}
-\vspace{1em}
 \peanoHeadingMedium{\S8. Numerorum rationes.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S8.Rational numbers.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explications}
-\vspace{1em}
 \peanoHeadingSmall{Explicationes.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Explications.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 \raggedright
 Si $p,q \in \N$, tunc $\frac{p}{q}$ legitur \emph{ratio numeri} $p$ \emph{numero} $q$.
@@ -3015,14 +2930,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3045,14 +2957,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3152,14 +3061,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3176,14 +3082,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3244,14 +3147,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3276,14 +3176,11 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3328,22 +3225,17 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S9. The system of rationals. Irrationals}
-\vspace{1em}
 \peanoHeadingMedium{\S9. Rationalum systemata. Irrationales.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S9. The system of rationals. Irrationals.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanation}
-\vspace{1em}
 \peanoHeadingSmall{Explicatio.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Explanation.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 \raggedright
 Si $a \in \K \R$, signum $\T a$ legitur \emph{terminus summus}, vel \emph{limes summus classis} $a$. Supra hoc novum ens relationes ac operationes tantum definimus.
@@ -3356,14 +3248,11 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3386,14 +3275,11 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorem}
-\vspace{1em}
 \peanoHeadingSmall{Theorema.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorem.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3406,14 +3292,11 @@ If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanation}
-\vspace{1em}
 \peanoHeadingSmall{Explicatio.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Explanation.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 \raggedright
 Signum $\Q$ legitur \emph{quantitas}, numerosque indicat reales positivos, rationales aut irrationales, $0$ et $\infty$ exceptis.
@@ -3426,14 +3309,11 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3458,14 +3338,11 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3493,14 +3370,11 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3530,22 +3404,17 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \centering
 \phantomsection
 \addcontentsline{toc}{section}{\S10. System of quantities}
-\vspace{1em}
 \peanoHeadingMedium{\S10. Quantitatum systemata.}
 \s
-\vspace{1em}
 \peanoHeadingMedium{\S10. System of quantities.}
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Explanations}
-\vspace{1em}
 \peanoHeadingSmall{Explicationes.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Explanations.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \begin{translateTwoCol}
 \raggedright
 Si $a \in \K \Q$, signa $\I a, \E a, \Lfat a$ leguntur: \emph{interior, exterior, limes classis} $a$.
@@ -3559,14 +3428,11 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
-\vspace{1em}
 \peanoHeadingSmall{Definitiones.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
@@ -3587,14 +3453,11 @@ If $a \in \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior, exte
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Theorems}
-\vspace{1em}
 \peanoHeadingSmall{Theoremata.}
 \s
-\vspace{1em}
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\vspace{1em}
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright

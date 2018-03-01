@@ -57,6 +57,7 @@
 \newcommand{\pppNoSpace}{\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}} % arranging three points in a triangle
 \newcommand{\ppp}{\thinspace \pppNoSpace\thinspace} % arranging three points in a triangle
 
+%TODO: Some of these might be better off with mathrel or mathbin instead of mathop
 \newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
 \newcommand{\abs}{\mathop{\rotatebox[origin=c]{180}{V}}}
 \newcommand{\mini}{\mathop{\rotatebox[origin=c]{180}{M}}}
@@ -64,8 +65,7 @@
 \newcommand{\smaller}{\mathop{\thinspace < \thinspace}}
 \newcommand{\such}{\thinspace \rotatebox[origin=c]{180}{$\epsilon$}}
 \newcommand{\mult}{\mathop{\reflectbox{D}}}
-% TODO: spacing on smallIn (and other commands) could be improved.
-\newcommand{\smallIn}{\ensuremath{\epsilon} \thinspace}
+\newcommand{\smallIn}{\ensuremath{\mathrel{\epsilon}}}
   
 \newcommand{\I}{\mathop{\thinspace \textbf{I} \thinspace}}
 \newcommand{\E}{\mathop{\thinspace \textbf{E} \thinspace}}
@@ -953,23 +953,23 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \quad The sign \scriptsize{CLASS} \normalsize means {\emph{class}}, or aggregate of entities.
 \LAT
-\quad Signum \smallIn significat {\emph{est}}. Ita $a$ \smallIn $b$ legitur $a$ {\emph{est quoddam}} $b$; $a$ $\smallIn$ K significat $a$ {\emph{est quaedam classis}}; $a$ \smallIn P significat $a$ {\emph{est quaedam propositio}}.
+\quad Signum \smallIn significat {\emph{est}}. Ita $a \smallIn b$ legitur $a$ {\emph{est quoddam}} $b$; $a \smallIn \K$ significat $a$ {\emph{est quaedam classis}}; $a \smallIn \text{P}$ significat $a$ {\emph{est quaedam propositio}}.
 \ENG
 \quad The sign $\in$ means {\emph{is an element of}}. Thus $a \in b$ is read $a$ {\emph{is an element of}} $b$\na{; $A$ is a \scriptsize{CLASS} \normalsize means {\emph{$A$ is a class}}; $a$ is a \scriptsize{proposition} \normalsize means {\emph{a is a proposition}}}.
 \LAT
-\quad Loco $-(a$ \smallIn $b)$ scribemus $a$ $-$ \smallIn $b$; signum $-$ \smallIn significat {\emph{non est}}; scilicet:
+\quad Loco $-(a \smallIn b)$ scribemus $a$ $- \smallIn b$; signum $-\smallIn$ significat {\emph{non est}}; scilicet:
 \ENG
 \quad Instead of $\neg(a \in b)$ we shall write $a \not\in b$. The sign $\not\in$ means {\emph{is not}}; thus:
 \LAT
-44. \hspace{0.67cm} $a$ $-$ \smallIn $b$ . = : $-$ . $a$ \smallIn $b$
+44. \hspace{0.67cm} $a$ $- \smallIn b$ . = : $-$ . $a \smallIn b$
 \ENG
 44. \hspace{0.67cm} $(a \not\in b) = [\neg(a \in b)]$
 \LAT
-\quad Signum $a$, $b$, $c$ \smallIn $m$ significat: $a$, $b$ et $c$ sunt $m$; scilicet:
+\quad Signum $a$, $b$, $c \smallIn m$ significat: $a$, $b$ et $c$ sunt $m$; scilicet:
 \ENG
 \quad The sign $(a, b, c) \in m$ means: $a$, $b$, and $c$ are in $m$; thus:
 \LAT
-45. \hspace{0.67cm} $a$, $b$, $c$ \smallIn $m$ . = : $a$ \smallIn $m$ . $b$ \smallIn $m$ . c \smallIn $m$
+45. \hspace{0.67cm} $a$, $b$, $c \smallIn m$ . = : $a \smallIn m$ . $b \smallIn m$ . c \smallIn $m$
 \ENG
 45. \hspace{0.67cm} $[(a, b, c) \in m] = [(a \in m) \wedge (b \in m) \wedge (c \in m)]$
 \LAT
@@ -977,7 +977,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \quad Let $A$ be a class. Then $\overline{A}$ means that class made up of individuals that are not in $A$. 
 \LAT
-46. \hspace{0.67cm} $a$ \smallIn K . $\C$ : $x$ \smallIn $-$ $a$ . = . $x$ $-$ \smallIn $a$
+46. \hspace{0.67cm} $a \smallIn \K$ . $\C$ : $x \smallIn -$ $a$ . = . $x$ $- \smallIn a$
 \ENG
 46. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow [(x \in \overline{A}) = (x \not\in A)]$
 \LAT
@@ -993,11 +993,11 @@ quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis consti
 \ENG
 which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of individuals which are in $A$ or $B$.
 \LAT
-47. \hspace{0.67cm} $a$, $b$ \smallIn K . $\C$ $\pppNoSpace$ $a$ $x$ \smallIn . $a$ $b$ : = : $x$ \smallIn $a$ . $x$ \smallIn $b$
+47. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $x$ \smallIn . $a$ $b$ : = : $x \smallIn a$ . $x \smallIn b$
 \ENG
 47. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]\}$
 \LAT
-48. \hspace{0.67cm} $a$, $b$ \smallIn K . $\C$ $\pppNoSpace$ $a$ $\cup$ $x$ \smallIn . $a$ $\cup$ $b$ : = : $x$ \smallIn $a$ . $\cup$ . $x$ \smallIn $b$
+48. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\cup$ $x$ \smallIn . $a$ $\cup$ $b$ : = : $x \smallIn a$ . $\cup$ . $x \smallIn b$
 \ENG
 48. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]\}$
 \LAT
@@ -1005,7 +1005,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad The sign $\varnothing$ indicates the class which contains no individuals. Thus:
 \LAT
-49. \hspace{0.67cm} $a$ \smallIn K . $\C$ $\pppNoSpace$ $a$ = $\abs$ : = : $x$ \smallIn $a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
+49. \hspace{0.67cm} $a \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ = $\abs$ : = : $x \smallIn a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
 \ENG
 49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot]\}$ 
 \LAT
@@ -1017,7 +1017,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad The sign $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the class a is contained in the class b}}.
 \LAT
-50. \hspace{0.67cm} $a$, $b$ \smallIn K . $\C$ $\pppNoSpace$ $a$ $\C$ $b$ : = : $x$ \smallIn $a$ . $\C$\scalebox{0.7}{$x$}\thinspace . $x$ \smallIn $b$
+50. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\C$ $b$ : = : $x \smallIn a$ . $\C$\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
 50. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall \text{x}]{} (x \in B)]\}$
 \LAT
@@ -1034,7 +1034,7 @@ Hic signa $\abs$ et $\C$ significationem habent quae paullo a praecedenti differ
 \raggedright
 \quad The formula $A = B$, if $A$ and $B$ are classes, means $(A \subset B) \wedge (B \subset A)$. Thus
 \LAT
-51. \hspace{0.67cm} $a$, $b$ \smallIn K . $\C$ $\pppNoSpace$ $a$ = $b$ : = : $x$ \smallIn $a$ . =\scalebox{0.7}{$x$}\thinspace . $x$ \smallIn $b$
+51. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ = $b$ : = : $x \smallIn a$ . =\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
 51. \hspace{0.67cm} $A$, $B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A = B) = [(x \in A) \underset{\forall \text{x}}=  (x \in B)]\}$
 \LAT
@@ -1042,19 +1042,19 @@ Propositiones 1...41 quoque subsistunt, si $a$, $b$... classes indicant; praeter
 \ENG
 Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
-52. \hspace{0.67cm} $a$ \smallIn b . $\C$ . $b$ \smallIn \text{K}
+52. \hspace{0.67cm} $a\smallIn b$ . $\C$ . $b \smallIn \text{K}$
 \ENG
 52. \hspace{0.67cm} $(a \in B) \rightarrow$ B is a \scriptsize{CLASS} \normalsize
 \LAT
-53. \hspace{0.67cm} $a$ \smallIn b . $\C$ . $b$ $-$ = $\abs$
+53. \hspace{0.67cm} $a\smallIn b$ . $\C$ . $b$ $-$ = $\abs$
 \ENG
 53. \hspace{0.67cm} $(a \in B) \rightarrow (B \not= \varnothing)$
 \LAT
-54. \hspace{0.67cm} $a$ \smallIn $b$ . $b$ = $c$ : $\C$ . $a$ \smallIn $c$
+54. \hspace{0.67cm} $a \smallIn b$ . $b$ = $c$ : $\C$ . $a \smallIn c$
 \ENG
 54. \hspace{0.67cm} $[(a \in B) \wedge (B = C)] \rightarrow (a \in C)$
 \LAT
-55. \hspace{0.67cm} $a$ \smallIn $b$ . $b$ $\C$ $c$ : $\C$ . $a$ \smallIn $c$
+55. \hspace{0.67cm} $a \smallIn b$ . $b$ $\C$ $c$ : $\C$ . $a \smallIn c$
 \ENG
 55. \hspace{0.67cm} $[(a \in B) \wedge (B \subset C)] \rightarrow (a \in C)$
 \LAT
@@ -1064,7 +1064,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 
 \quad Let $\text{A}$ be a class, and $\text{B}$ be a class which is contained in $\text{A}$; then we say that $\text{B}$ is an individual of the class $\text{A}$, if $\text{B}$ consists of only one individual. That is:
 \LAT
-56. \hspace{0.67cm} $s$ \smallIn K . $k$ $\C$ $s$ : $\C$ :: $k$ \smallIn $s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y$ \smallIn $k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
+56. \hspace{0.67cm} $s \smallIn \K$ . $k$ $\C$ $s$ : $\C$ :: $k \smallIn s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y \smallIn k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
 56. \hspace{0.67cm} $[\text{A}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $( \text{B} \subset \text{A})] \rightarrow \Big\{( \text{B} \in \text{A}) = \big\{(\text{B} \not= \varnothing) \wedge \{[(x,y) \in \text{B}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
 \end{translateTwoCol}
@@ -1086,15 +1086,15 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad The sign of the inverse is $\{x | \ldots\}$, and we shall explain its use in the following section. Here we give some particular examples.
 \LAT
-\quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x]$ \smallIn $a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
+\quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x] \smallIn a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
 \ENG
 \quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
 \LAT
-57. \hspace{0.67cm} $a$ \smallIn \text{P} . $\C$ : $[x\smallIn]$ $a$ . \smallIn K
+57. \hspace{0.67cm} $a$ \smallIn \text{P} . $\C$ : $[x\smallIn]$ $a$ . $\smallIn \K$
 \ENG
 57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow \{x | a \}$ is a \scriptsize{CLASS} \normalsize 
 \LAT
-58. \hspace{0.67cm} $a$ \smallIn \text{K} . $\C$ $\pppNoSpace$ $[x\smallIn]$ . $x$ \smallIn $a$ : = $a$
+58. \hspace{0.67cm} $a$ \smallIn \text{K} . $\C$ $\pppNoSpace$ $[x\smallIn]$ . $x \smallIn a$ : = $a$
 \ENG
 58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{ x | x \in A \} = A $
 \LAT
@@ -1337,27 +1337,27 @@ Itaque, si $\upvarphi$ $\smallIn$ $F' s$, tunc $\upvarphi$ $s$ classem indicat o
 \ENG
 Thus, if $\upvarphi$ $\in$ $F' S$, then $\upvarphi$ $S$ denotes the class composed of all $\upvarphi$ $x$, where the $x$ are objects of the class $S$. We have:
 \LAT
-\hspace{1.06cm} $s \smallIn K$ . $\upvarphi \smallIn F' s$ . $y \smallIn \upvarphi s : \C : \upvarphi [\upvarphi] y = y$
+\hspace{1.06cm} $s \smallIn \K$ . $\upvarphi \smallIn F' s$ . $y \smallIn \upvarphi s : \C : \upvarphi [\upvarphi] y = y$
 \ENG
 \todo
 \LAT
-\hspace{1.06cm} $s \smallIn K$ . $a, b \smallIn K$ . $a$ $\C$ $s$ . $b$ $\C$ $s$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi (a \cup b) = (\upvarphi a) \cup (\upvarphi b)$
+\hspace{1.06cm} $s \smallIn \K$ . $a, b \smallIn \K$ . $a$ $\C$ $s$ . $b$ $\C$ $s$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi (a \cup b) = (\upvarphi a) \cup (\upvarphi b)$
 \ENG
 \todo
 \LAT
-\hspace{1.06cm} $s \smallIn K$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi \abs = \abs$
+\hspace{1.06cm} $s \smallIn \K$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi \abs = \abs$
 \ENG
 \todo
 \LAT
-\hspace{1.06cm} $s \smallIn K$ . $a,b \smallIn K$ . $b$ $\C$ $s$ . $a$ $\C$ $b$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi a$ $\C$ $\upvarphi b$
+\hspace{1.06cm} $s \smallIn \K$ . $a,b \smallIn \K$ . $b$ $\C$ $s$ . $a$ $\C$ $b$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi a$ $\C$ $\upvarphi b$
 \ENG
 \todo
 \LAT
-\hspace{1.06cm} $s \smallIn K$ . $a,b \smallIn K$ . $a$ $\C$ $s$ . $b$ $\C$ $s$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi (ab)$ $\C$ $(\upvarphi a)(\upvarphi b)$
+\hspace{1.06cm} $s \smallIn \K$ . $a,b \smallIn \K$ . $a$ $\C$ $s$ . $b$ $\C$ $s$ . $\upvarphi \smallIn F' s : \C$ . $\upvarphi (ab)$ $\C$ $(\upvarphi a)(\upvarphi b)$
 \ENG
 \todo
 \LAT
-Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \smallIn K a$ idem significat quod $x \smallIn K$ . $x$ $\C$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
+Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \smallIn \K a$ idem significat quod $x \smallIn \K$ . $x$ $\C$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
 \ENG
 Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\C$ $a$. We shall sometimes use this convention; thus $K \mathbb{N}$ means \emph{a class of numbers}.
 \LAT
@@ -1373,11 +1373,11 @@ Functional signorum aequalitatem, productum, potestas, ita definire licet:
 \ENG
 Equality, product and powers can be defined thus for function signs:
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \smallIn K$ . $\varphi, \psi \smallIn F' s :$ $\C$ $\pppNoSpace$ $\varphi = \psi$ : $=$ : $x \smallIn s$ . $\C$ . $\varphi x = \psi x$
+\emph{Def.} \hspace{0.25cm} $s \smallIn \K$ . $\varphi, \psi \smallIn F' s :$ $\C$ $\pppNoSpace$ $\varphi = \psi$ : $=$ : $x \smallIn s$ . $\C$ . $\varphi x = \psi x$
 \ENG
 \emph{Def.} \hspace{0.25cm} \todo
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \smallIn K$ . $\varphi \smallIn F' s$ $.$ $\psi \smallIn F' \varphi s$ . $x \smallIn s$ : $\C$ . $\psi \varphi x = \psi (\varphi x)$
+\emph{Def.} \hspace{0.25cm} $s \smallIn \K$ . $\varphi \smallIn F' s$ $.$ $\psi \smallIn F' \varphi s$ . $x \smallIn s$ : $\C$ . $\psi \varphi x = \psi (\varphi x)$
 \ENG
 \emph{Def.} \hspace{0.25cm} \todo
 \LAT
@@ -1393,7 +1393,7 @@ Haec valet propositio:
 \ENG
 The following proposition holds:
 \LAT
-\hspace{1.06cm} $s \smallIn K$ . $\varphi \smallIn F' s$ . $\varphi s$ $\C$ $s : \C : \varphi \varphi s$ $\C$ $s$ . $\varphi \varphi \varphi s$ $\C$ $s$. etc.
+\hspace{1.06cm} $s \smallIn \K$ . $\varphi \smallIn F' s$ . $\varphi s$ $\C$ $s : \C : \varphi \varphi s$ $\C$ $s$ . $\varphi \varphi \varphi s$ $\C$ $s$. etc.
 \ENG
 \todo
 \LAT
@@ -1409,7 +1409,7 @@ Si vero $\varphi$ est functionis postsignum, ha faciliori notatione, absque ambi
 \ENG
 But if $\varphi$ is a function postsign, we can use the following more convenient notation without ambiguity:
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \smallIn K$ . $\varphi \smallIn s 'F$ . $s \varphi$ $\C$ $s : \C : \varphi 1 = \varphi$ . $\varphi 2 = \varphi \varphi$ . $\varphi 3 = \varphi \varphi \varphi$. etc.
+\emph{Def.} \hspace{0.25cm} $s \smallIn \K$ . $\varphi \smallIn s 'F$ . $s \varphi$ $\C$ $s : \C : \varphi 1 = \varphi$ . $\varphi 2 = \varphi \varphi$ . $\varphi 3 = \varphi \varphi \varphi$. etc.
 \ENG
 \emph{Def.} \hspace{0.25cm} \todo
 \LAT
@@ -1550,7 +1550,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \ENG
 ...
 \LAT
-9. \hspace{0.6cm} $k \smallIn K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$
+9. \hspace{0.6cm} $k \smallIn \K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$
 \ENG
 ...
 \end{translateTwoCol}
@@ -2145,7 +2145,7 @@ From this definition, and the preceding, we deduce that:
 \s
 \peanoHeadingSmall{Explanations.}
 \s*
-Sit $a \smallIn K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
+Sit $a \smallIn \K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
 \s
 Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M a$ is read \emph{greatest among} $a$, and $\mini a$ is read \emph{least among a}.
 \s*
@@ -2159,11 +2159,11 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
-1. \s $a \smallIn K \N \p \C : M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs$. \s
+1. \s $a \smallIn \K \N \p \C : M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs$. \s
 \s
 \s \s
 \s*
-2. \s $a \smallIn K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs$. \s
+2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs$. \s
 \end{paracol}
 
 \peanoPage{7} % page-number 7
@@ -2180,11 +2180,11 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
 \begin{paracol}{6}
 \raggedright
-3. \s $n \smallIn \N \p a \smallIn K \N \p a \no = \abs \p a \such \larger n = \abs : \C \p M a \smallIn N$. \s
+3. \s $n \smallIn \N \p a \smallIn \K \N \p a \no = \abs \p a \such \larger n = \abs : \C \p M a \smallIn N$. \s
 \s
 \s \s
 \s*
-\emph{Dem}. \s $a \smallIn K \N \p a \no = \abs \p a \such \larger 1 = \abs : \C : a = 1 : \C \p M a = 1 : \C \p M a \smallIn N$. \s (1)
+\emph{Dem}. \s $a \smallIn \K \N \p a \no = \abs \p a \such \larger 1 = \abs : \C : a = 1 : \C \p M a = 1 : \C \p M a \smallIn N$. \s (1)
 \s
 \s \s
 \s*
@@ -2192,15 +2192,15 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \s
 \s \s
 \s*
-\s $n \smallIn \N \p a \smallIn K \N \p a \such \larger n + 1 = \abs \p n + 1 \smallIn a : \C : n + 1 = M a : \C : M a \smallIn N$. \s (3)
+\s $n \smallIn \N \p a \smallIn \K \N \p a \such \larger n + 1 = \abs \p n + 1 \smallIn a : \C : n + 1 = M a : \C : M a \smallIn N$. \s (3)
 \s
 \s \s
 \s*
-\s $n \smallIn \N \p a \smallIn K \N \p a \such \larger n + 1 = \abs \p n + 1 \no \smallIn a : \C : a \such \larger n = \abs$. \s (4)
+\s $n \smallIn \N \p a \smallIn \K \N \p a \such \larger n + 1 = \abs \p n + 1 \no \smallIn a : \C : a \such \larger n = \abs$. \s (4)
 \s
 \s \s
 \s*
-\s $n \smallIn [n \smallIn]$ (Hp $\C$ Ts) $\p a \smallIn K \N \p a \such > n + 1 = \abs \p n + 1 \no \smallIn a : \C : M a \smallIn N$. \s (5)
+\s $n \smallIn [n \smallIn]$ (Hp $\C$ Ts) $\p a \smallIn \K \N \p a \such > n + 1 = \abs \p n + 1 \no \smallIn a : \C : M a \smallIn N$. \s (5)
 \s
 \s \s
 \s*
@@ -2212,11 +2212,11 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \s
 \s \s
 \s*
-4. \s $a \smallIn K \N \p a \no = \abs : \C \p \mini a \smallIn N$. \s
+4. \s $a \smallIn \K \N \p a \no = \abs : \C \p \mini a \smallIn N$. \s
 \s
 \s \s
 \s*
-5. \s $a \smallIn K \N \p \C : \mini a = M [x \smallIn] (a \such \smaller x = \abs)$. \s
+5. \s $a \smallIn \K \N \p \C : \mini a = M [x \smallIn] (a \such \smaller x = \abs)$. \s
 \s
 \s \s
 \end{paracol}
@@ -2748,7 +2748,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \s
 \s \s
 \s*
-\s $ (1)(2) \p \C \p 1 \smallIn K$. \s (3)
+\s $ (1)(2) \p \C \p 1 \smallIn \K$. \s (3)
 \s
 \s \s
 \s*
@@ -3318,7 +3318,7 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \columnratio{0.1, 0.3, 0.1, 0.1, 0.3, 0.1}
 \begin{paracol}{6}
 \raggedright
-5. \s $\Q = [x \smallIn] (a \smallIn K \R : a \no = \abs : \R \smallIn \larger \T a \p \min = \abs : \T a = x \ppp \no = \abs)$. \s
+5. \s $\Q = [x \smallIn] (a \smallIn \K \R : a \no = \abs : \R \smallIn \larger \T a \p \min = \abs : \T a = x \ppp \no = \abs)$. \s
 \s
 \s \s
 \s*

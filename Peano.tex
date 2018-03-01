@@ -54,6 +54,7 @@
 \raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{1}[1]{\copy0}}}\displaylimits} % creates a "math"-point to have equal spacing
 % Peano's 2 dots is just a colon :, and is used to indicate precidence in equations
 % Peano's 3 dots, used to indicate precidence in equations
+% TODO: Change \ppp to use \therefore 
 \newcommand{\pppNoSpace}{\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}} % arranging three points in a triangle
 \newcommand{\ppp}{\thinspace \pppNoSpace\thinspace} % arranging three points in a triangle
 
@@ -1270,7 +1271,7 @@ The sign $\{ x | \ldots \}$ is called \emph{inversion sign}, and we have already
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
-\commentary{COMMENTARY: Peano relies on the syntax of his substitution operator to create a presign function.  The modern substituion operator has a different syntax and therefore doesn't work properly in the following context.}
+\commentary{COMMENTARY: Peano relies on the syntax of his substitution operator to create a presign function.  The modern substitution operator has a different syntax and therefore doesn't work properly in the following context.}
 
 Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
 \LAT

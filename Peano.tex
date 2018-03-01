@@ -1645,41 +1645,41 @@ $\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \smallIn \N \p P 10 \p P 5 : \C : Th$
 \ENG
 \notPossible
 \LAT
-12. \hspace{0.67cm} $3, 4,... \smallIn N$
+12. \hspace{0.67cm} $3, 4,... \smallIn \N$
 \ENG
-...
+12. \hspace{0.67cm} $3, 4, ... \in \mathbb{N}$
 \LAT
 13. \hspace{0.67cm} $a,b,c,d \smallIn \N \p a = b \p b = c \p c = d : \C : a = d$
 \ENG
-...
+13. \hspace{0.67cm} $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge b = c \wedge c = d ) \rightarrow a = d$
 \LAT
 \emph{Dem.} \hspace{0.27cm} $Hyp. P 4 : \C : a,c,d \smallIn \N \p a = c \p c = d \p P4 : \C : Thes.$
 \ENG
-...
+\emph{Proof} \hspace{0.27cm} \todo
 \LAT
 14. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b = c \p a \no = c : = \abs$
 \ENG
-...
+14. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b = c \wedge a \neq c) = \bot$
 \LAT
 \emph{Dem.} \hspace{0.27cm} $P4 \p L 39 : \C \p Theor$.
 \ENG
-...
+\emph{Proof} \hspace{0.27cm} \todo
 \LAT
 15. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b \no = c : \C \p a \no = c$
 \ENG
-...
+15. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b \neq c) \rightarrow  a \neq c$
 \LAT
 16. \hspace{0.67cm} $a,b \smallIn \N \p a + 1 = b + 1 : \C \p a = b$
 \ENG
-...
+16. \hspace{0.67cm} $[a,b \in \mathbb{N} \wedge (a + 1 = b + 1 )] \rightarrow a = b$
 \LAT
 17. \hspace{0.67cm} $a,b \smallIn \N \p \C : a \no = b \p = \p a + 1 \no = b + 1$
 \ENG
-...
+17. \hspace{0.67cm} $(a,b \in \mathbb{N}) \rightarrow [(a \neq b) = (a + 1 \neq b + 1)]$
 \LAT
 \emph{Dem.} \hspace{0.27cm} $P7 \p L21 : \C \p Theor$
 \ENG
-...
+\emph{Proof} \hspace{0.27cm} \todo
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1694,7 +1694,7 @@ $\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \smallIn \N \p P 10 \p P 5 : \C : Th$
 \begin{translateTwoCol}
 18. \hspace{0.67cm} $a,b \smallIn \N \p \C \p a + (b + 1) = (a + b) + 1$
 \ENG
-...
+18. \hspace{0.67cm} $(a,b \in \mathbb{N}) \rightarrow [a + (b + 1) = (a + b) + 1]$
 \LAT
 \vspace{1em}
 \emph{Nota.} - Hanc definitionem ita legere oportet: si $a$ et $b$ sunt numeri, et $(a + b) + 1$ sensum habet (scilicet si $a + b$ est numerus), sed $a + (b + 1)$ nondum definitus est, tunc $a + (b + 1)$ significat numerum qui $a + b$ sequitur.
@@ -1710,9 +1710,11 @@ From this definition, and the preceding, we deduce that:
 \LAT
 \hspace{1.4cm} $a \smallIn \N \p \C \ppp a + 2 = a + (1 + 1) = (a + 1) + 1$
 \ENG
-...
+\hspace{1.4cm} $a \in \mathbb{N} \rightarrow a + 2 = a + (1 + 1) = (a + 1) + 1$
 \LAT
 \hspace{1.4cm} $a \smallIn \N \p \C \ppp a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
+\ENG
+\hspace{1.4cm} $a \in \N \rightarrow a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
 \end{translateTwoCol}
 
 \peanoPage{3} % page-number 3

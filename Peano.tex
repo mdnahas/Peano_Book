@@ -155,6 +155,8 @@
 
 \newenvironment{translateSixCol}[6]
                { % when beginning the environment
+                 % This complex line is need if you don't want \columnsep
+                 % space between each column.
                  \setcolumnwidth{#1\fill/1em, #2\fill/1em, #3\fill/\columnsep, #4\fill/1em, #5\fill/1em, #6\fill}
                  \begin{paracol}{6}
                }
@@ -1722,8 +1724,7 @@ From this definition, and the preceding, we deduce that:
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 19. \s $a, b \smallIn \N \p \C \p a + b \smallIn N$. \s
 \s
@@ -1808,12 +1809,11 @@ From this definition, and the preceding, we deduce that:
 \emph{Dem.} \s Hyp. P24 $: \C \C 1 + a = a + 1 \p$ P22 $: \C \p$ Thesis. \s
 \s
 ... \s ... \s ...
-\end{paracol}
+\end{translateSixCol}
 
 \peanoPage{4} % page-number 4
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 25. \s $a,b \smallIn \N \p \C \p a + b = b + a$. \s
 \s
 ... \s ... \s ...
@@ -1841,7 +1841,7 @@ From this definition, and the preceding, we deduce that:
 28. \s $a,b,c,d \smallIn \N \p a = b \p c = d : \C \p a + c = b + d$. \s
 \s
 ... \s ... \s ...
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \centering
@@ -1882,8 +1882,7 @@ From this definition, and the preceding, we deduce that:
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 1. \s $a,b \smallIn \N \p \C : b - a = \N [x \smallIn] (x + a = b)$. \s
 \s
@@ -1899,7 +1898,7 @@ From this definition, and the preceding, we deduce that:
 \s*
 \s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
 \s \s
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \centering
@@ -1910,8 +1909,7 @@ From this definition, and the preceding, we deduce that:
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 4. \s $a,b,a',b' \smallIn \N \p a = a' \p b = b' : \C : b - a = b' - a'$. \s
 \s
@@ -1931,12 +1929,11 @@ From this definition, and the preceding, we deduce that:
 \s*
 \s $a,b \smallIn \N \p a < b \p$ P2 $\p (1) : \C \ppp b - a \no = \abs : x,y \smallIn b - a \p \C \p x = y : (N, b - a) [s,k]$ (L56) $\ppp \C \ppp b - a \smallIn N$. \s (2)
 \s \s
-\end{paracol}
+\end{translateSixCol}
 
 \peanoPage{5} % page-number 5
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 \s $a,b \smallIn \N \p b - a \smallIn \N \p$ (L56) $: \C : b - a \no = \abs : \C : a < b$. \s (3)
 \s
@@ -2049,12 +2046,11 @@ From this definition, and the preceding, we deduce that:
 \s $(1)(2) \p \C \p$ Theor. \s
 \s
 \s \s
-\end{paracol}
+\end{translateSixCol}
 
 \peanoPage{6} % page-number 6
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 19. \s $a,b \smallIn \N \p \C \p a + b \no = b$. \s
 \s
@@ -2131,7 +2127,7 @@ From this definition, and the preceding, we deduce that:
 \s $(1)(9) \p \C \p$ Theor. \s
 \s
 \s \s
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2158,15 +2154,14 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 1. \s $a \smallIn \K \N \p \C : M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs$. \s
 \s
 \s \s
 \s*
 2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs$. \s
-\end{paracol}
+\end{translateSixCol}
 
 \peanoPage{7} % page-number 7
 
@@ -2179,8 +2174,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 3. \s $n \smallIn \N \p a \smallIn \K \N \p a \no = \abs \p a \such \larger n = \abs : \C \p M a \smallIn N$. \s
 \s
@@ -2221,7 +2215,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 5. \s $a \smallIn \K \N \p \C : \mini a = M [x \smallIn] (a \such \smaller x = \abs)$. \s
 \s
 \s \s
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2238,8 +2232,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 1. \s $a \smallIn \N \p \C \p a \times 1 = a$. \s
 \s
@@ -2252,7 +2245,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$. \s
 \s
 ...
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2263,8 +2256,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\columnratio{0.08, 0.39, 0.02, 0.08, 0.39, 0.02}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
 3. \s $a,b \smallIn \N \p \C \p ab \smallIn N$. \s
 \s
@@ -2281,7 +2273,7 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \s $(1)(2) \p \C \p$ Theor. \s
 \s
 \s \s
-\end{paracol}
+\end{translateSixCol}
 
 \peanoPage{8} % page-number 8
 

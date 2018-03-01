@@ -428,7 +428,7 @@ Cf: \\
 \peanoPage{V} % page-number V
 
 \begin{translateTwoCol}
-Signum $\epsilon$, quod cum signo \reflectbox{C} confundere non licet, inversionis in logica applicationes, et paucas alias institui conventiones, ut ad exprimendam quamlibet propositionem pervenirem.
+Signum $\epsilon$, quod cum signo $\C$ confundere non licet, inversionis in logica applicationes, et paucas alias institui conventiones, ut ad exprimendam quamlibet propositionem pervenirem.
 \ENG
 The sign $\in$, which must not be confused with the sign $\subset$, applications of the inverse in logic, and a few other conventions, I have adopted so that I could express any proposition whatever.
 \LAT
@@ -491,7 +491,7 @@ $P$ \s propositio \s VII
 \s $\neg$ \s not \s VIII, X
 \s* $\abs$ \s absurdum \emph{aut} nihil \s VIII, XI
 \s $\bot$ \\ $\varnothing$ \s false \emph{or} \\ \quad nothing \s VIII, XI
-\s* \reflectbox{C} \s deducitur \emph{aut} continetur \s VIII, XI
+\s* $\C$ \s deducitur \emph{aut} continetur \s VIII, XI
 \s $\rightarrow$ \\ $\subset$ \s one deduces \emph{or} \\ \quad is contained in \s VIII, XI
 \s* = \s est aequalis \s VIII
 \s = \s equals \s VIII
@@ -541,7 +541,7 @@ $N$ \s numerus integer positivus \s 1
 \s $\mathbb{P}$ \s prime number \s 9
 \s* M \s maximus \s 6
 \s M$^{\text{aximum}}$ \s maximum \s 6
-\s* \rotatebox[origin=c]{180}{M} \s minimus \s 6
+\s* $\mini$ \s minimus \s 6
 \s m$_{\text{inimum}}$ \s minimum \s 6
 \s* T \s terminus, \emph{vel} limes summus \s 15
 \s Gr$^{\text{eatest bound}}$ \s terminus \emph{or} greatest bound \s 15
@@ -659,9 +659,9 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \ENG The sign $\bot$ means \emph{false}, or \emph{absurd}.
 \LAT \text{[}Signum C significat \emph{est consequentia}; ita $b$ C $a$ legitur $b$ \emph{est consequentia propositionis} $a$. Sed hoc signo nunquam utimur\text{]}.
 \ENG \na{The sign $\leftarrow$ means \emph{is a consequence of}. Thus $b \leftarrow a$ is read $b$ \emph{is a consequence of the proposition} $a$. But we never use this sign.}
-\LAT Signum \reflectbox{C} significat \emph{deducitur}; ita $a$ $\reflectbox{C}$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\reflectbox{C}_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\reflectbox{C}_{x,y,...}$, scribemus solum \reflectbox{C}.
+\LAT Signum $\C$ significat \emph{deducitur}; ita $a$ $\C$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\C_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\C_{x,y,...}$, scribemus solum $\C$.
 \ENG The sign $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the indeterminate quantities $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[x,y,...]{}$, we write only $\rightarrow$.
-\LAT Signum = significat \emph{est aequalis}. Sint $a,b$ propositiones; tunc $a=b$ idem significat quod $a$ $\reflectbox{C}$ $b$ $.$ $b$ $\reflectbox{C}$ $a$; propositio $a=_{x,y,...} b$ idem significat quod $a$ $ \reflectbox{C}_{x,y,...} b$ $.$ $b$ $\reflectbox{C}_{x,y,...} a$.
+\LAT Signum = significat \emph{est aequalis}. Sint $a,b$ propositiones; tunc $a=b$ idem significat quod $a$ $\C$ $b$ $.$ $b$ $\C$ $a$; propositio $a=_{x,y,...} b$ idem significat quod $a$ $ \C_{x,y,...} b$ $.$ $b$ $\C_{x,y,...} a$.
 \ENG The sign = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\underset{x,y,...}=b$ means the same as ($a \xrightarrow[\text{x,y,...}]{} b) \wedge (b \xrightarrow[x,y,...]{} a)$.
 \end{translateTwoCol}
 
@@ -681,15 +681,15 @@ Sint $a,b,c,...$ propositiones. Tunc erit:
 \ENG
 Let $a,b,c,...$ be propositions. We have:
 \LAT
-1. \hspace{0.6cm} $a$ \reflectbox{C} $a$
+1. \hspace{0.6cm} $a$ $\C$ $a$
 \ENG
 1. \hspace{0.6cm} $a \rightarrow a$
 \LAT
-2. \hspace{0.6cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} : $a$ \reflectbox{C} $c$
+2. \hspace{0.6cm} $a$ $\C$ $b$ . $b$ $\C$ $c$ : $\C$ : $a$ $\C$ $c$
 \ENG
 2. \hspace{0.6cm} $[(a \rightarrow b) \wedge (b \rightarrow c)] \rightarrow (a \rightarrow c)$
 \LAT
-3. \hspace{0.6cm} $a$ = $b$ . = : $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $a$.
+3. \hspace{0.6cm} $a$ = $b$ . = : $a$ $\C$ $b$ . $b$ $\C$ $a$.
 \ENG
 3. \hspace{0.6cm} $(a=b)=[(a \rightarrow b) \wedge (b \rightarrow a)]$
 \LAT
@@ -701,23 +701,23 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 5. \hspace{0.6cm} $(a=b)=(b=a)$
 \LAT
-6. \hspace{0.6cm} $a$ = $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} . $a$ \reflectbox{C} $c$
+6. \hspace{0.6cm} $a$ = $b$ . $b$ $\C$ $c$ : $\C$ . $a$ $\C$ $c$
 \ENG
 6. \hspace{0.6cm} $[(a=b) \wedge (b \rightarrow c)] \rightarrow (a \rightarrow c)$
 \LAT
-7. \hspace{0.6cm} $a$ \reflectbox{C} $b$ . $b$ = $c$ : \reflectbox{C} . $a$ \reflectbox{C} $c$
+7. \hspace{0.6cm} $a$ $\C$ $b$ . $b$ = $c$ : $\C$ . $a$ $\C$ $c$
 \ENG
 7. \hspace{0.6cm} $[(a \rightarrow b) \wedge (b=c)] \rightarrow (a \rightarrow c)$
 \LAT
-8. \hspace{0.6cm} $a$ = $b$ . $b$ = $c$ : \reflectbox{C} . $a$ = $c$
+8. \hspace{0.6cm} $a$ = $b$ . $b$ = $c$ : $\C$ . $a$ = $c$
 \ENG
 8. \hspace{0.6cm} $[(a=b) \wedge (b=c) ] \rightarrow (a=c)$
 \LAT
-9. \hspace{0.6cm} $a$ = $b$ . \reflectbox{C} . $a$ \reflectbox{C} $b$
+9. \hspace{0.6cm} $a$ = $b$ . $\C$ . $a$ $\C$ $b$
 \ENG
 9. \hspace{0.6cm} $(a=b) \rightarrow (a \rightarrow b)$
 \LAT
-10. \hspace{0.67cm} $a$ = $b$ . \reflectbox{C} . $b$ \reflectbox{C} $a$
+10. \hspace{0.67cm} $a$ = $b$ . $\C$ . $b$ $\C$ $a$
 \ENG
 10. \hspace{0.67cm} $(a=b) \rightarrow (b \rightarrow a)$
 \LAT
@@ -725,7 +725,7 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hfill
 \LAT
-11. \hspace{0.67cm} $ab$ \reflectbox{C} $a$
+11. \hspace{0.67cm} $ab$ $\C$ $a$
 \ENG
 11. \hspace{0.67cm} $(a \wedge b) \rightarrow a$
 \LAT
@@ -745,23 +745,23 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 14. \hspace{0.67cm} $(a \wedge a)=a$
 \LAT
-15. \hspace{0.67cm} $a$ = $b$ . \reflectbox{C} . $ac$ = $bc$
+15. \hspace{0.67cm} $a$ = $b$ . $\C$ . $ac$ = $bc$
 \ENG
 15. \hspace{0.67cm} $(a=b) \rightarrow [(a \wedge c)=(b \wedge c)]$
 \LAT
-16. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . \reflectbox{C} . $ac$ \reflectbox{C} $bc$
+16. \hspace{0.67cm} $a$ $\C$ $b$ . $\C$ . $ac$ $\C$ $bc$
 \ENG
 16. \hspace{0.67cm} $(a \rightarrow b) \rightarrow [(a \wedge c) \rightarrow (b \wedge c)]$
 \LAT
-17. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . $c$ \reflectbox{C} $d$ : \reflectbox{C} . $ac$ \reflectbox{C} $bd$
+17. \hspace{0.67cm} $a$ $\C$ $b$ . $c$ $\C$ $d$ : $\C$ . $ac$ $\C$ $bd$
 \ENG
 17. \hspace{0.67cm} $[(a \rightarrow b) \wedge (c \rightarrow d)] \rightarrow [(a \wedge c) \rightarrow (b \wedge d)]$
 \LAT
-18. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . $a$ \reflectbox{C} $c$ : = . $a$ \reflectbox{C} $bc$
+18. \hspace{0.67cm} $a$ $\C$ $b$ . $a$ $\C$ $c$ : = . $a$ $\C$ $bc$
 \ENG
 18. \hspace{0.67cm} $[(a \rightarrow b) \wedge (a \rightarrow c)]=[(a \rightarrow (b \wedge c)]$
 \LAT
-19. \hspace{0.67cm} $a$ = $b$ . $c$ = $d$ : \reflectbox{C} . $ac$ = $bd$
+19. \hspace{0.67cm} $a$ = $b$ . $c$ = $d$ : $\C$ . $ac$ = $bd$
 \ENG
 19. \hspace{0.67cm} $[(a=b) \wedge (c=d)] \rightarrow [(a \wedge c)=(b \wedge d)]$
 \LAT
@@ -777,7 +777,7 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 21. \hspace{0.67cm} $(a=b)=[(\neg a)=(\neg b)]$
 \LAT
-22. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $-b$ \reflectbox{C} $-a$ =
+22. \hspace{0.67cm} $a$ $\C$ $b$ . = . $-b$ $\C$ $-a$ =
 \ENG
 22. \hspace{0.67cm} $(a \rightarrow b)=[(\neg b) \rightarrow (\neg a)]$
 \LAT
@@ -797,7 +797,7 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 25. \hspace{0.67cm} $[\neg(a \vee b)] = [(\neg a) \vee (\neg b)]$
 \LAT
-26. \hspace{0.67cm} $a$ \reflectbox{C} . $a$ $\cup$ $b$
+26. \hspace{0.67cm} $a$ $\C$ . $a$ $\cup$ $b$
 \ENG
 26. \hspace{0.67cm} $a \rightarrow (a \vee b)$
 \LAT
@@ -817,19 +817,19 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 30. \hspace{0.67cm} $[a \wedge (b \vee c)]=[(a \wedge b) \vee (a \wedge c)]$
 \LAT
-31. \hspace{0.67cm} $a$ = $b$ . \reflectbox{C} . $a$ $\cup$ $c$ = $b$ $\cup$ $c$
+31. \hspace{0.67cm} $a$ = $b$ . $\C$ . $a$ $\cup$ $c$ = $b$ $\cup$ $c$
 \ENG
 31. \hspace{0.67cm} $(a=b) \rightarrow [(a \vee c) = (b \vee c)]$
 \LAT
-32. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . \reflectbox{C} . $a$ $\cup$ $c$ \reflectbox{C} $b$ $\cup$ $c$
+32. \hspace{0.67cm} $a$ $\C$ $b$ . $\C$ . $a$ $\cup$ $c$ $\C$ $b$ $\cup$ $c$
 \ENG
 32. \hspace{0.67cm} $(a \rightarrow b) \rightarrow [(a \vee c) \rightarrow (b \vee c)]$
 \LAT
-33. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . $c$ \reflectbox{C} $d$ : \reflectbox{C} : $a$ $\cup$ $c$ . \reflectbox{C} . $b$ $\cup$ $d$
+33. \hspace{0.67cm} $a$ $\C$ $b$ . $c$ $\C$ $d$ : $\C$ : $a$ $\cup$ $c$ . $\C$ . $b$ $\cup$ $d$
 \ENG
 33. \hspace{0.67cm} $[(a \rightarrow b) \wedge (c \rightarrow d)] \rightarrow [(a \vee c) \rightarrow (b \vee d)]$
 \LAT
-34. \hspace{0.67cm} $b$ \reflectbox{C} $a$ . $c$ \reflectbox{C} $a$ : = . $b$ $\cup$ $c$ \reflectbox{C} $a$
+34. \hspace{0.67cm} $b$ $\C$ $a$ . $c$ $\C$ $a$ : = . $b$ $\cup$ $c$ $\C$ $a$
 \ENG
 34. \hspace{0.67cm} $[(b \rightarrow a) \wedge (c \rightarrow a)] = [(b \vee c) \rightarrow a]$
 \LAT
@@ -849,15 +849,15 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 37. \hspace{0.67cm} $(a \vee \bot)=a$
 \LAT
-38. \hspace{0.67cm} $a$ \reflectbox{C} $\abs$ . = . $a$ = $\abs$
+38. \hspace{0.67cm} $a$ $\C$ $\abs$ . = . $a$ = $\abs$
 \ENG
 38. \hspace{0.67cm} $(a \rightarrow \bot) = (a = \bot)$
 \LAT
-39. \hspace{0.67cm} $a$ \reflectbox{C} $b$ . = . $a-b$ = $\abs$
+39. \hspace{0.67cm} $a$ $\C$ $b$ . = . $a-b$ = $\abs$
 \ENG
 39. \hspace{0.67cm} $(a \rightarrow b) = [(a \wedge \neg b) = \bot]$
 \LAT
-40. \hspace{0.67cm} $\abs$ \reflectbox{C} $a$
+40. \hspace{0.67cm} $\abs$ $\C$ $a$
 \ENG
 40. \hspace{0.67cm} $\bot \rightarrow a$
 \LAT
@@ -869,11 +869,11 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hfill
 \LAT
-42. \hspace{0.67cm} $a$ \reflectbox{C} . $b$ \reflectbox{C} $c$ : = : $ab$ \reflectbox{C} $c$
+42. \hspace{0.67cm} $a$ $\C$ . $b$ $\C$ $c$ : = : $ab$ $\C$ $c$
 \ENG
 42. \hspace{0.67cm} $[a \rightarrow (b \rightarrow c)] = [(a \wedge b) \rightarrow c]$
 \LAT
-43. \hspace{0.67cm} $a$ \reflectbox{C} . $b$ = $c$ : = . $ab$ = $ac$
+43. \hspace{0.67cm} $a$ $\C$ . $b$ = $c$ : = . $ab$ = $ac$
 \ENG
 43. \hspace{0.67cm} $[a \rightarrow (b=c)]=[(a \wedge b)=(a \wedge c)]$
 \end{translateTwoCol}
@@ -881,7 +881,7 @@ Let $a,b,c,...$ be propositions. We have:
 \peanoPage{X} % page-number X
 
 \begin{translateTwoCol}
-\quad Sit $\alpha$ quoddam relationis signum (ex. gr. $=$, \reflectbox{C}), ita ut $a$ $\alpha$ $b$ sit quaedam propositio. Tunc loco $-$ . $a$ $\alpha$ $b$ scribemus $a$ $-$ $\alpha$ $b$; scilicet:
+\quad Sit $\alpha$ quoddam relationis signum (ex. gr. $=$, $\C$), ita ut $a$ $\alpha$ $b$ sit quaedam propositio. Tunc loco $-$ . $a$ $\alpha$ $b$ scribemus $a$ $-$ $\alpha$ $b$; scilicet:
 \ENG
 \quad Let $\alpha$ be the sign of some relation (eg., $=, \rightarrow$) so that $a$ $\alpha$ $b$ is a proposition. Then instead of $\neg(a$ $\alpha$ $b)$, we write $a$ $\not\alpha$ $b$. Thus:
 \LAT
@@ -889,19 +889,19 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hspace{1.06cm} $(a \not= b) = \neg (a=b)$
 \LAT
-\hspace{1.06cm} $a$ $-$ \reflectbox{C} $b$ . = : $-$ . $a$ \reflectbox{C} $b$
+\hspace{1.06cm} $a$ $-$ $\C$ $b$ . = : $-$ . $a$ $\C$ $b$
 \ENG
 \hspace{1.06cm} $ (a \not\rightarrow b) = \neg (a \rightarrow b)$
 \LAT
-\quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ \reflectbox{C} significat {\emph{non deducitur}}.
+\quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ $\C$ significat {\emph{non deducitur}}.
 \ENG
 Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\text{x}}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
 \LAT
-\quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . \reflectbox{C} $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
+\quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . $\C$ $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
 \ENG
 \quad Similarly, if $\alpha$ and $\beta$ are signs of relations, instead of $(a$ $\alpha$ $b) \wedge (a$ $\beta$ $b)$, and $(a$ $\alpha$ $b) \vee (a$ $\beta$ $b)$ we may write $a$ $(\alpha \wedge \beta)$ $b$ and $a$ $(\alpha \vee \beta)$ $b$. Thus, if $a$ and $b$ are propositions, the formula $a$ $(\rightarrow \wedge \not=)$ $b$ says: from $a$ {\emph{one deduces}} $b$, but not vice versa.
 \LAT
-\hspace{1.06cm} $a$ . \reflectbox{C} $-$ = . $b$ : = : $a$ \reflectbox{C} $b$ . $b$ $-$ $\reflectbox{C}$ $a$
+\hspace{1.06cm} $a$ . $\C$ $-$ = . $b$ : = : $a$ $\C$ $b$ . $b$ $-$ $$\C$$ $a$
 \ENG
 \hspace{1.06cm} $[a$ $(\rightarrow \wedge \not=)$ $b] = [(a \rightarrow b) \wedge (b \not\rightarrow a)]$
 \LAT
@@ -909,7 +909,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \quad Formulas:
 \LAT
-\hspace{1.06cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $c$ . $a$ $-$ \reflectbox{C} $c$ : = $\abs$
+\hspace{1.06cm} $a$ $\C$ $b$ . $b$ $\C$ $c$ . $a$ $-$ $\C$ $c$ : = $\abs$
 \ENG
 \hspace{1.06cm} $[(a \rightarrow b) \wedge (b \rightarrow c) \wedge (a \not\rightarrow c)] = \bot$
 \LAT
@@ -917,11 +917,11 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \hspace{1.06cm} $[(a=b) \wedge (b=c) \wedge (a \not= c)] = \bot$
 \LAT
-\hspace{1.06cm} $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $-$ = $c$ : \reflectbox{C} . $a$ \reflectbox{C} $-$ = $c$
+\hspace{1.06cm} $a$ $\C$ $b$ . $b$ $\C$ $-$ = $c$ : $\C$ . $a$ $\C$ $-$ = $c$
 \ENG
 \hspace{1.06cm} $\{(a \rightarrow b) \wedge [b$ $(\rightarrow \wedge \not=)$ $c]\} \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$
 \LAT
-\hspace{1.06cm} $a$ \reflectbox{C} $-$ = $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} . $a$ \reflectbox{C} $-$ = $c$
+\hspace{1.06cm} $a$ $\C$ $-$ = $b$ . $b$ $\C$ $c$ : $\C$ . $a$ $\C$ $-$ = $c$
 \ENG
 \hspace{1.06cm} $[a$ $(\rightarrow \wedge \not=)$ $b] \wedge (b \rightarrow c)\} \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$
 \LAT
@@ -972,7 +972,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \quad Let $A$ be a class. Then $\overline{A}$ means that class made up of individuals that are not in $A$. 
 \LAT
-46. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} : $x$ \scalebox{0.7}[0.9]{$\in$} $-$ $a$ . = . $x$ $-$ \scalebox{0.7}[0.9]{$\in$} $a$
+46. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ : $x$ \scalebox{0.7}[0.9]{$\in$} $-$ $a$ . = . $x$ $-$ \scalebox{0.7}[0.9]{$\in$} $a$
 \ENG
 46. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow [(x \in \overline{A}) = (x \not\in A)]$
 \LAT
@@ -988,11 +988,11 @@ quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis consti
 \ENG
 which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of individuals which are in $A$ or $B$.
 \LAT
-47. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+47. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ $\pppNoSpace$ $a$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 47. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]\}$
 \LAT
-48. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ $\cup$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $\cup$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $\cup$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+48. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ $\pppNoSpace$ $a$ $\cup$ $x$ \scalebox{0.7}[0.9]{$\in$} . $a$ $\cup$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $\cup$ . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 48. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{[(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]\}$
 \LAT
@@ -1000,7 +1000,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad The sign $\varnothing$ indicates the class which contains no individuals. Thus:
 \LAT
-49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ = $\abs$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
+49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ $\pppNoSpace$ $a$ = $\abs$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
 \ENG
 49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot])\}$ 
 \LAT
@@ -1009,11 +1009,11 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \quad \na{[We shall not use the sign \scriptsize{true} \normalsize, which indicates the class composed of all individuals being considered].}
 % TODO Find a replacement for ``true'' above
 \LAT
-\quad Signum \reflectbox{C} significat {\emph{continetur}}. Ita $a$ \reflectbox{C} $b$ significat {\emph{classis a continetur in classi b}}.
+\quad Signum $\C$ significat {\emph{continetur}}. Ita $a$ $\C$ $b$ significat {\emph{classis a continetur in classi b}}.
 \ENG
 \quad The sign $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the class a is contained in the class b}}.
 \LAT
-50. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ \reflectbox{C} $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . \reflectbox{C}\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+50. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ $\pppNoSpace$ $a$ $\C$ $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . $\C$\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 50. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall \text{x}]{} (x \in B)]\}$
 \LAT
@@ -1021,16 +1021,16 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \ENG
 \quad \na{[The formula $B \supset A$ could mean {\emph{the class B contains the class A}}, but we shall not use the sign $\supset$].}
 \LAT
-Hic signa $\abs$ et \reflectbox{C} significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
+Hic signa $\abs$ et $\C$ significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
 \ENG
 \na{The signs $(\bot / \varnothing)$ and $(\rightarrow / \subset)$ have meanings here which are slightly different from the preceding, but no ambiguity will arise, for if propositions are being considered, the signs are read \emph{absurd} $(\bot)$ and \emph{one deduces} $(\rightarrow)$, but if classes are being considered, they are read \emph{empty} $(\varnothing)$ and \emph{is contained} $(\subset)$.}
 \LAT
-\quad Formula $a$ = $b$, si $a$ et $b$ sint classes, significat $a$ \reflectbox{C} $b$ . $b$ \reflectbox{C} $a$. Itaque
+\quad Formula $a$ = $b$, si $a$ et $b$ sint classes, significat $a$ $\C$ $b$ . $b$ $\C$ $a$. Itaque
 \ENG
 \raggedright
 \quad The formula $A = B$, if $A$ and $B$ are classes, means $(A \subset B) \wedge (B \subset A)$. Thus
 \LAT
-51. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . \reflectbox{C} $\pppNoSpace$ $a$ = $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
+51. \hspace{0.67cm} $a$, $b$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ $\pppNoSpace$ $a$ = $b$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace . $x$ \scalebox{0.7}[0.9]{$\in$} $b$
 \ENG
 51. \hspace{0.67cm} $A$, $B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A = B) = [(x \in A) \underset{\forall \text{x}}=  (x \in B)]\}$
 \LAT
@@ -1038,19 +1038,19 @@ Propositiones 1...41 quoque subsistunt, si $a$, $b$... classes indicant; praeter
 \ENG
 Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
-52. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . \reflectbox{C} . $b$ \scalebox{0.7}[0.9]{$\in$} \text{K}
+52. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . $\C$ . $b$ \scalebox{0.7}[0.9]{$\in$} \text{K}
 \ENG
 52. \hspace{0.67cm} $(a \in B) \rightarrow$ B is a \scriptsize{CLASS} \normalsize
 \LAT
-53. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . \reflectbox{C} . $b$ $-$ = $\abs$
+53. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} b . $\C$ . $b$ $-$ = $\abs$
 \ENG
 53. \hspace{0.67cm} $(a \in B) \rightarrow (B \not= \varnothing)$
 \LAT
-54. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} $b$ . $b$ = $c$ : \reflectbox{C} . $a$ \scalebox{0.7}[0.9]{$\in$} $c$
+54. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} $b$ . $b$ = $c$ : $\C$ . $a$ \scalebox{0.7}[0.9]{$\in$} $c$
 \ENG
 54. \hspace{0.67cm} $[(a \in B) \wedge (B = C)] \rightarrow (a \in C)$
 \LAT
-55. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} $b$ . $b$ \reflectbox{C} $c$ : \reflectbox{C} . $a$ \scalebox{0.7}[0.9]{$\in$} $c$
+55. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} $b$ . $b$ $\C$ $c$ : $\C$ . $a$ \scalebox{0.7}[0.9]{$\in$} $c$
 \ENG
 55. \hspace{0.67cm} $[(a \in B) \wedge (B \subset C)] \rightarrow (a \in C)$
 \LAT
@@ -1058,7 +1058,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad Let $\text{C}$ be a class, and $\text{C}_{subset}$ be a class which is contained in $\text{C}$; then we say that $\text{C}_{subset}$ is an individual of the class $\text{C}$, if $\text{C}_{subset}$ consists of only one individual. That is:
 \LAT
-56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ \reflectbox{C} $s$ : \reflectbox{C} :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . \reflectbox{C}\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
+56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ $\C$ $s$ : $\C$ :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
 56. \hspace{0.67cm} $[\text{C}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $(\text{C}_{subset} \subset \text{C})] \rightarrow \Big\{(\text{C}_{subset} \in \text{C}) = \big\{(\text{C}_{subset} \not= \varnothing) \wedge \{[(x,y) \in \text{C}_{subset}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
 \end{translateTwoCol}
@@ -1085,15 +1085,15 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
 \LAT
-57. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} : $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ . \scalebox{0.7}[0.9]{$\in$} K
+57. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . $\C$ : $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ . \scalebox{0.7}[0.9]{$\in$} K
 \ENG
 57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow \{x | a \}$ is a \scriptsize{CLASS} \normalsize 
 \LAT
-58. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{K} . \reflectbox{C} $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $x$ \scalebox{0.7}[0.9]{$\in$} $a$ : = $a$
+58. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{K} . $\C$ $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $x$ \scalebox{0.7}[0.9]{$\in$} $a$ : = $a$
 \ENG
 58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{ x | x \in A \} = A $
 \LAT
-59. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . \reflectbox{C} $\pppNoSpace$ $x$ \scalebox{0.7}[0.9]{$\in$} . $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ : = $a$
+59. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} \text{P} . $\C$ $\pppNoSpace$ $x$ \scalebox{0.7}[0.9]{$\in$} . $[x\scalebox{0.7}[0.9]{$\in$}]$ $a$ : = $a$
 \ENG
 59. \hspace{0.67cm}  $a$ is a \scriptsize{proposition} \normalsize $\rightarrow (x \in \{x | a \}) = a$
 \LAT
@@ -1113,7 +1113,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 62. \hspace{0.67cm} $\{ x | \alpha \vee \beta \} = \{ x | \alpha \} \cup \{ x | \beta \}$
 \LAT
-63. \hspace{0.67cm} $\alpha$ \reflectbox{C}\scalebox{0.7}{$x$} $\beta$ . = . $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  \reflectbox{C} $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
+63. \hspace{0.67cm} $\alpha$ $\C$\scalebox{0.7}{$x$} $\beta$ . = . $[x\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  $\C$ $[x\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
 \ENG
 63. \hspace{0.67cm} $\alpha \xrightarrow[\forall x]{} \beta = \{x | \alpha\} \subset \{x | \beta \}$
 \LAT
@@ -1125,7 +1125,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the sign $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the indeterminate $x,y$; then $\{(x,y) | \alpha \}$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:
 \LAT
-65. \hspace{0.67cm} $\alpha$ \reflectbox{C}\scalebox{0.7}{$x, y$} $\beta$ . = . $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  \reflectbox{C} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
+65. \hspace{0.67cm} $\alpha$ $\C$\scalebox{0.7}{$x, y$} $\beta$ . = . $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$  $\C$ $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\beta$
 \ENG
 65. \hspace{0.67cm} $\alpha \xrightarrow[\forall x,y]{} \beta = \{(x,y) | \alpha\} \subset \{(x,y) | \beta \}$
 \LAT
@@ -1133,7 +1133,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$
 \LAT
-\quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\reflectbox{C}$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\scalebox{0.7}[0.9]{$\in$}]$, signo $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ utimur. Ita $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, et signum $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
+\quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\scalebox{0.7}[0.9]{$\in$}]$, signo $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ utimur. Ita $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, et signum $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
 \quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the sign $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ instead of the sign $[\scalebox{0.7}[0.9]{$\in$}]$. Thus, $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the sign $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ is read \emph{the objects that}. For example, let $y$ be a number; then $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the sign \emph{D} means \emph{divides} or \emph{is a divisor of}, the formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\scalebox{0.7}[0.9]{$\in$}$ $(\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.
 \LAT
@@ -1189,7 +1189,7 @@ Let $S$ be a class; we assume that equality is defined between the objects of th
 \ENG
 \hspace{1.06cm} $(a=b)$ $=$ $(b=a)$
 \LAT
-\hspace{1.06cm} $a=b$ . $b=c$ $:$ $\reflectbox{C}$ $.$ $a=c$
+\hspace{1.06cm} $a=b$ . $b=c$ $:$ $\C$ $.$ $a=c$
 \ENG
 \hspace{1.06cm} $[(a=b)$ $\wedge$ $(b=c)]$ $\rightarrow$ $a=c$
 \LAT
@@ -1197,7 +1197,7 @@ Sit $\upvarphi$ signum, sive signorum aggregatus, ita ut si $x$ est ens classis 
 \ENG
 Let $\upvarphi$ be a sign or an aggregate of signs such that, if $x$ is an object of the class $S$, the expression $\upvarphi$ $x$ denotes a new object; we assume also that equality is defined between the objects $\upvarphi$ $x$; further, if $x$ and $y$ are objects of the class $S$ and if $x = y$, we assume it is possible to deduce $\upvarphi$ $x = \upvarphi$ $y$. Then the sign $\upvarphi$ is said to be a \emph{function presign in the class S}, and we write $\upvarphi$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $F'$ $s$.
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\pppNoSpace$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\C$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\pppNoSpace$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\C_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
 \ENG
 ...
 \LAT
@@ -1205,7 +1205,7 @@ Verum si, cum sit $x$ quodlibet ens classis $s$, scriptura $x\upvarphi$ novum in
 \ENG
 If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a new object and $x\upvarphi = y\upvarphi$ follows from $x=y$, then we say that $\upvarphi$ is a \emph{function postsign in the class S}, and we write $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s'$F.
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\reflectbox{C}$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\pppNoSpace$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\reflectbox{C}_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ $K$ $.$ $\C$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\pppNoSpace$ $x,y$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $.$ $x$ $=$ $y$ $:$ $\C_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
 \ENG
 ...
 \LAT
@@ -1217,7 +1217,7 @@ If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a
 \ENG
 \hspace{1.06cm}
 \LAT
-\hspace{1.06cm} $a$ $\scalebox{0.7}[0.9]{$\in$} \N .$ $\reflectbox{C}$ $:$ $+$ $a$ $.$ $\scalebox{0.7}[0.9]{$\in$}$ $.$ $N$ $'F$
+\hspace{1.06cm} $a$ $\scalebox{0.7}[0.9]{$\in$} \N .$ $\C$ $:$ $+$ $a$ $.$ $\scalebox{0.7}[0.9]{$\in$}$ $.$ $N$ $'F$
 \ENG
 ...
 \LAT
@@ -1229,7 +1229,7 @@ Sit $\upvarphi$ functionis praesignum in classe $s$. Tunc $[\upvarphi] y$ classe
 \ENG
 Let $\upvarphi$ be a function presign in the class $S$. Then $[\upvarphi] y$ denotes the class composed of $x$ that satisfy the condition $\upvarphi x = y$; that is,
 \LAT
-\emph{Def}. \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $:$ $[\upvarphi]y$ $.$ $=$ $.$ $[x \scalebox{0.7}[0.9]{$\in$}]$ $(\upvarphi x$ $=$ $y)$
+\emph{Def}. \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\C$ $:$ $[\upvarphi]y$ $.$ $=$ $.$ $[x \scalebox{0.7}[0.9]{$\in$}]$ $(\upvarphi x$ $=$ $y)$
 \ENG
 \emph{Def}. \hspace{0.25cm}
 \end{translateTwoCol}
@@ -1241,7 +1241,7 @@ Classis $[\upvarphi] y$ vel unum vel plura, vel etiam nullum individuum continer
 \ENG
 The class $[\upvarphi] y$ may contain one or several individuals, or none at all. We have:
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $:$ $y$ $=$ $\upvarphi$ $x$ $.$ $=$ $.$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $[\upvarphi] y$
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\C$ $:$ $y$ $=$ $\upvarphi$ $x$ $.$ $=$ $.$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $[\upvarphi] y$
 \ENG
 ...
 \LAT
@@ -1253,7 +1253,7 @@ Sit $\upvarphi$ functions postsignum; similiter ponimus:
 \ENG
 Let $\upvarphi$ be a function postsign; we write similarly:
 \LAT
-\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $\pppNoSpace$ $y$ $| \upvarphi |$ $=$ $| x\scalebox{0.7}[0.9]{$\in$} |$ $(x \upvarphi = y)$.
+\hspace{1.06cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\C$ $\pppNoSpace$ $y$ $| \upvarphi |$ $=$ $| x\scalebox{0.7}[0.9]{$\in$} |$ $(x \upvarphi = y)$.
 \ENG
 ...
 \LAT
@@ -1316,15 +1316,15 @@ in $s$ contenta; tunc $\upvarphi k$ classem indicat omnibus $\upvarphi x$ compos
 \ENG
 contained in $S$; then $\upvarphi C$ denotes the class consisting of all $\upvarphi x$, where the $x$ are the objects of class $C$; that is
 \LAT
-\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\abs$)
+\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\C$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\C$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\abs$)
 \ENG
 \emph{Def}. \hspace{0.25cm}  %TODO
 \LAT
-Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\reflectbox{C}$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\pppNoSpace$ $-$ $=$ $\abs$)
+Sive \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\C$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F'$ $s$ $:$ $\C$ $.$ $\upvarphi$ $k$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $([x\scalebox{0.7}[0.9]{$\in$}]$ $:$ $x$ $\scalebox{0.7}[0.9]{$\in$}$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\pppNoSpace$ $-$ $=$ $\abs$)
 \ENG
 Or \hspace{0.25cm}  %TODO
 \LAT
-\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\reflectbox{C}$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\reflectbox{C}$ $.$ $k$ $\upvarphi$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\abs$)
+\emph{Def.} \hspace{0.25cm} $s$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\scalebox{0.7}[0.9]{$\in$}$ K $.$ $k$ $\C$ $s$ $.$ $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $s$ $'F$ $:$ $\C$ $.$ $k$ $\upvarphi$ $=$ $[y $\scalebox{0.7}[0.9]{$\in$}$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\abs$)
 \ENG
 \emph{Def.} \hspace{0.25cm} %TODO
 \LAT
@@ -1332,29 +1332,29 @@ Itaque, si $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' s$, tunc $\upvarphi$ $s$
 \ENG
 Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $s$ denotes the class composed of all $\upvarphi$ $x$, where the $x$ are objects of the class $S$. We have:
 \LAT
-\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s$ . $y \in \upvarphi s : \reflectbox{C} : \upvarphi [\upvarphi] y = y$
+\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s$ . $y \in \upvarphi s : \C : \upvarphi [\upvarphi] y = y$
 \ENG
 ... %TODO
 \LAT
-\hspace{1.06cm} $s \in K$ . $a, b \in K$ . $a$ $\reflectbox{C}$ $s$ . $b$ $\reflectbox{C}$ $s$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi (a \cup b) = (\upvarphi a) \cup (\upvarphi b)$
+\hspace{1.06cm} $s \in K$ . $a, b \in K$ . $a$ $\C$ $s$ . $b$ $\C$ $s$ . $\upvarphi \in F' s : \C$ . $\upvarphi (a \cup b) = (\upvarphi a) \cup (\upvarphi b)$
 \ENG
 ... %TODO
 \LAT
-\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi \abs = \abs$
+\hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s : \C$ . $\upvarphi \abs = \abs$
 \ENG
 ... %TODO
 \LAT
-\hspace{1.06cm} $s \in K$ . $a,b \in K$ . $b$ $\reflectbox{C}$ $s$ . $a$ $\reflectbox{C}$ $b$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi a$ $\reflectbox{C}$ $\upvarphi b$
+\hspace{1.06cm} $s \in K$ . $a,b \in K$ . $b$ $\C$ $s$ . $a$ $\C$ $b$ . $\upvarphi \in F' s : \C$ . $\upvarphi a$ $\C$ $\upvarphi b$
 \ENG
 ... %TODO
 \LAT
-\hspace{1.06cm} $s \in K$ . $a,b \in K$ . $a$ $\reflectbox{C}$ $s$ . $b$ $\reflectbox{C}$ $s$ . $\upvarphi \in F' s : \reflectbox{C}$ . $\upvarphi (ab)$ $\reflectbox{C}$ $(\upvarphi a)(\upvarphi b)$
+\hspace{1.06cm} $s \in K$ . $a,b \in K$ . $a$ $\C$ $s$ . $b$ $\C$ $s$ . $\upvarphi \in F' s : \C$ . $\upvarphi (ab)$ $\C$ $(\upvarphi a)(\upvarphi b)$
 \ENG
 ... %TODO
 \LAT
-Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \in K a$ idem significat quod $x \in K$ . $x$ $\reflectbox{C}$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
+Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \in K a$ idem significat quod $x \in K$ . $x$ $\C$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
 \ENG
-Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\reflectbox{C}$ $a$. We shall sometimes use this convention; thus $K N$ means \emph{a class of numbers}.
+Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\C$ $a$. We shall sometimes use this convention; thus $K N$ means \emph{a class of numbers}.
 \LAT
 Similiter, si $a$ est classis, $K \cup a$ indicat classes quae $a$ continent. Sit $a$ numerus; tunc $a + N$, sive $N + a$, \emph{numeros} indicat \emph{numero a maiores}; $a \times N$, sive $N \times a$, sive $N a$ indicat \emph{multiplices numeri a}; $a^N$ indicat \emph{potestas numeri} $a$; $N^2$, $N^3$, ... indicat \emph{numeros quadratos}, vel \emph{numeros cubos},...
 \ENG
@@ -1368,11 +1368,11 @@ Functional signorum aequalitatem, productum, potestas, ita definire licet:
 \ENG
 Equality, product and powers can be defined thus for function signs:
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi, \psi \in F' s :$ $\reflectbox{C}$ $\pppNoSpace$ $\varphi = \psi$ : $=$ : $x \in s$ . $\reflectbox{C}$ . $\varphi x = \psi x$
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi, \psi \in F' s :$ $\C$ $\pppNoSpace$ $\varphi = \psi$ : $=$ : $x \in s$ . $\C$ . $\varphi x = \psi x$
 \ENG
 \emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in F' s$ $.$ $\psi \in F' \varphi s$ . $x \in s$ : $\reflectbox{C}$ . $\psi \varphi x = \psi (\varphi x)$
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in F' s$ $.$ $\psi \in F' \varphi s$ . $x \in s$ : $\C$ . $\psi \varphi x = \psi (\varphi x)$
 \ENG
 \emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
@@ -1388,7 +1388,7 @@ Haec valet propositio:
 \ENG
 The following proposition holds:
 \LAT
-\hspace{1.06cm} $s \in K$ . $\varphi \in F' s$ . $\varphi s$ $\reflectbox{C}$ $s : \reflectbox{C} : \varphi \varphi s$ $\reflectbox{C}$ $s$ . $\varphi \varphi \varphi s$ $\reflectbox{C}$ $s$. etc.
+\hspace{1.06cm} $s \in K$ . $\varphi \in F' s$ . $\varphi s$ $\C$ $s : \C : \varphi \varphi s$ $\C$ $s$ . $\varphi \varphi \varphi s$ $\C$ $s$. etc.
 \ENG
 ...
 \LAT
@@ -1404,7 +1404,7 @@ Si vero $\varphi$ est functionis postsignum, ha faciliori notatione, absque ambi
 \ENG
 But if $\varphi$ is a function postsign, we can use the following more convenient notation without ambiguity:
 \LAT
-\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in s 'F$ . $s \varphi$ $\reflectbox{C}$ $s : \reflectbox{C} : \varphi 1 = \varphi$ . $\varphi 2 = \varphi \varphi$ . $\varphi 3 = \varphi \varphi \varphi$. etc.
+\emph{Def.} \hspace{0.25cm} $s \in K$ . $\varphi \in s 'F$ . $s \varphi$ $\C$ $s : \C : \varphi 1 = \varphi$ . $\varphi 2 = \varphi \varphi$ . $\varphi 3 = \varphi \varphi \varphi$. etc.
 \ENG
 \emph{Def.} \hspace{0.25cm}  %TODO
 \LAT
@@ -1412,13 +1412,13 @@ In definitionis hypothesi, si $m, n \in N$, erit $\varphi$ $(m+n)$ $=$ $(\varphi
 \ENG
 Assuming this definition, if $m, n \in N$, we have $\varphi$ $(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
 \LAT
-Si hac definitione in Arithmetica utimur, haec invenimus. Numerum qui sequitur numerum $a$ signo faciliori $a +$ indicare possumus; tunc $a + 1, a+2,...$ et, si $b$ est numerus, $a + b$, sensum habent $a +, a + +,...$ quod a definitione in \S 1 patet. Propositionem 6 in \S 1 scribere possumus $N +$ $\reflectbox{C}$ $N$. Si $a, b, c$ sunt numeri, tunc $a : + b$ . $c$ significat $a + b c$, et $a : \times b$ . $c$ significat $a b^c$.
+Si hac definitione in Arithmetica utimur, haec invenimus. Numerum qui sequitur numerum $a$ signo faciliori $a +$ indicare possumus; tunc $a + 1, a+2,...$ et, si $b$ est numerus, $a + b$, sensum habent $a +, a + +,...$ quod a definitione in \S 1 patet. Propositionem 6 in \S 1 scribere possumus $N +$ $\C$ $N$. Si $a, b, c$ sunt numeri, tunc $a : + b$ . $c$ significat $a + b c$, et $a : \times b$ . $c$ significat $a b^c$.
 \ENG
-If we use this definition in arithmetice, we obtain the following. We can denote the number that follows the number $a$ by the more convenient sign $a+$; then $a + 1$, $a + 2$,..., and, if $b$ is a number, $a + b$, have the meaning of $a +$, $a ++$,..., which is clear from the definition in \S 1 below. Proposition 6 in \S 1 can be written $N +$ $\reflectbox{C}$ $N$. If $a, b, c$ are numbers, then $a : + b$ . $c$ means $a + b c$, and $a : \times b$ . $c$ means $a b^c$.
+If we use this definition in arithmetice, we obtain the following. We can denote the number that follows the number $a$ by the more convenient sign $a+$; then $a + 1$, $a + 2$,..., and, if $b$ is a number, $a + b$, have the meaning of $a +$, $a ++$,..., which is clear from the definition in \S 1 below. Proposition 6 in \S 1 can be written $N +$ $\C$ $N$. If $a, b, c$ are numbers, then $a : + b$ . $c$ means $a + b c$, and $a : \times b$ . $c$ means $a b^c$.
 \LAT
-Multi aliis proprietatibus gaudent functionem signa, praesertim si conditioni satisfaciunt: $\varphi x = \varphi y$ . $\reflectbox{C}$ . $x = y$. Functionis signum quod huic conditioni satisfacit vocatur a clarrissimo Dedekind \emph{simile} (ähnliche Abbildung).
+Multi aliis proprietatibus gaudent functionem signa, praesertim si conditioni satisfaciunt: $\varphi x = \varphi y$ . $\C$ . $x = y$. Functionis signum quod huic conditioni satisfacit vocatur a clarrissimo Dedekind \emph{simile} (ähnliche Abbildung).
 \ENG
-Function signs possess many other properties, especially if they satisfy the condition: $\varphi x = \varphi y$ . $\reflectbox{C}$ . $x = y$. A function sign that satisfies this condition is called \emph{equivalent}\endnote{The 2 other translation, mentioned at the beginning of this current document, translated "ähnlich" literally to "similar", instead of "equivalent". However, additional information can be found in a footnote of the first translation: \\
+Function signs possess many other properties, especially if they satisfy the condition: $\varphi x = \varphi y$ . $\C$ . $x = y$. A function sign that satisfies this condition is called \emph{equivalent}\endnote{The 2 other translation, mentioned at the beginning of this current document, translated "ähnlich" literally to "similar", instead of "equivalent". However, additional information can be found in a footnote of the first translation: \\
 
 \quad \emph{"Today "similar" has another meaning and instead we would say "equivalent"."} \\
 
@@ -1442,13 +1442,13 @@ But we lack the space to present these properties.
 
 \vspace{1em}
 \begin{translateTwoCol}
-\emph{Defenitio}, vel breviter \emph{Def.} est propositio formam habens $x = a$, sive $\alpha$ $\reflectbox{C}$ . $x = a$, ubi $\alpha$ est signorum aggregatus sensum habens notum; $x$ est signum, vel signorum aggregatus significatione adhuc carnes; $\alpha$ vero est conditio sub qua definitio datur.
+\emph{Defenitio}, vel breviter \emph{Def.} est propositio formam habens $x = a$, sive $\alpha$ $\C$ . $x = a$, ubi $\alpha$ est signorum aggregatus sensum habens notum; $x$ est signum, vel signorum aggregatus significatione adhuc carnes; $\alpha$ vero est conditio sub qua definitio datur.
 \ENG
-A \emph{Definition}, or \emph{Def.} for short, is a proposition of the form $x=a$ or $\alpha$ $\reflectbox{C}$ . $x = a$, where $a$ is an aggregate of signs having a known meaning, $x$ is a sign or an aggregate of signs, hitherto without meaning, and $\alpha$ is the condition under which the definition is given.
+A \emph{Definition}, or \emph{Def.} for short, is a proposition of the form $x=a$ or $\alpha$ $\C$ . $x = a$, where $a$ is an aggregate of signs having a known meaning, $x$ is a sign or an aggregate of signs, hitherto without meaning, and $\alpha$ is the condition under which the definition is given.
 \LAT
-\emph{Theorema}, (Theor. vel Th) est propositio quae demonstratur. Si theorema formam habet $\alpha$ $\reflectbox{C}$ $\beta$, ubi $\alpha$ et $\beta$ sunt propositiones, tunc $\alpha$ dicitur \emph{Hypothesis} (Hyp. vel breviter Hp.), $\beta$ vero \emph{Thesis} (Thes. vel Ts.). Hyp. ac Ts. a Theorematis forma pendent; nam si loco $\alpha$ $\reflectbox{C}$ $\beta$ scribemus $- \beta$ $\reflectbox{C}$ $- \alpha$, erit $- \beta$ Hp, et $- \alpha$ Ts.; si vero scribemus $\alpha - \beta = \abs$, Hp. ac Ts. absunt.
+\emph{Theorema}, (Theor. vel Th) est propositio quae demonstratur. Si theorema formam habet $\alpha$ $\C$ $\beta$, ubi $\alpha$ et $\beta$ sunt propositiones, tunc $\alpha$ dicitur \emph{Hypothesis} (Hyp. vel breviter Hp.), $\beta$ vero \emph{Thesis} (Thes. vel Ts.). Hyp. ac Ts. a Theorematis forma pendent; nam si loco $\alpha$ $\C$ $\beta$ scribemus $- \beta$ $\C$ $- \alpha$, erit $- \beta$ Hp, et $- \alpha$ Ts.; si vero scribemus $\alpha - \beta = \abs$, Hp. ac Ts. absunt.
 \ENG
-A \emph{theorem} (Theor. or Th.) is aproposition that is \emph{proved}. If a theorem has the form $\alpha$ $\reflectbox{C}$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\reflectbox{C}$ $\beta$ instead of $- \beta$ $\reflectbox{C}$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \abs$, Hp. and Ts. do not exist.
+A \emph{theorem} (Theor. or Th.) is aproposition that is \emph{proved}. If a theorem has the form $\alpha$ $\C$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\C$ $\beta$ instead of $- \beta$ $\C$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \abs$, Hp. and Ts. do not exist.
 \LAT
 In quolibet $\S$ signum P quod quidam numerus sequatur, propositionem indicat eiusdem $\S$ hoc numero signatam. Logicae propositiones indicantur signo L et propositiones numero.
 \ENG

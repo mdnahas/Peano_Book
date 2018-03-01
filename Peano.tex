@@ -143,7 +143,11 @@
 % Define commands for document structure
 %
 % Command for the end of each page of Peano's original book
-\newcommand{\peanoPage}[1]{\columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s #1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol}}
+\newcommand{\peanoPage}[1]{\vspace{1ex}
+
+  \columnratio{0.475, 0.05, 0.475} \begin{paracol}{3} \centering \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \s #1 \s \hdashrule{\columnwidth}{0.1mm}{0.1mm 1mm} \end{paracol}
+
+\vspace{1ex}}
 %
 % FANCY LaTeX!  Create translation environment and commands \LAT and \ENG that only work inside it.
 \newenvironment{translateTwoCol}
@@ -342,6 +346,8 @@ Augustae Taurinorum - Typis Vincentii Bona.
 \vspace{1em}
 \na{At Turin, printed by Vincent Bona}
 \end{translateTwoCol}
+
+\pagebreak
 
 \vspace{1em}
 \peanoPage{III} % page-number III
@@ -1460,6 +1466,8 @@ Formulae quae in una linea non continentur, in altera linea, nullo interposito s
 \ENG
 Formulas that do not fit on one line are continued on the next line without any intervening sign.
 \end{translateTwoCol}
+
+\pagebreak
 
 \peanoPage{1} % page-number 1
 

@@ -164,6 +164,7 @@
 
 % Title Page
 %
+% TODO: fix spacing
 { \centering
 
   \Large Giuseppe Peano's
@@ -377,11 +378,11 @@ Ex arithmeticae signis quae caeteris, una cum logicae signis exprimere licet, id
 \begin{translateTwoCol}
 Propositiones, quae logicae operationibus a caeteris deducuntur, sunt \emph{theoremata}; quae vero non, \emph{axiomata} vocavi. Axiomata hic sunt novem (\S 1), et signorum, quae definitione carent, proprietates fundamentales exprimunt.
 \ENG
-Propositions which are deduced from others by the operations of logic are theorems; those for which this is not true I have called axioms. There are nine axioms here (\S 1), and they express fundamental properties of the undefined signs.
+Propositions which are deduced from others by the operations of logic are theorems; those for which this is not true I have called axioms. There are nine axioms here (See \S 1), and they express fundamental properties of the undefined signs.
 \LAT
 In \S 1-6 numerorum proprietates communes demonstravi; brevitatis causa, demonstrationes praecedentibus similes omisi; demonstrationum communem formam immutare oportet ut logicae signis exprimantur; haec transformatio interdum difficilior est, tamen inde demonstrationis natura clarissime patet.
 \ENG
-In \S 1-6 I have proved the ordinary properties of numbers; for the sake of brevity, I have omitted proofs which are similar to preceding ones. The ordinary form of proofs has had to be altered in order that they may be expressed with the signs of logic. This transformation is sometimes rather difficult but the nature of the proof then becomes quite clear. In the following sections I have treated various things so that the power of the method is better seen.
+In \S 1-6 I have proved the ordinary properties of numbers; for the sake of brevity, I have omitted proofs which are similar to preceding ones. The ordinary form of proofs has had to be altered in order that they may be expressed with the signs of logic. This transformation is sometimes rather difficult but the nature of the proof then becomes quite clear. 
 \LAT
 In sequentibus \S \ varia tractavi, ut huius methodi potentia magis videatur.
 \ENG
@@ -446,7 +447,7 @@ In the proofs of arithmetic I used the book H. Grassmann, \emph{Lehrbuch der Ari
 \LAT
 Utilius quoque mihi fuit recens scriptum: R. Dedekind, \emph{Was sind und was sollen die Zahlen}; Braunschweig, 1888, in quo quaestiones, quae ad numerorum fundamenta pertinent, acute examinantur.
 \ENG
-Also quite useful to me was the recent work by R. Dedekind, Was sind und was sollen die Zahlen (Braunschweig, 1888), in which questions pertaining to the foundations of numbers are acutely examined.
+Also quite useful to me was the recent work by R. Dedekind, \emph{Was sind und was sollen die Zahlen} (Braunschweig, 1888), in which questions pertaining to the foundations of numbers are acutely examined.
 \LAT
 Hic meus libellus ut novae methodi specimen habendus est. Hisce notationibus innumeras alias propositiones, ut quae ad rationales et irrationales pertinent, enunciare et demonstrare possumus. Sed, ut aliae theoriae tractentur, nova signa, quae nova indicant entia, instituere necesse est. Puto vero his tantum logicae signis propositiones cuiuslibet scientiae exprimi posse, dummodo adiungantur signa quae entia huius scientiae representant.
 \ENG
@@ -504,8 +505,7 @@ $P$ \s propositio \s VII
 \s* $[ \ ]$ \s inversionis signum \s XI
 \s $\{ x | \ldots \}$ \s sign of the inverse \s XI
 \s* \rotatebox[origin=c]{180}{$\epsilon$} \s qui \emph{vel} $[ \epsilon ]$ \s XII
-\s $\rightarrow$ \\ isn't \s such that \emph{or} \\ \quad isn't
-\s XII
+\s \rotatebox[origin=c]{180}{$\epsilon$} \s such that \emph{or} $[ \epsilon ]$ \s XII
 \s* Th \s Theorema \s XVI
 \s \scriptsize{theorem} \s \normalsize Theorem \s XVI
 \s* Hp \s Hypothesis \s
@@ -648,7 +648,7 @@ The sign $P$ means \emph{proposition}.
 \LAT
 Signum $\cap$ legitur \emph{et}. Sint $a, b$ propositiones; tunc $a \cap b$ est simultanea affirmatio propositionum $a, b$. Brevitatis causa, loco $a \cap b$ vulgo scribemus $a$ $b$.
 \ENG
-The sign $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a,b$.
+The sign $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a b$.
 \end{translateTwoCol}
 
 \peanoPage{VIII} % page-number VIII
@@ -790,7 +790,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 23. \hspace{0.67cm} $a$ $\cup$ $b$ . = $\pppNoSpace$ $-$ : $-a$ . $-b$
 \ENG
-23. \hspace{0.67cm} $(a \vee b) = \{[(\neg[(\neg a) \wedge (\neg b)]\} $
+23. \hspace{0.67cm} $(a \vee b) = \neg[(\neg a) \wedge (\neg b) $
 \LAT
 24. \hspace{0.67cm} $-(ab)$ = $(-a)$ $\cup$ $(-b)$
 \ENG
@@ -842,7 +842,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 35. \hspace{0.67cm} $a-a$ = $\abs$
 \ENG
-35. \hspace{0.67cm} $[a \wedge (\neg a)] = \bot$
+35. \hspace{0.67cm} $[a \wedge \neg a] = \bot$
 \LAT
 36. \hspace{0.67cm} $a$ $\abs$ = $\abs$
 \ENG
@@ -1004,11 +1004,11 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \LAT
 49. \hspace{0.67cm} $a$ \scalebox{0.7}[0.9]{$\in$} K . $\C$ $\pppNoSpace$ $a$ = $\abs$ : = : $x$ \scalebox{0.7}[0.9]{$\in$} $a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
 \ENG
-49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot])\}$ 
+49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot]\}$ 
 \LAT
 \quad [Signo V, quod classem ex omnibus individuis constitutam, de quibus quaestio est, indieat, non utimur].
 \ENG
-\quad \na{[We shall not use the sign \scriptsize{true} \normalsize, which indicates the class composed of all individuals being considered].}
+\quad \na{[We shall not use the sign \scriptsize{universe} \normalsize, which indicates the class composed of all individuals being considered].}
 % TODO Find a replacement for ``true'' above
 \LAT
 \quad Signum $\C$ significat {\emph{continetur}}. Ita $a$ $\C$ $b$ significat {\emph{classis a continetur in classi b}}.
@@ -1058,11 +1058,13 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
 \ENG
-\quad Let $\text{C}$ be a class, and $\text{C}_{subset}$ be a class which is contained in $\text{C}$; then we say that $\text{C}_{subset}$ is an individual of the class $\text{C}$, if $\text{C}_{subset}$ consists of only one individual. That is:
+\fn{COMMENTARY: Peano seems to be defining a subsets that each contain a single element, but the equation does not match.}
+
+\quad Let $\text{A}$ be a class, and $\text{B}$ be a class which is contained in $\text{A}$; then we say that $\text{B}$ is an individual of the class $\text{A}$, if $\text{B}$ consists of only one individual. That is:
 \LAT
 56. \hspace{0.67cm} $s$ \scalebox{0.7}[0.9]{$\in$} K . $k$ $\C$ $s$ : $\C$ :: $k$ \scalebox{0.7}[0.9]{$\in$} $s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y$ \scalebox{0.7}[0.9]{$\in$} $k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
-56. \hspace{0.67cm} $[\text{C}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $(\text{C}_{subset} \subset \text{C})] \rightarrow \Big\{(\text{C}_{subset} \in \text{C}) = \big\{(\text{C}_{subset} \not= \varnothing) \wedge \{[(x,y) \in \text{C}_{subset}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
+56. \hspace{0.67cm} $[\text{A}$ is a \scriptsize{CLASS} \normalsize $\wedge$ $( \text{B} \subset \text{A})] \rightarrow \Big\{( \text{B} \in \text{A}) = \big\{(\text{B} \not= \varnothing) \wedge \{[(x,y) \in \text{B}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1132,7 +1134,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 66. \hspace{0.67cm} $[(x, y)\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = $\abs$ . = $\pppNoSpace$ $[x\scalebox{0.7}[0.9]{$\in$}]$ . $[y\scalebox{0.7}[0.9]{$\in$}]$ $\alpha$ $-$ = $\abs$ : $-$ = $\abs$
 \ENG
-66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$
+66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$   %% TODO: Does this need a \forall x under the middle \neq?
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\scalebox{0.7}[0.9]{$\in$}$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\scalebox{0.7}[0.9]{$\in$}]$, signo $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ utimur. Ita $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ . = : $[x$ $\scalebox{0.7}[0.9]{$\in$} ]$ . $x$ $\alpha$ $y$, et signum $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\scalebox{0.7}[0.9]{$\in$}$ $\reflectbox{\scalebox{0.7}[0.9]{$\in$}}$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
@@ -1174,7 +1176,7 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 \begin{translateTwoCol}
 Logicae notationes quae praecedunt exprimendae cuilibet arithmeticae propositioni sufficiunt, iisdemque tantum utimur. Hic notationes alias nonnullas breviter explicamus, quae utiles fieri possunt.
 \ENG
-The symbols of logic introduced above suffice to express any proposition of arithmetic, and we shall only these.We explain here briefly some other symbols that may be useful.
+The symbols of logic introduced above suffice to express any proposition of arithmetic, and we shall only these.  We explain here briefly some other symbols that may be useful.
 \LAT
 Sit $s$ quaedam classis; supponimus aequalitatem inter entia systematis $s$ definitam, quae conditionibus satisfaciat:
 \ENG
@@ -1246,7 +1248,7 @@ The class $[\upvarphi] y$ may contain one or several individuals, or none at all
 \LAT
 Si vero $\upvarphi y$ uno tantum constat individuo, erit $y$ $=$ $\upvarphi x$ $.$ $=$ $.$ $x$ $=$ $[\upvarphi] y$
 \ENG
-But if $\upvarphi y$ consists of just one individual, we have $y$ $=$ $\upvarphi x$ $.$ $=$ $.$ $x$ $=$ $[\upvarphi] y$
+But if $\upvarphi y$ consists of just one individual, we have $(y$ $=$ $\upvarphi x)$ $=$ $(x$ $=$ $[\upvarphi] y)$
 \LAT
 Sit $\upvarphi$ functions postsignum; similiter ponimus:
 \ENG
@@ -1262,13 +1264,16 @@ The sign $\{ x | \ldots \}$ is called \emph{inversion sign}, and we have already
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
+\fn{COMMENTARY: Peano relies on the syntax of his substitution operator to create a presign function.  The modern substituion operator has a different syntax and therefore doesn't work properly in the following context.}
+
 Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
 % TODO: ADD COMMENT THAT THE ABOVE DOESN'T WORK WITH PEANO'S SYNTACTIC TRICK
 \LAT
 Similiter, sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis postsignum, ut $x \upvarphi = \alpha$; deducitur $\upvarphi = [x] \alpha$; tunc, si $x'$ est novum ens, erit $x' \upvarphi = x' [x] \alpha$, scilicet $x' [x] \alpha$ rursum indicat id quod obtinetur si in $\alpha$, loco $x, x'$ legatur, ut in V, 4.
 \ENG
-Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x' [x] \alpha$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
-% TODO: ADD COMMENT SAYING THIS DOESN'T WORK.  HOW DO BOTH WORK IN PEANO'S NOTATION???!!!
+\fn{COMMENTARY: It is unclear how Peano's substitution syntax works in the following statements.} 
+
+Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x'[x := \alpha]$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
 \LAT
 Alios quoque usus in logica signum $[ ]$ habere potest, quos breviter esponimus, quum ipsis non utamur. Sint $a$ et $b$ duae classes; tunc $[a \cap ]b$ sive $b[ \cap a]$ classes indicat $x$, quae conditioni $b = a \cap x$, sive $b = x \cap a$ satisfaciunt. Si $b$ in $a$ non continetur, nulla classis huic conditioni satifacit; si $b$ in $a$ continetur, signum $b [ \cap a ]$ omnes indicat classes quae $b$ continent atque in $b \cup - a$ continentur.
 \ENG
@@ -1329,7 +1334,7 @@ Or \hspace{0.25cm}  %TODO
 \LAT
 Itaque, si $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' s$, tunc $\upvarphi$ $s$ classem indicat omnibus $\upvarphi$ $x$ constitutam, ubi $x$ sint entia classis $s$. Erit:
 \ENG
-Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $s$ denotes the class composed of all $\upvarphi$ $x$, where the $x$ are objects of the class $S$. We have:
+Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $S$ denotes the class composed of all $\upvarphi$ $x$, where the $x$ are objects of the class $S$. We have:
 \LAT
 \hspace{1.06cm} $s \in K$ . $\upvarphi \in F' s$ . $y \in \upvarphi s : \C : \upvarphi [\upvarphi] y = y$
 \ENG
@@ -1353,11 +1358,11 @@ Thus, if $\upvarphi$ $\scalebox{0.7}[0.9]{$\in$}$ $F' S$, then $\upvarphi$ $s$ d
 \LAT
 Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \in K a$ idem significat quod $x \in K$ . $x$ $\C$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
 \ENG
-Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\C$ $a$. We shall sometimes use this convention; thus $K N$ means \emph{a class of numbers}.
+Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\C$ $a$. We shall sometimes use this convention; thus $K \mathbb{N}$ means \emph{a class of numbers}.
 \LAT
 Similiter, si $a$ est classis, $K \cup a$ indicat classes quae $a$ continent. Sit $a$ numerus; tunc $a + N$, sive $N + a$, \emph{numeros} indicat \emph{numero a maiores}; $a \times N$, sive $N \times a$, sive $N a$ indicat \emph{multiplices numeri a}; $a^N$ indicat \emph{potestas numeri} $a$; $N^2$, $N^3$, ... indicat \emph{numeros quadratos}, vel \emph{numeros cubos},...
 \ENG
-Similarly, if $A$ is a class, $K \cup A$ indicates the classes that contain $A$. Let $a$ be a number; then $a + N$, or $N + a$, denotes \emph{the numbers greater than the number} $a$; $a \times N$, or $N \times a$, or $N a$ denotes \emph{the multiples of the number} $a$; $a^N$ denotes \emph{the powers of the number} $a$; $N^2$, $N^3$, ... denote \emph{the squares}, \emph{the cubes},...
+Similarly, if $A$ is a class, $K \cup A$ indicates the classes that contain $A$. Let $a$ be a number; then $a + \mathbb{N}$, or $\mathbb{N} + a$, denotes \emph{the numbers greater than the number} $a$; $a \times \mathbb{N}$, or $\mathbb{N} \times a$, or $\mathbb{N} a$ denotes \emph{the multiples of the number} $a$; $a^\mathbb{N}$ denotes \emph{the powers of the number} $a$; $\mathbb{N}^2$, $\mathbb{N}^3$, ... denote \emph{the squares}, \emph{the cubes},...
 \LAT
 \hfill
 \ENG
@@ -1409,15 +1414,15 @@ But if $\varphi$ is a function postsign, we can use the following more convenien
 \LAT
 In definitionis hypothesi, si $m, n \in N$, erit $\varphi$ $(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
 \ENG
-Assuming this definition, if $m, n \in N$, we have $\varphi$ $(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
+Assuming this definition, if $m, n \in \mathbb{N}$, we have $\varphi(m+n)$ $=$ $(\varphi m)(\varphi n)$; $(\varphi m)n$ $=$ $\varphi (m n)$
 \LAT
 Si hac definitione in Arithmetica utimur, haec invenimus. Numerum qui sequitur numerum $a$ signo faciliori $a +$ indicare possumus; tunc $a + 1, a+2,...$ et, si $b$ est numerus, $a + b$, sensum habent $a +, a + +,...$ quod a definitione in \S 1 patet. Propositionem 6 in \S 1 scribere possumus $N +$ $\C$ $N$. Si $a, b, c$ sunt numeri, tunc $a : + b$ . $c$ significat $a + b c$, et $a : \times b$ . $c$ significat $a b^c$.
 \ENG
-If we use this definition in arithmetice, we obtain the following. We can denote the number that follows the number $a$ by the more convenient sign $a+$; then $a + 1$, $a + 2$,..., and, if $b$ is a number, $a + b$, have the meaning of $a +$, $a ++$,..., which is clear from the definition in \S 1 below. Proposition 6 in \S 1 can be written $N +$ $\C$ $N$. If $a, b, c$ are numbers, then $a : + b$ . $c$ means $a + b c$, and $a : \times b$ . $c$ means $a b^c$.
+If we use this definition in arithmetic, we obtain the following. We can denote the number that follows the number $a$ by the more convenient sign $a+$; then $a + 1$, $a + 2$,..., and, if $b$ is a number, $a + b$, have the meaning of $a +$, $a ++$,..., which is clear from the definition in \S 1 below. Proposition 6 in \S 1 can be written $\mathbb{N} +$ $\C$ $\mathbb{N}$. If $a, b, c$ are numbers, then $a : + b$ . $c$ means $a + b c$, and $a : \times b$ . $c$ means $a b^c$.
 \LAT
 Multi aliis proprietatibus gaudent functionem signa, praesertim si conditioni satisfaciunt: $\varphi x = \varphi y$ . $\C$ . $x = y$. Functionis signum quod huic conditioni satisfacit vocatur a clarrissimo Dedekind \emph{simile} (ähnliche Abbildung).
 \ENG
-Function signs possess many other properties, especially if they satisfy the condition: $\varphi x = \varphi y$ . $\C$ . $x = y$. A function sign that satisfies this condition is called \emph{equivalent}\endnote{The 2 other translation, mentioned at the beginning of this current document, translated "ähnlich" literally to "similar", instead of "equivalent". However, additional information can be found in a footnote of the first translation: \\
+Function signs possess many other properties, especially if they satisfy the condition: $(\varphi x = \varphi y) \rightarrow (x = y)$. A function sign that satisfies this condition is called \emph{equivalent}\endnote{The 2 other translation, mentioned at the beginning of this current document, translated "ähnlich" literally to "similar", instead of "equivalent". However, additional information can be found in a footnote of the first translation: \\
 
 \quad \emph{"Today "similar" has another meaning and instead we would say "equivalent"."} \\
 
@@ -1440,11 +1445,11 @@ But we lack the space to present these properties.
 \begin{translateTwoCol}
 \emph{Defenitio}, vel breviter \emph{Def.} est propositio formam habens $x = a$, sive $\alpha$ $\C$ . $x = a$, ubi $\alpha$ est signorum aggregatus sensum habens notum; $x$ est signum, vel signorum aggregatus significatione adhuc carnes; $\alpha$ vero est conditio sub qua definitio datur.
 \ENG
-A \emph{Definition}, or \emph{Def.} for short, is a proposition of the form $x=a$ or $\alpha$ $\C$ . $x = a$, where $a$ is an aggregate of signs having a known meaning, $x$ is a sign or an aggregate of signs, hitherto without meaning, and $\alpha$ is the condition under which the definition is given.
+A \emph{Definition}, or \emph{Def.} for short, is a proposition of the form $x=a$ or $\alpha \rightarrow (x = a)$, where $a$ is an aggregate of signs having a known meaning, $x$ is a sign or an aggregate of signs, hitherto without meaning, and $\alpha$ is the condition under which the definition is given.
 \LAT
 \emph{Theorema}, (Theor. vel Th) est propositio quae demonstratur. Si theorema formam habet $\alpha$ $\C$ $\beta$, ubi $\alpha$ et $\beta$ sunt propositiones, tunc $\alpha$ dicitur \emph{Hypothesis} (Hyp. vel breviter Hp.), $\beta$ vero \emph{Thesis} (Thes. vel Ts.). Hyp. ac Ts. a Theorematis forma pendent; nam si loco $\alpha$ $\C$ $\beta$ scribemus $- \beta$ $\C$ $- \alpha$, erit $- \beta$ Hp, et $- \alpha$ Ts.; si vero scribemus $\alpha - \beta = \abs$, Hp. ac Ts. absunt.
 \ENG
-A \emph{theorem} (Theor. or Th.) is aproposition that is \emph{proved}. If a theorem has the form $\alpha$ $\C$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\C$ $\beta$ instead of $- \beta$ $\C$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \abs$, Hp. and Ts. do not exist.
+A \emph{theorem} (Theor. or Th.) is a proposition that is \emph{proved}. If a theorem has the form $\alpha$ $\C$ $\beta$, where $\alpha$ and $\beta$ are propositions, then $\alpha$ is called the \emph{hypothesis} (Hyp., or even shorter, Hp.) and $\beta$ the \emph{thesis} (Thes. or Ts.). Hyp. and Ts. depend on the form of the theorem; in fact, if we write $\alpha$ $\C$ $\beta$ instead of $- \beta$ $\C$ $- \alpha$, then $- \beta$ is the Hp, abd $- \alpha$ the Ts.; if we write $\alpha - \beta = \abs$, Hp. and Ts. do not exist.
 \LAT
 In quolibet $\S$ signum P quod quidam numerus sequatur, propositionem indicat eiusdem $\S$ hoc numero signatam. Logicae propositiones indicantur signo L et propositiones numero.
 \ENG
@@ -1487,7 +1492,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \begin{paracol}{8}
 \centering Signo \s $\N$ \s significatur \s \raggedright \emph{numerus (integer positivus)}.
 \s
-\centering The sign \s $\N$ \s means \s \raggedright \emph{number (positive integer)}.
+\centering The sign \s $\mathbb{N}$ \s means \s \raggedright \emph{number (positive integer)}.
 \s*
 \centering $\dittoMarkLatin$ \s $1$ \s $\dittoMarkLatin$ \s \raggedright \emph{unitas}.
 \s
@@ -1854,7 +1859,7 @@ From this definition, and the preceding, we deduce that:
 \begin{paracol}{8}
 \centering Signo \s $-$ \s legitur \s \raggedright \emph{minus}.
 \s
-\centering The sign \s $-$ \s is read \s \raggedright \emph{minus}.
+\centering The sign \s $-$ \s is~read \s \raggedright \emph{minus}.
 \s*
 \centering $\dittoMarkLatin$ \s $<$ \s $\dittoMarkLatin$ \s \raggedright \emph{est minor.}
 \s
@@ -2141,7 +2146,7 @@ From this definition, and the preceding, we deduce that:
 \s*
 Sit $a \in K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
 \s
-Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \emph{greatest among} $a$, and $\mini a$ is read \emph{least among a}.
+Let $a \in \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M a$ is read \emph{greatest among} $a$, and $\mini a$ is read \emph{least among a}.
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
@@ -2915,11 +2920,11 @@ Let $a \in \K \N$, that is, let $a$ be a class of numbers; then $\M a$ is read \
 \raggedright
 Si $p,q \in \N$, tunc $\frac{p}{q}$ legitur \emph{ratio numeri} $p$ \emph{numero} $q$.
 \s
-If $p,q \in \N$, then $\frac{p}{q}$ is read \emph{the ratio of the number} $p$ {to the number} $q$.
+If $p,q \in \mathbb{N}$, then $\frac{p}{q}$ is read \emph{the ratio of the number} $p$ {to the number} $q$.
 \s*
 Signum $\R$ legitur \emph{duorum numerorum ratio}, et indicat numeros rationales positivos.
 \s
-The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive rational numbers.
+The sign $\mathbb{R}$ is read \emph{ratio of two numbers}, and indicates the positive rational numbers.
 \end{translateTwoCol}
 
 \peanoPage{13} % page-number 13
@@ -3237,7 +3242,7 @@ The sign $\R$ is read \emph{ratio of two numbers}, and indicates the positive ra
 \raggedright
 Si $a \in \K \R$, signum $\T a$ legitur \emph{terminus summus}, vel \emph{limes summus classis} $a$. Supra hoc novum ens relationes ac operationes tantum definimus.
 \s
-If $a \in \K \R$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper limit of the class} $a$. We shall define only a few relations and operations on this new entity.
+If $a \in \K \mathbb{R}$, the sign $\T$ a is read \emph{upper boundary}, or \emph{upper limit of the class} $a$. We shall define only a few relations and operations on this new entity.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -3357,7 +3362,7 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \s Subsistunt quoque propositiones quae a P17, 28, 29 in \S8 obtinentur, si loco $\R$ legatur $\Q$. \s
 \s
 \vspace{1em}
-\s The propositions obtained from P17, 28, 29 in \S8 also hold, by reading $\Q$ for $\R$. \s
+\s The propositions obtained from P17, 28, 29 in \S8 also hold, by reading $\Q$ for $\mathbb{R}$. \s
 \end{paracol}
 
 \begin{translateTwoCol}
@@ -3384,7 +3389,7 @@ The sign $\Q$ is read \emph{quantity}, and indicates the positive real numbers, 
 \s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \in \R$. \s
 \s
 \vspace{1em}
-\s In order for these definitions to have meaning, it must be proved that propositions 12 and 13 hold, if $a,b \in \R$. \s
+\s In order for these definitions to have meaning, it must be proved that propositions 12 and 13 hold, if $a,b \in \mathbb{R}$. \s
 \s*
 \vspace{1em}
 \s Substractionem et divisionem ut operationes inversas additiones et multiplicationis definire licet, illarumque proprietas demonstrare. \s

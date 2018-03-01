@@ -99,7 +99,7 @@
 %  understand when reading the english text)
 \newcommand\na[1]{\textcolor{gray}{#1}} 
 % fn for footnote (notations / text which ask for footnote-like attention)
-\newcommand\fn[1]{\textcolor{red}{#1}} 
+\newcommand\commentary[1]{\textcolor{red}{#1}} 
 \newcommand\todo{\textcolor{brown}{To do.}}
 
 \definecolor{blue}{RGB}{89,141,201}
@@ -153,7 +153,19 @@
                  \end{paracol}
                }
 
+\newenvironment{translateSixCol}[6]
+               { % when beginning the environment
+                 \setcolumnwidth{#1\fill/1em, #2\fill/1em, #3\fill/\columnsep, #4\fill/1em, #5\fill/1em, #6\fill}
+                 \begin{paracol}{6}
+               }
+               { % when ending the environment
+                 \end{paracol}
+               }
+               
 
+\setcolumnwidth{0.25\fill/1em, 0.17\fill/1em, 0.08\fill/\columnsep, 0.25\fill/1em, 0.17\fill/1em, 0.08\fill}
+
+               
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -237,7 +249,7 @@
 
    \vspace{1cm}
    
-   \fn{Red text} is mathematical commentary.
+   \commentary{Red text} is mathematical commentary.
 
    \na{Gray text} is irrelavant for modern mathematical notation.
 
@@ -475,18 +487,14 @@ My booklet should be taken as a sample of this new method. With these notations 
 \textbf{Signs of logic}
 \end{translateTwoCol}
 
-\columnratio{0.05, 0.35, 0.1, 0.05, 0.35, 0.1}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.05}{0.35}{0.1}{0.05}{0.35}{0.1}
 \raggedright
-\setlength{\columnsep}{1em}
 Signum \s Significatio \s Pag.
 \s Sign \s Meaning \s Pag.
-\end{paracol}
+\end{translateSixCol}
 
-\columnratio{0.06, 0.34, 0.1, 0.06, 0.34, 0.1}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.06}{0.34}{0.1}{0.06}{0.34}{0.1}
 \raggedright
-\setlength{\columnsep}{1em}
 $P$ \s propositio \s VII
 \s \scriptsize{proposition} \normalsize \s proposition \s VII
 \s* $K$ \s classis \s X
@@ -517,7 +525,7 @@ $P$ \s propositio \s VII
 \s \scriptsize{thesis} \s \normalsize Thesis \s
 \s* L \s Logica \s
 \s \scriptsize{logic} \s \normalsize Logic \s
-\end{paracol}
+\end{translateSixCol}
 
 \vspace{1em}
 \begin{translateTwoCol}
@@ -527,13 +535,11 @@ $P$ \s propositio \s VII
 \textbf{Signs of arithmetic}
 \end{translateTwoCol}
 
-\columnratio{0.05, 0.35, 0.1, 0.05, 0.35, 0.1}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.05}{0.35}{0.1}{0.05}{0.35}{0.1}
 \raggedright
-\setlength{\columnsep}{1em}
 Signum \s Significatio \s Pag.
 \s Sign \s Meaning \s Pag.
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \raggedright
@@ -542,10 +548,8 @@ Signa 1, 2, ..., =, $>$, $<$, +, -, $\times$ vulgarem habent significationem. Di
 The signs 1, 2, ..., =, $>$, $<$, +, -, $*$ have their usual meaning. The sign of division is /.
 \end{translateTwoCol}
 
-\columnratio{0.06, 0.34, 0.1, 0.06, 0.34, 0.1}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.06}{0.34}{0.1}{0.06}{0.34}{0.1}
 \raggedright
-\setlength{\columnsep}{1em}
 $N$ \s numerus integer positivus \s 1
 \s $\mathbb{N}$ \s positive integers \s 1
 \s* $R$ \s num. rationalis positivus \s 12
@@ -567,7 +571,7 @@ $N$ \s numerus integer positivus \s 1
 \s \scriptsize{is divisible} \s \normalsize is divisible \s 9
 \s* $\pi$ \s est primus cum \s 6
 \s \scriptsize{is $\mathbb{P}$rime with} \s \normalsize is prime with \s 6
-\end{paracol}
+\end{translateSixCol}
 
 \vspace{1em}
 \begin{translateTwoCol}
@@ -577,10 +581,8 @@ $N$ \s numerus integer positivus \s 1
 \textbf{Composite signs}
 \end{translateTwoCol}
 
-\columnratio{0.06, 0.34, 0.1, 0.06, 0.34, 0.1}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.06}{0.34}{0.1}{0.06}{0.34}{0.1}
 \raggedright
-\setlength{\columnsep}{1em}
 $-<$ \s non est minor \s
 \s $\nless$ \s is not less than \s
 \s* $=\cup>$ \s est aequalis aut maior \s
@@ -589,7 +591,7 @@ $-<$ \s non est minor \s
 \s \scriptsize{is a divisor} \s \normalsize{is a divisor} \s
 \s* $M$ \such $D$ \s maximus divisor \s
 \s \scriptsize{is the greatest divisor} \s \normalsize is the greatest divisor \s
-\end{paracol}
+\end{translateSixCol}
 
 \peanoPage{VII} % page-number VII
 
@@ -945,7 +947,7 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \peanoHeadingSmall{IV. Classes.}
 
 \raggedright
-\quad \fn{COMMENTARY: Peano's ``Class'' is similar to modern ``sets''. }
+\quad \commentary{COMMENTARY: Peano's ``Class'' is similar to modern ``sets''. }
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1060,7 +1062,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
 \ENG
-\fn{COMMENTARY: Peano seems to be defining a subsets that each contain a single element, but the equation does not match.}
+\commentary{COMMENTARY: Peano seems to be defining a subsets that each contain a single element, but the equation does not match.}
 
 \quad Let $\text{A}$ be a class, and $\text{B}$ be a class which is contained in $\text{A}$; then we say that $\text{B}$ is an individual of the class $\text{A}$, if $\text{B}$ consists of only one individual. That is:
 \LAT
@@ -1078,7 +1080,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \peanoHeadingSmall{V. The inverse.}
 
 \raggedright
-\fn{COMMENTARY: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
+\commentary{COMMENTARY: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1172,7 +1174,7 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 \peanoHeadingSmall{VI. Functions.}
 
 \raggedright
-\fn{COMMENTARY: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
+\commentary{COMMENTARY: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1266,13 +1268,13 @@ The sign $\{ x | \ldots \}$ is called \emph{inversion sign}, and we have already
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
-\fn{COMMENTARY: Peano relies on the syntax of his substitution operator to create a presign function.  The modern substituion operator has a different syntax and therefore doesn't work properly in the following context.}
+\commentary{COMMENTARY: Peano relies on the syntax of his substitution operator to create a presign function.  The modern substituion operator has a different syntax and therefore doesn't work properly in the following context.}
 
 Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
 \LAT
 Similiter, sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis postsignum, ut $x \upvarphi = \alpha$; deducitur $\upvarphi = [x] \alpha$; tunc, si $x'$ est novum ens, erit $x' \upvarphi = x' [x] \alpha$, scilicet $x' [x] \alpha$ rursum indicat id quod obtinetur si in $\alpha$, loco $x, x'$ legatur, ut in V, 4.
 \ENG
-\fn{COMMENTARY: It is unclear how Peano's substitution syntax works in the following statements.} 
+\commentary{COMMENTARY: It is unclear how Peano's substitution syntax works in the following statements.} 
 
 Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x'[x := \alpha]$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
 \LAT
@@ -1486,7 +1488,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \peanoHeadingSmall{Explanations.}
 
 \raggedright
-\fn{COMMENTARY: Peano starts his natural numbers at 1; most modern versions start at 0.  Also, while Peano calls it ``successor'' (``sequens''), he does not use the modern convention of using ``S'' for it.}
+\commentary{COMMENTARY: Peano starts his natural numbers at 1; most modern versions start at 0.  Also, while Peano calls it ``successor'' (``sequens''), he does not use the modern convention of using ``S'' for it.}
 \end{translateTwoCol}
 
 \columnratio{0.1, 0.05, 0.1, 0.25, 0.1, 0.05, 0.1, 0.25}
@@ -1595,10 +1597,8 @@ Formulas that do not fit on one line are continued on the next line without any 
 \vspace{1em}
 \end{translateTwoCol}
 
-\columnratio{0.25, 0.17, 0.08, 0.25, 0.17, 0.08}
-\begin{paracol}{6}
+\begin{translateSixCol}{0.25}{0.17}{0.08}{0.25}{0.17}{0.08}
 \raggedright
-\setlength{\columnsep}{1em}
 $P 1 \p \C :$ \s $1 \smallIn N$ \s (1)
 \s
 Axiom 1 \s $1 \in \mathbb{N}$ \s (1)
@@ -1618,7 +1618,7 @@ Def. 10 \s $2 = 1 + 1$ \s (4)
 $(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \smallIn N$ \s (Theor.)
 \s
 Steps 3,4,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
-\end{paracol}
+\end{translateSixCol}
 
 \begin{translateTwoCol}
 \vspace{1em}
@@ -1631,7 +1631,7 @@ Steps 3,4,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 \LAT
 $\hspace{1.4cm} P 1 \p 1 [a] (P 6) : \C : 1 +1 \smallIn \N \p P 10 \p (2, 1+1) [a, b] (P 5) : \C : Th$
 \ENG
-\fn{Modern notation usually has a proof tree, rather than a proof term.  Although, some research into proof theory does use proof terms.}
+\commentary{Modern notation usually has a proof tree, rather than a proof term.  Although, some research into proof theory does use proof terms.}
 \LAT
 vel
 \ENG

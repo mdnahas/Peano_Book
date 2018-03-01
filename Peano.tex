@@ -49,12 +49,13 @@
 % Peano's reverse C, that is used for implication.
 \newcommand{\C}{\mathop{\sbox0{$\displaystyle$$\reflectbox{C}$} % reflect box mirrors upside-down and left-to-right
 \raisebox{-\height+\ht0-0.05cm}[\ht0][\dp0]{\scalebox{0.8}[0.8]{\copy0}}}\displaylimits} %
+
 % Peano's one dot, used to indicate precidence in equations
 \newcommand{\p}{\mathop{\sbox0{$\displaystyle$$.$}
 \raisebox{-\height+\ht0}[\ht0][\dp0]{\scalebox{1}[1]{\copy0}}}\displaylimits} % creates a "math"-point to have equal spacing
 % Peano's 2 dots is just a colon :, and is used to indicate precidence in equations
 % Peano's 3 dots, used to indicate precidence in equations
-% TODO: Change \ppp to use \therefore 
+%    I tried using \therefore but the dots were too far separated
 \newcommand{\pppNoSpace}{\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}} % arranging three points in a triangle
 \newcommand{\ppp}{\thinspace \pppNoSpace\thinspace} % arranging three points in a triangle
 
@@ -102,12 +103,6 @@
 % fn for footnote (notations / text which ask for footnote-like attention)
 \newcommand\commentary[1]{\textcolor{red}{#1}} 
 \newcommand\todo{\textcolor{brown}{To do.}}
-
-\definecolor{blue}{RGB}{89,141,201}
-\definecolor{blue_edge}{RGB}{53,126,189}
-
-\definecolor{grey}{RGB}{235,235,235}
-\definecolor{grey_edge}{RGB}{173,173,173}
 
 
 % Use Hyperref package for URLs
@@ -948,12 +943,12 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \peanoHeadingSmall{IV. De classibus.}
 \ENG
 \peanoHeadingSmall{IV. Classes.}
-
-\raggedright
-\quad \commentary{COMMENTARY: Peano's ``Class'' is similar to modern ``sets''. }
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
+\ENG 
+\quad \commentary{COMMENTARY: Peano's ``Class'' is similar to modern ``sets''. }
+\LAT
 \quad Signo K significatur {\emph{classis}}, sive entium aggregatio.
 \ENG
 \quad The sign \scriptsize{CLASS} \normalsize means {\emph{class}}, or aggregate of entities.
@@ -1063,10 +1058,11 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 55. \hspace{0.67cm} $[(a \in B) \wedge (B \subset C)] \rightarrow (a \in C)$
 \LAT
-\quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
 \ENG
 \commentary{COMMENTARY: Peano seems to be defining a subsets that each contain a single element, but the equation does not match.}
-
+\LAT
+\quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
+\ENG
 \quad Let $\text{A}$ be a class, and $\text{B}$ be a class which is contained in $\text{A}$; then we say that $\text{B}$ is an individual of the class $\text{A}$, if $\text{B}$ consists of only one individual. That is:
 \LAT
 56. \hspace{0.67cm} $s \smallIn \K$ . $k$ $\C$ $s$ : $\C$ :: $k \smallIn s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y \smallIn k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
@@ -1081,12 +1077,12 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \peanoHeadingSmall{V. De inversione.}
 \ENG
 \peanoHeadingSmall{V. The inverse.}
-
-\raggedright
-\commentary{COMMENTARY: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
+\ENG
+\commentary{COMMENTARY: By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
+\LAT  
 \quad Inversionis signum est $\scalebox{1.5}[0.8]{[\scalebox{0.2}{ \ }]}$, eiusque usum in sequenti numero explicabimus. Hic tantum casus particulares exponimus.
 \ENG
 \quad The sign of the inverse is $\{x | \ldots\}$, and we shall explain its use in the following section. Here we give some particular examples.
@@ -1175,12 +1171,12 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 \peanoHeadingSmall{VI. De functionibus.}
 \ENG
 \peanoHeadingSmall{VI. Functions.}
-
-\raggedright
-\commentary{COMMENTARY: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
+\ENG
+\commentary{COMMENTARY: Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
+\LAT  
 Logicae notationes quae praecedunt exprimendae cuilibet arithmeticae propositioni sufficiunt, iisdemque tantum utimur. Hic notationes alias nonnullas breviter explicamus, quae utiles fieri possunt.
 \ENG
 The symbols of logic introduced above suffice to express any proposition of arithmetic, and we shall only these.  We explain here briefly some other symbols that may be useful.
@@ -1269,16 +1265,18 @@ Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logic
 \ENG
 The sign $\{ x | \ldots \}$ is called \emph{inversion sign}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the indeterminate $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\in$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i.
 \LAT
-Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
 \commentary{COMMENTARY: Peano relies on the syntax of his substitution operator to create a presign function.  The modern substitution operator has a different syntax and therefore doesn't work properly in the following context.}
-
+\LAT
+Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
+\ENG
 Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presign that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
+\LAT
+\ENG
+\commentary{COMMENTARY: It is unclear how Peano's substitution syntax works in the following statements.} 
 \LAT
 Similiter, sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis postsignum, ut $x \upvarphi = \alpha$; deducitur $\upvarphi = [x] \alpha$; tunc, si $x'$ est novum ens, erit $x' \upvarphi = x' [x] \alpha$, scilicet $x' [x] \alpha$ rursum indicat id quod obtinetur si in $\alpha$, loco $x, x'$ legatur, ut in V, 4.
 \ENG
-\commentary{COMMENTARY: It is unclear how Peano's substitution syntax works in the following statements.} 
-
 Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsign, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x'[x := \alpha]$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
 \LAT
 Alios quoque usus in logica signum $[ ]$ habere potest, quos breviter esponimus, quum ipsis non utamur. Sint $a$ et $b$ duae classes; tunc $[a \cap ]b$ sive $b[ \cap a]$ classes indicat $x$, quae conditioni $b = a \cap x$, sive $b = x \cap a$ satisfaciunt. Si $b$ in $a$ non continetur, nulla classis huic conditioni satifacit; si $b$ in $a$ continetur, signum $b [ \cap a ]$ omnes indicat classes quae $b$ continent atque in $b \cup - a$ continentur.
@@ -1634,7 +1632,7 @@ Steps 3,4,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 \LAT
 $\hspace{1.4cm} P 1 \p 1 [a] (P 6) : \C : 1 +1 \smallIn \N \p P 10 \p (2, 1+1) [a, b] (P 5) : \C : Th$
 \ENG
-\commentary{Modern notation usually has a proof tree, rather than a proof term.  Although, some research into proof theory does use proof terms.}
+\commentary{Modern notation does not have a compact proof term, like in Peano's.  Modern works tend to show a proof tree.  (Although some research into proof theory does use proof terms.)}
 \LAT
 vel
 \ENG

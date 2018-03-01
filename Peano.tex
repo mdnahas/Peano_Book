@@ -1582,9 +1582,9 @@ Formulas that do not fit on one line are continued on the next line without any 
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
-11. \hspace{0.67cm} $2 \smallIn N$.
+11. \hspace{0.67cm} $2 \smallIn \N$.
 \ENG
-...
+11. \hspace{0.67cm} $2 \in \mathbb{N}$.
 \LAT
 \vspace{1em}
 \emph{Demonstratio:}
@@ -1595,27 +1595,29 @@ Formulas that do not fit on one line are continued on the next line without any 
 \vspace{1em}
 \end{translateTwoCol}
 
-\columnratio{0.26, 0.18, 0.06, 0.27, 0.18, 0.06}
+\columnratio{0.25, 0.17, 0.08, 0.25, 0.17, 0.08}
 \begin{paracol}{6}
 \raggedright
 \setlength{\columnsep}{1em}
 $P 1 \p \C :$ \s $1 \smallIn N$ \s (1)
 \s
-.... \s .... \s (1)
+Axiom 1 \s $1 \in \mathbb{N}$ \s (1)
 \s*
 $1 [a] (P6) \p \C :$ \s $1 \smallIn \N \p \C \p 1 + 1 \smallIn N$ \s (2)
 \s
-... \s ... \s (2)
+Axiom 6[a:=1] \s $1 \in \mathbb{N} \rightarrow (1 + 1 \in \mathbb{N})$ \s (2)
 \s*
 $(1)(2) \p \C :$ \s $1 + 1 \smallIn N$ \s (3)
 \s
-... \s ... \s (3)
+Steps 1 and 2 \s $1 + 1 \in \mathbb{N}$ \s (3)
 \s*
 $P 10 \p \C :$ \s $2 = 1 + 1$ \s (4)
 \s
-... \s ... \s (4)
+Def. 10 \s $2 = 1 + 1$ \s (4)
 \s*
 $(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \smallIn N$ \s (Theor.)
+\s
+Steps 3,4,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 \end{paracol}
 
 \begin{translateTwoCol}
@@ -1629,11 +1631,11 @@ $(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \smallIn N$ \s (Theor.)
 \LAT
 $\hspace{1.4cm} P 1 \p 1 [a] (P 6) : \C : 1 +1 \smallIn \N \p P 10 \p (2, 1+1) [a, b] (P 5) : \C : Th$
 \ENG
-...
+\fn{Modern notation usually has a proof tree, rather than a proof term.  Although, some research into proof theory does use proof terms.}
 \LAT
 vel
 \ENG
-...
+or
 \LAT
 $\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \smallIn \N \p P 10 \p P 5 : \C : Th$
 \ENG

@@ -563,10 +563,10 @@ $N$ \s numerus integer positivus \s 1
 \s* T \s terminus, \emph{vel} limes summus \s 15
 \s Gr$^{\text{eatest bound}}$ \s terminus \emph{or} greatest bound \s 15
 \s* D \s dividit \s 9
-\s \scriptsize{divides} \s \normalsize divides
+\s $|$ \s \normalsize divides
 \s 9
 \s* \reflectbox{D} \s est multiplex \s 9
-\s \scriptsize{is divisible} \s \normalsize is divisible \s 9
+\s \reflectbox{D} \s \normalsize is divisible \s 9
 \s* $\pi$ \s est primus cum \s 6
 \s \scriptsize{is $\mathbb{P}$rime with} \s \normalsize is prime with \s 6
 \end{translateSixCol}
@@ -1139,9 +1139,9 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 66. \hspace{0.67cm} $( \{ (x,y) | \alpha \} \neq \varnothing ) = ( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing )$   %% TODO: Does this need a \forall x under the middle \neq?
 \LAT
-\quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum D significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
+\quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum $\D$ significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
-\quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the sign $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the sign $\ni$ instead of the sign $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the sign $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the sign \emph{D} means \emph{divides} or \emph{is a divisor of}, the formula $\ni$D means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.
+\quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the sign $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the sign $\ni$ instead of the sign $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the sign $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the sign $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.
 \LAT
 \quad 4. Sit $\alpha$ formula indeterminate continens $x$. Tunc scriptura $x' [x] \alpha$, quae legitur $x'$ \emph{loco} $x$ \emph{in} $\alpha$ \emph{substituto}, formulam indicat quae obtinetur si in $\alpha$, loco $x$, $x'$ legimus. Deducitur $x [x] \alpha = \alpha$.
 \ENG
@@ -2507,7 +2507,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s*
 \centering $\dittoMarkLatin$ \s \raggedright $\D$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{dividit}, sive \emph{est divisor.}
 \s
-\centering \dittoMarkEnglish \s \raggedright $\D$ \s \centering \dittoMarkEnglish \s \raggedright \emph{divides}, or \emph{is a divisor of.}
+\centering \dittoMarkEnglish \s \raggedright $|$ \s \centering \dittoMarkEnglish \s \raggedright \emph{divides}, or \emph{is a divisor of.}
 \s*
 \centering $\dittoMarkLatin$ \s \raggedright $\mult$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{est multiplex.}
 \s
@@ -2533,39 +2533,39 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05}  % wider than usual for definition 5
 \raggedright
 1. \s $a,b \smallIn \N \p \C : b / a = \N [x \smallIn] (xa=b)$. \s
 \s
-\s \s
+1. \s $a,b \in \mathbb{N} \rightarrow b / a = \mathbb{N} \cap \{x | xa=b \}$. \s
 \s*
-2. \s $a,b \smallIn \N \p \C : a D b \p = \p b / a \no = \abs$. \s
+2. \s $a,b \smallIn \N \p \C : a \D b \p = \p b / a \no = \abs$. \s
 \s
-\s \s
+2. \s $a,b \in \mathbb{N} \rightarrow (a | b) = (b / a \neq \varnothing)$. \s
 \s*
-3. \s $a,b \smallIn \N \p \C : b \mult a \p = \p a D b$. \s
+3. \s $a,b \smallIn \N \p \C : b \mult a \p = \p a \D b$. \s
 \s
-\s \s
+3. \s $a,b \in \mathbb{N} \rightarrow (b \mult a) = (a | b)$. \s  %%%TODO: There is no modern symbol for this, is there?
 \s*
-4. \s $\Np = \N [x \smallIn] (\such D x \p \such \larger 1 \p \such \smaller x : = \abs)$. \s
+4. \s $\Np = \N [x \smallIn] (\such \D x \p \such \larger 1 \p \such \smaller x : = \abs)$. \s
 \s
-\s \s
+4. \s $\mathbb{P} = \mathbb{N} \{x | (\{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \}) = \varnothing \}$. \s
 \s*
-5. \s $a,b \smallIn \N \p \C :: a \pi b \ppp = \ppp \such D a \p \such D b \p \such \larger 1 : = \abs$. \s
-\s
-\s \s
+5. \s $a,b \smallIn \N \p \C :: a \pi b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
+\s  %%% TODO: create new command for \pi with \mathbin 
+5. \s $a,b \in \mathbb{N} \rightarrow (a \mathbin{\pi} b) = [(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \}) = \varnothing ]$. \s
 \s*
-6. \s $a,b \smallIn \N \p \C \ppp \such D (a,b) : = : \such D a \p \cap \p \such D b$. \s
+6. \s $a,b \smallIn \N \p \C \ppp \such \D (a,b) : = : \such \D a \p \cap \p \such \D b$. \s
 \s
-\s \s
+6. \s $a,b \in \mathbb{N} \rightarrow \such \D (a,b) = (\{ z | ( z | a) \} \cap \{ z | (z | b) \})$. \s %%%TODO: There is no modern symbol for this, is there?
 \s*
 7. \s $a,b \smallIn \N \p \C \ppp \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
 \s
-\s \s
+7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = (\{ z | z \mult a \} \cap \{z | z \mult b \})$. \s %%%TODO: There is no modern symbol for this, is there?
 \s*
 \s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
 \s
-\s \s
+\s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -2591,7 +2591,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-9. \s $a,b,a',b' \smallIn \N \p a = a' \p b = b' : \C : a D b \p = \p a' D b'$. \s
+9. \s $a,b,a',b' \smallIn \N \p a = a' \p b = b' : \C : a \D b \p = \p a' \D b'$. \s
 \s
 \s \s
 \s*
@@ -2599,7 +2599,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-11. \s $a,b \smallIn \N \p \C : a D b \p = \p b / a \smallIn N$. \s
+11. \s $a,b \smallIn \N \p \C : a \D b \p = \p b / a \smallIn N$. \s
 \s
 \s \s
 \s*
@@ -2611,11 +2611,11 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-14. \s $a \smallIn \N \p \C \p 1 D a$. \s
+14. \s $a \smallIn \N \p \C \p 1 \D a$. \s
 \s
 \s \s
 \s*
-15. \s $a \smallIn \N \p \C \p a D a$. \s
+15. \s $a \smallIn \N \p \C \p a \D a$. \s
 \s
 \s \s
 \s*
@@ -2623,11 +2623,11 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-17. \s $a,b \smallIn \N \p a D b : \C \p a (b/a) = b$. \s
+17. \s $a,b \smallIn \N \p a \D b : \C \p a (b/a) = b$. \s
 \s
 \s \s
 \s*
-18. \s $a,b,c \smallIn \N \p c D b : \C \p a (b/c) = ab / c$. \s
+18. \s $a,b,c \smallIn \N \p c \D b : \C \p a (b/c) = ab / c$. \s
 \s
 \s \s
 \s*
@@ -2643,46 +2643,46 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-22. \s $a,b \smallIn \N \p \C \p a D ab$. \s
+22. \s $a,b \smallIn \N \p \C \p a \D ab$. \s
 \s
 \s \s
 \s*
-23. \s $a,b,c \smallIn \N \p a D b \p b D c : \C \p a D c$. \s
+23. \s $a,b,c \smallIn \N \p a \D b \p b \D c : \C \p a \D c$. \s
 \s
 \s \s
 \s*
-24. \s $a,b,c \smallIn \N \p a D b D c : \C \p c / a \mult c / b$. \s
+24. \s $a,b,c \smallIn \N \p a \D b \D c : \C \p c / a \mult c / b$. \s
 \s
 \s \s
 \s*
-25. \s $a,b,c \smallIn \N \p c D a \p c D b : \C \p (a + b) / c = a / c + b / c$. \s
+25. \s $a,b,c \smallIn \N \p c \D a \p c \D b : \C \p (a + b) / c = a / c + b / c$. \s
 \s
 \s \s
 \s*
-26. \s $a,b,c \smallIn \N \p c D a \p c D b \p a \larger b : \C : (a - b) / c = a / c - b / c$. \s
+26. \s $a,b,c \smallIn \N \p c \D a \p c \D b \p a \larger b : \C : (a - b) / c = a / c - b / c$. \s
 \s
 \s \s
 \s*
-27. \s $a,b,c, \smallIn \N \p c D a \p c D b : \C \p c D a + b$. \s
+27. \s $a,b,c, \smallIn \N \p c \D a \p c \D b : \C \p c \D a + b$. \s
 \s
 \s \s
 \s*
-28. \s $a,b,c \smallIn \N \p c D a \p c D b \p a \larger b : \C \p c D a - b$. \s
+28. \s $a,b,c \smallIn \N \p c \D a \p c \D b \p a \larger b : \C \p c \D a - b$. \s
 \end{translateSixCol}
 
 \peanoPage{11} % page-number 11
 
 \begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
 \raggedright
-29. \s $a,b,c,m,n \smallIn \N \p c D a \p c D b : \C \p c D ma + nb$. \s
+29. \s $a,b,c,m,n \smallIn \N \p c \D a \p c \D b : \C \p c \D ma + nb$. \s
 \s
 \s \s
 \s*
-30. \s $a,b,c,m,n \smallIn \N \p c D a \p c D b \p ma \larger nb : \C \p c D ma - nb$. \s
+30. \s $a,b,c,m,n \smallIn \N \p c \D a \p c \D b \p ma \larger nb : \C \p c \D ma - nb$. \s
 \s
 \s \s
 \s*
-31. \s $a,b \smallIn \N \p a D b : \C : a \p \smaller \cup = \p b$. \s
+31. \s $a,b \smallIn \N \p a \D b : \C : a \p \smaller \cup = \p b$. \s
 \s
 \s \s
 \s*
@@ -2690,39 +2690,39 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-32. \s $a,b \smallIn \N \p a D b \p b D a : \C \p a = b$. \s
+32. \s $a,b \smallIn \N \p a \D b \p b \D a : \C \p a = b$. \s
 \s
 \s \s
 \s*
-33. \s $a \smallIn \N \p \C \p M \such D a = a$. \s
+33. \s $a \smallIn \N \p \C \p M \such \D a = a$. \s
 \s
 \s \s
 \s*
-34. \s $a,b \smallIn \N \p a > b : \C \p \such  D (a,b) = \such D (b,a - b)$. \s
+34. \s $a,b \smallIn \N \p a > b : \C \p \such  \D (a,b) = \such \D (b,a - b)$. \s
 \s
 \s \s
 \s*
-\emph{Dem.} \s Hyp. P28 $: \C \ppp x D a \p x D b : \C : x D b \p x D (a-b)$ \s (1)
+\emph{Dem.} \s Hyp. P28 $: \C \ppp x \D a \p x \D b : \C : x \D b \p x \D (a-b)$ \s (1)
 \s
 \s \s
 \s*
-\s Hyp. P27 $: \C \ppp x D b \p x D (a-b) : \C : x D b \p x D (b+(a-b)) : \C : x D b \p x D a$. \s (2)
+\s Hyp. P27 $: \C \ppp x \D b \p x \D (a-b) : \C : x \D b \p x \D (b+(a-b)) : \C : x \D b \p x \D a$. \s (2)
 \s
 \s \s
 \s*
-\s $(1)(2) \C :$ Hyp. $\C \ppp x D a \p x D b : = : x D b \p x D(a-b)$. \s (Th.)
+\s $(1)(2) \C :$ Hyp. $\C \ppp x \D a \p x \D b : = : x \D b \p x D(a-b)$. \s (Th.)
 \s
 \s \s
 \s*
-35. \s $a,b \smallIn \N \p \C : M \such D (a,b) \smallIn N$. \s
+35. \s $a,b \smallIn \N \p \C : M \such \D (a,b) \smallIn N$. \s
 \s
 \s \s
 \s*
-\emph{Dem.} \s $1 D a \p 1 D b : \C : \such D (a,b) \no = \abs$. \s (1)
+\emph{Dem.} \s $1 \D a \p 1 \D b : \C : \such \D (a,b) \no = \abs$. \s (1)
 \s
 \s \s
 \s*
-\s $\such D (a,b) \p \such \larger a : = \abs$. \s (2)
+\s $\such \D (a,b) \p \such \larger a : = \abs$. \s (2)
 \s
 \s \s
 \s*
@@ -2730,7 +2730,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-36. \s $a,b \smallIn \N \p \C \p \such D (a,b) = \such D M \such D (a,b).$ \s (Eucl. VII, 2)
+36. \s $a,b \smallIn \N \p \C \p \such \D (a,b) = \such \D M \such \D (a,b).$ \s (Eucl. VII, 2)
 \s
 \s \s
 \s*
@@ -2754,7 +2754,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-\s $c \smallIn k \p a,b \smallIn \N \p a = c \p b \smaller c : \C : c \smallIn k \p b \smaller c /p a - b \smaller c \p \such D (a,b) = \such D (b,a-b) : \C : \such D (b, a-b) = \such D m \such D (b,a-b) : \C : \such D (a,b) = \such D M \such D (a,b) : \C :$ Ts. \s (6)
+\s $c \smallIn k \p a,b \smallIn \N \p a = c \p b \smaller c : \C : c \smallIn k \p b \smaller c /p a - b \smaller c \p \such \D (a,b) = \such \D (b,a-b) : \C : \such \D (b, a-b) = \such \D m \such \D (b,a-b) : \C : \such \D (a,b) = \such \D M \such \D (a,b) : \C :$ Ts. \s (6)
 \s
 \s \s
 \s*
@@ -2762,7 +2762,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-\s $c \smallIn k \p a,b \smallIn \N \p a = c \p b = c : \C : \such D (a,b) = \such D c = \such D M \such D c = \such D M \such D (a,b) : \C :$ Ts. \s (8)
+\s $c \smallIn k \p a,b \smallIn \N \p a = c \p b = c : \C : \such \D (a,b) = \such \D c = \such \D M \such \D c = \such \D M \such \D (a,b) : \C :$ Ts. \s (8)
 \s
 \s \s
 \s*
@@ -2782,7 +2782,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-37. \s $a,b,m \smallIn \N \p \C \p M \such D (am, bm) = m \times M \such D (a,b)$. \s
+37. \s $a,b,m \smallIn \N \p \C \p M \such \D (am, bm) = m \times M \such \D (a,b)$. \s
 \s
 \s \s
 \end{translateSixCol}
@@ -2828,35 +2828,35 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-8. \s $a \smallIn \N \p a \larger 1 : \C \ppp \Np \p \such \larger 1 \p \such D a : \no = \abs$. \s (Eucl. VII, 31)
+8. \s $a \smallIn \N \p a \larger 1 : \C \ppp \Np \p \such \larger 1 \p \such \D a : \no = \abs$. \s (Eucl. VII, 31)
 \s
 \s \s
 \s*
-9. \s $a,b \smallIn \N \ppp b^2 \larger a \ppp \such D a \p \such \larger 1 \p \such \smaller b : = \abs :: \C \p a \smallIn \Np$. \s
+9. \s $a,b \smallIn \N \ppp b^2 \larger a \ppp \such \D a \p \such \larger 1 \p \such \smaller b : = \abs :: \C \p a \smallIn \Np$. \s
 \s
 \s \s
 \s*
-10. \s $a,b \smallIn \N \p a \smallIn \Np \p a \no D b : \C : a \pi b$. \s (Eucl. VII, 29)
+10. \s $a,b \smallIn \N \p a \smallIn \Np \p a \no \D b : \C : a \pi b$. \s (Eucl. VII, 29)
 \s
 \s \s
 \s*
-11. \s $a,b,c \smallIn \N \p a D bc \p a \pi b : \C \p a D c$. \s
+11. \s $a,b,c \smallIn \N \p a \D bc \p a \pi b : \C \p a \D c$. \s
 \s
 \s \s
 \s*
-12. \s $a,b \smallIn \N \p m = M \such D (a,b) : \C : a / m \pi \p b / m$. \s
+12. \s $a,b \smallIn \N \p m = M \such \D (a,b) : \C : a / m \pi \p b / m$. \s
 \s
 \s \s
 \s*
-13. \s $ a \smallIn \Np \p b,c \smallIn \N \p a D b c : \C : a D b \p \cup \p a D c$. \s (Eucl. VII, 30)
+13. \s $ a \smallIn \Np \p b,c \smallIn \N \p a \D b c : \C : a \D b \p \cup \p a \D c$. \s (Eucl. VII, 30)
 \s
 \s \s
 \s*
-14. \s $a \smallIn \Np \p b,n \smallIn \N : \C : a D b^n \p = \p a D b$. \s (Eucl. IX, 12)
+14. \s $a \smallIn \Np \p b,n \smallIn \N : \C : a \D b^n \p = \p a \D b$. \s (Eucl. IX, 12)
 \s
 \s \s
 \s*
-15. \s $a,b,c \smallIn \N \p a \pi b \p c D a : \C : c \pi b$. \s (Eucl. VII, 23)
+15. \s $a,b,c \smallIn \N \p a \pi b \p c \D a : \C : c \pi b$. \s (Eucl. VII, 23)
 \s
 \s \s
 \s*
@@ -2864,11 +2864,11 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-17. \s $a,b,c \smallIn \N \p b \pi c \p b D a \p c D a : \C \p bc D a$. \s
+17. \s $a,b,c \smallIn \N \p b \pi c \p b \D a \p c \D a : \C \p bc \D a$. \s
 \s
 \s \s
 \s*
-18. \s $a,b,c \smallIn \N \ p a \pi b : \C : \such D (ac, b) = \such D (c,b)$. \s
+18. \s $a,b,c \smallIn \N \ p a \pi b : \C : \such \D (ac, b) = \such \D (c,b)$. \s
 \s
 \s \s
 \s*
@@ -2876,11 +2876,11 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-20. \s $a,b \smallIn \N \p \C \p \mini \such \mult (a,b) = ab / M \such D (a,b)$. \s (Eucl. VII, 34)
+20. \s $a,b \smallIn \N \p \C \p \mini \such \mult (a,b) = ab / M \such \D (a,b)$. \s (Eucl. VII, 34)
 \s
 \s \s
 \s*
-21. \s $ a,b,c \smallIn \N \p c \mult a \p c \mult b : \C : c \mult \mini \such D (a,b)$. \s (Eucl. VII, 35)
+21. \s $ a,b,c \smallIn \N \p c \mult a \p c \mult b : \C : c \mult \mini \such \D (a,b)$. \s (Eucl. VII, 35)
 \s
 \s \s
 \s*
@@ -2980,7 +2980,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s
 \s \s
 \s*
-7. \s $p,q \smallIn \N \p m \smallIn \N \p m D p \p m D q : \C \p \frac{p}{q} = \frac{p/m}{q/m}$. \s
+7. \s $p,q \smallIn \N \p m \smallIn \N \p m \D p \p m \D q : \C \p \frac{p}{q} = \frac{p/m}{q/m}$. \s
 \s
 \s \s
 \s*
@@ -2988,7 +2988,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s
 \s \s
 \s*
-9. \s $p,q,p',q' \smallIn \N \p p' \pi q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p' / p = q' / q = M \such D (p,q)$. \s
+9. \s $p,q,p',q' \smallIn \N \p p' \pi q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p' / p = q' / q = M \such \D (p,q)$. \s
 \s
 \s \s
 \s*

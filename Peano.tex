@@ -514,7 +514,7 @@ $P$ \s propositio \s VII
 \s* $[ \ ]$ \s inversionis signum \s XI
 \s $\{ x | \ldots \}$ \s sign of the inverse \s XI
 \s* \such \s qui \emph{vel} $[ \smallIn ]$ \s XII
-\s $\ni$ \s such that \emph{or} $[ \smallIn ]$ \s XII
+\s $\ni$ \s such that \emph{or} $[ \in ]$ \s XII
 \s* Th \s Theorema \s XVI
 \s \scriptsize{theorem} \s \normalsize Theorem \s XVI
 \s* Hp \s Hypothesis \s
@@ -557,9 +557,9 @@ $N$ \s numerus integer positivus \s 1
 \s* $\Np$ \s numerus primus \s 9
 \s $\mathbb{P}$ \s prime number \s 9
 \s* M \s maximus \s 6
-\s M$^{\text{aximum}}$ \s maximum \s 6
+\s $\max()$ \s maximum \s 6
 \s* $\mini$ \s minimus \s 6
-\s m$_{\text{inimum}}$ \s minimum \s 6
+\s $\min()$ \s minimum \s 6
 \s* T \s terminus, \emph{vel} limes summus \s 15
 \s Gr$^{\text{eatest bound}}$ \s terminus \emph{or} greatest bound \s 15
 \s* D \s dividit \s 9
@@ -1890,18 +1890,19 @@ From this definition, and the preceding, we deduce that:
 \raggedright
 1. \s $a,b \smallIn \N \p \C : b - a = \N [x \smallIn] (x + a = b)$. \s
 \s
-\s \s
+1. \s $a,b \in \mathbb{N} \rightarrow b - a = \mathbb{N} \cap \{x | x + a = b \}$. \s
 \s*
 2. \s $a,b \smallIn \N \p \C : a < b \p = \p b - a \no = \abs$. \s
 \s
-\s \s
+2. \s $a,b \in \mathbb{N} \rightarrow [(a < b) = (b - a \neq \bot$)]. \s
 \s*
 3. \s $a,b \smallIn \N \p \C : b > a \p = \p a < b$. \s
 \s
-\s \s
+3. \s $a,b \in \mathbb{N} \rightarrow [(b > a) = (a < b)]$. \s
 \s*
 \s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
-\s \s
+\s
+\s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -2149,7 +2150,7 @@ From this definition, and the preceding, we deduce that:
 \s*
 Sit $a \smallIn \K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
 \s
-Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M a$ is read \emph{greatest among} $a$, and $\mini a$ is read \emph{least among a}.
+Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\max(A)$ is read \emph{greatest among} $A$, and $\min(A)$ is read \emph{least among a}.
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
@@ -2160,11 +2161,13 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 
 \begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
-1. \s $a \smallIn \K \N \p \C : M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs$. \s
+1. \s $a \smallIn \K \N \p \C : \M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs)$.\s
 \s
-\s \s
+1. \s $A \in \K \mathbb{N} \rightarrow  \max(A) = \{x | x \in A \wedge [(A \cap \{ z | z > x \}) = \bot]\}$.\s
 \s*
-2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs$. \s
+2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs)$.\s
+\s
+2. \s $A \in \K \mathbb{N} \rightarrow \min(A) = \{x | x \in A \wedge [(A \cap \{ z | z < x \}) = \bot]\}$.\s
 \end{translateSixCol}
 
 \peanoPage{7} % page-number 7
@@ -2238,17 +2241,17 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 
 \begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 \raggedright
-1. \s $a \smallIn \N \p \C \p a \times 1 = a$. \s
+1. \s $a \smallIn \N \p \C \p a \times 1 = a$.\s
 \s
-\s \s
+1. \s $a \in \mathbb{N} \rightarrow a \times 1 = a$.\s
 \s*
 2. \s $a,b \smallIn \N \p \C \p a \times (b + 1) = a \times b + a$. \s
 \s
-\s \s
+2. \s $a,b \in \mathbb{N} \rightarrow a \times (b + 1) = a \times b + a$. \s
 \s*
 \s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$. \s
 \s
-...
+\s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -2424,11 +2427,11 @@ Let $a \smallIn \K \mathbb{N}$, that is, let $a$ be a class of numbers; then $\M
 \raggedright
 1. \s $a \smallIn \N \p \C \p a^1 = a$. \s
 \s
-\s \s
+1. \s $a \in \mathbb{N} \rightarrow a^1 = a$. \s
 \s*
 2. \s $a,b \smallIn \N \p \C \p a^{b+1} = a^{b} a$. \s
 \s
-\s \s
+2. \s $a,b \in \mathbb{N} \rightarrow a^{b+1} = a^{b} a$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}

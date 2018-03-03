@@ -1555,7 +1555,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \LAT
 9. \hspace{0.6cm} $k \smallIn \K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$
 \ENG
-9. \hspace{0.6cm} $[(A$ is a {\scriptsize{CLASS}} $\wedge 1 \in A \wedge x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall \text{x}]{} (x + 1 \in A)] \rightarrow \mathbb{N} \subset A$
+9. \hspace{0.6cm} $\big(A$ is a {\scriptsize{CLASS}} $\wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall \text{x}]{} (x + 1 \in A)] \big) \rightarrow \mathbb{N} \subset A$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1894,11 +1894,11 @@ From this definition, and the preceding, we deduce that:
 \s*
 2. \s $a,b \smallIn \N \p \C : a < b \p = \p b - a \no = \abs$. \s
 \s
-2. \s $a,b \in \mathbb{N} \rightarrow [(a < b) = (b - a \neq \bot$)]. \s
+2. \s $a,b \in \mathbb{N} \rightarrow (a < b) = (b - a \neq \bot$). \s
 \s*
 3. \s $a,b \smallIn \N \p \C : b > a \p = \p a < b$. \s
 \s
-3. \s $a,b \in \mathbb{N} \rightarrow [(b > a) = (a < b)]$. \s
+3. \s $a,b \in \mathbb{N} \rightarrow (b > a) = (a < b)$. \s
 \s*
 \s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
 \s
@@ -2163,11 +2163,11 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \raggedright
 1. \s $a \smallIn \K \N \p \C : \M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs)$.\s
 \s
-1. \s $A \in \K \mathbb{N} \rightarrow  \max(A) = \{x | x \in A \wedge [(A \cap \{ z | z > x \}) = \bot]\}$.\s
+1. \s $A \in \K \mathbb{N} \rightarrow  \max(A) = \big\{x \big| x \in A \wedge [(A \cap \{ z | z > x \}) = \bot]\big\}$.\s
 \s*
 2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs)$.\s
 \s
-2. \s $A \in \K \mathbb{N} \rightarrow \min(A) = \{x | x \in A \wedge [(A \cap \{ z | z < x \}) = \bot]\}$.\s
+2. \s $A \in \K \mathbb{N} \rightarrow \min(A) = \big\{x \big| x \in A \wedge [(A \cap \{ z | z < x \}) = \bot]\big\}$.\s
 \end{translateSixCol}
 
 \peanoPage{7} % page-number 7
@@ -2541,27 +2541,27 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s*
 2. \s $a,b \smallIn \N \p \C : a \D b \p = \p b / a \no = \abs$. \s
 \s
-2. \s $a,b \in \mathbb{N} \rightarrow (a | b) = (b / a \neq \varnothing)$. \s
+2. \s $a,b \in \mathbb{N} \rightarrow a | b = (b / a \neq \varnothing)$. \s
 \s*
 3. \s $a,b \smallIn \N \p \C : b \mult a \p = \p a \D b$. \s
 \s
-3. \s $a,b \in \mathbb{N} \rightarrow (b \mult a) = (a | b)$. \s  %%%TODO: There is no modern symbol for this, is there?
+3. \s $a,b \in \mathbb{N} \rightarrow b \mult a = (a | b)$. \s  %%%TODO: There is no modern symbol for this, is there?
 \s*
 4. \s $\Np = \N [x \smallIn] (\such \D x \p \such \larger 1 \p \such \smaller x : = \abs)$. \s
 \s
-4. \s $\mathbb{P} = \mathbb{N} \{x | (\{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \}) = \varnothing \}$. \s
+4. \s $\mathbb{P} = \mathbb{N} \cap \big\{x \big| \big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \big) = \varnothing \big\}$. \s
 \s*
 5. \s $a,b \smallIn \N \p \C :: a \pi b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
 \s  %%% TODO: create new command for \pi with \mathbin 
-5. \s $a,b \in \mathbb{N} \rightarrow (a \mathbin{\pi} b) = [(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \}) = \varnothing ]$. \s
+5. \s $a,b \in \mathbb{N} \rightarrow a \mathbin{\pi} b = \big[\big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \big) = \varnothing \big]$. \s
 \s*
 6. \s $a,b \smallIn \N \p \C \ppp \such \D (a,b) : = : \such \D a \p \cap \p \such \D b$. \s
 \s
-6. \s $a,b \in \mathbb{N} \rightarrow \such \D (a,b) = (\{ z | ( z | a) \} \cap \{ z | (z | b) \})$. \s %%%TODO: There is no modern symbol for this, is there?
+6. \s $a,b \in \mathbb{N} \rightarrow \such \D (a,b) = \big( \{ z | ( z | a) \} \cap \{ z | (z | b) \} \big)$. \s %%%TODO: There is no modern symbol for this, is there?
 \s*
 7. \s $a,b \smallIn \N \p \C \ppp \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
 \s
-7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = (\{ z | z \mult a \} \cap \{z | z \mult b \})$. \s %%%TODO: There is no modern symbol for this, is there?
+7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = \big( \{ z | z \mult a \} \cap \{z | z \mult b \} \big)$. \s %%%TODO: There is no modern symbol for this, is there?
 \s*
 \s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
 \s
@@ -3145,11 +3145,11 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05}  % wider than usual
 \raggedright
 30. \s $a,b \smallIn \R \p \C \p a + b = [c \smallIn] (c \smallIn  \R \ppp x \smallIn \N \p x a, x b, x c \smallIn \N : \C_x \p xa + xb = xc)$. \s
 \s
-30. \s $a,b \in \mathbb{Q} \rightarrow a + b = \{c | [c \in  \mathbb{Q} \wedge x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[x]{}  xa + xb = xc \}$. \s
+30. \s $a,b \in \mathbb{Q} \rightarrow a + b = \big\{c \big| c \in  \mathbb{Q} \wedge \big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[x]{}  xa + xb = xc \big) \big\}$. \s
 \s*
 31. \s $a,b \smallIn \R \p \C :: b - a = \ppp [x \smallIn] (x \smallIn \R \p a + x = b)$. \s
 \s
@@ -3157,7 +3157,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s*
 32. \s $a,b \smallIn \R \p \C \p ab = [c \smallIn] (c \smallIn \R \ppp x \smallIn \N \p xa, (xa)b, xc \smallIn \N : \C_x \p (xa) b = xc)$. \s
 \s
-32. \s $a,b \in \mathbb{Q} \rightarrow ab = \{ c | (c \in \mathbb{Q} \wedge x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}]) \xrightarrow[x]{} (xa) b = xc \}$. \s
+32. \s $a,b \in \mathbb{Q} \rightarrow ab = \big\{ c \big| c \in \mathbb{Q} \wedge \big[ \big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \big) \xrightarrow[x]{} (xa) b = xc \big] \big\}$. \s
 \s*
 33. \s $a,b \smallIn \R \p \C \p b / a = [x \smallIn] (x \smallIn \R \p ax = b)$. \s
 \s
@@ -3243,19 +3243,19 @@ If $a \smallIn \K \mathbb{Q}^+$, the sign $\T$ a is read \emph{upper boundary}, 
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05} % wider than usual
 \raggedright
 1. \s $a \smallIn \K \R \p x \smallIn \R : \C :: x \smaller \T a \p = \ppp a \p \such \larger x : \no = \abs$. \s
 \s
-\s \s
+1. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow x < \T A = [(A \cap \{ z | z > x \}) \neq \varnothing]$. \s
 \s*
 2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
 \s
-\s \s
+2. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow ( x = \T A ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q} \wedge u < x) \xrightarrow[x]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
 \s*
-3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x -\no \smaller \T a \p x \no = \T a$. \s
+3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$. \s
 \s
-\s \s
+3. \s $( A \in \K \mathbb{Q} \wedge x \in \mathbb{Q} ) \rightarrow (x > \T a) = [(x \nless \T a) \wedge (x \neq \T a)] $. \s
 \end{translateSixCol}
 
 \peanoPage{16} % page-number 16
@@ -3305,19 +3305,19 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 5. \s $\Q = [x \smallIn] (a \smallIn \K \R : a \no = \abs : \R \smallIn \larger \T a \p \min = \abs : \T a = x \ppp \no = \abs)$. \s
 \s
-\s \s
+\s \todo \s
 \s*
 6. \s $a,b \smallIn \Q \p \C :: a = b \p = \ppp \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
 \s
-\s \s
+\s \todo \s
 \s*
 7. \s $a,b \smallIn \Q \p \C :: a \smaller b \p = \ppp \R \p \such \larger a \p \such \smaller b : = \no = \abs$. \s
 \s
-\s \s
+\s \todo \s
 \s*
 8. \s $a,b \smallIn \Q \p \C : b \larger a \p = \p a \smaller b$. \s
 \s
-\s \s
+\s \todo \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -3363,11 +3363,11 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 12. \s $a,b \smallIn Q \p \C \p a + b = T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
 \s
-\s \s
+\s \todo \s
 \s*
 13. \s $a,b \smallIn Q \p \C \p ab = T [z \smallIn] ([x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
 \s
-\s \s
+\s \todo \s
 \s*
 \vspace{1em}
 \s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \smallIn \R$. \s
@@ -3417,17 +3417,17 @@ If $a \smallIn \K \Q$, the signs $\I a, \E a, \Lfat a$ are read: \emph{interior,
 
 \begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
 \raggedright
-1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
+1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([(u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
 \s
-\s \s
+1. \s $A \in \K \mathbb{R} \rightarrow \I A = \mathbb{R} \cap \big\{ x \big| \{ (u,v) | (u,v \in \mathbb{R}) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \big\}$. \s
 \s*
 2. \s $a \smallIn \K \Q \p \C \p \E a = \I (\no a)$. \s
 \s
-\s \s
+2. \s $A \in \K \mathbb{R} \rightarrow \E A = \I \big( \overline{A} \big)$. \s
 \s*
 3. \s $a \smallIn \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$. \s
 \s
-\s \s
+3. \s $A \in \K \mathbb{R} \rightarrow \Lfat A = \overline{\I A} \cap \overline{\E A}$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}

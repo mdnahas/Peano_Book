@@ -44,3 +44,8 @@ even when you have an intelligence like mine. Thank you and good luck studying.
 "I would like to thank Mauro Allegranzo and acknowledge his support of this work and his various comments during its creation."
 
 
+NOTE: The website VincentVerheyen.com was expected to be deleted 2018-03-26.  The webpages may be available via the Internet Archive's [WaybackMachine](https://web.archive.org/) at 
+https://web.archive.org/web/*/http://VincentVerheyen.com/node/26
+
+
+

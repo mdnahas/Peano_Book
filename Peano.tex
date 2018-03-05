@@ -85,6 +85,10 @@
 \newcommand{\EE}{\mathop{\thinspace \textbf{E\hspace{0.02cm}E} \thinspace}}
 \newcommand{\LfatLfat}{\mathop{\thinspace \textbf{L\hspace{0.02cm}L} \thinspace}}
 
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\exterior}{ext}
+\DeclareMathOperator{\boundary}{bd}
+
 
 
 % Use Dashrule package for dashed lines (using \hdashrule)
@@ -3399,9 +3403,9 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 
 \begin{translateTwoCol}
 \raggedright
-Si $a \smallIn \K \Q$, signa $\I a, \E a, \Lfat a$ leguntur: \emph{interior, exterior, limes classis} $a$.
+Si $a \smallIn \K \Q$, signa $\I a$, $\E a$, $\Lfat a$ leguntur: \emph{interior, exterior, limes classis} $a$.
 \s
-If $A \in \K \mathbb{R}$, the signs $\I A, \E A, \Lfat A$ are read: \emph{interior, exterior, limit of the class} $A$.
+If $A \in \K \mathbb{R}$, the signs $\interior(A)$, $\exterior(A)$, $\boundary(A)$ are read: \emph{interior, exterior, limit of the class} $A$.
 \end{translateTwoCol}
 
 \peanoPage{17} % page-number 17
@@ -3419,15 +3423,15 @@ If $A \in \K \mathbb{R}$, the signs $\I A, \E A, \Lfat A$ are read: \emph{interi
 \raggedright
 1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([(u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
 \s
-1. \s $A \in \K \mathbb{R} \rightarrow \I A = \mathbb{R} \cap \big\{ x \big| \{ (u,v) | (u,v \in \mathbb{R}) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \big\}$. \s
+1. \s $A \in \K \mathbb{R} \rightarrow \interior(A) = \mathbb{R} \cap \big\{ x \big| \{ (u,v) | (u,v \in \mathbb{R}) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \big\}$. \s
 \s*
 2. \s $a \smallIn \K \Q \p \C \p \E a = \I (\no a)$. \s
 \s
-2. \s $A \in \K \mathbb{R} \rightarrow \E A = \I \big( \overline{A} \big)$. \s
+2. \s $A \in \K \mathbb{R} \rightarrow \exterior(A) = \interior\big( \overline{A} \big)$. \s
 \s*
 3. \s $a \smallIn \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$. \s
 \s
-3. \s $A \in \K \mathbb{R} \rightarrow \Lfat A = \overline{\I A} \cap \overline{\E A}$. \s
+3. \s $A \in \K \mathbb{R} \rightarrow \boundary(A) = \overline{\interior(A)} \cap \overline{\exterior(A)}$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}

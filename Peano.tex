@@ -2947,7 +2947,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s*
 3. \s $R = :: [x \smallIn] \ppp p, q \smallIn \N \p \frac{p}{q} = x : \no = \abs$. \s
 \s
-3. \s $\mathbb{Q} = \{x | [(p, q \in \mathbb{N}) \wedge \frac{p}{q} = x] \neq \bot \}$. \s
+3. \s $\mathbb{Q}^+ = \{x | [(p, q \in \mathbb{N}) \wedge \frac{p}{q} = x] \neq \bot \}$. \s
 \s*
 4. \s $p \smallIn \N \p \C \p \frac{p}{1} = p$. \s
 \s
@@ -3068,11 +3068,11 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \raggedright
 19. \s $a,b \smallIn \R \p \C :: a \smaller b \p = \ppp x \smallIn \N \p xa, xb \smallIn \N : \C \p xa \smaller xb$. \s
 \s
-19. \s $a,b \in \mathbb{Q} \rightarrow a < b = ([x \in \mathbb{N} \wedge (xa, xb \in \mathbb{N})] \rightarrow xa < xb)$.\s
+19. \s $a,b \in \mathbb{Q}^+ \rightarrow a < b = ([x \in \mathbb{N} \wedge (xa, xb \in \mathbb{N})] \rightarrow xa < xb)$.\s
 \s*
 20. \s $a,b \smallIn \R \p \C : b \larger a \p = \p a \smaller b$. \s
 \s
-20. \s $a,b \in \mathbb{Q} \rightarrow b \larger a = a \smaller b$. \s
+20. \s $a,b \in \mathbb{Q}^+ \rightarrow b \larger a = a \smaller b$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -3152,19 +3152,19 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \raggedright
 30. \s $a,b \smallIn \R \p \C \p a + b = [c \smallIn] (c \smallIn  \R \ppp x \smallIn \N \p x a, x b, x c \smallIn \N : \C_x \p xa + xb = xc)$. \s
 \s
-30. \s $a,b \in \mathbb{Q} \rightarrow a + b = \big\{c \big| c \in  \mathbb{Q} \wedge \big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[x]{}  xa + xb = xc \big) \big\}$. \s
+30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \big\{c \big| c \in  \mathbb{Q}^+ \wedge \big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[x]{}  xa + xb = xc \big) \big\}$. \s
 \s*
 31. \s $a,b \smallIn \R \p \C :: b - a = \ppp [x \smallIn] (x \smallIn \R \p a + x = b)$. \s
 \s
-31. \s $a,b \in \mathbb{Q} \rightarrow b - a = \{ x | x \in \mathbb{Q} \wedge a + x = b \}$. \s
+31. \s $a,b \in \mathbb{Q}^+ \rightarrow b - a = \{ x | x \in \mathbb{Q}^+ \wedge a + x = b \}$. \s
 \s*
 32. \s $a,b \smallIn \R \p \C \p ab = [c \smallIn] (c \smallIn \R \ppp x \smallIn \N \p xa, (xa)b, xc \smallIn \N : \C_x \p (xa) b = xc)$. \s
 \s
-32. \s $a,b \in \mathbb{Q} \rightarrow ab = \big\{ c \big| c \in \mathbb{Q} \wedge \big[ \big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \big) \xrightarrow[x]{} (xa) b = xc \big] \big\}$. \s
+32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \big\{ c \big| c \in \mathbb{Q}^+ \wedge \big[ \big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \big) \xrightarrow[x]{} (xa) b = xc \big] \big\}$. \s
 \s*
 33. \s $a,b \smallIn \R \p \C \p b / a = [x \smallIn] (x \smallIn \R \p ax = b)$. \s
 \s
-33. \s $a,b \in \mathbb{Q} \rightarrow b / a = \{ x | x \in \mathbb{Q} \wedge ax = b \}$. \s
+33. \s $a,b \in \mathbb{Q}^+ \rightarrow b / a = \{ x | x \in \mathbb{Q}^+ \wedge ax = b \}$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -3250,15 +3250,15 @@ If $A \in \K \mathbb{Q}^+$, the sign $\sup(A)$ is read \emph{upper boundary}, or
 \raggedright
 1. \s $a \smallIn \K \R \p x \smallIn \R : \C :: x \smaller \T a \p = \ppp a \p \such \larger x : \no = \abs$. \s
 \s
-1. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow x < \sup(A) = [(A \cap \{ z | z > x \}) \neq \varnothing]$. \s
+1. \s $(A \in \K \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow x < \sup(A) = [(A \cap \{ z | z > x \}) \neq \varnothing]$. \s
 \s*
 2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
 \s
-2. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow ( x = \sup(A) ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q} \wedge u < x) \xrightarrow[u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
+2. \s $(A \in \K \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
 \s*
 3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$. \s
 \s
-3. \s $( A \in \K \mathbb{Q} \wedge x \in \mathbb{Q} ) \rightarrow (x > \sup(A)) = [(x \nless \sup(A)) \wedge (x \neq \sup(A))] $. \s
+3. \s $( A \in \K \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+ ) \rightarrow (x > \sup(A)) = [(x \nless \sup(A)) \wedge (x \neq \sup(A))] $. \s
 \end{translateSixCol}
 
 \peanoPage{16} % page-number 16
@@ -3276,7 +3276,7 @@ If $A \in \K \mathbb{Q}^+$, the sign $\sup(A)$ is read \emph{upper boundary}, or
 \raggedright
 4. \s $x \smallIn \R \p \C :: x = \ppp \T : \R \p \such \smaller x$. \s
 \s
-4. \s $x \in \mathbb{Q} \rightarrow  x = \sup(\mathbb{Q} \cap \{z | z < x \})$. \s
+4. \s $x \in \mathbb{Q}^+ \rightarrow  x = \sup(\mathbb{Q}^+ \cap \{z | z < x \})$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -3308,19 +3308,19 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 5. \s $\Q = [x \smallIn] (a \smallIn \K \R : a \no = \abs : \R \smallIn \larger \T a \p \no = \abs : \T a = x \ppp \no = \abs)$. \s
 \s
-5. \s $\mathbb{R} = \{x | [A \in \K \mathbb{Q} \wedge A \neq \varnothing \wedge (\mathbb{Q} \cap \{ z | z > \sup(A) \}) = \varnothing \wedge \sup(A) = x] \neq \bot \}$. \s
+5. \s $\mathbb{R}^+ = \{x | [A \in \K \mathbb{Q}^+ \wedge A \neq \varnothing \wedge (\mathbb{Q}^+ \cap \{ z | z > \sup(A) \}) = \varnothing \wedge \sup(A) = x] \neq \bot \}$. \s
 \s*
 6. \s $a,b \smallIn \Q \p \C :: a = b \p = \ppp \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
 \s
-6. \s $a,b \in \mathbb{R} \rightarrow (a = b) = [( \mathbb{Q} \cap \{ z | z < a \}) = (\mathbb{Q} \cap \{ z | z < b \})]$ \s
+6. \s $a,b \in \mathbb{R}^+ \rightarrow (a = b) = [( \mathbb{Q}^+ \cap \{ z | z < a \}) = (\mathbb{Q}^+ \cap \{ z | z < b \})]$ \s
 \s*
 7. \s $a,b \smallIn \Q \p \C :: a \smaller b \p = \ppp \R \p \such \larger a \p \such \smaller b : \no = \abs$. \s
 \s
-7. \s $a,b \in \mathbb{R} \rightarrow a < b = [(\mathbb{Q} \cap \{z | z > a \} \cap \{ z | z < b \} \neq \varnothing]$. \s
+7. \s $a,b \in \mathbb{R}^+ \rightarrow a < b = [(\mathbb{Q}^+ \cap \{z | z > a \} \cap \{ z | z < b \} \neq \varnothing]$. \s
 \s*
 8. \s $a,b \smallIn \Q \p \C : b \larger a \p = \p a \smaller b$. \s
 \s
-8. \s $a,b \in \mathbb{R} \rightarrow b > a = a < b$. \s
+8. \s $a,b \in \mathbb{R}^+ \rightarrow b > a = a < b$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -3336,15 +3336,15 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 9. \s $a \smallIn \Q \p \C \ppp \R \p \such \smaller a : \no = \abs$. \s
 \s
-9. \s $a \in \mathbb{R} \rightarrow (\mathbb{Q} \cap \{ z | z < a \}) \neq \varnothing$. \s
+9. \s $a \in \mathbb{R}^+ \rightarrow (\mathbb{Q}^+ \cap \{ z | z < a \}) \neq \varnothing$. \s
 \s*
 10. \s $a \smallIn \Q \p \C \ppp \R \p \such \larger a : \no = \abs$. \s
 \s
-10. \s $a \in \mathbb{R} \rightarrow (\mathbb{Q} \cap \{z | z > a \}) \neq \varnothing$. \s
+10. \s $a \in \mathbb{R}^+ \rightarrow (\mathbb{Q}^+ \cap \{z | z > a \}) \neq \varnothing$. \s
 \s*
 11. \s $\R \C \Q$. \s
 \s
-11. \s $\mathbb{Q} \subset \mathbb{R}$. \s
+11. \s $\mathbb{Q}^+ \subset \mathbb{R}^+$. \s
 \s*
 \vspace{1em}
 \s Subsistunt quoque propositiones quae a P17, 28, 29 in \S8 obtinentur, si loco $\R$ legatur $\Q$. \s
@@ -3366,11 +3366,11 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 12. \s $a,b \smallIn Q \p \C \p a + b = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
 \s
-12. \s $a,b \in \mathbb{R} \rightarrow  a + b = \sup\big( \big\{z \big| \{(x,y) | (x,y \in \mathbb{Q}) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \big\} \big)$. \s
+12. \s $a,b \in \mathbb{R}^+ \rightarrow  a + b = \sup\big( \big\{z \big| \{(x,y) | (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \big\} \big)$. \s
 \s*
 13. \s $a,b \smallIn Q \p \C \p ab = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
 \s
-13. \s $a,b \in \mathbb{R} \rightarrow ab = \sup\big( \big\{ z \big| \{(x,y) |  (x,y \in \mathbb{Q}) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \big\} \big)$. \s
+13. \s $a,b \in \mathbb{R}^+ \rightarrow ab = \sup\big( \big\{ z \big| \{(x,y) |  (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \big\} \big)$. \s
 \s*
 \vspace{1em}
 \s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \smallIn \R$. \s
@@ -3404,7 +3404,7 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 Si $a \smallIn \K \Q$, signa $\I a$, $\E a$, $\Lfat a$ leguntur: \emph{interior, exterior, limes classis} $a$.
 \s
-If $A \in \K \mathbb{R}$, the signs $\interior(A)$, $\exterior(A)$, $\boundary(A)$ are read: \emph{interior, exterior, limit of the class} $A$.
+If $A \in \K \mathbb{R}^+$, the signs $\interior(A)$, $\exterior(A)$, $\boundary(A)$ are read: \emph{interior, exterior, limit of the class} $A$.
 \end{translateTwoCol}
 
 \peanoPage{17} % page-number 17
@@ -3422,15 +3422,15 @@ If $A \in \K \mathbb{R}$, the signs $\interior(A)$, $\exterior(A)$, $\boundary(A
 \raggedright
 1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([(u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
 \s
-1. \s $A \in \K \mathbb{R} \rightarrow \interior(A) = \mathbb{R} \cap \big\{ x \big| \{ (u,v) | (u,v \in \mathbb{R}) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \big\}$. \s
+1. \s $A \in \K \mathbb{R}^+ \rightarrow \interior(A) = \mathbb{R}^+ \cap \big\{ x \big| \{ (u,v) | (u,v \in \mathbb{R}^+) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \big\}$. \s
 \s*
 2. \s $a \smallIn \K \Q \p \C \p \E a = \I (\no a)$. \s
 \s
-2. \s $A \in \K \mathbb{R} \rightarrow \exterior(A) = \interior\big( \overline{A} \big)$. \s
+2. \s $A \in \K \mathbb{R}^+ \rightarrow \exterior(A) = \interior\big( \overline{A} \big)$. \s
 \s*
 3. \s $a \smallIn \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$. \s
 \s
-3. \s $A \in \K \mathbb{R} \rightarrow \boundary(A) = \overline{\interior(A)} \cap \overline{\exterior(A)}$. \s
+3. \s $A \in \K \mathbb{R}^+ \rightarrow \boundary(A) = \overline{\interior(A)} \cap \overline{\exterior(A)}$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}

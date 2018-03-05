@@ -38,7 +38,6 @@
 
 % Use math packages for fonts, symbols, etc.
 %
-\usepackage{fouriernc} % for $\otherpi$
 \usepackage{upgreek} % certain upright greek characters
 \usepackage{amsmath} % for $\text{cl.}^{\text{mus}}$
 \usepackage{amssymb} % to have standard symbols for special sets --- to have $\nless$
@@ -68,7 +67,8 @@
 \newcommand{\such}{\thinspace \rotatebox[origin=c]{180}{$\epsilon$}}
 \newcommand{\mult}{\mathop{\reflectbox{D}}}
 \newcommand{\smallIn}{\ensuremath{\mathrel{\epsilon}}}
-  
+\newcommand{\primeWith}{\ensuremath{\mathbin{\uppi}}}
+
 \newcommand{\I}{\mathop{\thinspace \textbf{I} \thinspace}}
 \newcommand{\E}{\mathop{\thinspace \textbf{E} \thinspace}}
 \newcommand{\Lfat}{\mathop{\thinspace \textbf{L} \thinspace}}
@@ -570,8 +570,8 @@ $N$ \s numerus integer positivus \s 1
 \s $|$ \s \normalsize divides \s 9
 \s* \reflectbox{D} \s est multiplex \s 9
 \s \reflectbox{D} \s \normalsize is divisible \s 9
-\s* $\pi$ \s est primus cum \s 6
-\s \scriptsize{is $\mathbb{P}$rime with} \s \normalsize is prime with \s 6
+\s* $\primeWith$ \s est primus cum \s 6
+\s $\primeWith$ \s \normalsize is prime with \s 6
 \end{translateSixCol}
 
 \vspace{1em}
@@ -2520,9 +2520,9 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \centering \dittoMarkEnglish \s \raggedright $\Np$ \s \centering \dittoMarkEnglish \s \raggedright \emph{prime number.}
 \s*
-\centering $\dittoMarkLatin$ \s \raggedright $\otherpi$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{est primus cum.}
+\centering $\dittoMarkLatin$ \s \raggedright $\primeWith$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{est primus cum.}
 \s
-\centering \dittoMarkEnglish \s \raggedright $\otherpi$ \s \centering \dittoMarkEnglish \s \raggedright \emph{is prime with.}
+\centering \dittoMarkEnglish \s \raggedright $\primeWith$ \s \centering \dittoMarkEnglish \s \raggedright \emph{is prime with.}
 \end{paracol}
 
 \peanoPage{10} % page-number 10
@@ -2554,9 +2554,9 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 4. \s $\mathbb{P} = \mathbb{N} \cap \big\{x \big| \big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \big) = \varnothing \big\}$. \s
 \s*
-5. \s $a,b \smallIn \N \p \C :: a \pi b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
-\s  %%% TODO: create new command for \pi with \mathbin 
-5. \s $a,b \in \mathbb{N} \rightarrow a \mathbin{\pi} b = \big[\big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \big) = \varnothing \big]$. \s
+5. \s $a,b \smallIn \N \p \C :: a \primeWith b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
+\s  %%% TODO: create new command for \primeWith with \mathbin 
+5. \s $a,b \in \mathbb{N} \rightarrow a \primeWith b = \big[\big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \big) = \varnothing \big]$. \s
 \s*
 6. \s $a,b \smallIn \N \p \C \ppp \such \D (a,b) : = : \such \D a \p \cap \p \such \D b$. \s
 \s
@@ -2819,11 +2819,11 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-5. \s $x \smallIn \N \p \C : x \p \pi \p x + 1$. \s
+5. \s $x \smallIn \N \p \C : x \p \primeWith \p x + 1$. \s
 \s
 \s \s
 \s*
-6. \s $x \smallIn \N \p \C : 2x - 1 \p \pi \p 2x + 1$. \s
+6. \s $x \smallIn \N \p \C : 2x - 1 \p \primeWith \p 2x + 1$. \s
 \s
 \s \s
 \s*
@@ -2839,15 +2839,15 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-10. \s $a,b \smallIn \N \p a \smallIn \Np \p a \no \D b : \C : a \pi b$. \s (Eucl. VII, 29)
+10. \s $a,b \smallIn \N \p a \smallIn \Np \p a \no \D b : \C : a \primeWith b$. \s (Eucl. VII, 29)
 \s
 \s \s
 \s*
-11. \s $a,b,c \smallIn \N \p a \D bc \p a \pi b : \C \p a \D c$. \s
+11. \s $a,b,c \smallIn \N \p a \D bc \p a \primeWith b : \C \p a \D c$. \s
 \s
 \s \s
 \s*
-12. \s $a,b \smallIn \N \p m = M \such \D (a,b) : \C : a / m \pi \p b / m$. \s
+12. \s $a,b \smallIn \N \p m = M \such \D (a,b) : \C : a / m \primeWith \p b / m$. \s
 \s
 \s \s
 \s*
@@ -2859,19 +2859,19 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s
 \s \s
 \s*
-15. \s $a,b,c \smallIn \N \p a \pi b \p c \D a : \C : c \pi b$. \s (Eucl. VII, 23)
+15. \s $a,b,c \smallIn \N \p a \primeWith b \p c \D a : \C : c \primeWith b$. \s (Eucl. VII, 23)
 \s
 \s \s
 \s*
-16. \s $ a,b,c \smallIn \N \p \C \ppp a \pi b \p a \pi c : = : a \pi bc$. \s (Eucl. VII, 24)
+16. \s $ a,b,c \smallIn \N \p \C \ppp a \primeWith b \p a \primeWith c : = : a \primeWith bc$. \s (Eucl. VII, 24)
 \s
 \s \s
 \s*
-17. \s $a,b,c \smallIn \N \p b \pi c \p b \D a \p c \D a : \C \p bc \D a$. \s
+17. \s $a,b,c \smallIn \N \p b \primeWith c \p b \D a \p c \D a : \C \p bc \D a$. \s
 \s
 \s \s
 \s*
-18. \s $a,b,c \smallIn \N \ p a \pi b : \C : \such \D (ac, b) = \such \D (c,b)$. \s
+18. \s $a,b,c \smallIn \N \ p a \primeWith b : \C : \such \D (ac, b) = \such \D (c,b)$. \s
 \s
 \s \s
 \s*
@@ -2989,15 +2989,15 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s
 \s \s
 \s*
-8. \s $p,q,p',q' \smallIn \N \p p \pi q \p p' \pi q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p = p' \p q =q'$. \s
+8. \s $p,q,p',q' \smallIn \N \p p \primeWith q \p p' \primeWith q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p = p' \p q =q'$. \s
 \s
 \s \s
 \s*
-9. \s $p,q,p',q' \smallIn \N \p p' \pi q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p' / p = q' / q = M \such \D (p,q)$. \s
+9. \s $p,q,p',q' \smallIn \N \p p' \primeWith q' \p \frac{p}{q} = \frac{p'}{q'} : \C : p' / p = q' / q = M \such \D (p,q)$. \s
 \s
 \s \s
 \s*
-10. \s $p,q,p',q' \smallIn \N \p \frac{p}{q} = \frac{p'}{q'} \p p \pi q \p q' \smaller q : = \abs$. \s (Eucl. VII, 21)
+10. \s $p,q,p',q' \smallIn \N \p \frac{p}{q} = \frac{p'}{q'} \p p \primeWith q \p q' \smaller q : = \abs$. \s (Eucl. VII, 21)
 \s
 \s \s
 \s*

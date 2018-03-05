@@ -564,11 +564,10 @@ $N$ \s numerus integer positivus \s 1
 \s $\max()$ \s maximum \s 6
 \s* $\mini$ \s minimus \s 6
 \s $\min()$ \s minimum \s 6
-\s* T \s terminus, \emph{vel} limes summus \s 15
-\s Gr$^{\text{eatest bound}}$ \s terminus \emph{or} greatest bound \s 15
+\s* $\T$ \s terminus, \emph{vel} limes summus \s 15
+\s $\sup()$ \s boundary \emph{or} upper limit \s 15
 \s* D \s dividit \s 9
-\s $|$ \s \normalsize divides
-\s 9
+\s $|$ \s \normalsize divides \s 9
 \s* \reflectbox{D} \s est multiplex \s 9
 \s \reflectbox{D} \s \normalsize is divisible \s 9
 \s* $\pi$ \s est primus cum \s 6
@@ -3235,7 +3234,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \raggedright
 Si $a \smallIn \K \R$, signum $\T a$ legitur \emph{terminus summus}, vel \emph{limes summus classis} $a$. Supra hoc novum ens relationes ac operationes tantum definimus.
 \s
-If $A \in \K \mathbb{Q}^+$, the sign $\T A$ is read \emph{upper boundary}, or \emph{upper limit of the class} $A$. We shall define only a few relations and operations on this new entity.
+If $A \in \K \mathbb{Q}^+$, the sign $\sup(A)$ is read \emph{upper boundary}, or \emph{upper limit of the class} $A$. We shall define only a few relations and operations on this new entity.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -3251,15 +3250,15 @@ If $A \in \K \mathbb{Q}^+$, the sign $\T A$ is read \emph{upper boundary}, or \e
 \raggedright
 1. \s $a \smallIn \K \R \p x \smallIn \R : \C :: x \smaller \T a \p = \ppp a \p \such \larger x : \no = \abs$. \s
 \s
-1. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow x < \T A = [(A \cap \{ z | z > x \}) \neq \varnothing]$. \s
+1. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow x < \sup(A) = [(A \cap \{ z | z > x \}) \neq \varnothing]$. \s
 \s*
 2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
 \s
-2. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow ( x = \T A ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q} \wedge u < x) \xrightarrow[u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
+2. \s $(A \in \K \mathbb{Q} \wedge x \in \mathbb{Q}) \rightarrow ( x = \sup(A) ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q} \wedge u < x) \xrightarrow[u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
 \s*
 3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$. \s
 \s
-3. \s $( A \in \K \mathbb{Q} \wedge x \in \mathbb{Q} ) \rightarrow (x > \T A) = [(x \nless \T A) \wedge (x \neq \T A)] $. \s
+3. \s $( A \in \K \mathbb{Q} \wedge x \in \mathbb{Q} ) \rightarrow (x > \sup(A)) = [(x \nless \sup(A)) \wedge (x \neq \sup(A))] $. \s
 \end{translateSixCol}
 
 \peanoPage{16} % page-number 16
@@ -3277,7 +3276,7 @@ If $A \in \K \mathbb{Q}^+$, the sign $\T A$ is read \emph{upper boundary}, or \e
 \raggedright
 4. \s $x \smallIn \R \p \C :: x = \ppp \T : \R \p \such \smaller x$. \s
 \s
-4. \s $x \in \mathbb{Q} \rightarrow  x = \T (\mathbb{Q} \cap \{z | z < x \})$. \s
+4. \s $x \in \mathbb{Q} \rightarrow  x = \sup(\mathbb{Q} \cap \{z | z < x \})$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -3309,7 +3308,7 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 \raggedright
 5. \s $\Q = [x \smallIn] (a \smallIn \K \R : a \no = \abs : \R \smallIn \larger \T a \p \no = \abs : \T a = x \ppp \no = \abs)$. \s
 \s
-5. \s $\mathbb{R} = \{x | [A \in \K \mathbb{Q} \wedge A \neq \varnothing \wedge (\mathbb{Q} \cap \{ z | z > \T A \}) = \varnothing \wedge \T A = x] \neq \bot \}$. \s
+5. \s $\mathbb{R} = \{x | [A \in \K \mathbb{Q} \wedge A \neq \varnothing \wedge (\mathbb{Q} \cap \{ z | z > \sup(A) \}) = \varnothing \wedge \sup(A) = x] \neq \bot \}$. \s
 \s*
 6. \s $a,b \smallIn \Q \p \C :: a = b \p = \ppp \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
 \s
@@ -3365,13 +3364,13 @@ The sign $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real
 
 \begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
 \raggedright
-12. \s $a,b \smallIn Q \p \C \p a + b = T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
+12. \s $a,b \smallIn Q \p \C \p a + b = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
 \s
-12. \s $a,b \in \mathbb{R} \rightarrow  a + b = T \big\{z \big| \{(x,y) | (x,y \in \mathbb{Q}) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \big\}$. \s
+12. \s $a,b \in \mathbb{R} \rightarrow  a + b = \sup\big( \big\{z \big| \{(x,y) | (x,y \in \mathbb{Q}) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \big\} \big)$. \s
 \s*
-13. \s $a,b \smallIn Q \p \C \p ab = T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
+13. \s $a,b \smallIn Q \p \C \p ab = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
 \s
-13. \s $a,b \in \mathbb{R} \rightarrow ab = T \big\{ z \big| \{(x,y) |  (x,y \in \mathbb{Q}) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \big\} $. \s
+13. \s $a,b \in \mathbb{R} \rightarrow ab = \sup\big( \big\{ z \big| \{(x,y) |  (x,y \in \mathbb{Q}) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \big\} \big)$. \s
 \s*
 \vspace{1em}
 \s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \smallIn \R$. \s

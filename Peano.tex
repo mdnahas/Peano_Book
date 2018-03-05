@@ -558,15 +558,15 @@ $N$ \s numerus integer positivus \s 1
 \s $\mathbb{Q}^+$ \s postive rational numbers \s 12
 \s* $Q$ \s quantitas, \emph{sive} numerus realis positivus \s 16
 \s $\mathbb{R}^+$ \s quantity \emph{or} postive real numbers \s 16
-\s* $\Np$ \s numerus primus \s 9
+\s* $\text{N}p$ \s numerus primus \s 9
 \s $\mathbb{P}$ \s prime number \s 9
-\s* M \s maximus \s 6
+\s* $\text{M}$ \s maximus \s 6
 \s $\max()$ \s maximum \s 6
 \s* $\mini$ \s minimus \s 6
 \s $\min()$ \s minimum \s 6
-\s* $\T$ \s terminus, \emph{vel} limes summus \s 15
+\s* $\text{T}$ \s terminus, \emph{vel} limes summus \s 15
 \s $\sup()$ \s boundary \emph{or} upper limit \s 15
-\s* D \s dividit \s 9
+\s* $\text{D}$ \s dividit \s 9
 \s $|$ \s \normalsize divides \s 9
 \s* \reflectbox{D} \s est multiplex \s 9
 \s \reflectbox{D} \s \normalsize is divisible \s 9
@@ -588,10 +588,10 @@ $-<$ \s non est minor \s
 \s $\nless$ \s is not less than \s
 \s* $=\cup>$ \s est aequalis aut maior \s
 \s $\geq$ \s is equal to or greater than \s
-\s* \such $D$ \s divisor \s
-\s \scriptsize{is a divisor} \s \normalsize{is a divisor} \s
-\s* $M$ \such $D$ \s maximus divisor \s
-\s \scriptsize{is the greatest divisor} \s \normalsize is the greatest divisor \s
+\s* $\such \D$ \s divisor \s
+\s $\such \D$ \s is a divisor \s
+\s* $\text{M}\such\D$ \s maximus divisor \s
+\s $\text{M}\such\D$ \s \normalsize is the greatest divisor \s
 \end{translateSixCol}
 
 \peanoPage{VII} % page-number VII
@@ -615,7 +615,7 @@ $-<$ \s non est minor \s
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
-Litteris $a,b,... x,y,... x', y',...$ entia indicamus indeterminata quaecumque. Entia vero determinata signis, sive litteris $P, K, N,...$ indicamus.
+Litteris $a,b,... x,y,... x', y',...$ entia indicamus indeterminata quaecumque. Entia vero determinata signis, sive litteris $\mathbb{P}, K, \mathbb{N},...$ indicamus.
 \ENG
 By the letters $a,b,... x,y,... x', y',...$ we indicate any indeterminate entities. Determinate entities are, however, indicated by the signs, or rather by the letters, $P, K, N,...$
 \LAT
@@ -671,9 +671,9 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \LAT \text{[}Signum C significat \emph{est consequentia}; ita $b$ C $a$ legitur $b$ \emph{est consequentia propositionis} $a$. Sed hoc signo nunquam utimur\text{]}.
 \ENG \irrelavent{The sign $\leftarrow$ means \emph{is a consequence of}. Thus $b \leftarrow a$ is read $b$ \emph{is a consequence of the proposition} $a$. But we never use this sign.}
 \LAT Signum $\C$ significat \emph{deducitur}; ita $a$ $\C$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\C_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\C_{x,y,...}$, scribemus solum $\C$.
-\ENG The sign $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the indeterminate quantities $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[x,y,...]{}$, we write only $\rightarrow$.
+\ENG The sign $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the indeterminate quantities $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[\forall x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[\forall x,y,...]{}$, we write only $\rightarrow$.
 \LAT Signum = significat \emph{est aequalis}. Sint $a,b$ propositiones; tunc $a=b$ idem significat quod $a$ $\C$ $b$ $.$ $b$ $\C$ $a$; propositio $a=_{x,y,...} b$ idem significat quod $a$ $ \C_{x,y,...} b$ $.$ $b$ $\C_{x,y,...} a$.
-\ENG The sign = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\underset{x,y,...}=b$ means the same as ($a \xrightarrow[\text{x,y,...}]{} b) \wedge (b \xrightarrow[x,y,...]{} a)$.
+\ENG The sign = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\underset{\forall x,y,...}=b$ means the same as ($a \xrightarrow[\forall x,y,...]{} b) \wedge (b \xrightarrow[\forall x,y,...]{} a)$.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -902,9 +902,12 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \hspace{1.06cm} $ (a \not\rightarrow b) = \neg (a \rightarrow b)$
 \LAT
+\ENG
+\commentary{Peano's $=$\scalebox{0.7}{$x$} operator contains a ``for all $x$'', while the $-=$\scalebox{0.7}{$x$} operator contains an ``exists $x$''.}
+\LAT
 \quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ $\C$ significat {\emph{non deducitur}}.
 \ENG
-Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\text{x}}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
+Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\exists x}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The sign $\not\rightarrow$ means {\emph{one does not deduce}}.
 \LAT
 \quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . $\C$ $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
 \ENG
@@ -1010,7 +1013,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \LAT
 49. \hspace{0.67cm} $a \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ = $\abs$ : = : $x \smallIn a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
 \ENG
-49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall \text{x}}= \bot]\}$ 
+49. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall x}= \bot]\}$ 
 \LAT
 \quad [Signo V, quod classem ex omnibus individuis constitutam, de quibus quaestio est, indieat, non utimur].
 \ENG
@@ -1022,7 +1025,7 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of i
 \LAT
 50. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\C$ $b$ : = : $x \smallIn a$ . $\C$\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
-50. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall \text{x}]{} (x \in B)]\}$
+50. \hspace{0.67cm} $A, B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall x]{} (x \in B)]\}$
 \LAT
 \quad [Formula $b$ \scalebox{0.8}{C} $a$ significare potest {\emph{classis b continet classem a}}; at signo  \scalebox{0.8}{C} non utiumur].
 \ENG
@@ -1039,7 +1042,7 @@ Hic signa $\abs$ et $\C$ significationem habent quae paullo a praecedenti differ
 \LAT
 51. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ = $b$ : = : $x \smallIn a$ . =\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
-51. \hspace{0.67cm} $A$, $B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A = B) = [(x \in A) \underset{\forall \text{x}}=  (x \in B)]\}$
+51. \hspace{0.67cm} $A$, $B$ are \scriptsize{CLASSES} \normalsize $\rightarrow \{(A = B) = [(x \in A) \underset{\forall x}=  (x \in B)]\}$
 \LAT
 Propositiones 1...41 quoque subsistunt, si $a$, $b$... classes indicant; praeterea est:
 \ENG
@@ -1128,7 +1131,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 64. \hspace{0.67cm} $\alpha$ =\scalebox{0.7}{$x$} $\beta$ . = . $[x\smallIn]$ $\alpha$ = $[x\smallIn]$ $\beta$
 \ENG
-64. \hspace{0.67cm} $(\alpha \underset{\forall \text{x}}= \beta) = (\{ x |  \alpha\} = \{x | \beta \} )$
+64. \hspace{0.67cm} $(\alpha \underset{\forall x}= \beta) = (\{ x |  \alpha\} = \{x | \beta \} )$
 \LAT
 \quad 2. Sint $x,y$ entia quacumque; system ex ente $x$ et ex ente $y$ compositum ut novum ens consideramus, et signo $(x,y)$ indicamus; similiterque si entium numerus maior fit. Sit $\alpha$ propositio indeterminata continens $x,y$; tunc $[(x,y)\smallIn]$ $\alpha$ significat classem entibus $(x,y)$ constitutam, quae conditioni $\alpha$ satisfaciunt. Erit:
 \ENG
@@ -1558,7 +1561,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \LAT
 9. \hspace{0.6cm} $k \smallIn \K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$
 \ENG
-9. \hspace{0.6cm} $\big(A$ is a {\scriptsize{CLASS}} $\wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall \text{x}]{} (x + 1 \in A)] \big) \rightarrow \mathbb{N} \subset A$
+9. \hspace{0.6cm} $\big(A$ is a {\scriptsize{CLASS}} $\wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall x]{} (x + 1 \in A)] \big) \rightarrow \mathbb{N} \subset A$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -2518,7 +2521,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \s*
 \centering $\dittoMarkLatin$ \s \raggedright $\Np$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{numerus primus.}
 \s
-\centering \dittoMarkEnglish \s \raggedright $\Np$ \s \centering \dittoMarkEnglish \s \raggedright \emph{prime number.}
+\centering \dittoMarkEnglish \s \raggedright $\mathbb{P}$ \s \centering \dittoMarkEnglish \s \raggedright \emph{prime number.}
 \s*
 \centering $\dittoMarkLatin$ \s \raggedright $\primeWith$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{est primus cum.}
 \s
@@ -2943,7 +2946,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s*
 2. \s $p,q,p',q' \smallIn \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \ppp x \smallIn \N \p x \frac{p}{q}, x \frac{p'}{q'} \smallIn \N : \C_x \p x \frac{p}{q} = x \frac{p'}{q'}$. \s
 \s
-2. \s $p,q,p',q' \in \mathbb{N} \rightarrow (\frac{p}{q} = \frac{p'}{q'}) = [ x \in \mathbb{N} \wedge (x \frac{p}{q}, x \frac{p'}{q'} \in \mathbb{N}) \xrightarrow[x]{} ( x \frac{p}{q} = x \frac{p'}{q'})]$. \s
+2. \s $p,q,p',q' \in \mathbb{N} \rightarrow (\frac{p}{q} = \frac{p'}{q'}) = [ x \in \mathbb{N} \wedge (x \frac{p}{q}, x \frac{p'}{q'} \in \mathbb{N}) \xrightarrow[\forall x]{} ( x \frac{p}{q} = x \frac{p'}{q'})]$. \s
 \s*
 3. \s $R = :: [x \smallIn] \ppp p, q \smallIn \N \p \frac{p}{q} = x : \no = \abs$. \s
 \s
@@ -3152,7 +3155,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \raggedright
 30. \s $a,b \smallIn \R \p \C \p a + b = [c \smallIn] (c \smallIn  \R \ppp x \smallIn \N \p x a, x b, x c \smallIn \N : \C_x \p xa + xb = xc)$. \s
 \s
-30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \big\{c \big| c \in  \mathbb{Q}^+ \wedge \big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[x]{}  xa + xb = xc \big) \big\}$. \s
+30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \big\{c \big| c \in  \mathbb{Q}^+ \wedge \big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[\forall x]{}  xa + xb = xc \big) \big\}$. \s
 \s*
 31. \s $a,b \smallIn \R \p \C :: b - a = \ppp [x \smallIn] (x \smallIn \R \p a + x = b)$. \s
 \s
@@ -3160,7 +3163,7 @@ The sign $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the p
 \s*
 32. \s $a,b \smallIn \R \p \C \p ab = [c \smallIn] (c \smallIn \R \ppp x \smallIn \N \p xa, (xa)b, xc \smallIn \N : \C_x \p (xa) b = xc)$. \s
 \s
-32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \big\{ c \big| c \in \mathbb{Q}^+ \wedge \big[ \big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \big) \xrightarrow[x]{} (xa) b = xc \big] \big\}$. \s
+32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \big\{ c \big| c \in \mathbb{Q}^+ \wedge \big[ \big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \big) \xrightarrow[\forall x]{} (xa) b = xc \big] \big\}$. \s
 \s*
 33. \s $a,b \smallIn \R \p \C \p b / a = [x \smallIn] (x \smallIn \R \p ax = b)$. \s
 \s
@@ -3254,7 +3257,7 @@ If $A \in \K \mathbb{Q}^+$, the sign $\sup(A)$ is read \emph{upper boundary}, or
 \s*
 2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
 \s
-2. \s $(A \in \K \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
+2. \s $(A \in \K \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[\forall u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
 \s*
 3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$. \s
 \s

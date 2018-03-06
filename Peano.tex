@@ -21,7 +21,7 @@
 %
 \usepackage{endnotes} % \endnote{...}
 \addtoendnotes{\vspace*{-1em}} % no extra vertical space between the endnotes-header and the endnotes
-\input{hyperendnotes.sty} % LOADS hyperendnotes.sty
+\input{hyperendnotes.sty} % enables links between endnotes and citing locations
 \def\enoteheading{} % to have endnotes without the usual heading
 
 
@@ -498,7 +498,7 @@ Signum \s Significatio \s Pag.
 \begin{translateSixCol}{0.06}{0.34}{0.1}{0.06}{0.34}{0.1}
 \raggedright
 $P$ \s propositio \s VII
-\s \scriptsize{proposition} \normalsize \s proposition \s VII
+\s $P$\# \s proposition \s VII
 \s* $K$ \s classis \s X
 \s \scriptsize{CLASS} \normalsize \s class \s X
 \s* $\cap$ \s et \s VII, X
@@ -520,13 +520,13 @@ $P$ \s propositio \s VII
 \s* \such \s qui \emph{vel} $[ \smallIn ]$ \s XII
 \s $\ni$ \s such that \emph{or} $[ \in ]$ \s XII
 \s* Th \s Theorema \s XVI
-\s  Th \s \normalsize Theorem \s XVI
+\s  Th \s Theorem \s XVI
 \s* Hp \s Hypothesis \s
-\s  Hp \s \normalsize Hypothesis \s
+\s  Hp \s Hypothesis \s
 \s* Ts \s Thesis \s
-\s  Ts \s \normalsize Thesis \s
-\s* L \s Logica \s
-\s  L \s \normalsize Logic \s
+\s  Ts \s Thesis \s
+\s* $L$ \s Logica \s
+\s  $L$\# \s Logic \s
 \end{translateSixCol}
 
 \vspace{1em}
@@ -567,11 +567,11 @@ $N$ \s numerus integer positivus \s 1
 \s* $\text{T}$ \s terminus, \emph{vel} limes summus \s 15
 \s $\sup()$ \s boundary \emph{or} upper limit \s 15
 \s* $\text{D}$ \s dividit \s 9
-\s $|$ \s \normalsize divides \s 9
+\s $|$ \s divides \s 9
 \s* \reflectbox{D} \s est multiplex \s 9
-\s \reflectbox{D} \s \normalsize is divisible \s 9
+\s \reflectbox{D} \s is divisible \s 9
 \s* $\primeWith$ \s est primus cum \s 6
-\s $\primeWith$ \s \normalsize is prime with \s 6
+\s $\primeWith$ \s is prime with \s 6
 \end{translateSixCol}
 
 \vspace{1em}
@@ -591,7 +591,7 @@ $-<$ \s non est minor \s
 \s* $\such \D$ \s divisor \s
 \s $\such \D$ \s is a divisor \s
 \s* $\text{M}\such\D$ \s maximus divisor \s
-\s $\text{M}\such\D$ \s \normalsize is the greatest divisor \s
+\s $\text{M}\such\D$ \s is the greatest divisor \s
 \end{translateSixCol}
 
 \peanoPage{VII} % page-number VII
@@ -959,9 +959,9 @@ Thus the sign $\not=$ means {\emph{is not equal to}}. If the proposition $a$ con
 \ENG
 \quad The sign \scriptsize{CLASS} \normalsize means {\emph{class}}, or aggregate of entities.
 \LAT
-\quad Signum \smallIn significat {\emph{est}}. Ita $a \smallIn b$ legitur $a$ {\emph{est quoddam}} $b$; $a \smallIn \K$ significat $a$ {\emph{est quaedam classis}}; $a \smallIn \text{P}$ significat $a$ {\emph{est quaedam propositio}}.
+\quad Signum $\smallIn$ significat {\emph{est}}. Ita $a \smallIn b$ legitur $a$ {\emph{est quoddam}} $b$; $a \smallIn \K$ significat $a$ {\emph{est quaedam classis}}; $a \smallIn \text{P}$ significat $a$ {\emph{est quaedam propositio}}.
 \ENG
-\quad The sign $\in$ means {\emph{is an element of}}. Thus $a \in B$ is read $a$ {\emph{is an element of}} $B$\irrelavent{; $A$ is a \scriptsize{CLASS} \normalsize means {\emph{$A$ is a class}}; $a$ is a \scriptsize{proposition} \normalsize means {\emph{a is a proposition}}}.
+\quad The sign $\in$ means {\emph{is an element of}}. Thus $a \in B$ is read $a$ {\emph{is an element of}} $B$\irrelavent{; $A$ is a \scriptsize{CLASS} \normalsize means {\emph{$A$ is a class}}; $a$ is a \scriptsize{proposition} \normalsize means {\emph{$a$ is a proposition}}}.
 \LAT
 \quad Loco $-(a \smallIn b)$ scribemus $a$ $- \smallIn b$; signum $-\smallIn$ significat {\emph{non est}}; scilicet:
 \ENG
@@ -1100,15 +1100,15 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \ENG
 \quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
 \LAT
-57. \hspace{0.67cm} $a$ \smallIn \text{P} . $\C$ : $[x\smallIn]$ $a$ . $\smallIn \K$
+57. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ : $[x\smallIn]$ $a$ . $\smallIn \K$
 \ENG
 57. \hspace{0.67cm} $a$ is a \scriptsize{proposition} \normalsize $\rightarrow \{x | a \}$ is a \scriptsize{CLASS} \normalsize 
 \LAT
-58. \hspace{0.67cm} $a$ \smallIn \text{K} . $\C$ $\pppNoSpace$ $[x\smallIn]$ . $x \smallIn a$ : = $a$
+58. \hspace{0.67cm} $a \smallIn \text{K}$ . $\C$ $\pppNoSpace$ $[x\smallIn]$ . $x \smallIn a$ : = $a$
 \ENG
 58. \hspace{0.67cm} $A$ is a \scriptsize{CLASS} \normalsize $\rightarrow \{ x | x \in A \} = A $
 \LAT
-59. \hspace{0.67cm} $a$ \smallIn \text{P} . $\C$ $\pppNoSpace$ $x$ \smallIn . $[x\smallIn]$ $a$ : = $a$
+59. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ $\pppNoSpace$ $x$ \smallIn . $[x\smallIn]$ $a$ : = $a$
 \ENG
 59. \hspace{0.67cm}  $a$ is a \scriptsize{proposition} \normalsize $\rightarrow (x \in \{x | a \}) = a$
 \LAT
@@ -1635,7 +1635,7 @@ Steps 3,4,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 
 \begin{translateTwoCol}
 \vspace{1em}
-\commentary{Peano's proof notation uses $(P1)$ and $(P6)$ to refer to proposition \#1 and \#6 proved earlier.  The $1[a]$ before $(P6)$ is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations (1) and (2) refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent and the implication, as in $(1)(2)$.  Each line of a modern proof consists of a statement and a rationale.  Peano's proof connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  Because Peano's proof statement are actual statements of logic, they can be combined together to form a single proof term.  This is what happens below.}
+\commentary{Peano's proof notation uses $P1$ and $P6$ to refer to proposition \#1 and \#6 proved earlier.  The $1[a]$ before $(P6)$ is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations $(1)$ and $(2)$ refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent with the implication, as in $(1)(2)$.  Peano's style is different from a modern proof, where each line consists of a statement and a rationale.  Here, he connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  This makes each line into a complete universal expression of logic.  All the steps can be combined together to form a single expression, called a ``proof term''.  This is what happens below.}
 \ENG
 \commentary{Peano is able to convert the entire proof into a single proof term.  This is possible because of his notation.  Modern notation does not generally use proof terms.  Modern works tend to use a proof tree, which we do not show here.  It is worth noting that some research into proof theory does use proof terms.}
 \LAT

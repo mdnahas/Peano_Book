@@ -165,7 +165,18 @@
                }
                
 
-\setcolumnwidth{0.25\fill/1em, 0.17\fill/1em, 0.08\fill/\columnsep, 0.25\fill/1em, 0.17\fill/1em, 0.08\fill}
+\newenvironment{translateEightCol}[8]
+               { % when beginning the environment
+                 % This complex line is need if you don't want \columnsep
+                 % space between each column.
+                 \setcolumnwidth{#1\fill/1em, #2\fill/1em, #3\fill/1em, #4\fill/\columnsep, #5\fill/1em, #6\fill/1em, #7\fill/1em, #8\fill}
+                 \begin{paracol}{8}
+               }
+               { % when ending the environment
+                 \end{paracol}
+               }
+               
+
 
                
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1514,8 +1525,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \commentary{Peano starts his natural numbers at 1; most modern versions start at 0.  Also, while Peano calls it ``successor'' (``sequens''), he does not use the modern convention of using ``S'' for it.}
 \end{translateTwoCol}
 
-\columnratio{0.1, 0.05, 0.1, 0.25, 0.1, 0.05, 0.1, 0.25}
-\begin{paracol}{8}
+\begin{translateEightCol}{0.1}{0.05}{0.1}{0.25}{0.1}{0.05}{0.1}{0.25}
 \centering Signo \s $\N$ \s significatur \s \raggedright \emph{numerus (integer positivus)}.
 \s
 \centering The~symbol \s $\mathbb{N}$ \s means \s \raggedright \emph{number (positive integer)}.
@@ -1531,7 +1541,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \centering $\dittoMarkLatin$ \s $=$  \s $\dittoMarkLatin$ \s \raggedright \emph{est aequalis}. Hoc ut novum signum considerandum est, etsi logicae signi figuram habeat.
 \s
 \centering \dittoMarkEnglish \s $=$ \s \dittoMarkEnglish \s \raggedright \emph{is equal to}. This must be considered as a new symbol, although it has the appearance of a symbol of logic.
-\end{paracol}
+\end{translateEightCol}
 
 \begin{translateTwoCol}
 \centering
@@ -1885,8 +1895,7 @@ From this definition, and the preceding, we deduce that:
 \peanoHeadingSmall{Explanations.}
 \end{translateTwoCol}
 
-\columnratio{0.12, 0.09, 0.09, 0.2, 0.12, 0.09, 0.09, 0.2}
-\begin{paracol}{8}
+\begin{translateEightCol}{0.1}{0.1}{0.1}{0.2}{0.1}{0.1}{0.1}{0.2}
 \centering Signo \s $-$ \s legitur \s \raggedright \emph{minus}.
 \s
 \centering The~symbol \s $-$ \s is~read \s \raggedright \emph{minus}.
@@ -1898,7 +1907,7 @@ From this definition, and the preceding, we deduce that:
 \centering $\dittoMarkLatin$ \s $>$ \s $\dittoMarkLatin$ \s \raggedright \emph{est maior.}
 \s
 \centering \dittoMarkEnglish \s $>$ \s \dittoMarkEnglish \s \raggedright \emph{is greater than.}
-\end{paracol}
+\end{translateEightCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2526,8 +2535,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \peanoHeadingSmall{Explications.}
 \end{translateTwoCol}
 
-\columnratio{0.12, 0.06, 0.06, 0.26, 0.12, 0.06, 0.06, 0.26}
-\begin{paracol}{8}
+\begin{translateEightCol}{0.12}{0.06}{0.06}{0.26}{0.12}{0.06}{0.06}{0.26}
 \centering Signum \s \raggedright $/$ \s \centering legatur \s \raggedright \emph{divisus per.}
 \s
 \centering The~symbol \s \raggedright $/$ \s \centering is~read \s \raggedright \emph{divided by.}
@@ -2547,7 +2555,7 @@ Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\m
 \centering $\dittoMarkLatin$ \s \raggedright $\primeWith$ \s \centering $\dittoMarkLatin$ \s \raggedright \emph{est primus cum.}
 \s
 \centering \dittoMarkEnglish \s \raggedright $\primeWith$ \s \centering \dittoMarkEnglish \s \raggedright \emph{is prime with.}
-\end{paracol}
+\end{translateEightCol}
 
 \peanoPage{10} % page-number 10
 

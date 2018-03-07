@@ -158,6 +158,17 @@
                  \end{paracol}
                }
 
+\newenvironment{translateFourCol}[4]
+               { % when beginning the environment
+                 % This complex line is need if you don't want \columnsep
+                 % space between each column.
+                 \setcolumnwidth{#1\fill/1em, #2\fill/\columnsep, #3\fill/1em, #4\fill}
+                 \begin{paracol}{4}
+               }
+               { % when ending the environment
+                 \end{paracol}
+               }
+               
 \newenvironment{translateSixCol}[6]
                { % when beginning the environment
                  % This complex line is need if you don't want \columnsep
@@ -344,8 +355,7 @@ Regis bibliopolae
 \vspace{1em}
 \end{translateTwoCol}
 
-\columnratio{0.25, 0.25, 0.25, 0.25}
-\begin{paracol}{4}
+\begin{translateFourCol}{0.25}{0.25}{0.25}{0.25}
 \centering
 Romae \s Florentiae 
 \s 
@@ -354,7 +364,7 @@ Romae \s Florentiae
 Via del Corse, 216-217. \s Via Oerretani, 8.
 \s
 \irrelavent{Via del Corso, 216-217.} \s \irrelavent{Via Oerretani, 8.}
-\end{paracol}
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -1323,24 +1333,23 @@ In Arithmetica, sint $a, b$ numeri; tunc $[b + a]$ sive $[a +] b$ numerum indica
 \irrelavent{In arithmetic, let $a$ and $b$ be numbers; then $[b + a]$ or $[a +] b$ denotes the number $x$ that satisfies the condition $b = x + a$, or $b = a + x$, that is $b - a$. Similarly we have $b [ \times a ] = [a \times ] b = b / a$. This notation can even find a use in analysis; thus} % Chose to translate ``signum'' as ``notation'' rather than ``symbol''.
 \end{translateTwoCol}
 
-\columnratio{0.30, 0.20, 0.30, 0.20}
-\begin{paracol}{4}
+\begin{translateFourCol}{0.30}{0.20}{0.30}{0.20}
 \hspace{0.54cm} $y = \sin$ $x$ $.$ = $.$ $x \smallIn$ $[\sin]$ $y$
 \s
-(loco $x = \mbox{arc}$ $\sin$ $y).$
+(loco $x = \mbox{arc}$ $\sin$ $y$).
 \s
-\todo
+\hspace{0.54cm} $(y = \sin x) = (x \in [\sin] y)$
 \s
-\todo
+(instead of $x = \arcsin y$).
 \s
 \hspace{0.54cm} $d F (x) = f(x) dx$ $.$ $=$ $.$ $F$ $(x)\smallIn$ $[d]$ $f(x)dx$
 \s
-(loco $F(x) = \int{f(x)dx}).$ 
+(loco $F(x) = \int{f(x)dx}$). 
 \s
-\todo
+\hspace{0.54cm} $\big( d F (x) = f(x) dx \big) = \big( F$ $(x)\smallIn$ $[d]$ $f(x)dx \big)$
 \s
-\todo
-\end{paracol}
+(instead of $F(x) = \int{f(x)dx}$).
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \hfill
@@ -2617,13 +2626,12 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\columnratio{0.1, 0.4, 0.1, 0.4}
-\begin{paracol}{4}
+\begin{translateFourCol}{0.1}{0.4}{0.1}{0.4}
 \raggedright
 \emph{Nota.} \s Haec theoremata ut in substractione demonstrantur.
 \s
 \emph{Note.} \s These theorems are proved as for subtraction.
-\end{paracol}
+\end{translateFourCol}
 
 \begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
 \raggedright

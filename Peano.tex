@@ -85,7 +85,9 @@
 \newcommand{\EE}{\mathop{\thinspace \textbf{E\hspace{0.02cm}E} \thinspace}}
 \newcommand{\LfatLfat}{\mathop{\thinspace \textbf{L\hspace{0.02cm}L} \thinspace}}
 
-\newcommand{\setOfSets}{\mathord{\text{SETS}}}
+\newcommand{\setOfSets}{\mathord{\text{{\footnotesize \textbf{SET}}}}}
+\newcommand{\prop}{\mathord{\text{{\footnotesize \textbf{PROP}}}}}
+
 
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\exterior}{ext}
@@ -523,9 +525,9 @@ Signum \s Significatio \s Pag.
 
 \begin{translateSixCol}{0.06}{0.34}{0.1}{0.06}{0.34}{0.1}
 \raggedright
-$P$ \s propositio \s VII
-\s $P$\# \s proposition \s VII
-\s* $\K$ \s classis \s X
+P \s propositio \s VII
+\s $\prop$ \emph{or} P\# \s proposition \s VII
+\s* $\text{K}$ \s classis \s X
 \s $\setOfSets$ \s set \s X
 \s* $\cap$ \s et \s VII, X
 \s $\wedge$ \s and \s VII, X
@@ -674,9 +676,9 @@ Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
-Signo $P$ significatur \emph{propositio}.
+Signo $\text{P}$ significatur \emph{propositio}.
 \ENG
-The symbol $P$ means \emph{proposition}.
+The symbol $\prop$ means \emph{proposition}.
 \LAT
 Signum $\cap$ legitur \emph{et}. Sint $a, b$ propositiones; tunc $a \cap b$ est simultanea affirmatio propositionum $a, b$. Brevitatis causa, loco $a \cap b$ vulgo scribemus $a$ $b$.
 \ENG
@@ -686,8 +688,8 @@ The symbol $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \we
 \peanoPage{VIII} % page-number VIII
 
 \begin{translateTwoCol}
-Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propositionis $a$.
-\ENG The symbol $\neg$ is read \emph{not}. Let $a$ be a $P$; then $\neg a$ is the negation of the proposition $a$.
+Signum $-$ legitur \emph{non}. Sit $a$ quaedam $\text{P}$; tunc $-a$ est negatio propositionis $a$.
+\ENG The symbol $\neg$ is read \emph{not}. Let $a$ be a $\prop$; then $\neg a$ is the negation of the proposition $a$.
 \LAT Signo $\cup$ legitur \emph{vel}. Sint $a,b$ propositiones; tunc $a \cup b$ idem est ac $-:-a$ $.$ $-b$.
 \ENG The symbol $\vee$ is read \emph{or}. Let $a,b$ be propositions; then $a \vee b$ is the same as $\neg[(\neg a) \wedge (\neg b)]$.
 \LAT \text{[}Signo $V$ significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.  % TODO: The math V here should be upright, not slanted
@@ -931,13 +933,13 @@ Let $a,b,c,...$ be propositions. We have:
 \ENG
 \commentary{Peano's $=$\scalebox{0.7}{$x$} operator contains a ``for all $x$'', while the $-=$\scalebox{0.7}{$x$} operator contains an ``exists $x$''.}
 \LAT
-\quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ $\C$ significat {\emph{non deducitur}}.
+\quad Ita signum $-$ $=$ significat \emph{non est aequalis}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ $\C$ significat \emph{non deducitur}.
 \ENG
-Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the variable $x, a\underset{\exists x}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The symbol $\not\rightarrow$ means {\emph{one does not deduce}}.
+Thus the symbol $\not=$ means \emph{is not equal to}. If the proposition $a$ contains the variable $x, a\underset{\exists x}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The symbol $\not\rightarrow$ means \emph{one does not deduce}.
 \LAT
-\quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . $\C$ $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
+\quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . $\C$ $-$ = . $b$ dicit: ab $a$ \emph{deducitur} $b$, sed non vice versa.
 \ENG
-\quad Similarly, if $\alpha$ and $\beta$ are symbols of relations, instead of $(a$ $\alpha$ $b) \wedge (a$ $\beta$ $b)$, and $(a$ $\alpha$ $b) \vee (a$ $\beta$ $b)$ we may write $a$ $(\alpha \wedge \beta)$ $b$ and $a$ $(\alpha \vee \beta)$ $b$. Thus, if $a$ and $b$ are propositions, the formula $a$ $(\rightarrow \wedge \not=)$ $b$ says: from $a$ {\emph{one deduces}} $b$, but not vice versa.
+\quad Similarly, if $\alpha$ and $\beta$ are symbols of relations, instead of $(a$ $\alpha$ $b) \wedge (a$ $\beta$ $b)$, and $(a$ $\alpha$ $b) \vee (a$ $\beta$ $b)$ we may write $a$ $(\alpha \wedge \beta)$ $b$ and $a$ $(\alpha \vee \beta)$ $b$. Thus, if $a$ and $b$ are propositions, the formula $a$ $(\rightarrow \wedge \not=)$ $b$ says: from $a$ \emph{one deduces} $b$, but not vice versa.
 \LAT
 \hspace{1.06cm} $a$ . $\C$ $-$ = . $b$ : = : $a$ $\C$ $b$ . $b$ $-$ $\C$ $a$
 \ENG
@@ -978,17 +980,17 @@ Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ c
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
-\quad Signo $\K$ significatur {\emph{classis}}, sive entium aggregatio.
+\quad Signo $\K$ significatur \emph{classis}, sive entium aggregatio.
 \ENG
-\quad The symbol $\setOfSets$ means a {\emph{set}}, or aggregate of entities.
+\quad The symbol $\setOfSets$ means a \emph{set}, or aggregate of entities.
 \LAT
-\quad Signum $\smallIn$ significat {\emph{est}}. Ita $a \smallIn b$ legitur $a$ {\emph{est quoddam}} $b$; $a \smallIn \K$ significat $a$ {\emph{est quaedam classis}}; $a \smallIn \text{P}$ significat $a$ {\emph{est quaedam propositio}}.
+\quad Signum $\smallIn$ significat \emph{est}. Ita $a \smallIn b$ legitur $a$ \emph{est quoddam} $b$; $a \smallIn \K$ significat $a$ \emph{est quaedam classis}; $a \smallIn \text{P}$ significat $a$ \emph{est quaedam propositio}.
 \ENG
-\quad The symbol $\in$ means {\emph{is an element of}}. Thus $a \in B$ is read $a$ {\emph{is an element of}} $B$\irrelavent{; $A \in \setOfSets$ means {\emph{$A$ is a set}}; $a$ is a {\scriptsize proposition} means {\emph{$a$ is a proposition}}}.
+\quad The symbol $\in$ means \emph{is}. Thus $a \in B$ is read $a$ \emph{is (an element of)} $B$; $A \in \setOfSets$ means \emph{$A$ is a set}; $a \in \prop$ means \emph{$a$ is a proposition}.
 \LAT
-\quad Loco $-(a \smallIn b)$ scribemus $a$ $- \smallIn b$; signum $-\smallIn$ significat {\emph{non est}}; scilicet:
+\quad Loco $-(a \smallIn b)$ scribemus $a$ $- \smallIn b$; signum $-\smallIn$ significat \emph{non est}; scilicet:
 \ENG
-\quad Instead of $\neg(a \in b)$ we shall write $a \not\in b$. The symbol $\not\in$ means {\emph{is not}}; thus:
+\quad Instead of $\neg(a \in b)$ we shall write $a \not\in b$. The symbol $\not\in$ means \emph{is not}; thus:
 \LAT
 44. \hspace{0.67cm} $a$ $- \smallIn b$ . = : $-$ . $a \smallIn b$
 \ENG
@@ -1040,24 +1042,24 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the set composed of ind
 \LAT
 \quad [Signo V, quod classem ex omnibus individuis constitutam, de quibus quaestio est, indieat, non utimur].
 \ENG
-\quad \irrelavent{[We shall not use the symbol \scriptsize{universe} \normalsize, which indicates the set composed of all individuals being considered].}
+\quad \irrelavent{[We shall not use the symbol $\mathbb{U}$, which indicates the set composed of all individuals being considered].}
 \LAT
-\quad Signum $\C$ significat {\emph{continetur}}. Ita $a$ $\C$ $b$ significat {\emph{classis a continetur in classi b}}.
+\quad Signum $\C$ significat \emph{continetur}. Ita $a$ $\C$ $b$ significat \emph{classis a continetur in classi b}.
 \ENG
-\quad The symbol $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the set a is contained in the set b}}.
+\quad The symbol $\subset$ means \emph{is contained}. Thus $A \subset B$ means \emph{the set A is contained in the set B}.
 \LAT
 50. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\C$ $b$ : = : $x \smallIn a$ . $\C$\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
 50. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall x]{} (x \in B)]\}$
 \LAT
-\quad [Formula $b$ \scalebox{0.8}{C} $a$ significare potest {\emph{classis b continet classem a}}; at signo  \scalebox{0.8}{C} non utiumur].
+\quad [Formula $b$ \scalebox{0.8}{C} $a$ significare potest \emph{classis b continet classem a}; at signo  \scalebox{0.8}{C} non utiumur].
 \ENG
-\quad \irrelavent{[The formula $B \supset A$ could mean {\emph{the set B contains the set A}}, but we shall not use the symbol $\supset$].}
+\quad \irrelavent{[The formula $B \supset A$ could mean \emph{the set B contains the set A}, but we shall not use the symbol $\supset$].}
 \LAT
 \ENG
 \commentary{The following paragraph describes ambiguity in Peano's notation.  In translating the expressions to modern notation, the ambiguity has been removed.  (Except for the equal sign, which is shared by sets and propositions.) }
 \LAT
-Hic signa $\abs$ et $\C$ significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
+Hic signa $\abs$ et $\C$ significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur \emph{absurdum} et \emph{deducitur}; si vero de classibus, \emph{nihil} et \emph{continetur}.
 \ENG
 \irrelavent{The symbols $(\bot / \varnothing)$ and $(\rightarrow / \subset)$ have meanings here which are slightly different from the preceding, but no ambiguity will arise, for if propositions are being considered, the symbols are read \emph{absurd} $(\bot)$ and \emph{one deduces} $(\rightarrow)$, but if sets are being considered, they are read \emph{empty} $(\varnothing)$ and \emph{is contained} $(\subset)$.}
 \LAT
@@ -1091,7 +1093,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 55. \hspace{0.67cm} $[(a \in B) \wedge (B \subset C)] \rightarrow (a \in C)$
 \LAT
 \ENG
-\commentary{Peano seems to be defining a subsets that each contain a single element, but the equation does not match.}
+\commentary{Below, Peano defines a subsets that each contain a single element.}
 \LAT
 \quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
 \ENG
@@ -1119,13 +1121,13 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \ENG
 \quad The notation of the inverse is $\{x | \ldots\}$, and we shall explain its use in the following section. Here we give some particular examples.  % Chose to translate ``signum'' as ``notation'' instead of ``symbol''
 \LAT
-\quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x] \smallIn a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
+\quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x] \smallIn a$, quae legitur \emph{ea x quibus a}, sive \emph{solutiones}, vel \emph{radices} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
 \ENG
-\quad 1. Let $a$ be a proposition containing the variable $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the set consisting of individuals which satisfy the condition $a$. That is:
+\quad 1. Let $a$ be a proposition containing the variable $x$; then the expression $\{ x | a \}$, which is read \emph{those x such that a}, or \emph{solutions}, or \emph{roots} of the condition $a$, indicates the set consisting of individuals which satisfy the condition $a$. That is:
 \LAT
 57. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ : $[x\smallIn]$ $a$ . $\smallIn \K$
 \ENG
-57. \hspace{0.67cm} $a$ is a {\scriptsize proposition} $\rightarrow ( \{x | a \} \in \setOfSets )$ 
+57. \hspace{0.67cm} $a \in \prop \rightarrow ( \{x | a \} \in \setOfSets )$ 
 \LAT
 58. \hspace{0.67cm} $a \smallIn \K$ . $\C$ $\pppNoSpace$ $[x\smallIn]$ . $x \smallIn a$ : = $a$
 \ENG
@@ -1133,7 +1135,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \LAT
 59. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ $\pppNoSpace$ $x$ \smallIn . $[x\smallIn]$ $a$ : = $a$
 \ENG
-59. \hspace{0.67cm}  $a$ is a {\scriptsize proposition} $\rightarrow (x \in \{x | a \}) = a$
+59. \hspace{0.67cm}  $a \in \prop \rightarrow (x \in \{x | a \}) = a$
 \LAT
 \quad Sint $\alpha$, $\beta$ propositiones indeterminatum continentes $x$; erit:
 \ENG
@@ -1173,7 +1175,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum $\D$ significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
-\quad 3. Let $x$ $\alpha$ $y$ be a relation between the variables $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the notation $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the symbol $\ni$ instead of the notation $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the symbol $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the set formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the symbol $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.   % Chose in multiple places to translate ``signum'' as ``notation'' instead of ``symbol''
+\quad 3. Let $x$ $\alpha$ $y$ be a relation between the variables $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the notation $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x \mathbin{\alpha} y$. For the sake of convenience, we use the symbol $\ni$ instead of the notation $[\in]$. Thus, $\mathord{\ni} \mathbin{\alpha} y = \{ x | x \mathbin{\alpha} y \}$, and the symbol $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni < y$ denotes the set formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the symbol $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x \in (\mathord{\ni} \mathbin{\alpha} y) = x \mathbin{\alpha} y$.   % Chose in multiple places to translate ``signum'' as ``notation'' instead of ``symbol''
 \LAT
 \quad 4. Sit $\alpha$ formula indeterminate continens $x$. Tunc scriptura $x' [x] \alpha$, quae legitur $x'$ \emph{loco} $x$ \emph{in} $\alpha$ \emph{substituto}, formulam indicat quae obtinetur si in $\alpha$, loco $x$, $x'$ legimus. Deducitur $x [x] \alpha = \alpha$.
 \ENG
@@ -1207,7 +1209,7 @@ which is read $x',y',...$ \emph{being substituted for} $x,y,...$ in $\alpha$, de
 
 \begin{translateTwoCol}
 \ENG
-\commentary{Peano has a very structural or syntactical version of a function.  There is no parameter.  The function is text like ``2 + `` or ``+ 3'' where if you append a number to the start or end, you have a valid expression.}
+\commentary{Peano has a very structural or syntactical version of a function.  There is no parameter.  A presymbol function (``functionis praesignum'') is text like ``2 + `` where if you append a number to the end, you have a valid expression.   A postsymbol function would be ``+ 2''.} 
 \LAT  
 Logicae notationes quae praecedunt exprimendae cuilibet arithmeticae propositioni sufficiunt, iisdemque tantum utimur. Hic notationes alias nonnullas breviter explicamus, quae utiles fieri possunt.
 \ENG
@@ -1298,7 +1300,7 @@ Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logic
 The notation $\{ x | \ldots \}$ is called \emph{notation of the inverse}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the variable $x$ and $A$ is a set composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\in$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i. % chose to translate ``signum'' as ``notation'' rather than ``symbol''
 \LAT
 \ENG
-\commentary{Peano relies on the syntax of his substitution operator to create a presymbol function.  The modern substitution operator has a different syntax and therefore doesn't work properly in the following context.}
+\commentary{In the following, Peano relies on the syntax of his substitution operator to create a presymbol function.  The modern substitution operator has a different syntax and therefore doesn't work properly.}
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
@@ -1394,7 +1396,7 @@ Thus, if $\upvarphi$ $\in$ $F' S$, then $\upvarphi$ $S$ denotes the set composed
 \LAT
 Sit $a$ quaedam classis; tunc $a \cap \K$, sive $\K \cap a$, sive $\K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $\K a$ indicat classes quae in $a$ continentur. Formula $x \smallIn \K a$ idem significat quod $x \smallIn \K$ . $x$ $\C$ $a$. Hac conventione quandoque utimur; ita $\K N$ isgnificat \emph{numerorum classem}.
 \ENG
-Let $A$ be a set; then $A \cap \setOfSets$, or $\setOfSets \cap A$, or $\setOfSets A$, denotes all sets of the form $A \cap X$, or $X \cap A$,\irrelavent{ $X A$,} where $X$ is any set; that is $\setOfSets A$ denotes the sets that are contained in $A$. The formula $X \in \setOfSets A$ means the same as  $X \in \setOfSets$ . $X \subset A$. We shall sometimes use this convention; thus $\setOfSets \mathbb{N}$ means \emph{a set of numbers}.
+Let $A$ be a set; then $A \cap \setOfSets$, or $\setOfSets \cap A$, or $\setOfSets A$, denotes all sets of the form $A \cap X$, or $X \cap A$,\irrelavent{ $X A$,} where $X$ is any set; that is $\setOfSets A$ denotes the sets that are contained in $A$. The formula $X \in \setOfSets A$ means the same as  $X \in \setOfSets \wedge X \subset A$. We shall sometimes use this convention; thus $\setOfSets \mathbb{N}$ means \emph{a set of numbers}.
 \LAT
 \ENG
 \commentary{Peano's natural numbers start at 1. This is why in the following text, $a + \mathbb{N}$ is the set of numbers ``greater than $a$'', rather than ``greater than or equal to $a$''.}
@@ -1652,12 +1654,12 @@ Def. 10 \s $2 = 1 + 1$ \s (4)
 \s*
 $(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \smallIn N$ \s (Theor.)
 \s
-Steps 3,4,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
+Steps 4,3,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 \end{translateSixCol}
 
 \begin{translateTwoCol}
 \vspace{1em}
-\commentary{Peano's proof notation uses $P1$ and $P6$ to refer to proposition \#1 and \#6 proved earlier.  The $1[a]$ before $(P6)$ is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations $(1)$ and $(2)$ refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent with the implication, as in $(1)(2)$.  Peano's style is different from a modern proof, where each line consists of a statement and a rationale.  Here, he connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  This makes each line into a complete universal expression of logic.  All the steps can be combined together to form a single expression, called a ``proof term''.  This is what happens below.}
+\commentary{Peano's proof notation uses ``$P1$'' and ``$P6$'' to refer to proposition \#1 and \#6 proved earlier.  The ``$1[a]$'' before ``$(P6)$'' is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent with the implication, as in ``$(1)(2)$''.  Peano's style is different from a modern proof, where each line consists of a statement and a rationale.  Here, he connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  This makes each line into a complete universal expression of logic.  All the steps can be combined together to form a single expression, called a ``proof term''.  This is what happens below.}
 \ENG
 \commentary{Peano is able to convert the entire proof into a single proof term.  This is possible because of his notation.  Modern notation does not generally use proof terms.  Modern works tend to use a proof tree, which we do not show here.  It is worth noting that some research into proof theory does use proof terms.}
 \LAT

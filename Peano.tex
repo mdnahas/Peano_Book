@@ -85,6 +85,8 @@
 \newcommand{\EE}{\mathop{\thinspace \textbf{E\hspace{0.02cm}E} \thinspace}}
 \newcommand{\LfatLfat}{\mathop{\thinspace \textbf{L\hspace{0.02cm}L} \thinspace}}
 
+\newcommand{\setOfSets}{\mathord{\text{SETS}}}
+
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\exterior}{ext}
 \DeclareMathOperator{\boundary}{bd}
@@ -521,7 +523,7 @@ Signum \s Significatio \s Pag.
 $P$ \s propositio \s VII
 \s $P$\# \s proposition \s VII
 \s* $K$ \s classis \s X
-\s {\scriptsize CLASS} \s class \s X
+\s $\setOfSets$ \s set \s X
 \s* $\cap$ \s et \s VII, X
 \s $\wedge$ \s and \s VII, X
 \s* $\cup$ \s vel \s VIII, X, XI
@@ -966,23 +968,20 @@ Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ c
 \begin{translateTwoCol}
 \centering
 \phantomsection
-\addcontentsline{toc}{section}{IV. Classes}
+\addcontentsline{toc}{section}{IV. Sets}
 \peanoHeadingSmall{IV. De classibus.}
 \ENG
-\peanoHeadingSmall{IV. Classes.}
+\peanoHeadingSmall{IV. Sets.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
-\ENG 
-\quad \commentary{Peano's ``Class'' is similar to modern ``sets''. }
-\LAT
 \quad Signo K significatur {\emph{classis}}, sive entium aggregatio.
 \ENG
-\quad The symbol {\scriptsize CLASS} means {\emph{class}}, or aggregate of entities.
+\quad The symbol $\setOfSets$ means a {\emph{set}}, or aggregate of entities.
 \LAT
 \quad Signum $\smallIn$ significat {\emph{est}}. Ita $a \smallIn b$ legitur $a$ {\emph{est quoddam}} $b$; $a \smallIn \K$ significat $a$ {\emph{est quaedam classis}}; $a \smallIn \text{P}$ significat $a$ {\emph{est quaedam propositio}}.
 \ENG
-\quad The symbol $\in$ means {\emph{is an element of}}. Thus $a \in B$ is read $a$ {\emph{is an element of}} $B$\irrelavent{; $A$ is a {\scriptsize CLASS} means {\emph{$A$ is a class}}; $a$ is a {\scriptsize proposition} means {\emph{$a$ is a proposition}}}.
+\quad The symbol $\in$ means {\emph{is an element of}}. Thus $a \in B$ is read $a$ {\emph{is an element of}} $B$\irrelavent{; $A \in \setOfSets$ means {\emph{$A$ is a set}}; $a$ is a {\scriptsize proposition} means {\emph{$a$ is a proposition}}}.
 \LAT
 \quad Loco $-(a \smallIn b)$ scribemus $a$ $- \smallIn b$; signum $-\smallIn$ significat {\emph{non est}}; scilicet:
 \ENG
@@ -1002,15 +1001,15 @@ Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ c
 \LAT
 \quad Sit $a$ classis; tunc $-a$ significatur classis indiviuis constituta quae non sunt $a$.
 \ENG
-\quad Let $A$ be a class. Then $\overline{A}$ means that class made up of individuals that are not in $A$. 
+\quad Let $A$ be a set. Then $\overline{A}$ means that set made up of individuals that are not in $A$. 
 \LAT
 46. \hspace{0.67cm} $a \smallIn \K$ . $\C$ : $x \smallIn -$ $a$ . = . $x$ $- \smallIn a$
 \ENG
-46. \hspace{0.67cm} $A$ is a {\scriptsize CLASS} $\rightarrow [(x \in \overline{A}) = (x \not\in A)]$
+46. \hspace{0.67cm} $A \in \setOfSets \rightarrow [(x \in \overline{A}) = (x \not\in A)]$
 \LAT
 \quad Sint $a$, $b$ classes; $a$ \scalebox{0.8}[0.6]{$\cap$} $b$, sive $a$ $b$, est classis individuis constituta
 \ENG
-\quad Let $A, B$ be classes. Then $A \cap B$\irrelavent{, or $A B$,} is the class composed of individuals
+\quad Let $A, B$ be sets. Then $A \cap B$\irrelavent{, or $A B$,} is the set composed of individuals
 \end{translateTwoCol}
 
 \peanoPage{XI} % page-number XI
@@ -1018,63 +1017,63 @@ Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ c
 \begin{translateTwoCol}
 quae eodem tempore sunt $a$ et $b$; $a$ $\cup$ $b$ est classis individuis constituta qui sunt $a$ vel $b$.
 \ENG
-which are at the same time in $A$ and $B$; $A \cup B$ is the class composed of individuals which are in $A$ or $B$.
+which are at the same time in $A$ and $B$; $A \cup B$ is the set composed of individuals which are in $A$ or $B$.
 \LAT
 47. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $x$ \smallIn . $a$ $b$ : = : $x \smallIn a$ . $x \smallIn b$
 \ENG
-47. \hspace{0.67cm} $A, B$ are {\scriptsize CLASSES} $\rightarrow \{[(x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]\}$
+47. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow \{[(x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]\}$
 \LAT
 48. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\cup$ $x$ \smallIn . $a$ $\cup$ $b$ : = : $x \smallIn a$ . $\cup$ . $x \smallIn b$
 \ENG
-48. \hspace{0.67cm} $A, B$ are {\scriptsize CLASSES} $\rightarrow \{[(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]\}$
+48. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow \{[(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]\}$
 \LAT
 \quad Signum $\abs$ indicat classem quae nullum continet individuum. Ita:
 \ENG
-\quad The symbol $\varnothing$ indicates the class which contains no individuals. Thus:
+\quad The symbol $\varnothing$ indicates the set which contains no individuals. Thus:
 \LAT
 49. \hspace{0.67cm} $a \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ = $\abs$ : = : $x \smallIn a$ . =\scalebox{0.7}{$x$}\thinspace  $\abs$
 \ENG
-49. \hspace{0.67cm} $A$ is a {\scriptsize CLASS} $\rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall x}= \bot]\}$ 
+49. \hspace{0.67cm} $A \in \setOfSets \rightarrow \{(A= \varnothing) = [(x \in A) \underset{\forall x}= \bot]\}$ 
 \LAT
 \quad [Signo V, quod classem ex omnibus individuis constitutam, de quibus quaestio est, indieat, non utimur].
 \ENG
-\quad \irrelavent{[We shall not use the symbol \scriptsize{universe} \normalsize, which indicates the class composed of all individuals being considered].}
+\quad \irrelavent{[We shall not use the symbol \scriptsize{universe} \normalsize, which indicates the set composed of all individuals being considered].}
 \LAT
 \quad Signum $\C$ significat {\emph{continetur}}. Ita $a$ $\C$ $b$ significat {\emph{classis a continetur in classi b}}.
 \ENG
-\quad The symbol $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the class a is contained in the class b}}.
+\quad The symbol $\subset$ means {\emph{is contained}}. Thus $a \subset b$ means {\emph{the set a is contained in the set b}}.
 \LAT
 50. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\C$ $b$ : = : $x \smallIn a$ . $\C$\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
-50. \hspace{0.67cm} $A, B$ are {\scriptsize CLASSES} $\rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall x]{} (x \in B)]\}$
+50. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow \{(A \subset B)=[(x\in A) \xrightarrow[\forall x]{} (x \in B)]\}$
 \LAT
 \quad [Formula $b$ \scalebox{0.8}{C} $a$ significare potest {\emph{classis b continet classem a}}; at signo  \scalebox{0.8}{C} non utiumur].
 \ENG
-\quad \irrelavent{[The formula $B \supset A$ could mean {\emph{the class B contains the class A}}, but we shall not use the symbol $\supset$].}
+\quad \irrelavent{[The formula $B \supset A$ could mean {\emph{the set B contains the set A}}, but we shall not use the symbol $\supset$].}
 \LAT
 \ENG
 \commentary{The following paragraph describes ambiguity in Peano's notation.  In translating the expressions to modern notation, the ambiguity has been removed.  (Except for the equal sign, which is shared by sets and propositions.) }
 \LAT
 Hic signa $\abs$ et $\C$ significationem habent quae paullo a praecedenti differt; sed nulla orietur ambiguitas. Nam si de propositionibus agatur, haec signa legantur {\emph{absurdum}} et {\emph{deducitur}}; si vero de classibus, {\emph{nihil}} et {\emph{continetur}}.
 \ENG
-\irrelavent{The symbols $(\bot / \varnothing)$ and $(\rightarrow / \subset)$ have meanings here which are slightly different from the preceding, but no ambiguity will arise, for if propositions are being considered, the symbols are read \emph{absurd} $(\bot)$ and \emph{one deduces} $(\rightarrow)$, but if classes are being considered, they are read \emph{empty} $(\varnothing)$ and \emph{is contained} $(\subset)$.}
+\irrelavent{The symbols $(\bot / \varnothing)$ and $(\rightarrow / \subset)$ have meanings here which are slightly different from the preceding, but no ambiguity will arise, for if propositions are being considered, the symbols are read \emph{absurd} $(\bot)$ and \emph{one deduces} $(\rightarrow)$, but if sets are being considered, they are read \emph{empty} $(\varnothing)$ and \emph{is contained} $(\subset)$.}
 \LAT
 \quad Formula $a$ = $b$, si $a$ et $b$ sint classes, significat $a$ $\C$ $b$ . $b$ $\C$ $a$. Itaque
 \ENG
 \raggedright
-\quad The formula $A = B$, if $A$ and $B$ are classes, means $(A \subset B) \wedge (B \subset A)$. Thus
+\quad The formula $A = B$, if $A$ and $B$ are sets, means $(A \subset B) \wedge (B \subset A)$. Thus
 \LAT
 51. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ = $b$ : = : $x \smallIn a$ . =\scalebox{0.7}{$x$}\thinspace . $x \smallIn b$
 \ENG
-51. \hspace{0.67cm} $A$, $B$ are {\scriptsize CLASSES} $\rightarrow \{(A = B) = [(x \in A) \underset{\forall x}=  (x \in B)]\}$
+51. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow \{(A = B) = [(x \in A) \underset{\forall x}=  (x \in B)]\}$
 \LAT
 Propositiones 1...41 quoque subsistunt, si $a$, $b$... classes indicant; praeterea est:
 \ENG
-Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
+Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \LAT
 52. \hspace{0.67cm} $a\smallIn b$ . $\C$ . $b \smallIn \text{K}$
 \ENG
-52. \hspace{0.67cm} $(a \in B) \rightarrow$ B is a {\scriptsize CLASS}
+52. \hspace{0.67cm} $(a \in B) \rightarrow B \in \setOfSets$
 \LAT
 53. \hspace{0.67cm} $a\smallIn b$ . $\C$ . $b$ $-$ = $\abs$
 \ENG
@@ -1093,11 +1092,11 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad Sit $s$ classis, et $k$ classis quae in $s$ contineatur; tunc dicimus $k$ esse individuum classis $s$, si $k$ ex uno tantum constat individuo. Itaque:
 \ENG
-\quad Let $\text{A}$ be a class, and $\text{B}$ be a class which is contained in $\text{A}$; then we say that $\text{B}$ is an individual of the class $\text{A}$, if $\text{B}$ consists of only one individual. That is:
+\quad Let $\text{A}$ be a set, and $\text{B}$ be a set which is contained in $\text{A}$; then we say that $\text{B}$ is an individual of the set $\text{A}$, if $\text{B}$ consists of only one individual. That is:
 \LAT
 56. \hspace{0.67cm} $s \smallIn \K$ . $k$ $\C$ $s$ : $\C$ :: $k \smallIn s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y \smallIn k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
-56. \hspace{0.67cm} $[\text{A}$ is a {\scriptsize CLASS} $\wedge$ $( \text{B} \subset \text{A})] \rightarrow \Big\{( \text{B} \in \text{A}) = \big\{(\text{B} \not= \varnothing) \wedge \{[(x,y) \in \text{B}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
+56. \hspace{0.67cm} $[\text{A} \in \setOfSets$ $\wedge$ $( \text{B} \subset \text{A})] \rightarrow \Big\{( \text{B} \in \text{A}) = \big\{(\text{B} \not= \varnothing) \wedge \{[(x,y) \in \text{B}] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1111,7 +1110,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 
 \begin{translateTwoCol}
 \ENG
-\commentary{By inversion, Peano means going backwards from a proposition to a class.  It is not a mathematical inverse; it is ``set-builder notation''. }
+\commentary{By inversion, Peano means going backwards from a proposition to a set.  It is not a mathematical inverse; it is ``set-builder notation''. }
 \LAT  
 \quad Inversionis signum est $\scalebox{1.5}[0.8]{[\scalebox{0.2}{ \ }]}$, eiusque usum in sequenti numero explicabimus. Hic tantum casus particulares exponimus.
 \ENG
@@ -1119,15 +1118,15 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x] \smallIn a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
 \ENG
-\quad 1. Let $a$ be a proposition containing the variable $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
+\quad 1. Let $a$ be a proposition containing the variable $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the set consisting of individuals which satisfy the condition $a$. That is:
 \LAT
 57. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ : $[x\smallIn]$ $a$ . $\smallIn \K$
 \ENG
-57. \hspace{0.67cm} $a$ is a {\scriptsize proposition} $\rightarrow \{x | a \}$ is a {\scriptsize CLASS} 
+57. \hspace{0.67cm} $a$ is a {\scriptsize proposition} $\rightarrow ( \{x | a \} \in \setOfSets )$ 
 \LAT
 58. \hspace{0.67cm} $a \smallIn \text{K}$ . $\C$ $\pppNoSpace$ $[x\smallIn]$ . $x \smallIn a$ : = $a$
 \ENG
-58. \hspace{0.67cm} $A$ is a {\scriptsize CLASS} $\rightarrow \{ x | x \in A \} = A $
+58. \hspace{0.67cm} $A \in \setOfSets \rightarrow \{ x | x \in A \} = A $
 \LAT
 59. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ $\pppNoSpace$ $x$ \smallIn . $[x\smallIn]$ $a$ : = $a$
 \ENG
@@ -1159,7 +1158,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 2. Sint $x,y$ entia quacumque; system ex ente $x$ et ex ente $y$ compositum ut novum ens consideramus, et signo $(x,y)$ indicamus; similiterque si entium numerus maior fit. Sit $\alpha$ propositio indeterminata continens $x,y$; tunc $[(x,y)\smallIn]$ $\alpha$ significat classem entibus $(x,y)$ constitutam, quae conditioni $\alpha$ satisfaciunt. Erit:
 \ENG
-\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the notation $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the variables $x,y$; then $\{(x,y) | \alpha \}$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:   % chose to translate ``signum'' as ``notation'' rather than ``symbol''
+\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the notation $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the variables $x,y$; then $\{(x,y) | \alpha \}$ indicates the set of entities $(x,y)$ which satisfy the condition $\alpha$. We have:   % chose to translate ``signum'' as ``notation'' rather than ``symbol''
 \LAT
 65. \hspace{0.67cm} $\alpha$ $\C$\scalebox{0.7}{$x, y$} $\beta$ . = . $[(x, y)\smallIn]$ $\alpha$  $\C$ $[(x, y)\smallIn]$ $\beta$
 \ENG
@@ -1171,7 +1170,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum $\D$ significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
-\quad 3. Let $x$ $\alpha$ $y$ be a relation between the variables $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the notation $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the symbol $\ni$ instead of the notation $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the symbol $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the symbol $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.   % Chose in multiple places to translate ``signum'' as ``notation'' instead of ``symbol''
+\quad 3. Let $x$ $\alpha$ $y$ be a relation between the variables $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the notation $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the symbol $\ni$ instead of the notation $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the symbol $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the set formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the symbol $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.   % Chose in multiple places to translate ``signum'' as ``notation'' instead of ``symbol''
 \LAT
 \quad 4. Sit $\alpha$ formula indeterminate continens $x$. Tunc scriptura $x' [x] \alpha$, quae legitur $x'$ \emph{loco} $x$ \emph{in} $\alpha$ \emph{substituto}, formulam indicat quae obtinetur si in $\alpha$, loco $x$, $x'$ legimus. Deducitur $x [x] \alpha = \alpha$.
 \ENG
@@ -1213,7 +1212,7 @@ The symbols of logic introduced above suffice to express any proposition of arit
 \LAT
 Sit $s$ quaedam classis; supponimus aequalitatem inter entia systematis $s$ definitam, quae conditionibus satisfaciat:
 \ENG
-Let $S$ be a class; we assume that equality is defined between the objects of the system $s$ so as to satisfy the conditions:
+Let $S$ be a set; we assume that equality is defined between the objects of the system $S$ so as to satisfy the conditions:
 \LAT
 \hspace{1.06cm} $a=a$
 \ENG
@@ -1229,7 +1228,7 @@ Let $S$ be a class; we assume that equality is defined between the objects of th
 \LAT
 Sit $\upvarphi$ signum, sive signorum aggregatus, ita ut si $x$ est ens classis $s$, scriptura $\upvarphi$ $x$ novum indicet ens; supponimus quoque aequalitatem inter entia $\upvarphi$ $x$ definitam; et si $x$ et $y$ sunt entia classis $s$, et est $x=y$, supponimus deduci posse $\upvarphi$ $x$ $=$ $\upvarphi$ $y$. Tunc signum $\upvarphi$ dicitur esse \emph{functionis praesignum in classi} $s$, et scribemus $\upvarphi$ $\such$ $F'$ $s$.
 \ENG
-Let $\upvarphi$ be a symbol or an aggregate of symbols such that, if $x$ is an object of the class $S$, the expression $\upvarphi$ $x$ denotes a new object; we assume also that equality is defined between the objects $\upvarphi$ $x$; further, if $x$ and $y$ are objects of the class $S$ and if $x = y$, we assume it is possible to deduce $\upvarphi$ $x = \upvarphi$ $y$. Then the symbol $\upvarphi$ is said to be a \emph{function presymbol in the class S}, and we write $\upvarphi$ $\ni$ $F'$ $S$.
+Let $\upvarphi$ be a symbol or an aggregate of symbols such that, if $x$ is an object of the set $S$, the expression $\upvarphi$ $x$ denotes a new object; we assume also that equality is defined between the objects $\upvarphi$ $x$; further, if $x$ and $y$ are objects of the set $S$ and if $x = y$, we assume it is possible to deduce $\upvarphi$ $x = \upvarphi$ $y$. Then the symbol $\upvarphi$ is said to be a \emph{function presymbol in the set S}, and we write $\upvarphi$ $\ni$ $F'$ $S$.
 \LAT
 \hspace{1.06cm} $s$ $\smallIn$ $K$ $.$ $\C$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\pppNoSpace$ $x,y$ $\smallIn$ $s$ $.$ $x$ $=$ $y$ $:$ $\C_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
 \ENG
@@ -1237,7 +1236,7 @@ Let $\upvarphi$ be a symbol or an aggregate of symbols such that, if $x$ is an o
 \LAT
 Verum si, cum sit $x$ quodlibet ens classis $s$, scriptura $x\upvarphi$ novum indicet ens, et, ex, $x$ $=$ $y$ deducitur $x\upvarphi$ $=$ $y\upvarphi$, tunc dicimus $\upvarphi$ esse \emph{functionis postsignum in classi} $s$ et scribemus $\upvarphi$ $\smallIn$ $s$ $'F$.
 \ENG
-If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a new object and $x\upvarphi = y\upvarphi$ follows from $x=y$, then we say that $\upvarphi$ is a \emph{function postsymbol in the class S}, and we write $\upvarphi$ $\in$ $S$ $'F$.
+If, $x$ being any object of the set $S$, the expression $x\upvarphi$ denotes a new object and $x\upvarphi = y\upvarphi$ follows from $x=y$, then we say that $\upvarphi$ is a \emph{function postsymbol in the set S}, and we write $\upvarphi$ $\in$ $S$ $'F$.
 \LAT
 \hspace{1.06cm} $s$ $\smallIn$ $K$ $.$ $\C$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\pppNoSpace$ $x,y$ $\smallIn$ $s$ $.$ $x$ $=$ $y$ $:$ $\C_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
 \ENG
@@ -1245,7 +1244,7 @@ If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a
 \LAT
 \emph{Exempla}. Sit $a$ numerus; tunc $a$ $+$ est functionis praesignum in numerorum classe, et $+$ $a$ est functionis postsignum; quicumque enim est numerus $x$, formulae $a$ $+$ $x$ et $x$ $+$ $a$ novos indicant numeros, et ex $x$ $=$ $y$ deducitur $a$ $+$ $x$ $=$ $a$ $+$ $y$, et $x$ $+$ $a$ $=$ $y$ $+$ $a$. Itaque
 \ENG
-\emph{Examples}. Let $a$ be a number; then $a+$ is a function presymbol in the class of numbers, and $+a$ is a function postsymbol; for any number $x$, formulas $a+x$ and $x+a$ denote new numbers; $a+x=a+y$ and $x+a=y+a$ follow from $x=y$. Thus
+\emph{Examples}. Let $a$ be a number; then $a+$ is a function presymbol in the set of numbers, and $+a$ is a function postsymbol; for any number $x$, formulas $a+x$ and $x+a$ denote new numbers; $a+x=a+y$ and $x+a=y+a$ follow from $x=y$. Thus
 \LAT
 \hspace{1.06cm} $a$ $\smallIn \N . \C : a + . \smallIn .$ $F' \N$
 \ENG
@@ -1261,7 +1260,7 @@ If, $x$ being any object of the class $S$, the expression $x\upvarphi$ denotes a
 \LAT
 Sit $\upvarphi$ functionis praesignum in classe $s$. Tunc $[\upvarphi] y$ classem significat iis $x$ constitutam, quae conditioni $\upvarphi x$ $=$ $y$ satisfaciunt; scilicet:
 \ENG
-Let $\upvarphi$ be a function presymbol in the class $S$. Then $[\upvarphi] y$ denotes the class composed of $x$ that satisfy the condition $\upvarphi x = y$; that is,
+Let $\upvarphi$ be a function presymbol in the set $S$. Then $[\upvarphi] y$ denotes the set composed of $x$ that satisfy the condition $\upvarphi x = y$; that is,
 \LAT
 \emph{Def}. \hspace{0.25cm} $s$ $\smallIn$ K $.$ $\upvarphi$ $\smallIn$ $F'$ $s$ $:$ $\C$ $:$ $[\upvarphi]y$ $.$ $=$ $.$ $[x \smallIn]$ $(\upvarphi x$ $=$ $y)$
 \ENG
@@ -1273,7 +1272,7 @@ Let $\upvarphi$ be a function presymbol in the class $S$. Then $[\upvarphi] y$ d
 \begin{translateTwoCol}
 Classis $[\upvarphi] y$ vel unum vel plura, vel etiam nullum individuum continere potest. Erit:
 \ENG
-The class $[\upvarphi] y$ may contain one or several individuals, or none at all. We have:
+The set $[\upvarphi] y$ may contain one or several individuals, or none at all. We have:
 \LAT
 \hspace{1.06cm} $s$ $\smallIn$ K $.$ $\upvarphi$ $\smallIn$ $F'$ $s$ $:$ $\C$ $:$ $y$ $=$ $\upvarphi$ $x$ $.$ $=$ $.$ $x$ $\smallIn$ $[\upvarphi] y$
 \ENG
@@ -1293,7 +1292,7 @@ Let $\upvarphi$ be a function postsymbol; we write similarly:
 \LAT
 Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logica iam exposuimus. Nam si $\alpha$ est propositio indeterminatum continens $x$, atque $A$ est classis individuis $x$ composita quae conditioni $\alpha$ satisfaciunt, erit $x$ $\smallIn$ $a$ $.$ $=$ $\alpha$, tunc $a$ $=$ $[x$\smallIn$]$ $\alpha$, ut in V, i.
 \ENG
-The notation $\{ x | \ldots \}$ is called \emph{notation of the inverse}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the variable $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\in$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i. % chose to translate ``signum'' as ``notation'' rather than ``symbol''
+The notation $\{ x | \ldots \}$ is called \emph{notation of the inverse}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the variable $x$ and $A$ is a set composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\in$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i. % chose to translate ``signum'' as ``notation'' rather than ``symbol''
 \LAT
 \ENG
 \commentary{Peano relies on the syntax of his substitution operator to create a presymbol function.  The modern substitution operator has a different syntax and therefore doesn't work properly in the following context.}
@@ -1311,7 +1310,7 @@ Similarly, let $\alpha$ be a formula containing the variable $x$ and let $\upvar
 \LAT
 Alios quoque usus in logica signum $[ ]$ habere potest, quos breviter esponimus, quum ipsis non utamur. Sint $a$ et $b$ duae classes; tunc $[a \cap ]b$ sive $b[ \cap a]$ classes indicat $x$, quae conditioni $b = a \cap x$, sive $b = x \cap a$ satisfaciunt. Si $b$ in $a$ non continetur, nulla classis huic conditioni satifacit; si $b$ in $a$ continetur, signum $b [ \cap a ]$ omnes indicat classes quae $b$ continent atque in $b \cup - a$ continentur.
 \ENG
-\irrelavent{The symbol $[ ]$ can have other uses in logic, which we present only briefly, since we shall not use it in these ways. Let $A$ and $B$ be two classes; then $[A \cap ]B$ or $B[ \cap A]$ denotes the classes $X$ that satisfy the condition $B = A \cap X$, or $B = X \cap A$. If $B$ is not contained in $A$, no class satisfies this condition; if $B$ is contained in $A$, the notation $B [ \cap A ]$ denotes all classes that contain $B$ and are contained in $B \cup  \overline{A}$.} % Chose to translate second ``signum'' as ``notation'' rather than ``symbol''.  May also want to use it on first one.
+\irrelavent{The symbol $[ ]$ can have other uses in logic, which we present only briefly, since we shall not use it in these ways. Let $A$ and $B$ be two sets; then $[A \cap ]B$ or $B[ \cap A]$ denotes the sets $X$ that satisfy the condition $B = A \cap X$, or $B = X \cap A$. If $B$ is not contained in $A$, no set satisfies this condition; if $B$ is contained in $A$, the notation $B [ \cap A ]$ denotes all sets that contain $B$ and are contained in $B \cup  \overline{A}$.} % Chose to translate second ``signum'' as ``notation'' rather than ``symbol''.  May also want to use it on first one.
 \LAT
 In Arithmetica, sint $a, b$ numeri; tunc $[b + a]$ sive $[a +] b$ numerum indicat $x$, qui conditioni $b = x + a$, sive $b = a + x$ satisfacit, nempe $b - a$. Similiter erit $b [ \times a ] = [a \times ] b = b / a$. Et in analysi hoc signum usuvenire potest; itaque
 \ENG
@@ -1344,7 +1343,7 @@ In Arithmetica, sint $a, b$ numeri; tunc $[b + a]$ sive $[a +] b$ numerum indica
 \LAT
 Sit rursum $\upvarphi$ functionis praesignum in classi $s$, sitque $k$ classis
 \ENG
-Let $\upvarphi$ again be a function presymbol in a class $S$ and let $C$ be a class
+Let $\upvarphi$ again be a function presymbol in a set $S$ and let $C$ be a set
 \end{translateTwoCol}
 
 \peanoPage{XV} % page-number XV
@@ -1352,7 +1351,7 @@ Let $\upvarphi$ again be a function presymbol in a class $S$ and let $C$ be a cl
 \begin{translateTwoCol}
 in $s$ contenta; tunc $\upvarphi k$ classem indicat omnibus $\upvarphi x$ compositam, ubi $x$ sunt entia classis $k$; scilicet
 \ENG
-contained in $S$; then $\upvarphi C$ denotes the class consisting of all $\upvarphi x$, where the $x$ are the objects of class $C$; that is
+contained in $S$; then $\upvarphi C$ denotes the set consisting of all $\upvarphi x$, where the $x$ are the objects of set $C$; that is
 \LAT
 \emph{Def.} \hspace{0.25cm} $s$ $\smallIn$ K $.$ $k$ $\smallIn$ K $.$ $k$ $\C$ $s$ $.$ $\upvarphi$ $\smallIn$ $F'$ $s$ $:$ $\C$ $.$ $\upvarphi$ $k$ $=$ $[y $\smallIn$]$ $(k$ $.$ $[\upvarphi]y$ $:$ $-$ $=$ $\abs$)
 \ENG
@@ -1368,7 +1367,7 @@ Or \hspace{0.25cm} \todo
 \LAT
 Itaque, si $\upvarphi$ $\smallIn$ $F' s$, tunc $\upvarphi$ $s$ classem indicat omnibus $\upvarphi$ $x$ constitutam, ubi $x$ sint entia classis $s$. Erit:
 \ENG
-Thus, if $\upvarphi$ $\in$ $F' S$, then $\upvarphi$ $S$ denotes the class composed of all $\upvarphi$ $x$, where the $x$ are objects of the class $S$. We have:
+Thus, if $\upvarphi$ $\in$ $F' S$, then $\upvarphi$ $S$ denotes the set composed of all $\upvarphi$ $x$, where the $x$ are objects of the set $S$. We have:
 \LAT
 \hspace{1.06cm} $s \smallIn \K$ . $\upvarphi \smallIn F' s$ . $y \smallIn \upvarphi s : \C : \upvarphi [\upvarphi] y = y$
 \ENG
@@ -1392,14 +1391,14 @@ Thus, if $\upvarphi$ $\in$ $F' S$, then $\upvarphi$ $S$ denotes the class compos
 \LAT
 Sit $a$ quaedam classis; tunc $a \cap K$, sive $K \cap a$, sive $K a$, classes omnes indicat formae $a \cap x$, sive $x \cap a$, $x a$, ubi $x$ est classis quacumque; scilicet $K a$ indicat classes quae in $a$ continentur. Formula $x \smallIn \K a$ idem significat quod $x \smallIn \K$ . $x$ $\C$ $a$. Hac conventione quandoque utimur; ita $K N$ isgnificat \emph{numerorum classem}.
 \ENG
-Let $a$ be a class; then $a \cap K$, or $K \cap a$, or $K a$, denotes all classes of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any class; that is $K a$ denotes the classes that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\C$ $a$. We shall sometimes use this convention; thus $K \mathbb{N}$ means \emph{a class of numbers}.
+Let $a$ be a set; then $a \cap K$, or $K \cap a$, or $K a$, denotes all sets of the form $a \cap x$, or $x \cap a$, $x a$, where $x$ is any set; that is $K a$ denotes the sets that are contained in $a$. The formula $x \in K a$ means the same as  $x \in K$ . $x$ $\C$ $a$. We shall sometimes use this convention; thus $K \mathbb{N}$ means \emph{a set of numbers}.
 \LAT
 \ENG
 \commentary{Peano's natural numbers start at 1. This is why in the following text, $a + \mathbb{N}$ is the set of numbers ``greater than $a$'', rather than ``greater than or equal to $a$''.}
 \LAT
 Similiter, si $a$ est classis, $K \cup a$ indicat classes quae $a$ continent. Sit $a$ numerus; tunc $a + N$, sive $N + a$, \emph{numeros} indicat \emph{numero a maiores}; $a \times N$, sive $N \times a$, sive $N a$ indicat \emph{multiplices numeri a}; $a^N$ indicat \emph{potestas numeri} $a$; $N^2$, $N^3$, ... indicat \emph{numeros quadratos}, vel \emph{numeros cubos},...
 \ENG
-Similarly, if $A$ is a class, $K \cup A$ indicates the classes that contain $A$. Let $a$ be a number; then $a + \mathbb{N}$, or $\mathbb{N} + a$, denotes \emph{the numbers greater than the number} $a$; $a \times \mathbb{N}$, or $\mathbb{N} \times a$, or $\mathbb{N} a$ denotes \emph{the multiples of the number} $a$; $a^\mathbb{N}$ denotes \emph{the powers of the number} $a$; $\mathbb{N}^2$, $\mathbb{N}^3$, ... denote \emph{the squares}, \emph{the cubes},...
+Similarly, if $A$ is a set, $K \cup A$ indicates the sets that contain $A$. Let $a$ be a number; then $a + \mathbb{N}$, or $\mathbb{N} + a$, denotes \emph{the numbers greater than the number} $a$; $a \times \mathbb{N}$, or $\mathbb{N} \times a$, or $\mathbb{N} a$ denotes \emph{the multiples of the number} $a$; $a^\mathbb{N}$ denotes \emph{the powers of the number} $a$; $\mathbb{N}^2$, $\mathbb{N}^3$, ... denote \emph{the squares}, \emph{the cubes},...
 \LAT
 \hfill
 \ENG
@@ -1587,7 +1586,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \LAT
 9. \hspace{0.6cm} $k \smallIn \K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$
 \ENG
-9. \hspace{0.6cm} $\big(A$ is a {\scriptsize{CLASS}} $\wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall x]{} (x + 1 \in A)] \big) \rightarrow \mathbb{N} \subset A$
+9. \hspace{0.6cm} $\big(A \in \setOfSets \wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall x]{} (x + 1 \in A)] \big) \rightarrow \mathbb{N} \subset A$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -2182,7 +2181,7 @@ From this definition, and the preceding, we deduce that:
 \s*
 Sit $a \smallIn \K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
 \s
-Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a class of numbers; then $\max(A)$ is read \emph{greatest among} $A$, and $\min(A)$ is read \emph{least among A}.
+Let $A \smallIn \K \mathbb{N}$, that is, let $A$ be a set of numbers; then $\max(A)$ is read \emph{greatest among} $A$, and $\min(A)$ is read \emph{least among A}.
 \s*
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
@@ -3266,7 +3265,7 @@ The symbol $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the
 \raggedright
 Si $a \smallIn \K \R$, signum $\T a$ legitur \emph{terminus summus}, vel \emph{limes summus classis} $a$. Supra hoc novum ens relationes ac operationes tantum definimus.
 \s
-If $A \in \K \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper boundary}, or \emph{upper limit of the class} $A$. We shall define only a few relations and operations on this new entity.
+If $A \in \K \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper boundary}, or \emph{upper limit of the set} $A$. We shall define only a few relations and operations on this new entity.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -3436,7 +3435,7 @@ The symbol $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive re
 \raggedright
 Si $a \smallIn \K \Q$, signa $\I a$, $\E a$, $\Lfat a$ leguntur: \emph{interior, exterior, limes classis} $a$.
 \s
-If $A \in \K \mathbb{R}^+$, the symbols $\interior(A)$, $\exterior(A)$, $\boundary(A)$ are read: \emph{interior, exterior, limit of the class} $A$.
+If $A \in \K \mathbb{R}^+$, the symbols $\interior(A)$, $\exterior(A)$, $\boundary(A)$ are read: \emph{interior, exterior, limit of the set} $A$.
 \end{translateTwoCol}
 
 \peanoPage{17} % page-number 17

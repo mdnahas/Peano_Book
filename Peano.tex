@@ -638,7 +638,7 @@ $-<$ \s non est minor \s
 \begin{translateTwoCol}
 Litteris $a,b,... x,y,... x', y',...$ entia indicamus indeterminata quaecumque. Entia vero determinata signis, sive litteris $\mathbb{P}, K, \mathbb{N},...$ indicamus.
 \ENG
-By the letters $a,b,... x,y,... x', y',...$ we indicate any indeterminate entities. Determinate entities are, however, indicated by the symbols, or rather by the letters, $P, K, N,...$
+By the letters $a,b,... x,y,... x', y',...$ we indicate any variables. Constants are, however, indicated by the symbols, or rather by the letters, $P, K, N,...$
 \LAT
 Signa plerumque in eadem linea scribemus. Ut ordo pateat quo ea coniungere oporteat, \emph{parenthesibus} ut in algebra, sive \emph{punctis} $. : \pppNoSpace :\hspace{0.1em}:$ etc. utimur.
 \ENG
@@ -692,7 +692,7 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $P$; tunc $-a$ est negatio propos
 \LAT \text{[}Signum C significat \emph{est consequentia}; ita $b$ C $a$ legitur $b$ \emph{est consequentia propositionis} $a$. Sed hoc signo nunquam utimur\text{]}.
 \ENG \irrelavent{The symbol $\leftarrow$ means \emph{is a consequence of}. Thus $b \leftarrow a$ is read $b$ \emph{is a consequence of the proposition} $a$. But we never use this symbol.}
 \LAT Signum $\C$ significat \emph{deducitur}; ita $a$ $\C$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\C_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\C_{x,y,...}$, scribemus solum $\C$.
-\ENG The symbol $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the indeterminate quantities $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[\forall x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[\forall x,y,...]{}$, we write only $\rightarrow$.
+\ENG The symbol $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the variables $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[\forall x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[\forall x,y,...]{}$, we write only $\rightarrow$.
 \LAT Signum = significat \emph{est aequalis}. Sint $a,b$ propositiones; tunc $a=b$ idem significat quod $a$ $\C$ $b$ $.$ $b$ $\C$ $a$; propositio $a=_{x,y,...} b$ idem significat quod $a$ $ \C_{x,y,...} b$ $.$ $b$ $\C_{x,y,...} a$.
 \ENG The symbol = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\underset{\forall x,y,...}=b$ means the same as ($a \xrightarrow[\forall x,y,...]{} b) \wedge (b \xrightarrow[\forall x,y,...]{} a)$.
 \end{translateTwoCol}
@@ -928,7 +928,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 \quad Ita signum $-$ $=$ significat {\emph{non est aequalis}}. Si propositio $a$ indeterminatum continet $x$, $a$ $-=$\scalebox{0.7}{$x$}\thinspace $\abs$ significat: sunt $x$ quae conditioni $a$ satisfaciunt. Signum $-$ $\C$ significat {\emph{non deducitur}}.
 \ENG
-Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the indeterminate $x, a\underset{\exists x}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The symbol $\not\rightarrow$ means {\emph{one does not deduce}}.
+Thus the symbol $\not=$ means {\emph{is not equal to}}. If the proposition $a$ contains the variable $x, a\underset{\exists x}\neq \bot$ means: there is an $x$ which satisfies condition $a$. The symbol $\not\rightarrow$ means {\emph{one does not deduce}}.
 \LAT
 \quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . $\C$ $-$ = . $b$ dicit: ab $a$ {\emph{deducitur}} $b$, sed non vice versa.
 \ENG
@@ -1119,7 +1119,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 1. Sit $a$ propositio, indeterminatum continens $x$; tunc scriptura $[x] \smallIn a$, quae legitur \emph{ea x quibus a}, sive {\emph{solutiones}}, vel {\emph{radices}} conditionis $a$, classem significat individuis constitutam, quae conditioni $a$ satisfaciunt. Itaque:
 \ENG
-\quad 1. Let $a$ be a proposition containing the indeterminate $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
+\quad 1. Let $a$ be a proposition containing the variable $x$; then the expression $\{ x | a \}$, which is read {\emph{those x such that a}}, or {\emph{solutions}}, or {\emph{roots}} of the condition $a$, indicates the class consisting of individuals which satisfy the condition $a$. That is:
 \LAT
 57. \hspace{0.67cm} $a \smallIn \text{P}$ . $\C$ : $[x\smallIn]$ $a$ . $\smallIn \K$
 \ENG
@@ -1135,7 +1135,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad Sint $\alpha$, $\beta$ propositiones indeterminatum continentes $x$; erit:
 \ENG
-\quad Let $\alpha, \beta$ be propositions containing the indeterminate $x$. We will have:
+\quad Let $\alpha, \beta$ be propositions containing the variable $x$. We will have:
 \LAT
 60. \hspace{0.67cm} $[x\smallIn]$ ($\alpha$ $\beta$) = ($[x\smallIn]$ $\alpha)$ $([x\smallIn]$ $\beta$)
 \ENG
@@ -1159,7 +1159,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 2. Sint $x,y$ entia quacumque; system ex ente $x$ et ex ente $y$ compositum ut novum ens consideramus, et signo $(x,y)$ indicamus; similiterque si entium numerus maior fit. Sit $\alpha$ propositio indeterminata continens $x,y$; tunc $[(x,y)\smallIn]$ $\alpha$ significat classem entibus $(x,y)$ constitutam, quae conditioni $\alpha$ satisfaciunt. Erit:
 \ENG
-\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the notation $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the indeterminate $x,y$; then $\{(x,y) | \alpha \}$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:   % chose to translate ``signum'' as ``notation'' rather than ``symbol''
+\quad 2. Let $x,y$ be any entities. We shall consider the system composed of the entity $x$ and the entity $y$ as a new entity, and indicate it by the notation $(x,y)$; and similarly if the number of entities becomes larger. Let $\alpha$ be a proposition containing the variables $x,y$; then $\{(x,y) | \alpha \}$ indicates the class of entities $(x,y)$ which satisfy the condition $\alpha$. We have:   % chose to translate ``signum'' as ``notation'' rather than ``symbol''
 \LAT
 65. \hspace{0.67cm} $\alpha$ $\C$\scalebox{0.7}{$x, y$} $\beta$ . = . $[(x, y)\smallIn]$ $\alpha$  $\C$ $[(x, y)\smallIn]$ $\beta$
 \ENG
@@ -1171,15 +1171,15 @@ Propositions 1-41 also hold if $a,b,...$ indicate classes. In addition, we have:
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum $\D$ significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
-\quad 3. Let $x$ $\alpha$ $y$ be a relation between the indeterminates $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the notation $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the symbol $\ni$ instead of the notation $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the symbol $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the symbol $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.   % Chose in multiple places to translate ``signum'' as ``notation'' instead of ``symbol''
+\quad 3. Let $x$ $\alpha$ $y$ be a relation between the variables $x$ and $y$ (eg. in logic, the relations $x = y$, $x \not= y$, $x \rightarrow y$; in arithmetic, $x < y$, $x > y$, ...). Then the notation $[\in$ $\alpha]$ $y$ denotes the $x$ that satisfy the relation $x$ $\alpha$ $y$. For the sake of convenience, we use the symbol $\ni$ instead of the notation $[\in]$. Thus, $\ni$ $\alpha$ $y$  $= \{ x | x \alpha y \}$, and the symbol $\ni$ is read \emph{the objects that}. For example, let $y$ be a number; then $\ni$ $< y$ denotes the class formed by the numbers $x$ that satisfy the condition $x<y$, that is, \emph{the objects that are smaller than} $y$, or simply \emph{the objects smaller than} $y$. Similarly, if the symbol $|$ means \emph{divides} or \emph{is a divisor of}, the formula $\ni|$ means \emph{the objects that divide} or \emph{the divisors}. It follows that $x$ $\in$ $(\ni$ $\alpha$ $y)$ $=$ $x$ $\alpha$ $y$.   % Chose in multiple places to translate ``signum'' as ``notation'' instead of ``symbol''
 \LAT
 \quad 4. Sit $\alpha$ formula indeterminate continens $x$. Tunc scriptura $x' [x] \alpha$, quae legitur $x'$ \emph{loco} $x$ \emph{in} $\alpha$ \emph{substituto}, formulam indicat quae obtinetur si in $\alpha$, loco $x$, $x'$ legimus. Deducitur $x [x] \alpha = \alpha$.
 \ENG
-\quad 4. Let $\alpha$ be a formula containing the indeterminate $x$. Then the expression $\alpha [ x := x' ]$, which is read $x'$ \emph{being substituted for} $x$ \emph{in} $\alpha$, denotes the formula obtained if, in $\alpha$, we read $x'$ for $x$. It follows that $\alpha[x := x] = \alpha$.
+\quad 4. Let $\alpha$ be a formula containing the variable $x$. Then the expression $\alpha [ x := x' ]$, which is read $x'$ \emph{being substituted for} $x$ \emph{in} $\alpha$, denotes the formula obtained if, in $\alpha$, we read $x'$ for $x$. It follows that $\alpha[x := x] = \alpha$.
 \LAT
 \quad 5. Sit $\alpha$ formula, quae indeterminata $x,y,...$ continet. Tunc
 \ENG
-\quad 5. Let $\alpha$ be a formula that contains the indeterminates $x,y,...$ Then
+\quad 5. Let $\alpha$ be a formula that contains the variables $x,y,...$ Then
 \LAT
 \hspace{1.06cm} $(x',y',...)$ $[x,y,...]$ $\alpha$,
 \ENG
@@ -1293,21 +1293,21 @@ Let $\upvarphi$ be a function postsymbol; we write similarly:
 \LAT
 Signum $[$ $]$ dicitur \emph{inversionis signum}, eiusque usus nonullos in logica iam exposuimus. Nam si $\alpha$ est propositio indeterminatum continens $x$, atque $A$ est classis individuis $x$ composita quae conditioni $\alpha$ satisfaciunt, erit $x$ $\smallIn$ $a$ $.$ $=$ $\alpha$, tunc $a$ $=$ $[x$\smallIn$]$ $\alpha$, ut in V, i.
 \ENG
-The notation $\{ x | \ldots \}$ is called \emph{notation of the inverse}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the indeterminate $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\in$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i. % chose to translate ``signum'' as ``notation'' rather than ``symbol''
+The notation $\{ x | \ldots \}$ is called \emph{notation of the inverse}, and we have already presented some of its uses in logic. If $\alpha$ is a proposition containing the variable $x$ and $A$ is a class composed of the individuals $x$ that satisfy the condition $\alpha$, we have $x$ $\in$ $A$ $=$ $\alpha$, and then $A$ $=$ $\{ x | \alpha \}$, as in V, i. % chose to translate ``signum'' as ``notation'' rather than ``symbol''
 \LAT
 \ENG
 \commentary{Peano relies on the syntax of his substitution operator to create a presymbol function.  The modern substitution operator has a different syntax and therefore doesn't work properly in the following context.}
 \LAT
 Sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis praesignum, quod litterae $x$ praepositum, formulam $\alpha$ gignat; scilicet sit $\alpha$ $=$ $\upvarphi$ $x$; tunc erit $\upvarphi$ $=$ $\alpha [x]$, et si $x'$ est novum ens, erit $\upvarphi x'$ $=$ $\alpha [x] x'$, scilicet, si $\alpha$ est formula indeterminatum continens $x$, tunc $\alpha [x] x'$ significat id quod obtinetur si in $\alpha$, loco $x, x'$ ponatur.
 \ENG
-Let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function presymbol that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the indeterminate $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
+Let $\alpha$ be a formula containing the variable $x$ and let $\upvarphi$ be a function presymbol that yields the formula $\alpha$ when written before the letter $x$; that is, let $\alpha = \upvarphi x$; then we have $\upvarphi$ $=$ $\alpha [x := ? ]$, and if $x'$ is a new object, we have $\upvarphi x'$ $=$ $\alpha [x := x']$, that is, if $\alpha$ is a formula containing the variable $x$, then $\alpha[x := x']$ means what is obtained when, in $\alpha$, we put $x'$ for $x$.
 \LAT
 \ENG
 \commentary{It is unclear how Peano's substitution syntax works in the following statements.} 
 \LAT
 Similiter, sit $\alpha$ formula indeterminate continens $x$, sitque $\upvarphi$ functionis postsignum, ut $x \upvarphi = \alpha$; deducitur $\upvarphi = [x] \alpha$; tunc, si $x'$ est novum ens, erit $x' \upvarphi = x' [x] \alpha$, scilicet $x' [x] \alpha$ rursum indicat id quod obtinetur si in $\alpha$, loco $x, x'$ legatur, ut in V, 4.
 \ENG
-Similarly, let $\alpha$ be a formula containing the indeterminate $x$ and let $\upvarphi$ be a function postsymbol, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x'[x := \alpha]$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
+Similarly, let $\alpha$ be a formula containing the variable $x$ and let $\upvarphi$ be a function postsymbol, such that $x\upvarphi = \alpha$; it follows that $\upvarphi = \alpha[x := ?]$. Then, if $x'$ is a new object, have $x' \upvarphi = \alpha[x := x']$; that is, $x'[x := \alpha]$ again denotes what is obtained, when, in $\alpha$, read $x'$ for $x$, as in V, 4..
 \LAT
 Alios quoque usus in logica signum $[ ]$ habere potest, quos breviter esponimus, quum ipsis non utamur. Sint $a$ et $b$ duae classes; tunc $[a \cap ]b$ sive $b[ \cap a]$ classes indicat $x$, quae conditioni $b = a \cap x$, sive $b = x \cap a$ satisfaciunt. Si $b$ in $a$ non continetur, nulla classis huic conditioni satifacit; si $b$ in $a$ continetur, signum $b [ \cap a ]$ omnes indicat classes quae $b$ continent atque in $b \cup - a$ continentur.
 \ENG

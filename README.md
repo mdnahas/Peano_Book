@@ -2,7 +2,7 @@
 
 This repository holds an English translation, with original Latin, of Guiseppe Peano's "Arithmetices Principia, Nova Methodo Exposita" or "The Principles of Arithmetic, Presented by a New Method".  This treatise is from 1889 and it laid out the axioms of elementary arithmetic that are still used today.
 
-**A recent PDF of the translation is available [HERE](https://github.com/mdnahas/Peano_Book/raw/master/Peano.pdf).**
+**SKIP THE BORING AND JUMP TO A RECENT VERSION OF THE PDF ----> [HERE](https://github.com/mdnahas/Peano_Book/raw/master/Peano.pdf) <----.**
 
 
 ## License
@@ -28,6 +28,8 @@ If you want the most up-to-date version, or you want to modify it, or you want i
    latex Peano
    dvipdfm Peano
 ```
+
+If you run into trouble, look at the Peano.tex file and make sure you've installed all the packages used by it.  Also, make sure that your reading in the hyperendnotes.sty style file.
 
 ## Spellcheck
 

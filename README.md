@@ -2,29 +2,60 @@
 
 This repository holds an English translation, with original Latin, of Guiseppe Peano's "Arithmetices Principia, Nova Methodo Exposita" or "The Principles of Arithmetic, Presented by a New Method".  This treatise is from 1889 and it laid out the axioms of elementary arithmetic that are still used today.
 
+## Link to PDF
+
+A recent PDF of the translation is available [HERE](https://github.com/mdnahas/Peano_Book/raw/master/Peano.pdf).
+
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+
 ## Compiling to PDF
 
-Install [LaTeX](https://www.latex-project.org/get/)
+If you want the most up-to-date version, or you want to modify it, or you want it on your paper size (e.g., A4), you can compile the document.  Here's how you do that:
 
-Start a command prompt or terminal window
+1. Install [LaTeX](https://www.latex-project.org/get/)
 
-If you have pdflatex, run:
+2. Start a command prompt or terminal window
+
+3. If you have pdflatex, run:
 ```
    pdflatex Peano
 ```
 
-Otherwise:
+3. Otherwise run:
 ```
    latex Peano
    dvipdfm Peano
 ```
 
-## License
+## Spellcheck
 
-The files in this repository are issued under Creative Commons Attribution-ShareAlike 4.0
+If you commit changes, please spellcheck.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+I used the program "aspell".  You can install it with your package manager.  While at it, try to install the English (EN) and Latin (LA) dictionaries.  My package manager did not support a Latin dictionary.  You can downloaded the dictionary(s) [here](https://ftp.gnu.org/gnu/aspell/dict/0index.html).
 
+To install a dictionary, copy it to a temp directory and run
+```
+    bunzip2 aspell6-la-*.tar.bz2
+    tar xvf aspell6-la-*.tar
+    cd aspell6-la-*[^r]
+    ./configure
+    make
+    sudo make install
+```
+
+The following command will run spellcheck on the LaTeX file using both dictionaries.
+```
+    cat Peano.tex | aspell -t --lang=la list | aspell --lang=en list > misspelled_words.txt 
+```
+
+I found this command useful to prioritize mistakes.
+```
+   sort misspelled_words.txt | uniq -c | sort -n
+```
 
 ## Origin of the Translation
 

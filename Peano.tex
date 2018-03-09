@@ -148,7 +148,8 @@
 % FANCY LaTeX!  Create translation environment and commands \LAT and \ENG that only work inside it.
 \newenvironment{translateTwoCol}
                { % when beginning the environment
-                 \columnratio{0.5, 0.5} \begin{paracol}{2}
+                 \columnratio{0.5, 0.5}
+                 \begin{paracol}{2}
                  \newcommand{\LAT}{\switchcolumn[0]*}
                  \newcommand{\ENG}{\switchcolumn[1]}
                }
@@ -164,8 +165,12 @@
                  % space between each column.
                  \setcolumnwidth{#1\fill/1em, #2\fill/\columnsep, #3\fill/1em, #4\fill}
                  \begin{paracol}{4}
+                 \newcommand{\LAT}{\switchcolumn[0]*}
+                 \newcommand{\ENG}{\switchcolumn[2]}
                }
                { % when ending the environment
+                 \let\ENG\undefined
+                 \let\LAT\undefined
                  \end{paracol}
                }
                
@@ -175,8 +180,12 @@
                  % space between each column.
                  \setcolumnwidth{#1\fill/1em, #2\fill/1em, #3\fill/\columnsep, #4\fill/1em, #5\fill/1em, #6\fill}
                  \begin{paracol}{6}
+                 \newcommand{\LAT}{\switchcolumn[0]*}
+                 \newcommand{\ENG}{\switchcolumn[3]}
                }
                { % when ending the environment
+                 \let\ENG\undefined
+                 \let\LAT\undefined
                  \end{paracol}
                }
                
@@ -187,8 +196,12 @@
                  % space between each column.
                  \setcolumnwidth{#1\fill/1em, #2\fill/1em, #3\fill/1em, #4\fill/\columnsep, #5\fill/1em, #6\fill/1em, #7\fill/1em, #8\fill}
                  \begin{paracol}{8}
+                 \newcommand{\LAT}{\switchcolumn[0]*}
+                 \newcommand{\ENG}{\switchcolumn[4]}
                }
                { % when ending the environment
+                 \let\ENG\undefined
+                 \let\LAT\undefined
                  \end{paracol}
                }
                
@@ -1677,9 +1690,9 @@ Steps 4,3,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 
 \begin{translateTwoCol}
 \vspace{1em}
-\commentary{Peano's proof notation uses ``$P1$'' and ``$P6$'' to refer to propositions \#1 and \#6 proved earlier.  The ``$1[a]$'' before ``$(P6)$'' is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent with the implication, as in ``$(1)(2)$''.  Peano's style is different from a modern proof, where each line consists of a statement and a rationale.  Here, he connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  This makes each line into a complete universal expression of logic.  All the steps can be combined together to form a single expression, called a ``proof term''.  This is what happens below.}
+\commentary{Peano's proof notation uses ``$P1$'' and ``$P6$'' to refer to propositions \#1 and \#6 proved earlier.  The ``$1[a]$'' before ``$(P6)$'' is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent with the implication, as in ``$(1)(2)$''.  Peano's style is different from a modern proof, where each line consists of a statement and a rationale.  Here, he connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  This makes each line into a complete universal expression of logic.  All the steps can be combined together to form a single expression, and this is what happens below.}
 \ENG
-\commentary{Peano is able to convert the entire proof into a single proof term.  This is possible because of his notation.  Modern notation does not generally use proof terms.  Modern works tend to use a proof tree, which we do not show here.}
+\commentary{Peano is able to convert many proof steps into a single proof term.  This is possible because of his notation.  Modern notation does not generally use proof terms.  Modern works tend to use a proof tree, which we do not show here.}
 \LAT
 \emph{Nota.} - Huius facillimae demonstrationis gradus omnes ecplicite scripsimus. Brevitatis causa ipsam ita scribemus:
 \vspace{1em}
@@ -1874,31 +1887,75 @@ From this definition, and the preceding, we deduce that:
 
 \begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
 25. \s $a,b \smallIn \N \p \C \p a + b = b + a$. \s
-\s
-\s \s
-\s*
+\ENG
+25. \s $a,b \in \mathbb{N} \rightarrow a + b = b + a$. \s
+\LAT
 \emph{Dem.} \s $a \smallIn \N \p$ P24 $: \C : 1 \smallIn [b \smallIn]$ Ts. \s (1)
-\s
-\s \s
-\s*
-\s $a \smallIn \N \p \C \ppp b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = (a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \s (2)
-\s
-\s \s
-\s*
+\ENG
+\emph{Proof} \s $a \in \mathbb{N} \wedge \text{P24} \rightarrow 1 \in \{b | Ts \}$. \s (1)
+\LAT
+\s $a \smallIn \N \p \C \ppp b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \s (2)
+\ENG
+\s $a \in \mathbb{N} \rightarrow \Big( (b \in \mathbb{N} \wedge b \in \{b| $Ts$\} ) \rightarrow ( a + b = b + a \wedge \text{P7} ) \rightarrow [ (a + b) + 1 = (b + a) + 1 \wedge (a + b) + 1 = a + (b + 1) \wedge (b + a ) + 1 = 1 + (b + a) \wedge 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a ] \rightarrow [ a + (b + 1) = (b + 1) + a ] \rightarrow [(b + 1) \in \{b | $Ts$\}] \Big)$. \s (2)
+\LAT
 \s $(1)(2) \p \C \p$ Theor. \s
-\s
+\ENG
+\s $(1)(2) \rightarrow$ Theor. \s
+\LAT
 \s \s
-\s*
+\ENG
+\s \commentary{Redone in modern style} \s
+\LAT
+\s \s
+\ENG
+P24\s $a \in \mathbb{N} \rightarrow 1 \in \{ b | a+b = b+a \} $\s (1)
+\LAT
+\s \s
+\ENG
+\s $a \in \mathbb{N} \rightarrow b \in \mathbb{N} \wedge b \in \{ b | a+b=b+a\} \rightarrow a+b=b+a$ \s (2)
+\LAT
+\s \s
+\ENG
+P7\s $\ldots \rightarrow a + b + 1 = b + a + 1$\s (3)
+\LAT
+\s \s
+\ENG
+P23\s $\ldots \rightarrow (a+b)+1 = a+(b+1)$ \s (4)
+\LAT
+\s \s
+\ENG
+P24\s $\ldots \rightarrow (b+a)+1 = 1+(b+a)$ \s (5)
+\LAT
+\s \s
+\ENG
+P23\s $\ldots \rightarrow 1+(b+a) = (1+b)+a$ \s (6)
+\LAT
+\s \s
+\ENG
+P24'\s $\ldots \rightarrow (1+b)+a = (b+1)+a$ \s (7)
+\LAT
+\s \s
+\ENG
+P4(3-7)\s  $\ldots \rightarrow a+(b+1) = (b+1)+a$ \s (8)
+\LAT
+\s \s
+\ENG
+(2,8)\s $\ldots \rightarrow b \in \{ b| a+b = b+a \} \rightarrow (b+1) \in \{ b| a+b = b+a \}$ \s (9)
+\LAT
+\s \s
+\ENG
+P9(1,9)\s $(a,b \in \mathbb{N}) \rightarrow a+b=b+a$ \s
+\LAT
 26. \s $a,b,c \smallIn \N \p \C : a = b \p = \p c + a = c + b$. \s
-\s
-\s \s
-\s*
+\ENG
+\s \todo... \s
+\LAT
 27. \s $a,b,c \smallIn \N \p \C : a + b + c = a + c + b$. \s
-\s
+\ENG
 \s \s
-\s*
+\LAT
 28. \s $a,b,c,d \smallIn \N \p a = b \p c = d : \C \p a + c = b + d$. \s
-\s
+\ENG
 \s \s
 \end{translateSixCol}
 

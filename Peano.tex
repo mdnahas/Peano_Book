@@ -674,7 +674,7 @@ Ex. g. sint $a,b,c,...$ signa quaecumque. Tunc $ab$ $.$ $cd$ significat $(ab)(cd
 \LAT Ut ambiguitatis periculum absit, aritmeticae operationum signis $. :$ nunquam utimur.
 \ENG \irrelavent{To avoid the danger of ambiguity, we never use $. :$ as symbols of arithmetical operations.}
 \LAT Parenthesum figura una est $( \ )$; si in eadem formula, parentheses et puncta occurant, primum quae parenthesibus continentur, colligantur.
-\ENG \irrelavent{The figure of parentheses is one $( \ )$; if parentheses and points occur in the same formula, whatever is contained in parentheses is to be gathered first.}
+\ENG \irrelavent{The shape of one parentheses is $( \ )$; if parentheses and points occur in the same formula, whatever is contained in parentheses is to be gathered first.}  % Changed translation from original.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -693,7 +693,7 @@ The symbol $\prop$ means \emph{proposition}.
 \LAT
 Signum $\cap$ legitur \emph{et}. Sint $a, b$ propositiones; tunc $a \cap b$ est simultanea affirmatio propositionum $a, b$. Brevitatis causa, loco $a \cap b$ vulgo scribemus $a$ $b$.
 \ENG
-The symbol $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a b$.
+The symbol $\wedge$ is read \emph{and}. Let $a, b$, be propositions; then $a \wedge b$ is the simultaneous affirmation of the propositions $a, b$. \irrelavent{For the sake of brevity, instead of $a \wedge b$, we ordinarily write $a b$.}
 \end{translateTwoCol}
 
 \peanoPage{VIII} % page-number VIII
@@ -835,7 +835,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 23. \hspace{0.67cm} $a$ $\cup$ $b$ . = $\pppNoSpace$ $-$ : $-a$ . $-b$
 \ENG
-23. \hspace{0.67cm} $(a \vee b) = \neg[(\neg a) \wedge (\neg b) $
+23. \hspace{0.67cm} $(a \vee b) = \neg[(\neg a) \wedge (\neg b)] $
 \LAT
 24. \hspace{0.67cm} $-(ab)$ = $(-a)$ $\cup$ $(-b)$
 \ENG
@@ -843,7 +843,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 25. \hspace{0.67cm} $-(a$ $\cup$ $b)$ = $(-a)$  $(-b)$
 \ENG
-25. \hspace{0.67cm} $[\neg(a \vee b)] = [(\neg a) \vee (\neg b)]$
+25. \hspace{0.67cm} $[\neg(a \vee b)] = [(\neg a) \wedge (\neg b)]$
 \LAT
 26. \hspace{0.67cm} $a$ $\C$ . $a$ $\cup$ $b$
 \ENG
@@ -872,6 +872,11 @@ Let $a,b,c,...$ be propositions. We have:
 32. \hspace{0.67cm} $a$ $\C$ $b$ . $\C$ . $a$ $\cup$ $c$ $\C$ $b$ $\cup$ $c$
 \ENG
 32. \hspace{0.67cm} $(a \rightarrow b) \rightarrow [(a \vee c) \rightarrow (b \vee c)]$
+\LAT
+\ENG
+\commentary{Proposition \#33 appears to be false when $a=b=d=\top$ and $c=\bot$.  It does hold if the first ``and'' is changed to an ``or''.  Compare with proposition \#17.}
+%%%%% Useful website for generating truth tables:
+%%%%% http://turner.faculty.swau.edu/mathematics/materialslibrary/truth/process.php
 \LAT
 33. \hspace{0.67cm} $a$ $\C$ $b$ . $c$ $\C$ $d$ : $\C$ : $a$ $\cup$ $c$ . $\C$ . $b$ $\cup$ $d$
 \ENG
@@ -931,7 +936,7 @@ Let $a,b,c,...$ be propositions. We have:
 \begin{translateTwoCol}
 \quad Sit $\alpha$ quoddam relationis signum (ex. gr. $=$, $\C$), ita ut $a$ $\alpha$ $b$ sit quaedam propositio. Tunc loco $-$ . $a$ $\alpha$ $b$ scribemus $a$ $-$ $\alpha$ $b$; scilicet:
 \ENG
-\quad Let $\alpha$ be the symbol of some relation (eg., $=, \rightarrow$) so that $a$ $\alpha$ $b$ is a proposition. Then instead of $\neg(a$ $\alpha$ $b)$, we write $a$ $\not\alpha$ $b$. Thus:
+\quad Let $\alpha$ be the symbol of some relation (eg., $=, \rightarrow$) so that $a$ $\alpha$ $b$ is a proposition. Then instead of $\neg(a$ $\alpha$ $b)$, we write $a$ $\not\mathrel{\,\alpha\!}$ $b$. Thus:
 \LAT
 \hspace{1.06cm} $a$ $-$ = $b$ . = : $-$ . $a$ = $b$
 \ENG
@@ -950,35 +955,35 @@ Thus the symbol $\not=$ means \emph{is not equal to}. If the proposition $a$ con
 \LAT
 \quad Similter, si $\alpha$ et $\beta$ sunt relationis signa, loco $a$ $\alpha$ $b$, et $a$ $\alpha$ $b$ . $\cup$ . $a$ $\beta$ $b$ scribere possumus $a$ . $\alpha$ $\beta$ . $b$ et $a$ . $\alpha$ $\cup$ $\beta$ . $b$. Ita, si $a$ et $b$ sunt propositiones, formula $a$ . $\C$ $-$ = . $b$ dicit: ab $a$ \emph{deducitur} $b$, sed non vice versa.
 \ENG
-\quad Similarly, if $\alpha$ and $\beta$ are symbols of relations, instead of $(a$ $\alpha$ $b) \wedge (a$ $\beta$ $b)$, and $(a$ $\alpha$ $b) \vee (a$ $\beta$ $b)$ we may write $a$ $(\alpha \wedge \beta)$ $b$ and $a$ $(\alpha \vee \beta)$ $b$. Thus, if $a$ and $b$ are propositions, the formula $a$ $(\rightarrow \wedge \not=)$ $b$ says: from $a$ \emph{one deduces} $b$, but not vice versa.
+\quad \irrelavent{Similarly, if $\alpha$ and $\beta$ are symbols of relations, instead of $(a$ $\alpha$ $b) \wedge (a$ $\beta$ $b)$ and $(a$ $\alpha$ $b) \vee (a$ $\beta$ $b)$, we may write $a$ $(\alpha \wedge \beta)$ $b$ and $a$ $(\alpha \vee \beta)$ $b$. Thus, if $a$ and $b$ are propositions, the formula $a$ $(\rightarrow \wedge \not=)$ $b$ says: from $a$ \emph{one deduces} $b$, but not vice versa.}
 \LAT
 \hspace{1.06cm} $a$ . $\C$ $-$ = . $b$ : = : $a$ $\C$ $b$ . $b$ $-$ $\C$ $a$
 \ENG
-\hspace{1.06cm} $[a$ $(\rightarrow \wedge \not=)$ $b] = [(a \rightarrow b) \wedge (b \not\rightarrow a)]$
+\hspace{1.06cm} \irrelavent{ $[a$ $(\rightarrow \wedge \not=)$ $b] = [(a \rightarrow b) \wedge (b \not\rightarrow a)]$ }
 \LAT
 \quad Formulae:
 \ENG
-\quad Formulas:
+\quad \irrelavent{Formulas:}
 \LAT
 \hspace{1.06cm} $a$ $\C$ $b$ . $b$ $\C$ $c$ . $a$ $-$ $\C$ $c$ : = $\abs$
 \ENG
-\hspace{1.06cm} $[(a \rightarrow b) \wedge (b \rightarrow c) \wedge (a \not\rightarrow c)] = \bot$
+\hspace{1.06cm} \irrelavent{$[(a \rightarrow b) \wedge (b \rightarrow c) \wedge (a \not\rightarrow c)] = \bot$}
 \LAT
 \hspace{1.06cm} $a$ = $b$ . $b$ = $c$ . $a$ $-$ = $c$ : = $\abs$
 \ENG
-\hspace{1.06cm} $[(a=b) \wedge (b=c) \wedge (a \not= c)] = \bot$
+\hspace{1.06cm} \irrelavent{$[(a=b) \wedge (b=c) \wedge (a \not= c)] = \bot$}
 \LAT
 \hspace{1.06cm} $a$ $\C$ $b$ . $b$ $\C$ $-$ = $c$ : $\C$ . $a$ $\C$ $-$ = $c$
 \ENG
-\hspace{1.06cm} $\{(a \rightarrow b) \wedge [b$ $(\rightarrow \wedge \not=)$ $c]\} \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$
+\hspace{1.06cm} \irrelavent{$\big( (a \rightarrow b) \wedge [b$ $(\rightarrow \wedge \not=)$ $c]\big) \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$}
 \LAT
 \hspace{1.06cm} $a$ $\C$ $-$ = $b$ . $b$ $\C$ $c$ : $\C$ . $a$ $\C$ $-$ = $c$
 \ENG
-\hspace{1.06cm} $[a$ $(\rightarrow \wedge \not=)$ $b] \wedge (b \rightarrow c)\} \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$
+\hspace{1.06cm} \irrelavent{$\big( [a$ $(\rightarrow \wedge \not=)$ $b] \wedge (b \rightarrow c)\big) \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$}
 \LAT
 \quad Sed his notationibus raro utimur.
 \ENG
-\quad But we shall rarely use these notations.
+\quad \irrelavent{But we shall rarely use these notations.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1009,11 +1014,11 @@ Thus the symbol $\not=$ means \emph{is not equal to}. If the proposition $a$ con
 \LAT
 \quad Signum $a$, $b$, $c \smallIn m$ significat: $a$, $b$ et $c$ sunt $m$; scilicet:
 \ENG
-\quad The notation $a, b, c \in m$ means: $a$, $b$, and $c$ are in $m$; thus:  % Chose to translate signum as ``notation'' rather than ``symbol''
+\quad The notation $a, b, c \in M$ means: $a$, $b$, and $c$ are in $M$; thus:  % Chose to translate signum as ``notation'' rather than ``symbol''
 \LAT
 45. \hspace{0.67cm} $a$, $b$, $c \smallIn m$ . = : $a \smallIn m$ . $b \smallIn m$ . c \smallIn $m$
 \ENG
-45. \hspace{0.67cm} $[a, b, c \in m] = [(a \in m) \wedge (b \in m) \wedge (c \in m)]$
+45. \hspace{0.67cm} $[a, b, c \in M] = [(a \in M) \wedge (b \in M) \wedge (c \in M)]$
 \LAT
 \quad Sit $a$ classis; tunc $-a$ significatur classis indiviuis constituta quae non sunt $a$.
 \ENG

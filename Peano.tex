@@ -975,11 +975,11 @@ Thus the symbol $\not=$ means \emph{is not equal to}. If the proposition $a$ con
 \LAT
 \hspace{1.06cm} $a$ $\C$ $b$ . $b$ $\C$ $-$ = $c$ : $\C$ . $a$ $\C$ $-$ = $c$
 \ENG
-\hspace{1.06cm} \irrelavent{$\big( (a \rightarrow b) \wedge [b$ $(\rightarrow \wedge \not=)$ $c]\big) \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$}
+\hspace{1.06cm} \irrelavent{$\Big( (a \rightarrow b) \wedge [b$ $(\rightarrow \wedge \not=)$ $c]\Big) \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$}
 \LAT
 \hspace{1.06cm} $a$ $\C$ $-$ = $b$ . $b$ $\C$ $c$ : $\C$ . $a$ $\C$ $-$ = $c$
 \ENG
-\hspace{1.06cm} \irrelavent{$\big( [a$ $(\rightarrow \wedge \not=)$ $b] \wedge (b \rightarrow c)\big) \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$}
+\hspace{1.06cm} \irrelavent{$\Big( [a$ $(\rightarrow \wedge \not=)$ $b] \wedge (b \rightarrow c)\Big) \rightarrow [a$ $(\rightarrow \wedge \not=)$ $c]$}
 \LAT
 \quad Sed his notationibus raro utimur.
 \ENG
@@ -1117,7 +1117,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \LAT
 56. \hspace{0.67cm} $s \smallIn \K$ . $k$ $\C$ $s$ : $\C$ :: $k \smallIn s$ . = $\pppNoSpace$ $k$ $-$ $=$ $\abs$ : $x$, $y \smallIn k$ . $\C$\scalebox{0.7}{$x, y$}\thinspace . $x$ = $y$
 \ENG
-56. \hspace{0.67cm} $[A \in \setOfSets$ $\wedge$ $( B \subset A)] \rightarrow \Big\{( B \in A) = \big\{(B \not= \varnothing) \wedge \{[(x,y) \in B] \xrightarrow[\forall x,y]{} (x=y)\}\big\}\Big\}$
+56. \hspace{0.67cm} $[A \in \setOfSets$ $\wedge$ $( B \subset A)] \rightarrow \Big[ ( B \in A) = \Big( (B \not= \varnothing) \wedge [((x,y) \in B) \xrightarrow[\forall x,y]{} (x=y)] \Big)\Big]$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1187,7 +1187,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \LAT
 66. \hspace{0.67cm} $[(x, y)\smallIn]$ $\alpha$ $-$ = $\abs$ . = $\pppNoSpace$ $[x\smallIn]$ . $[y\smallIn]$ $\alpha$ $-$ = $\abs$ : $-$ = $\abs$
 \ENG
-66. \hspace{0.67cm} $\big( \{ (x,y) | \alpha \} \neq \varnothing \big) = \big( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing \big)$   %% TODO: Does this need a \forall x under the middle \neq?
+66. \hspace{0.67cm} $\Big( \{ (x,y) | \alpha \} \neq \varnothing \Big) = \Big( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing \Big)$   %% TODO: Does this need a \forall x under the middle \neq?
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum $\D$ significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
@@ -1256,7 +1256,7 @@ Let $\upvarphi$ be a symbol or an aggregate of symbols such that, if $x$ is an e
 \LAT
 \hspace{1.06cm} $s \smallIn \K$ $.$ $\C$ $:\hspace{0.1em}:$ $\upvarphi$ $F'$ $s$ $.$ $=$ $\pppNoSpace$ $x,y$ $\smallIn$ $s$ $.$ $x$ $=$ $y$ $:$ $\C_{x,y}$ $.$ $\upvarphi x$ $=$ $\upvarphi y$
 \ENG
-\hspace{1.06cm} $S \in \setOfSets \rightarrow \upvarphi$ $\func'$ $S = \big( [(x,y \in S) \wedge x = y] \xrightarrow[\forall x,y]{} ( \upvarphi x = \upvarphi y) \big)$
+\hspace{1.06cm} $S \in \setOfSets \rightarrow \upvarphi$ $\func'$ $S = \Big( [(x,y \in S) \wedge x = y] \xrightarrow[\forall x,y]{} ( \upvarphi x = \upvarphi y) \Big)$
 \LAT
 Verum si, cum sit $x$ quodlibet ens classis $s$, scriptura $x\upvarphi$ novum indicet ens, et, ex, $x$ $=$ $y$ deducitur $x\upvarphi$ $=$ $y\upvarphi$, tunc dicimus $\upvarphi$ esse \emph{functionis postsignum in classi} $s$ et scribemus $\upvarphi$ $\smallIn$ $s$ $'F$.
 \ENG
@@ -1264,7 +1264,7 @@ If, $x$ being any element of the set $S$, the expression $x\upvarphi$ denotes a 
 \LAT
 \hspace{1.06cm} $s \smallIn \K$ $.$ $\C$ $:\hspace{0.1em}:$ $\upvarphi$ $s$ $'F$ $.$ $=$ $\pppNoSpace$ $x,y$ $\smallIn$ $s$ $.$ $x$ $=$ $y$ $:$ $\C_{x,y}$ $.$ $x\upvarphi$ $=$ $y\upvarphi$
 \ENG
-\hspace{1.06cm} $S \in \setOfSets \rightarrow \upvarphi$ $S$ $'\func$ $= \big( [(x,y \in S) \wedge x=y] \xrightarrow[\forall x,y]{} x\upvarphi=y\upvarphi \big)$
+\hspace{1.06cm} $S \in \setOfSets \rightarrow \upvarphi$ $S$ $'\func$ $= \Big( [(x,y \in S) \wedge x=y] \xrightarrow[\forall x,y]{} x\upvarphi=y\upvarphi \Big)$
 \LAT
 \emph{Exempla}. Sit $a$ numerus; tunc $a$ $+$ est functionis praesignum in numerorum classe, et $+$ $a$ est functionis postsignum; quicumque enim est numerus $x$, formulae $a$ $+$ $x$ et $x$ $+$ $a$ novos indicant numeros, et ex $x$ $=$ $y$ deducitur $a$ $+$ $x$ $=$ $a$ $+$ $y$, et $x$ $+$ $a$ $=$ $y$ $+$ $a$. Itaque
 \ENG
@@ -1354,7 +1354,7 @@ In Arithmetica, sint $a, b$ numeri; tunc $[b + a]$ sive $[a +] b$ numerum indica
 \s
 (loco $F(x) = \int{f(x)dx}$). 
 \s
-\hspace{0.54cm} $\big( d F (x) = f(x) \mathrm{d}x \big) = \big( F(x) \in [d]f(x)\mathrm{d}x \big)$
+\hspace{0.54cm} $\Big( d F (x) = f(x) \mathrm{d}x \Big) = \Big( F(x) \in [d]f(x)\mathrm{d}x \Big)$
 \s
 (instead of $F(x) = \int{f(x)dx}$).
 \end{translateFourCol}
@@ -1609,7 +1609,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \LAT
 9. \hspace{0.6cm} $k \smallIn \K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$
 \ENG
-9. \hspace{0.6cm} $\big(A \in \setOfSets \wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall x]{} (x + 1 \in A)] \big) \rightarrow \mathbb{N} \subset A$
+9. \hspace{0.6cm} $\Big(A \in \setOfSets \wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall x]{} (x + 1 \in A)] \Big) \rightarrow \mathbb{N} \subset A$
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -2219,11 +2219,11 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \raggedright
 1. \s $a \smallIn \K \N \p \C : \M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs)$.\s
 \s
-1. \s $A \in \setOfSets \mathbb{N} \rightarrow  \max(A) = \big\{x \big| x \in A \wedge [(A \cap \{ z | z > x \}) = \bot]\big\}$.\s
+1. \s $A \in \setOfSets \mathbb{N} \rightarrow  \max(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z > x \}) = \bot]\Big\}$.\s
 \s*
 2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs)$.\s
 \s
-2. \s $A \in \setOfSets \mathbb{N} \rightarrow \min(A) = \big\{x \big| x \in A \wedge [(A \cap \{ z | z < x \}) = \bot]\big\}$.\s
+2. \s $A \in \setOfSets \mathbb{N} \rightarrow \min(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z < x \}) = \bot]\Big\}$.\s
 \end{translateSixCol}
 
 \peanoPage{7} % page-number 7
@@ -2608,19 +2608,19 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \s*
 4. \s $\Np = \N [x \smallIn] (\such \D x \p \such \larger 1 \p \such \smaller x : = \abs)$. \s
 \s
-4. \s $\mathbb{P} = \mathbb{N} \cap \big\{x \big| \big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \big) = \varnothing \big\}$. \s
+4. \s $\mathbb{P} = \mathbb{N} \cap \Big\{x \Big| \Big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \Big) = \varnothing \Big\}$. \s
 \s*
 5. \s $a,b \smallIn \N \p \C :: a \primeWith b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
 \s  %%% TODO: create new command for \primeWith with \mathbin 
-5. \s $a,b \in \mathbb{N} \rightarrow a \primeWith b = \big[\big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \big) = \varnothing \big]$. \s
+5. \s $a,b \in \mathbb{N} \rightarrow a \primeWith b = \Big[\Big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \Big) = \varnothing \Big]$. \s
 \s*
 6. \s $a,b \smallIn \N \p \C \ppp \such \D (a,b) : = : \such \D a \p \cap \p \such \D b$. \s
 \s
-6. \s $a,b \in \mathbb{N} \rightarrow \such\,|\,(a,b) = \big( \{ z | ( z | a) \} \cap \{ z | (z | b) \} \big)$. \s %%%TODO: There is no modern symbol for this, is there?
+6. \s $a,b \in \mathbb{N} \rightarrow \such\,|\,(a,b) = \Big( \{ z | ( z | a) \} \cap \{ z | (z | b) \} \Big)$. \s %%%TODO: There is no modern symbol for this, is there?
 \s*
 7. \s $a,b \smallIn \N \p \C \ppp \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
 \s
-7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = \big( \{ z | z \mult a \} \cap \{z | z \mult b \} \big)$. \s %%%TODO: There is no modern symbol for this, is there?
+7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = \Big( \{ z | z \mult a \} \cap \{z | z \mult b \} \Big)$. \s %%%TODO: There is no modern symbol for this, is there?
 \s*
 \s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
 \s
@@ -3210,7 +3210,7 @@ The symbol $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the
 \raggedright
 30. \s $a,b \smallIn \R \p \C \p a + b = [c \smallIn] (c \smallIn  \R \ppp x \smallIn \N \p x a, x b, x c \smallIn \N : \C_x \p xa + xb = xc)$. \s
 \s
-30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \big\{c \big| c \in  \mathbb{Q}^+ \wedge \big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[\forall x]{}  xa + xb = xc \big) \big\}$. \s
+30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \Big\{c \Big| c \in  \mathbb{Q}^+ \wedge \Big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[\forall x]{}  xa + xb = xc \Big) \Big\}$. \s
 \s*
 31. \s $a,b \smallIn \R \p \C :: b - a = \ppp [x \smallIn] (x \smallIn \R \p a + x = b)$. \s
 \s
@@ -3218,7 +3218,7 @@ The symbol $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the
 \s*
 32. \s $a,b \smallIn \R \p \C \p ab = [c \smallIn] (c \smallIn \R \ppp x \smallIn \N \p xa, (xa)b, xc \smallIn \N : \C_x \p (xa) b = xc)$. \s
 \s
-32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \big\{ c \big| c \in \mathbb{Q}^+ \wedge \big[ \big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \big) \xrightarrow[\forall x]{} (xa) b = xc \big] \big\}$. \s
+32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \Big\{ c \Big| c \in \mathbb{Q}^+ \wedge \Big[ \Big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \Big) \xrightarrow[\forall x]{} (xa) b = xc \Big] \Big\}$. \s
 \s*
 33. \s $a,b \smallIn \R \p \C \p b / a = [x \smallIn] (x \smallIn \R \p ax = b)$. \s
 \s
@@ -3312,7 +3312,7 @@ If $A \in \setOfSets \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper bou
 \s*
 2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
 \s
-2. \s $(A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[\forall u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \big) \big]$. \s
+2. \s $(A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \Big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \Big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[\forall u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \Big) \Big]$. \s
 \s*
 3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$. \s
 \s
@@ -3424,11 +3424,11 @@ The symbol $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive re
 \raggedright
 12. \s $a,b \smallIn Q \p \C \p a + b = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
 \s
-12. \s $a,b \in \mathbb{R}^+ \rightarrow  a + b = \sup\big( \big\{z \big| \{(x,y) | (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \big\} \big)$. \s
+12. \s $a,b \in \mathbb{R}^+ \rightarrow  a + b = \sup\Big( \Big\{z \Big| \{(x,y) | (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \Big\} \Big)$. \s
 \s*
 13. \s $a,b \smallIn Q \p \C \p ab = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
 \s
-13. \s $a,b \in \mathbb{R}^+ \rightarrow ab = \sup\big( \big\{ z \big| \{(x,y) |  (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \big\} \big)$. \s
+13. \s $a,b \in \mathbb{R}^+ \rightarrow ab = \sup\Big( \Big\{ z \Big| \{(x,y) |  (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \Big\} \Big)$. \s
 \s*
 \vspace{1em}
 \s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \smallIn \R$. \s
@@ -3480,11 +3480,11 @@ If $A \in \setOfSets \mathbb{R}^+$, the symbols $\interior(A)$, $\exterior(A)$, 
 \raggedright
 1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([(u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
 \s
-1. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \interior(A) = \mathbb{R}^+ \cap \big\{ x \big| \{ (u,v) | (u,v \in \mathbb{R}^+) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \big\}$. \s
+1. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \interior(A) = \mathbb{R}^+ \cap \Big\{ x \Big| \{ (u,v) | (u,v \in \mathbb{R}^+) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \Big\}$. \s
 \s*
 2. \s $a \smallIn \K \Q \p \C \p \E a = \I (\no a)$. \s
 \s
-2. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \exterior(A) = \interior\!\big( \overline{A} \big)$. \s
+2. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \exterior(A) = \interior\!\Big( \overline{A} \Big)$. \s
 \s*
 3. \s $a \smallIn \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$. \s
 \s

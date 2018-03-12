@@ -1659,7 +1659,7 @@ Formulas that do not fit on one line are continued on the next line without any 
 \ENG
 \commentary{Below is Peano's first proof.  The proof style taught in American high schools has two columns: the left column has mathematical statements and the right column has the rationale for each statement.  In this first proof, Peano's style is similar except he puts the rationale in the left column with a $\rightarrow$ and the statement in the right column.  Essentially, the rationale implies the statement.}
 
-\commentary{Peano's proof notation uses ``$P1$'' and ``$P6$'' to refer to propositions \#1 and \#6 proved earlier.  The ``$[a:=1]$'' after ``$(P6)$'' is notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of the proof.  Modus ponens is indicated by anding the antecedent with the implication, as in ``$(1)\wedge(2)$''.}
+\commentary{Peano's proof notation uses ``P1'' and ``P6'' to refer to propositions \#1 and \#6 proved earlier.  The ``$[a:=1]$'' after ``(P6)'' is notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of the proof.  Modus ponens is indicated by anding the antecedent with the implication, as in ``$(1)\wedge(2)$''.}
 \LAT
 11. \hspace{0.67cm} $2 \smallIn \N$.
 \ENG
@@ -1676,25 +1676,25 @@ Formulas that do not fit on one line are continued on the next line without any 
 
 \begin{translateSixCol}{0.25}{0.17}{0.08}{0.25}{0.17}{0.08}
 \raggedright
-$P 1 \p \C :$ \s $1 \smallIn N$ \s (1)
+$\text{P1} \p \C :$ \s $1 \smallIn N$ \s (1)
 \s
-$P1 \rightarrow$ \s $1 \in \mathbb{N}$ \s (1)
+$\text{P1} \rightarrow$ \s $1 \in \mathbb{N}$ \s (1)
 \s*
-$1 [a] (P6) \p \C :$ \s $1 \smallIn \N \p \C \p 1 + 1 \smallIn N$ \s (2)
+$1 [a] (\text{P6}) \p \C :$ \s $1 \smallIn \N \p \C \p 1 + 1 \smallIn N$ \s (2)
 \s
-$(P6)[a:=1] \rightarrow$ \s $1 \in \mathbb{N} \rightarrow (1 + 1 \in \mathbb{N})$ \s (2)
+$(\text{P6})[a:=1] \rightarrow$ \s $1 \in \mathbb{N} \rightarrow (1 + 1 \in \mathbb{N})$ \s (2)
 \s*
 $(1)(2) \p \C :$ \s $1 + 1 \smallIn N$ \s (3)
 \s
 $(1)\wedge(2) \rightarrow$ \s $1 + 1 \in \mathbb{N}$ \s (3)
 \s*
-$P 10 \p \C :$ \s $2 = 1 + 1$ \s (4)
+$\text{P10} \p \C :$ \s $2 = 1 + 1$ \s (4)
 \s
-$P10 \rightarrow$ \s $2 = 1 + 1$ \s (4)
+$\text{P10} \rightarrow$ \s $2 = 1 + 1$ \s (4)
 \s*
-$(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \smallIn N$ \s (Theor.)
+$(4) \p (3) \p (2, 1+1) [a, b] (\text{P5}) : \C :$ \s $2 \smallIn N$ \s (Theor.)
 \s
-$(4) \wedge (3) \wedge (P5)[a:=2,b:=1+1] \rightarrow$ \s $2 \in \mathbb{N}$ \s (Q.E.D.)
+$(4) \wedge (3) \wedge (\text{P5})[a:=2,b:=1+1] \rightarrow$ \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 \end{translateSixCol}
 
 \begin{translateTwoCol}
@@ -1712,56 +1712,56 @@ $(4) \wedge (3) \wedge (P5)[a:=2,b:=1+1] \rightarrow$ \s $2 \in \mathbb{N}$ \s (
 \ENG
 \vspace{1em}
 \LAT
-$\hspace{1.4cm} P 1 \p 1 [a] (P 6) : \C : 1 +1 \smallIn \N \p P 10 \p (2, 1+1) [a, b] (P 5) : \C : Th$
+$\hspace{1.4cm} \text{P1} \p 1 [a] (\text{P6}) : \C : 1 +1 \smallIn \N \p \text{P10} \p (2, 1+1) [a, b] (\text{P5}) : \C : \text{Th}$.
 \ENG
-$\Big( P1 \wedge (P6)[a:=1] \Big) \rightarrow \Big( (1 + 1 \in \mathbb{N}) \wedge P10 \wedge (P5)[a:=2,b:=1+1] \Big) \rightarrow Th$
+$\Big( \text{P1} \wedge (\text{P6})[a:=1] \Big) \rightarrow \Big( (1 + 1 \in \mathbb{N}) \wedge \text{P10} \wedge (\text{P5})[a:=2,b:=1+1] \Big) \rightarrow \text{Th}$.
 \LAT
 vel
 \ENG
 or
 \LAT
-$\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \smallIn \N \p P 10 \p P 5 : \C : Th$
+$\hspace{1.4cm} \text{P1} \p \text{P6} : \C : 1 + 1 \smallIn \N \p \text{P10} \p \text{P5} : \C : \text{Th}$.
 \ENG
-$[P1 \wedge P6] \rightarrow [(1 + 1 \in \mathbb{N}) \wedge P10 \wedge P5] \rightarrow Th$
+$[\text{P1} \wedge \text{P6}] \rightarrow [(1 + 1 \in \mathbb{N}) \wedge \text{P10} \wedge \text{P5}] \rightarrow \text{Th}$.
 \LAT
-12. \hspace{0.67cm} $3, 4,... \smallIn \N$
+12. \hspace{0.67cm} $3, 4,... \smallIn \N$.
 \ENG
-12. \hspace{0.67cm} $3, 4, ... \in \mathbb{N}$
+12. \hspace{0.67cm} $3, 4, ... \in \mathbb{N}$.
 \LAT
 \ENG
-\commentary{Below, $L$\# refers to a proposition of logic from the first half of this book.  ``theorem'', ``Theor.'' or ``Th.'' refers to what is to be proven.  If the theorem is an implication, ``hypothesis'' or ``Hyp.'' refers to its antecedent and ``thesis'', ``Thes.'' or ``Ts.'' refers to its consequent.}
+\commentary{Below, L\# refers to a proposition of logic from the first half of this book.  The text ``theorem'', ``Theor'' or ``Th'' refers to what is to be proven.  If the theorem is an implication, ``hypothesis'' or ``Hyp'' refers to its antecedent and ``thesis'', ``Thes'' or ``Ts'' refers to its consequent.}
 \LAT
-13. \hspace{0.67cm} $a,b,c,d \smallIn \N \p a = b \p b = c \p c = d : \C : a = d$
+13. \hspace{0.67cm} $a,b,c,d \smallIn \N \p a = b \p b = c \p c = d : \C : a = d$.
 \ENG
-13. \hspace{0.67cm} $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge b = c \wedge c = d ) \rightarrow a = d$
+13. \hspace{0.67cm} $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge b = c \wedge c = d ) \rightarrow a = d$.
 \LAT
-\emph{Dem.} \hspace{0.27cm} $Hyp. P4 : \C : a,c,d \smallIn \N \p a = c \p c = d \p P4 : \C : Thes.$
+\emph{Dem.} \hspace{0.27cm} $Hyp. P4 : \C : a,c,d \smallIn \N \p a = c \p c = d \p P4 : \C : Thes$.
 \ENG
-\emph{Proof} \hspace{0.27cm} $(Hyp. \wedge P4) \rightarrow [(a,c,d \in \mathbb{N}) \wedge a = c \wedge c = d \wedge P4 ] \rightarrow Thes.$
+\emph{Proof} \hspace{0.27cm} $(\text{Hyp} \wedge \text{P4}) \rightarrow [(a,c,d \in \mathbb{N}) \wedge a = c \wedge c = d \wedge \text{P4} ] \rightarrow \text{Thes}$.
 \LAT
-14. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b = c \p a \no = c : = \abs$
+14. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b = c \p a \no = c : = \abs$.
 \ENG
-14. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b = c \wedge a \neq c) = \bot$
+14. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b = c \wedge a \neq c) = \bot$.
 \LAT
 \emph{Dem.} \hspace{0.27cm} $P4 \p L39 : \C \p Theor$.
 \ENG
-\emph{Proof} \hspace{0.27cm} $(P4 \wedge L39) \rightarrow Theor$.
+\emph{Proof} \hspace{0.27cm} $(\text{P4} \wedge \text{L39}) \rightarrow \text{Theor}$.
 \LAT
-15. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b \no = c : \C \p a \no = c$
+15. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b \no = c : \C \p a \no = c$.
 \ENG
-15. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b \neq c) \rightarrow  a \neq c$
+15. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b \neq c) \rightarrow  a \neq c$.
 \LAT
-16. \hspace{0.67cm} $a,b \smallIn \N \p a + 1 = b + 1 : \C \p a = b$
+16. \hspace{0.67cm} $a,b \smallIn \N \p a + 1 = b + 1 : \C \p a = b$.
 \ENG
-16. \hspace{0.67cm} $[a,b \in \mathbb{N} \wedge (a + 1 = b + 1 )] \rightarrow a = b$
+16. \hspace{0.67cm} $[a,b \in \mathbb{N} \wedge (a + 1 = b + 1 )] \rightarrow a = b$.
 \LAT
-17. \hspace{0.67cm} $a,b \smallIn \N \p \C : a \no = b \p = \p a + 1 \no = b + 1$
+17. \hspace{0.67cm} $a,b \smallIn \N \p \C : a \no = b \p = \p a + 1 \no = b + 1$.
 \ENG
-17. \hspace{0.67cm} $(a,b \in \mathbb{N}) \rightarrow [(a \neq b) = (a + 1 \neq b + 1)]$
+17. \hspace{0.67cm} $(a,b \in \mathbb{N}) \rightarrow [(a \neq b) = (a + 1 \neq b + 1)]$.
 \LAT
 \emph{Dem.} \hspace{0.27cm} $P7 \p L21 : \C \p Theor$.
 \ENG
-\emph{Proof} \hspace{0.27cm} $(P7 \wedge L21) \rightarrow Theor$.
+\emph{Proof} \hspace{0.27cm} $(\text{P7} \wedge \text{L21}) \rightarrow \text{Theor}$.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}

@@ -1810,11 +1810,11 @@ From this definition, and the preceding, we deduce that:
 \raggedright
 19. \s $a, b \smallIn \N \p \C \p a + b \smallIn N$. \s
 \s
-19. \s \todo... \s
+19. \s $a, b \in \mathbb{N} \rightarrow a + b \in \mathbb{N}$. \s
 \s*
 \emph{Dem.} \s $a \smallIn \N \p$ P6 $: \C : a + 1 \smallIn \N : \C : 1 \smallIn [b \smallIn]$ Ts. \s (1)
 \s
-\s \s
+\emph{Proof}\s \todo \s
 \s*
 \s $a \smallIn \N \p \C :: b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b \smallIn \N \p$ P6 $: \C : (a + b) + 1 \smallIn \N \p$ P18 $: \C : a + (b + 1) \smallIn \N : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \s (2)
 \s
@@ -1830,19 +1830,19 @@ From this definition, and the preceding, we deduce that:
 \s*
 20. \emph{Def.} \s $a + b + c = (a + b) + c$ \s
 \s
-\s \s
+20. \emph{Def.} \s $a + b + c = (a + b) + c$ \s
 \s*
 21. \s $a,b,c \smallIn \N \p \C \p a + b + c \smallIn N$ \s
 \s
-\s \s
+21. \s $a,b,c \in \mathbb{N} \rightarrow a + b + c \in \mathbb{N}$ \s
 \s*
 22. \s $a,b,c \smallIn \N \p \C : a = b \p = \p a + c = b + c$ \s
 \s
-\s \s
+22. \s $a,b,c \in \mathbb{N} \rightarrow (a = b) = (a + c = b + c)$ \s
 \s*
 \emph{Dem.} \s $a,b \smallIn \N \p$ P7 $: \C \p 1 \smallIn [c \smallIn]$ Ts. \s (1)
 \s
-\s \s
+\emph{Proof} \s \todo \s
 \s*
 \s $a,b \smallIn \N \p \C :: c \smallIn \N \p c \smallIn [c \smallIn]$ Ts $\ppp \C \ppp a = b \p = \p a + c = b + c : a + c , b + c \smallIn \N : a + c = b + c \p = \p a + c + 1 = b + c + 1 \ppp \C \ppp a = b \p = \p a + (c + 1) = b + (c + 1) \ppp \C \ppp (c + 1) \smallIn [C\smallIn]$ Ts. \s (2)
 \s
@@ -1854,11 +1854,11 @@ From this definition, and the preceding, we deduce that:
 \s*
 23. \s $a,b,c \smallIn \N \p \C \p a + (b + c) = a + b + c$ \s
 \s
-\s \s
+23. \s $a,b,c \in \mathbb{N} \rightarrow a + (b + c) = a + b + c$ \s
 \s*
 \emph{Dem.} \s $a,b \smallIn \N \p$ P18 $\p$ P20 $: \C \p 1 \smallIn [c \smallIn]$ Ts. \s (1)
 \s
-\s \s
+\emph{Proof} \s \todo \s
 \s*
 \s $a,b \smallIn \N \p \C \ppp c \smallIn \N \p c \smallIn [c \smallIn]$ Ts $: \C : a + (b +c) = a + b + c \p$ P7 $: \C : a + (b + c) + 1 = a + b + c + 1 \p$ P18 $: \C : a + (b + (c + 1)) = a + b + (c + 1) : \C \p c + 1 \smallIn [c \smallIn]$ Ts. \s (2)
 \s
@@ -1870,11 +1870,11 @@ From this definition, and the preceding, we deduce that:
 \s*
 24. \s $a \smallIn \N \p \C \p 1 + a = a + 1$ \s
 \s
-\s \s
+24. \s $a \in \mathbb{N} \rightarrow 1 + a = a + 1$ \s
 \s*
 \emph{Dem.} \s P2 $\p \C \p 1 \smallIn [a \smallIn]$ Ts. \s (1)
 \s
-\s \s
+\emph{Proof} \s \todo \s
 \s*
 \s $a \smallIn \N \p a \smallIn [a \smallIn]$ Ts $: \C : 1 + 1 = a + 1 : \C : 1 + (a + 1) = (a + 1) + 1 : \C : (a + 1) \smallIn [a \smallIn]$ Ts. \s (2)
 \s
@@ -1886,11 +1886,11 @@ From this definition, and the preceding, we deduce that:
 \s*
 24'. \s $a,b \smallIn \N \p \C \p 1 + a + b = a + 1 + b$ \s
 \s
-\s \s
+24'. \s $a,b \in \mathbb{N} \rightarrow 1 + a + b = a + 1 + b$ \s
 \s*
-\emph{Dem.} \s Hyp. P24 $: \C \C 1 + a = a + 1 \p$ P22 $: \C \p$ Thesis. \s
+\emph{Dem.} \s Hyp. P24 $: \C : 1 + a = a + 1 \p$ P22 $: \C \p$ Thesis. \s
 \s
-\s \s 
+\emph{Proof} \s \todo \s 
 \end{translateSixCol}
 
 \peanoPage{4} % page-number 4
@@ -1914,15 +1914,15 @@ From this definition, and the preceding, we deduce that:
 \LAT
 26. \s $a,b,c \smallIn \N \p \C : a = b \p = \p c + a = c + b$. \s
 \ENG
-\s \todo... \s
+26. \s $a,b,c \in \mathbb{N} \rightarrow (a = b) = (c + a = c + b)$. \s
 \LAT
 27. \s $a,b,c \smallIn \N \p \C : a + b + c = a + c + b$. \s
 \ENG
-\s \s
+27. \s $a,b,c \in \mathbb{N} \rightarrow a + b + c = a + c + b$. \s
 \LAT
 28. \s $a,b,c,d \smallIn \N \p a = b \p c = d : \C \p a + c = b + d$. \s
 \ENG
-\s \s
+28. \s $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge c = d) \rightarrow a + c = b + d$. \s
 \end{translateSixCol}
 
 \begin{translateTwoCol}

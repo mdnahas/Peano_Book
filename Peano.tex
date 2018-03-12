@@ -1652,6 +1652,11 @@ Formulas that do not fit on one line are continued on the next line without any 
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
+\ENG
+\commentary{Below is Peano's first proof.  The proof style taught in American high schools has two columns: the left column has mathematical statements and the right column has the rationale for each statement.  In this first proof, Peano's style is similar except he puts the rationale in the left column with a $\rightarrow$ and the statement in the right column.  Essentially, the rationale implies the statement.}
+
+\commentary{Peano's proof notation uses ``$P1$'' and ``$P6$'' to refer to propositions \#1 and \#6 proved earlier.  The ``$[a:=1]$'' after ``$(P6)$'' is notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of the proof.  Modus ponens is indicated by anding the antecedent with the implication, as in ``$(1)\wedge(2)$''.}
+\LAT
 11. \hspace{0.67cm} $2 \smallIn \N$.
 \ENG
 11. \hspace{0.67cm} $2 \in \mathbb{N}$.
@@ -1669,41 +1674,43 @@ Formulas that do not fit on one line are continued on the next line without any 
 \raggedright
 $P 1 \p \C :$ \s $1 \smallIn N$ \s (1)
 \s
-Axiom 1 \s $1 \in \mathbb{N}$ \s (1)
+$P1 \rightarrow$ \s $1 \in \mathbb{N}$ \s (1)
 \s*
 $1 [a] (P6) \p \C :$ \s $1 \smallIn \N \p \C \p 1 + 1 \smallIn N$ \s (2)
 \s
-Axiom 6[a:=1] \s $1 \in \mathbb{N} \rightarrow (1 + 1 \in \mathbb{N})$ \s (2)
+$(P6)[a:=1] \rightarrow$ \s $1 \in \mathbb{N} \rightarrow (1 + 1 \in \mathbb{N})$ \s (2)
 \s*
 $(1)(2) \p \C :$ \s $1 + 1 \smallIn N$ \s (3)
 \s
-Steps 1 and 2 \s $1 + 1 \in \mathbb{N}$ \s (3)
+$(1)\wedge(2) \rightarrow$ \s $1 + 1 \in \mathbb{N}$ \s (3)
 \s*
 $P 10 \p \C :$ \s $2 = 1 + 1$ \s (4)
 \s
-Def. 10 \s $2 = 1 + 1$ \s (4)
+$P10 \rightarrow$ \s $2 = 1 + 1$ \s (4)
 \s*
 $(4) \p (3) \p (2, 1+1) [a, b] (P 5) : \C :$ \s $2 \smallIn N$ \s (Theor.)
 \s
-Steps 4,3,Axiom 5[a:=2,b:=$1+1$] \s $2 \in \mathbb{N}$ \s (Q.E.D.)
+$(4) \wedge (3) \wedge (P5)[a:=2,b:=1+1] \rightarrow$ \s $2 \in \mathbb{N}$ \s (Q.E.D.)
 \end{translateSixCol}
 
 \begin{translateTwoCol}
 \vspace{1em}
-\commentary{Peano's proof notation uses ``$P1$'' and ``$P6$'' to refer to propositions \#1 and \#6 proved earlier.  The ``$1[a]$'' before ``$(P6)$'' is Peano's notation for substituting $1$ for $a$ in proposition \#6.   The notations ``$(1)$'' and ``$(2)$'' refer to the results of steps 1 and 2 of this proof.  Modus ponens is indicated by concatenating the antecedent with the implication, as in ``$(1)(2)$''.  Peano's style is different from a modern proof, where each line consists of a statement and a rationale.  Here, he connects the rationale to the statement with a $\C$.  So the rationale actually \emph{implies} the statement.  This makes each line into a complete universal expression of logic.  All the steps can be combined together to form a single expression, and this is what happens below.}
 \ENG
-\commentary{Peano is able to convert many proof steps into a single proof term.  This is possible because of his notation.  Modern notation does not generally use proof terms.  Modern works tend to use a proof tree, which we do not show here.}
+\vspace{1em}
 \LAT
 \emph{Nota.} - Huius facillimae demonstrationis gradus omnes ecplicite scripsimus. Brevitatis causa ipsam ita scribemus:
+\ENG
+\emph{Note.} - We have explicitly written every step of this very easy proof. For the sake of brevity, we shall write it as follows:
+
+\commentary{Since each statement in Peano's proofs is an implication, they can be combined using the axioms of logic.  Peano shortens proofs by combining many steps together.}
+\LAT
 \vspace{1em}
 \ENG
-\vspace{1em}
-\emph{Note.} - We have explicitly written every step of this very easy proof. For the sake of brevity, we shall write it as follows:
 \vspace{1em}
 \LAT
 $\hspace{1.4cm} P 1 \p 1 [a] (P 6) : \C : 1 +1 \smallIn \N \p P 10 \p (2, 1+1) [a, b] (P 5) : \C : Th$
 \ENG
-\notPossible
+$\Big( P1 \wedge (P6)[a:=1] \Big) \rightarrow \Big( (1 + 1 \in \mathbb{N}) \wedge P10 \wedge (P5)[a:=2,b:=1+1] \Big) \rightarrow Th$
 \LAT
 vel
 \ENG
@@ -1711,7 +1718,7 @@ or
 \LAT
 $\hspace{1.4cm} P 1 \p P 6 : \C : 1 + 1 \smallIn \N \p P 10 \p P 5 : \C : Th$
 \ENG
-\notPossible
+$[P1 \wedge P6] \rightarrow [(1 + 1 \in \mathbb{N}) \wedge P10 \wedge P5] \rightarrow Th$
 \LAT
 12. \hspace{0.67cm} $3, 4,... \smallIn \N$
 \ENG

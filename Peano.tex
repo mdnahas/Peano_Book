@@ -1812,92 +1812,92 @@ From this definition, and the preceding, we deduce that:
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-19. \s $a, b \smallIn \N \p \C \p a + b \smallIn N$. \s
-\s
-19. \s $a, b \in \mathbb{N} \rightarrow a + b \in \mathbb{N}$. \s
-\s*
-\emph{Dem.} \s $a \smallIn \N \p$ P6 $: \C : a + 1 \smallIn \N : \C : 1 \smallIn [b \smallIn]$ Ts. \s (1)
-\s
-\emph{Proof} \s $(a \in \mathbb{N} \wedge \text{P6} ) \rightarrow a + 1 \in \mathbb{N} \rightarrow 1 \in \{ b | \text{Ts} \}$. \s (1)
-\s*
-\s $a \smallIn \N \p \C :: b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b \smallIn \N \p$ P6 $: \C : (a + b) + 1 \smallIn \N \p$ P18 $: \C : a + (b + 1) \smallIn \N : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \s (2)
-\s
-\s $a \in \mathbb{N} \rightarrow \Big( (b \in \mathbb{N} \wedge b \in \{ b | \text{Ts} \}) \rightarrow (a + b \in \mathbb{N} \wedge \text{P6} ) \rightarrow [(a + b) + 1 \in \mathbb{N} \wedge \text{P18} ] \rightarrow a + (b + 1) \in \mathbb{N} \rightarrow (b + 1) \in \{ b | \text{Ts} \} \Big)$. \s (2)
-\s*
-\s $a \smallIn \N \p (1) \p (2) \p \C : : 1 \smallIn [b \smallIn]$ Ts $\ppp b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : b + 1 \smallIn [b \smallIn]$ Ts $\ppp ([b \smallIn]$ Ts $) [k]$ P9 $: : \C : \N \C [b \smallIn]$ Ts $\p$ (L50) $:: \C : b \smallIn \N \p \C$ Ts. \s (3)
-\s
-\s $[a \in \mathbb{N} \wedge (1) \wedge (2)] \rightarrow \Big( 1 \in \{b | \text{Ts} \} \wedge [(b \in \mathbb{N} \wedge b \in \{b | \text{Ts} \}) \rightarrow b + 1 \in \{ b | \text{Ts} \}] \wedge \text{P9}[A:=\{b |\text{Ts}\}] \Big) \rightarrow [\mathbb{N} \subset \{b | \text{Ts} \} \wedge \text{L50}] \rightarrow (b \in \mathbb{N} \rightarrow \text{Ts})$. \s (3)
-\s*
-\s $(3) \p$ (L42) $: \C : a,b \smallIn \N \p \C \p$ Thesis. \s (Theor.)
-\s
-\s $[(3) \wedge $ (L42) $] \rightarrow [(a,b \in \mathbb{N}) \rightarrow $ Thesis $]$.\s (Theor.)
-\s*
+19. \s $a, b \smallIn \N \p \C \p a + b \smallIn N$. 
+\ENG
+19. \s $a, b \in \mathbb{N} \rightarrow a + b \in \mathbb{N}$.
+\LAT
+\emph{Dem.} \s $a \smallIn \N \p$ P6 $: \C : a + 1 \smallIn \N : \C : 1 \smallIn [b \smallIn]$ Ts. \hfill (1)
+\ENG
+\emph{Proof} \s $(a \in \mathbb{N} \wedge \text{P6} ) \rightarrow a + 1 \in \mathbb{N} \rightarrow 1 \in \{ b | \text{Ts} \}$. \hfill (1)
+\LAT
+\s $a \smallIn \N \p \C :: b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b \smallIn \N \p$ P6 $: \C : (a + b) + 1 \smallIn \N \p$ P18 $: \C : a + (b + 1) \smallIn \N : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \hfill (2)
+\ENG
+\s $a \in \mathbb{N} \rightarrow \Big( (b \in \mathbb{N} \wedge b \in \{ b | \text{Ts} \}) \rightarrow (a + b \in \mathbb{N} \wedge \text{P6} ) \rightarrow [(a + b) + 1 \in \mathbb{N} \wedge \text{P18} ] \rightarrow a + (b + 1) \in \mathbb{N} \rightarrow (b + 1) \in \{ b | \text{Ts} \} \Big)$. \hfill (2)
+\LAT
+\s $a \smallIn \N \p (1) \p (2) \p \C : : 1 \smallIn [b \smallIn]$ Ts $\ppp b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : b + 1 \smallIn [b \smallIn]$ Ts $\ppp ([b \smallIn]$ Ts $) [k]$ P9 $: : \C : \N \C [b \smallIn]$ Ts $\p$ (L50) $:: \C : b \smallIn \N \p \C$ Ts. \hfill (3)
+\ENG
+\s $[a \in \mathbb{N} \wedge (1) \wedge (2)] \rightarrow \Big( 1 \in \{b | \text{Ts} \} \wedge [(b \in \mathbb{N} \wedge b \in \{b | \text{Ts} \}) \rightarrow b + 1 \in \{ b | \text{Ts} \}] \wedge \text{P9}[A:=\{b |\text{Ts}\}] \Big) \rightarrow [\mathbb{N} \subset \{b | \text{Ts} \} \wedge \text{L50}] \rightarrow (b \in \mathbb{N} \rightarrow \text{Ts})$. \strut\hfill (3)
+\LAT
+\s $(3) \p$ (L42) $: \C : a,b \smallIn \N \p \C \p$ Thesis. \hfill (Theor.)
+\ENG
+\s $[(3) \wedge $ (L42) $] \rightarrow [(a,b \in \mathbb{N}) \rightarrow $ Thesis $]$.\hfill (Theor.)
+\LAT
 20. \emph{Def.} \s $a + b + c = (a + b) + c$. \s
-\s
+\ENG
 20. \emph{Def.} \s $a + b + c = (a + b) + c$. \s
-\s*
+\LAT
 21. \s $a,b,c \smallIn \N \p \C \p a + b + c \smallIn N$. \s
-\s
+\ENG
 21. \s $a,b,c \in \mathbb{N} \rightarrow a + b + c \in \mathbb{N}$. \s
-\s*
+\LAT
 22. \s $a,b,c \smallIn \N \p \C : a = b \p = \p a + c = b + c$. \s
-\s
+\ENG
 22. \s $a,b,c \in \mathbb{N} \rightarrow (a = b) = (a + c = b + c)$. \s
-\s*
-\emph{Dem.} \s $a,b \smallIn \N \p$ P7 $: \C \p 1 \smallIn [c \smallIn] \text{Ts}$. \s (1)
-\s
-\emph{Proof} \s $[(a,b \in \mathbb{N}) \wedge \text{P7}] \rightarrow 1 \in \{c | \text{Ts} \}$. \s (1)
-\s*
-\s $a,b \smallIn \N \p \C :: c \smallIn \N \p c \smallIn [c \smallIn]$ Ts $\ppp \C \ppp a = b \p = \p a + c = b + c : a + c , b + c \smallIn \N : a + c = b + c \p = \p a + c + 1 = b + c + 1 \ppp \C \ppp a = b \p = \p a + (c + 1) = b + (c + 1) \ppp \C \ppp (c + 1) \smallIn [c \smallIn] \text{Ts}$. \s (2)
-\s
-\s $a,b \in \mathbb{N} \rightarrow \Big[ (c \in \mathbb{N} \wedge c \in \{c | \text{Ts}\}) \rightarrow \Big( [(a = b) = (a + c = b + c)] \wedge (a + c , b + c \in \mathbb{N}) \wedge [(a + c = b + c) = (a + c + 1 = b + c + 1)] \Big) \rightarrow \Big( (a = b) = [a + (c + 1) = b + (c + 1)] \Big) \rightarrow (c + 1) \in \{c | \text{Ts}\} \Big]$. \s (2)
-\s*
-\s $a,b \smallIn \N \p (1) \p (2) : \C :: 1 \smallIn [c \smallIn]$ Ts $\ppp c \smallIn [c \smallIn]$ Ts $ \p \C \p (c + 1) \smallIn [c \smallIn]$ Ts $:: \C :: c \smallIn \N \p \C \p$ Ts. \s (3)
-\s
-\s $[(a,b \in \mathbb{N}) \wedge (1) \wedge (2)] \rightarrow \Big( 1 \in \{ c | \text{Ts} \} \wedge [c \in \{ c | \text{Ts} \}  \rightarrow (c + 1) \in \{ c | \text{Ts} \}] \Big) \rightarrow [(c \in \mathbb{N}) \rightarrow \text{Ts}]$. \s (3)
-\s*
+\LAT
+\emph{Dem.} \s $a,b \smallIn \N \p$ P7 $: \C \p 1 \smallIn [c \smallIn] \text{Ts}$. \hfill (1)
+\ENG
+\emph{Proof} \s $[(a,b \in \mathbb{N}) \wedge \text{P7}] \rightarrow 1 \in \{c | \text{Ts} \}$. \hfill (1)
+\LAT
+\s $a,b \smallIn \N \p \C :: c \smallIn \N \p c \smallIn [c \smallIn]$ Ts $\ppp \C \ppp a = b \p = \p a + c = b + c : a + c , b + c \smallIn \N : a + c = b + c \p = \p a + c + 1 = b + c + 1 \ppp \C \ppp a = b \p = \p a + (c + 1) = b + (c + 1) \ppp \C \ppp (c + 1) \smallIn [c \smallIn] \text{Ts}$. \hfill (2)
+\ENG
+\s $a,b \in \mathbb{N} \rightarrow \Big[ (c \in \mathbb{N} \wedge c \in \{c | \text{Ts}\}) \rightarrow \Big( [(a = b) = (a + c = b + c)] \wedge (a + c , b + c \in \mathbb{N}) \wedge [(a + c = b + c) = (a + c + 1 = b + c + 1)] \Big) \rightarrow \Big( (a = b) = [a + (c + 1) = b + (c + 1)] \Big) \rightarrow (c + 1) \in \{c | \text{Ts}\} \Big]$. \hfill (2)
+\LAT
+\s $a,b \smallIn \N \p (1) \p (2) : \C :: 1 \smallIn [c \smallIn]$ Ts $\ppp c \smallIn [c \smallIn]$ Ts $ \p \C \p (c + 1) \smallIn [c \smallIn]$ Ts $:: \C :: c \smallIn \N \p \C \p$ Ts. \hfill (3)
+\ENG
+\s $[(a,b \in \mathbb{N}) \wedge (1) \wedge (2)] \rightarrow \Big( 1 \in \{ c | \text{Ts} \} \wedge [c \in \{ c | \text{Ts} \}  \rightarrow (c + 1) \in \{ c | \text{Ts} \}] \Big) \rightarrow [(c \in \mathbb{N}) \rightarrow \text{Ts}]$. \hfill (3)
+\LAT
 23. \s $a,b,c \smallIn \N \p \C \p a + (b + c) = a + b + c$. \s
-\s
+\ENG
 23. \s $a,b,c \in \mathbb{N} \rightarrow a + (b + c) = a + b + c$. \s
-\s*
-\emph{Dem.} \s $a,b \smallIn \N \p$ P18 $\p$ P20 $: \C \p 1 \smallIn [c \smallIn]$ Ts. \s (1)
-\s
-\emph{Proof} \s $[(a,b \in \mathbb{N}) \wedge \text{P18} \wedge \text{P20} ] \rightarrow 1 \in \{ c | \text{Ts} \}$. \s (1)
-\s*
-\s $a,b \smallIn \N \p \C \ppp c \smallIn \N \p c \smallIn [c \smallIn]$ Ts $: \C : a + (b +c) = a + b + c \p$ P7 $: \C : a + (b + c) + 1 = a + b + c + 1 \p$ P18 $: \C : a + (b + (c + 1)) = a + b + (c + 1) : \C \p c + 1 \smallIn [c \smallIn]$ Ts. \s (2)
-\s
-\s $a,b \in \mathbb{N} \rightarrow \Big[ (c \in \mathbb{N} \wedge c \in \{ c | \text{Ts} \}) \rightarrow [ a + (b +c) = a + b + c \wedge \text{P7} ] \rightarrow [ a + (b + c) + 1 = a + b + c + 1 \wedge \text{P18} ] \rightarrow \Big( a + [b + (c + 1)] = a + b + (c + 1) \Big) \rightarrow c + 1 \in \{ c | \text{Ts} \} \Big]$. \s (2)
-\s*
+\LAT
+\emph{Dem.} \s $a,b \smallIn \N \p$ P18 $\p$ P20 $: \C \p 1 \smallIn [c \smallIn]$ Ts. \hfill (1)
+\ENG
+\emph{Proof} \s $[(a,b \in \mathbb{N}) \wedge \text{P18} \wedge \text{P20} ] \rightarrow 1 \in \{ c | \text{Ts} \}$. \hfill (1)
+\LAT
+\s $a,b \smallIn \N \p \C \ppp c \smallIn \N \p c \smallIn [c \smallIn]$ Ts $: \C : a + (b +c) = a + b + c \p$ P7 $: \C : a + (b + c) + 1 = a + b + c + 1 \p$ P18 $: \C : a + (b + (c + 1)) = a + b + (c + 1) : \C \p c + 1 \smallIn [c \smallIn]$ Ts. \hfill (2)
+\ENG
+\s $a,b \in \mathbb{N} \rightarrow \Big[ (c \in \mathbb{N} \wedge c \in \{ c | \text{Ts} \}) \rightarrow [ a + (b +c) = a + b + c \wedge \text{P7} ] \rightarrow [ a + (b + c) + 1 = a + b + c + 1 \wedge \text{P18} ] \rightarrow \Big( a + [b + (c + 1)] = a + b + (c + 1) \Big) \rightarrow c + 1 \in \{ c | \text{Ts} \} \Big]$. \hfill (2)
+\LAT
 \s $(1)(2)$ (P9) $\p \C \p$ Theor. \s
-\s
+\ENG
 \s $[(1) \wedge (2) \wedge \text{P9} ] \rightarrow \text{Theor}$. \s
-\s*
+\LAT
 24. \s $a \smallIn \N \p \C \p 1 + a = a + 1$. \s
-\s
+\ENG
 24. \s $a \in \mathbb{N} \rightarrow 1 + a = a + 1$. \s
-\s*
-\emph{Dem.} \s P2 $\p \C \p 1 \smallIn [a \smallIn]$ Ts. \s (1)
-\s
-\emph{Proof} \s $\text{P2} \rightarrow 1 \in \{ a | \text{Ts} \}$. \s (1)
-\s*
-\s $a \smallIn \N \p a \smallIn [a \smallIn]$ Ts $: \C : 1 + 1 = a + 1 : \C : 1 + (a + 1) = (a + 1) + 1 : \C : (a + 1) \smallIn [a \smallIn]$ Ts. \s (2)
-\s
-\s $(a \in \mathbb{N} \wedge a \in \{ a | \text{Ts} \} ) \rightarrow (1 + 1 = a + 1) \rightarrow [1 + (a + 1) = (a + 1) + 1] \rightarrow [(a + 1) \in \{ a | \text{Ts} \}]$. \s (2)
-\s*
+\LAT
+\emph{Dem.} \s P2 $\p \C \p 1 \smallIn [a \smallIn]$ Ts. \hfill (1)
+\ENG
+\emph{Proof} \s $\text{P2} \rightarrow 1 \in \{ a | \text{Ts} \}$. \hfill (1)
+\LAT
+\s $a \smallIn \N \p a \smallIn [a \smallIn]$ Ts $: \C : 1 + 1 = a + 1 : \C : 1 + (a + 1) = (a + 1) + 1 : \C : (a + 1) \smallIn [a \smallIn]$ Ts. \hfill (2)
+\ENG
+\s $(a \in \mathbb{N} \wedge a \in \{ a | \text{Ts} \} ) \rightarrow (1 + 1 = a + 1) \rightarrow [1 + (a + 1) = (a + 1) + 1] \rightarrow [(a + 1) \in \{ a | \text{Ts} \}]$. \hfill (2)
+\LAT
 \s $(1)(2) \p \C \p$ Theor. \s
-\s
+\ENG
 \s $[(1) \wedge (2)] \rightarrow \text{Theor}$. \s
-\s*
+\LAT
 24'. \s $a,b \smallIn \N \p \C \p 1 + a + b = a + 1 + b$. \s
-\s
+\ENG
 24'. \s $a,b \in \mathbb{N} \rightarrow 1 + a + b = a + 1 + b$. \s
-\s*
+\LAT
 \emph{Dem.} \s Hyp. P24 $: \C : 1 + a = a + 1 \p$ P22 $: \C \p$ Thesis. \s
-\s
+\ENG
 \emph{Proof} \s $(\text{Hyp.} \wedge \text{P24}) \rightarrow [(1 + a = a + 1) \wedge \text{P22}] \rightarrow \text{Thesis}$. \s
-\end{translateSixCol}
+\end{translateFourCol}
 
 \peanoPage{4} % page-number 4
 

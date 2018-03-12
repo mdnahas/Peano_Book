@@ -1,5 +1,26 @@
 \documentclass{book}
 
+% TODO LIST:
+
+% * Many theorems and proofs need to be translated.
+
+% * Many proofs need to change from translateSixCol environment
+%   to a translateFourCol environment with \hfill (or \strut\hfill)
+%   before proof step numbers.  (This is already done in lines 1826
+%   to 1911.)  This will make it match the original and make more
+%   space available for proofs.
+
+% * Change \s and \s* to use \LAT and \ENG where possible.
+
+% * Many long equations have a line break at a bad location.
+
+% * The symbol $\text{M}\such\D$ has too much space in it.
+
+% * Most of the symbols used in Latin math have very hacked spacing
+%   with \thinspace and such.  This means equations have lots of $s.
+%   It'd be nice to define these with \mathrel or \mathbin to clean
+%   it all up.  
+
 
 % Set paper and layout
 %
@@ -221,7 +242,6 @@
 
 % Title Page
 %
-% TODO: fix spacing
 { \centering
 
   \vspace*{1cm}
@@ -721,7 +741,7 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $\text{P}$; tunc $-a$ est negatio
 \ENG The symbol $\neg$ is read \emph{not}. Let $a$ be a $\prop$; then $\neg a$ is the negation of the proposition $a$.
 \LAT Signo $\cup$ legitur \emph{vel}. Sint $a,b$ propositiones; tunc $a \cup b$ idem est ac $-:-a$ $.$ $-b$.
 \ENG The symbol $\vee$ is read \emph{or}. Let $a,b$ be propositions; then $a \vee b$ is the same as $\neg[(\neg a) \wedge (\neg b)]$.
-\LAT \text{[}Signo $V$ significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.  % TODO: The math V here should be upright, not slanted
+\LAT \text{[}Signo V significatur \emph{verum}, sive \emph{identitas}; sed hoc signo numquam utimur\text{]}.  
 \ENG \irrelavent{The symbol $\top$  means \emph{true}, or \emph{identity}, but we never use this symbol.}
 \LAT Signum  $\abs$ significat \emph{falsum}, sive \emph{absurdum}.
 \ENG The symbol $\bot$ means \emph{false}, or \emph{absurd}.
@@ -2640,7 +2660,7 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 4. \s $\mathbb{P} = \mathbb{N} \cap \Big\{x \Big| \Big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \Big) = \varnothing \Big\}$. \s
 \s*
 5. \s $a,b \smallIn \N \p \C :: a \primeWith b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
-\s  %%% TODO: create new command for \primeWith with \mathbin 
+\s
 5. \s $a,b \in \mathbb{N} \rightarrow a \primeWith b = \Big[\Big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \Big) = \varnothing \Big]$. \s
 \s*
 6. \s $a,b \smallIn \N \p \C \ppp \such \D (a,b) : = : \such \D a \p \cap \p \such \D b$. \s

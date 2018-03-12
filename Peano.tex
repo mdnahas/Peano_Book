@@ -1724,21 +1724,24 @@ $[P1 \wedge P6] \rightarrow [(1 + 1 \in \mathbb{N}) \wedge P10 \wedge P5] \right
 \ENG
 12. \hspace{0.67cm} $3, 4, ... \in \mathbb{N}$
 \LAT
+\ENG
+\commentary{Below, $L$\# refers to a proposition of logic from the first half of this book.  ``theorem'', ``Theor.'' or ``Th.'' refers to what is to be proven.  If the theorem is an implication, ``hypothesis'' or ``Hyp.'' refers to its antecedent and ``thesis'', ``Thes.'' or ``Ts.'' refers to its consequent.}
+\LAT
 13. \hspace{0.67cm} $a,b,c,d \smallIn \N \p a = b \p b = c \p c = d : \C : a = d$
 \ENG
 13. \hspace{0.67cm} $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge b = c \wedge c = d ) \rightarrow a = d$
 \LAT
-\emph{Dem.} \hspace{0.27cm} $Hyp. P 4 : \C : a,c,d \smallIn \N \p a = c \p c = d \p P4 : \C : Thes.$
+\emph{Dem.} \hspace{0.27cm} $Hyp. P4 : \C : a,c,d \smallIn \N \p a = c \p c = d \p P4 : \C : Thes.$
 \ENG
-\emph{Proof} \hspace{0.27cm} \todo
+\emph{Proof} \hspace{0.27cm} $(Hyp. \wedge P4) \rightarrow [(a,c,d \in \mathbb{N}) \wedge a = c \wedge c = d \wedge P4 ] \rightarrow Thes.$
 \LAT
 14. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b = c \p a \no = c : = \abs$
 \ENG
 14. \hspace{0.67cm} $(a,b,c \in \mathbb{N} \wedge a = b \wedge b = c \wedge a \neq c) = \bot$
 \LAT
-\emph{Dem.} \hspace{0.27cm} $P4 \p L 39 : \C \p Theor$.
+\emph{Dem.} \hspace{0.27cm} $P4 \p L39 : \C \p Theor$.
 \ENG
-\emph{Proof} \hspace{0.27cm} \todo
+\emph{Proof} \hspace{0.27cm} $(P4 \wedge L39) \rightarrow Theor$.
 \LAT
 15. \hspace{0.67cm} $a,b,c \smallIn \N \p a = b \p b \no = c : \C \p a \no = c$
 \ENG
@@ -1752,9 +1755,9 @@ $[P1 \wedge P6] \rightarrow [(1 + 1 \in \mathbb{N}) \wedge P10 \wedge P5] \right
 \ENG
 17. \hspace{0.67cm} $(a,b \in \mathbb{N}) \rightarrow [(a \neq b) = (a + 1 \neq b + 1)]$
 \LAT
-\emph{Dem.} \hspace{0.27cm} $P7 \p L21 : \C \p Theor$
+\emph{Dem.} \hspace{0.27cm} $P7 \p L21 : \C \p Theor$.
 \ENG
-\emph{Proof} \hspace{0.27cm} \todo
+\emph{Proof} \hspace{0.27cm} $(P7 \wedge L21) \rightarrow Theor$.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1908,50 +1911,6 @@ From this definition, and the preceding, we deduce that:
 \s $(1)(2) \p \C \p$ Theor. \s
 \ENG
 \s $(1)(2) \rightarrow$ Theor. \s
-\LAT
-\s \s
-\ENG
-\s \commentary{Redone in modern style} \s
-\LAT
-\s \s
-\ENG
-P24\s $a \in \mathbb{N} \rightarrow 1 \in \{ b | a+b = b+a \} $\s (1)
-\LAT
-\s \s
-\ENG
-\s $a \in \mathbb{N} \rightarrow b \in \mathbb{N} \wedge b \in \{ b | a+b=b+a\} \rightarrow a+b=b+a$ \s (2)
-\LAT
-\s \s
-\ENG
-P7\s $\ldots \rightarrow a + b + 1 = b + a + 1$\s (3)
-\LAT
-\s \s
-\ENG
-P23\s $\ldots \rightarrow (a+b)+1 = a+(b+1)$ \s (4)
-\LAT
-\s \s
-\ENG
-P24\s $\ldots \rightarrow (b+a)+1 = 1+(b+a)$ \s (5)
-\LAT
-\s \s
-\ENG
-P23\s $\ldots \rightarrow 1+(b+a) = (1+b)+a$ \s (6)
-\LAT
-\s \s
-\ENG
-P24'\s $\ldots \rightarrow (1+b)+a = (b+1)+a$ \s (7)
-\LAT
-\s \s
-\ENG
-P4(3-7)\s  $\ldots \rightarrow a+(b+1) = (b+1)+a$ \s (8)
-\LAT
-\s \s
-\ENG
-(2,8)\s $\ldots \rightarrow b \in \{ b| a+b = b+a \} \rightarrow (b+1) \in \{ b| a+b = b+a \}$ \s (9)
-\LAT
-\s \s
-\ENG
-P9(1,9)\s $(a,b \in \mathbb{N}) \rightarrow a+b=b+a$ \s
 \LAT
 26. \s $a,b,c \smallIn \N \p \C : a = b \p = \p c + a = c + b$. \s
 \ENG

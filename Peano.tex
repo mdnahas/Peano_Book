@@ -2,16 +2,6 @@
 
 % TODO LIST:
 
-% * Many theorems and proofs need to be translated.
-
-% * Many proofs need to change from translateSixCol environment
-%   to a translateFourCol environment with \hfill (or \strut\hfill)
-%   before proof step numbers.  (This is already done in lines 1826
-%   to 1911.)  This will make it match the original and make more
-%   space available for proofs.
-
-% * Change \s and \s* to use \LAT and \ENG where possible.
-
 % * Many long equations have a line break at a bad location.
 
 % Set paper and layout
@@ -1932,35 +1922,35 @@ From this definition, and the preceding, we deduce that:
 
 \peanoPage{4} % page-number 4
 
-\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
-25. \s $a,b \smallIn \N \p \C \p a + b = b + a$. \s
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
+25. \s $a,b \smallIn \N \p \C \p a + b = b + a$.
 \ENG
-25. \s $a,b \in \mathbb{N} \rightarrow a + b = b + a$. \s
+25. \s $a,b \in \mathbb{N} \rightarrow a + b = b + a$.
 \LAT
-\emph{Dem.} \s $a \smallIn \N \p$ P24 $: \C : 1 \smallIn [b \smallIn]$ Ts. \s (1)
+\emph{Dem.} \s $a \smallIn \N \p$ P24 $: \C : 1 \smallIn [b \smallIn]$ Ts. \hfill (1)
 \ENG
-\emph{Proof} \s $a \in \mathbb{N} \wedge \text{P24} \rightarrow 1 \in \{b | Ts \}$. \s (1)
+\emph{Proof} \s $a \in \mathbb{N} \wedge \text{P24} \rightarrow 1 \in \{b | \text{Ts} \}$. \hfill (1)
 \LAT
-\s $a \smallIn \N \p \C \ppp b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \s (2)
+\s $a \smallIn \N \p \C \ppp b \smallIn \N \p b \smallIn [b \smallIn]$ Ts $: \C : a + b = b + a \p$ P7 $: \C : (a + b) + 1 = (b + a) + 1 \p (a + b) + 1 = a + (b + 1) \p (b + a ) + 1 = 1 + (b + a) \p 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a : \C : a + (b + 1) = (b + 1) + a : \C : (b + 1) \smallIn [b \smallIn]$ Ts. \hfill (2)
 \ENG
-\s $a \in \mathbb{N} \rightarrow \Big( (b \in \mathbb{N} \wedge b \in \{b| $Ts$\} ) \rightarrow ( a + b = b + a \wedge \text{P7} ) \rightarrow [ (a + b) + 1 = (b + a) + 1 \wedge (a + b) + 1 = a + (b + 1) \wedge (b + a ) + 1 = 1 + (b + a) \wedge 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a ] \rightarrow [ a + (b + 1) = (b + 1) + a ] \rightarrow [(b + 1) \in \{b | $Ts$\}] \Big)$. \s (2)
+\s $a \in \mathbb{N} \rightarrow \Big( (b \in \mathbb{N} \wedge b \in \{b| \text{Ts}\} ) \rightarrow ( a + b = b + a \wedge \text{P7} ) \rightarrow [ (a + b) + 1 = (b + a) + 1 \wedge (a + b) + 1 = a + (b + 1) \wedge (b + a ) + 1 = 1 + (b + a) \wedge 1 + (b + a) = (1 + b) + a \p (1 + b) + a = (b + 1) + a ] \rightarrow [ a + (b + 1) = (b + 1) + a ] \rightarrow [(b + 1) \in \{b | \text{Ts}\}] \Big)$. \hfill (2)
 \LAT
-\s $(1)(2) \p \C \p$ Theor. \s
+\s $(1)(2) \p \C \p$ Theor.
 \ENG
-\s $(1)(2) \rightarrow$ Theor. \s
+\s $[(1) \wedge (2)] \rightarrow \text{Theor}$.
 \LAT
-26. \s $a,b,c \smallIn \N \p \C : a = b \p = \p c + a = c + b$. \s
+26. \s $a,b,c \smallIn \N \p \C : a = b \p = \p c + a = c + b$.
 \ENG
-26. \s $a,b,c \in \mathbb{N} \rightarrow (a = b) = (c + a = c + b)$. \s
+26. \s $a,b,c \in \mathbb{N} \rightarrow (a = b) = (c + a = c + b)$.
 \LAT
-27. \s $a,b,c \smallIn \N \p \C : a + b + c = a + c + b$. \s
+27. \s $a,b,c \smallIn \N \p \C : a + b + c = a + c + b$.
 \ENG
-27. \s $a,b,c \in \mathbb{N} \rightarrow a + b + c = a + c + b$. \s
+27. \s $a,b,c \in \mathbb{N} \rightarrow a + b + c = a + c + b$.
 \LAT
-28. \s $a,b,c,d \smallIn \N \p a = b \p c = d : \C \p a + c = b + d$. \s
+28. \s $a,b,c,d \smallIn \N \p a = b \p c = d : \C \p a + c = b + d$.
 \ENG
-28. \s $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge c = d) \rightarrow a + c = b + d$. \s
-\end{translateSixCol}
+28. \s $(a,b,c,d \in \mathbb{N} \wedge a = b \wedge c = d) \rightarrow a + c = b + d$.
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2000,24 +1990,25 @@ From this definition, and the preceding, we deduce that:
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-1. \s $a,b \smallIn \N \p \C : b - a = \N [x \smallIn] (x + a = b)$. \s
-\s
-1. \s $a,b \in \mathbb{N} \rightarrow b - a = \mathbb{N} \cap \{x | x + a = b \}$. \s
-\s*
-2. \s $a,b \smallIn \N \p \C : a < b \p = \p b - a \no = \abs$. \s
-\s
-2. \s $a,b \in \mathbb{N} \rightarrow (a < b) = (b - a \neq \bot$). \s
-\s*
-3. \s $a,b \smallIn \N \p \C : b > a \p = \p a < b$. \s
-\s
-3. \s $a,b \in \mathbb{N} \rightarrow (b > a) = (a < b)$. \s
-\s*
-\s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
-\s
-\s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$. \s
-\end{translateSixCol}
+1. \s $a,b \smallIn \N \p \C : b - a = \N [x \smallIn] (x + a = b)$.
+\ENG
+1. \s $a,b \in \mathbb{N} \rightarrow b - a = \mathbb{N} \cap \{x | x + a = b \}$.
+\LAT
+2. \s $a,b \smallIn \N \p \C : a < b \p = \p b - a \no = \abs$.
+\ENG
+2. \s $a,b \in \mathbb{N} \rightarrow (a < b) = (b - a \neq \varnothing$).
+\LAT
+3. \s $a,b \smallIn \N \p \C : b > a \p = \p a < b$.
+\ENG
+3. \s $a,b \in \mathbb{N} \rightarrow (b > a) = (a < b)$.
+\LAT
+\s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$.
+\ENG
+\s $a + b - c = (a + b) - c; a - b + c = (a - b) + c; a - b - c = (a - b) - c$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2275,16 +2266,17 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-1. \s $a \smallIn \K \N \p \C : \M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs)$.\s
-\s
-1. \s $A \in \setOfSets \mathbb{N} \rightarrow  \max(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z > x \}) = \bot]\Big\}$.\s
-\s*
-2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs)$.\s
-\s
-2. \s $A \in \setOfSets \mathbb{N} \rightarrow \min(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z < x \}) = \bot]\Big\}$.\s
-\end{translateSixCol}
+1. \s $a \smallIn \K \N \p \C : \M a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \larger x : = \abs)$.
+\ENG
+1. \s $A \in \setOfSets \mathbb{N} \rightarrow  \max(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z > x \}) = \varnothing]\Big\}$.
+\LAT
+2. \s $a \smallIn \K \N \p \C : \mini a = [x \smallIn] (x \smallIn a \ppp a \p \smallIn \smaller x : = \abs)$.
+\ENG
+2. \s $A \in \setOfSets \mathbb{N} \rightarrow \min(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z < x \}) = \varnothing]\Big\}$.
+\LAT
+\end{translateFourCol}
 
 \peanoPage{7} % page-number 7
 
@@ -2355,20 +2347,21 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.08}{0.39}{0.02}{0.08}{0.39}{0.02}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-1. \s $a \smallIn \N \p \C \p a \times 1 = a$.\s
-\s
-1. \s $a \in \mathbb{N} \rightarrow a \times 1 = a$.\s
-\s*
-2. \s $a,b \smallIn \N \p \C \p a \times (b + 1) = a \times b + a$. \s
-\s
-2. \s $a,b \in \mathbb{N} \rightarrow a \times (b + 1) = a \times b + a$. \s
-\s*
-\s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$. \s
-\s
-\s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$. \s
-\end{translateSixCol}
+1. \s $a \smallIn \N \p \C \p a \times 1 = a$.
+\ENG
+1. \s $a \in \mathbb{N} \rightarrow a \times 1 = a$.
+\LAT
+2. \s $a,b \smallIn \N \p \C \p a \times (b + 1) = a \times b + a$.
+\ENG
+2. \s $a,b \in \mathbb{N} \rightarrow a \times (b + 1) = a \times b + a$.
+\LAT
+\s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$.
+\ENG
+\s $a b = a \times b; a b + c = (a b) + c; a b c = (a b) c$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2543,16 +2536,17 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-1. \s $a \smallIn \N \p \C \p a^1 = a$. \s
-\s
-1. \s $a \in \mathbb{N} \rightarrow a^1 = a$. \s
-\s*
-2. \s $a,b \smallIn \N \p \C \p a^{b+1} = a^{b} a$. \s
-\s
-2. \s $a,b \in \mathbb{N} \rightarrow a^{b+1} = a^{b} a$. \s
-\end{translateSixCol}
+1. \s $a \smallIn \N \p \C \p a^1 = a$.
+\ENG
+1. \s $a \in \mathbb{N} \rightarrow a^1 = a$.
+\LAT
+2. \s $a,b \smallIn \N \p \C \p a^{b+1} = a^{b} a$.
+\ENG
+2. \s $a,b \in \mathbb{N} \rightarrow a^{b+1} = a^{b} a$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -2652,40 +2646,41 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05}  % wider than usual for definition 5
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}  % wider than usual for definition 5
 \raggedright
-1. \s $a,b \smallIn \N \p \C : b / a = \N [x \smallIn] (xa=b)$. \s
-\s
-1. \s $a,b \in \mathbb{N} \rightarrow b / a = \mathbb{N} \cap \{x | xa=b \}$. \s
-\s*
-2. \s $a,b \smallIn \N \p \C : a \D b \p = \p b / a \no = \abs$. \s
-\s
-2. \s $a,b \in \mathbb{N} \rightarrow a | b = (b / a \neq \varnothing)$. \s
-\s*
-3. \s $a,b \smallIn \N \p \C : b \mult a \p = \p a \D b$. \s
-\s
-3. \s $a,b \in \mathbb{N} \rightarrow b \mult a = (a | b)$. \s  %%%TODO: There is no modern symbol for this, is there?
-\s*
-4. \s $\Np = \N [x \smallIn] (\such \D x \p \such \larger 1 \p \such \smaller x : = \abs)$. \s
-\s
-4. \s $\mathbb{P} = \mathbb{N} \cap \Big\{x \Big| \Big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \Big) = \varnothing \Big\}$. \s
-\s*
-5. \s $a,b \smallIn \N \p \C :: a \primeWith b \ppp = \ppp \such \D a \p \such \D b \p \such \larger 1 : = \abs$. \s
-\s
-5. \s $a,b \in \mathbb{N} \rightarrow a \primeWith b = \Big[\Big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \Big) = \varnothing \Big]$. \s
-\s*
-6. \s $a,b \smallIn \N \p \C \ppp \such \D (a,b) : = : \such \D a \p \cap \p \such \D b$. \s
-\s
-6. \s $a,b \in \mathbb{N} \rightarrow \such\,|\,(a,b) = \Big( \{ z | ( z | a) \} \cap \{ z | (z | b) \} \Big)$. \s %%%TODO: There is no modern symbol for this, is there?
-\s*
-7. \s $a,b \smallIn \N \p \C \ppp \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$. \s
-\s
-7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = \Big( \{ z | z \mult a \} \cap \{z | z \mult b \} \Big)$. \s %%%TODO: There is no modern symbol for this, is there?
-\s*
-\s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
-\s
-\s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$. \s
-\end{translateSixCol}
+1. \s $a,b \smallIn \N \p \C : b / a = \N [x \smallIn] (xa=b)$.
+\ENG
+1. \s $a,b \in \mathbb{N} \rightarrow b / a = \mathbb{N} \cap \{x | xa=b \}$.
+\LAT
+2. \s $a,b \smallIn \N \p \C : a \D b \p = \p b / a \no = \abs$.
+\ENG
+2. \s $a,b \in \mathbb{N} \rightarrow a | b = (b / a \neq \varnothing)$.
+\LAT
+3. \s $a,b \smallIn \N \p \C : b \mult a \p = \p a \D b$.
+\ENG
+3. \s $a,b \in \mathbb{N} \rightarrow b \mult a = (a | b)$. \hfill %%%TODO: There is no modern symbol for this, is there?
+\LAT
+4. \s $\Np = \N [x \smallIn] (\divSet x \p \such \larger 1 \p \such \smaller x : = \abs)$.
+\ENG
+4. \s $\mathbb{P} = \mathbb{N} \cap \Big\{x \Big| \Big( \{ z | (z | x) \} \cap \{z | z > 1 \} \cap \{z | z < x \} \Big) = \varnothing \Big\}$.
+\LAT
+5. \s $a,b \smallIn \N \p \C :: a \primeWith b \ppp = \ppp \divSet a \p \divSet b \p \such \larger 1 : = \abs$.
+\ENG
+5. \s $a,b \in \mathbb{N} \rightarrow a \primeWith b = \Big[\Big(\{z | (z | a) \} \cap \{z | (z | b) \} \cap \{ z | z > 1 \} \Big) = \varnothing \Big]$.
+\LAT
+6. \s $a,b \smallIn \N \p \C \ppp \divSet (a,b) : = : \divSet a \p \cap \p \divSet b$.
+\ENG
+6. \s $a,b \in \mathbb{N} \rightarrow \such\,|\,(a,b) = \Big( \{ z | ( z | a) \} \cap \{ z | (z | b) \} \Big)$. \hfill %%%TODO: There is no modern symbol for this, is there?
+\LAT
+7. \s $a,b \smallIn \N \p \C \ppp \such \mult (a,b) : = : \such \mult a \p \cap \p \such \mult b$.
+\ENG
+7. \s $a,b \in \mathbb{N} \rightarrow \such \mult (a,b) = \Big( \{ z | z \mult a \} \cap \{z | z \mult b \} \Big)$. \hfill %%%TODO: There is no modern symbol for this, is there?
+\LAT
+\s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$.
+\ENG
+\s $ab / c = (ab)/c; a/b/c = (a/b)/c; a/b \times c = (a/b)c$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3057,24 +3052,25 @@ The symbol $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-1. \s $m,p,q \smallIn \N \p \C \p m \frac{p}{q} = m p / q$. \s
-\s
-1. \s $m,p,q \in \mathbb{N} \rightarrow m \frac{p}{q} = m p / q$. \s
-\s*
-2. \s $p,q,p',q' \smallIn \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \ppp x \smallIn \N \p x \frac{p}{q}, x \frac{p'}{q'} \smallIn \N : \C_x \p x \frac{p}{q} = x \frac{p'}{q'}$. \s
-\s
-2. \s $p,q,p',q' \in \mathbb{N} \rightarrow (\frac{p}{q} = \frac{p'}{q'}) = [ x \in \mathbb{N} \wedge (x \frac{p}{q}, x \frac{p'}{q'} \in \mathbb{N}) \xrightarrow[\forall x]{} ( x \frac{p}{q} = x \frac{p'}{q'})]$. \s
-\s*
-3. \s $R = :: [x \smallIn] \ppp p, q \smallIn \N \p \frac{p}{q} = x : \no = \abs$. \s
-\s
-3. \s $\mathbb{Q}^+ = \{x | [(p, q \in \mathbb{N}) \wedge \frac{p}{q} = x] \neq \bot \}$. \s
-\s*
-4. \s $p \smallIn \N \p \C \p \frac{p}{1} = p$. \s
-\s
-4. \s $p \in \mathbb{N} \rightarrow \frac{p}{1} = p$. \s
-\end{translateSixCol}
+1. \s $m,p,q \smallIn \N \p \C \p m \frac{p}{q} = m p / q$.
+\ENG
+1. \s $m,p,q \in \mathbb{N} \rightarrow m \frac{p}{q} = m p / q$.
+\LAT
+2. \s $p,q,p',q' \smallIn \N \p \C :: \frac{p}{q} = \frac{p'}{q'} \p = \ppp x \smallIn \N \p x \frac{p}{q}, x \frac{p'}{q'} \smallIn \N : \C_x \p x \frac{p}{q} = x \frac{p'}{q'}$.
+\ENG
+2. \s $p,q,p',q' \in \mathbb{N} \rightarrow (\frac{p}{q} = \frac{p'}{q'}) = \Big( [x \in \mathbb{N} \wedge (x \frac{p}{q}, x \frac{p'}{q'} \in \mathbb{N})] \xrightarrow[\forall x]{} ( x \frac{p}{q} = x \frac{p'}{q'}) \Big)$.
+\LAT
+3. \s $R = :: [x \smallIn] \ppp p, q \smallIn \N \p \frac{p}{q} = x : \no = \abs$.
+\ENG
+3. \s $\mathbb{Q}^+ = \{x | [(p, q \in \mathbb{N}) \wedge \frac{p}{q} = x] \neq \bot \}$.
+\LAT
+4. \s $p \smallIn \N \p \C \p \frac{p}{1} = p$.
+\ENG
+4. \s $p \in \mathbb{N} \rightarrow \frac{p}{1} = p$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3186,16 +3182,17 @@ The symbol $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05}  %wider than usual
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}  %wider than usual
 \raggedright
-19. \s $a,b \smallIn \R \p \C :: a \smaller b \p = \ppp x \smallIn \N \p xa, xb \smallIn \N : \C \p xa \smaller xb$. \s
-\s
-19. \s $a,b \in \mathbb{Q}^+ \rightarrow a < b = ([x \in \mathbb{N} \wedge (xa, xb \in \mathbb{N})] \rightarrow xa < xb)$.\s
-\s*
-20. \s $a,b \smallIn \R \p \C : b \larger a \p = \p a \smaller b$. \s
-\s
-20. \s $a,b \in \mathbb{Q}^+ \rightarrow b \larger a = a \smaller b$. \s
-\end{translateSixCol}
+19. \s $a,b \smallIn \R \p \C :: a \smaller b \p = \ppp x \smallIn \N \p xa, xb \smallIn \N : \C \p xa \smaller xb$.
+\ENG
+19. \s $a,b \in \mathbb{Q}^+ \rightarrow (a < b) = ([x \in \mathbb{N} \wedge (xa, xb \in \mathbb{N})] \rightarrow xa < xb)$.
+\LAT
+20. \s $a,b \smallIn \R \p \C : b \larger a \p = \p a \smaller b$.
+\ENG
+20. \s $a,b \in \mathbb{Q}^+ \rightarrow (b > a) = (a < b)$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3270,24 +3267,25 @@ The symbol $\mathbb{Q}^+$ is read \emph{ratio of two numbers}, and indicates the
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05}  % wider than usual
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}  % wider than usual
 \raggedright
-30. \s $a,b \smallIn \R \p \C \p a + b = [c \smallIn] (c \smallIn  \R \ppp x \smallIn \N \p x a, x b, x c \smallIn \N : \C_x \p xa + xb = xc)$. \s
-\s
-30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \Big\{c \Big| c \in  \mathbb{Q}^+ \wedge \Big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[\forall x]{}  xa + xb = xc \Big) \Big\}$. \s
-\s*
-31. \s $a,b \smallIn \R \p \C :: b - a = \ppp [x \smallIn] (x \smallIn \R \p a + x = b)$. \s
-\s
-31. \s $a,b \in \mathbb{Q}^+ \rightarrow b - a = \{ x | x \in \mathbb{Q}^+ \wedge a + x = b \}$. \s
-\s*
-32. \s $a,b \smallIn \R \p \C \p ab = [c \smallIn] (c \smallIn \R \ppp x \smallIn \N \p xa, (xa)b, xc \smallIn \N : \C_x \p (xa) b = xc)$. \s
-\s
-32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \Big\{ c \Big| c \in \mathbb{Q}^+ \wedge \Big[ \Big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \Big) \xrightarrow[\forall x]{} (xa) b = xc \Big] \Big\}$. \s
-\s*
-33. \s $a,b \smallIn \R \p \C \p b / a = [x \smallIn] (x \smallIn \R \p ax = b)$. \s
-\s
-33. \s $a,b \in \mathbb{Q}^+ \rightarrow b / a = \{ x | x \in \mathbb{Q}^+ \wedge ax = b \}$. \s
-\end{translateSixCol}
+30. \s $a,b \smallIn \R \p \C \p a + b = [c \smallIn] (c \smallIn  \R \ppp x \smallIn \N \p x a, x b, x c \smallIn \N : \C_x \p xa + xb = xc)$.
+\ENG
+30. \s $a,b \in \mathbb{Q}^+ \rightarrow a + b = \Big\{c \Big| c \in  \mathbb{Q}^+ \wedge \Big( [ x \in \mathbb{N}  \wedge (x a, x b, x c \in \mathbb{N})] \xrightarrow[\forall x]{}  xa + xb = xc \Big) \Big\}$.
+\LAT
+31. \s $a,b \smallIn \R \p \C :: b - a = \ppp [x \smallIn] (x \smallIn \R \p a + x = b)$.
+\ENG
+31. \s $a,b \in \mathbb{Q}^+ \rightarrow b - a = \{ x | x \in \mathbb{Q}^+ \wedge a + x = b \}$.
+\LAT
+32. \s $a,b \smallIn \R \p \C \p ab = [c \smallIn] (c \smallIn \R \ppp x \smallIn \N \p xa, (xa)b, xc \smallIn \N : \C_x \p (xa) b = xc)$.
+\ENG
+32. \s $a,b \in \mathbb{Q}^+ \rightarrow ab = \Big\{ c \Big| c \in \mathbb{Q}^+ \wedge \Big[ \Big( x \in \mathbb{N} \wedge [xa, (xa)b, xc \in \mathbb{N}] \Big) \xrightarrow[\forall x]{} (xa) b = xc \Big] \Big\}$.
+\LAT
+33. \s $a,b \smallIn \R \p \C \p b / a = [x \smallIn] (x \smallIn \R \p ax = b)$.
+\ENG
+33. \s $a,b \in \mathbb{Q}^+ \rightarrow b / a = \{ x | x \in \mathbb{Q}^+ \wedge ax = b \}$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3368,20 +3366,21 @@ If $A \in \setOfSets \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper bou
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.35}{0.05}{0.1}{0.35}{0.05} % wider than usual
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42} % wider than usual
 \raggedright
-1. \s $a \smallIn \K \R \p x \smallIn \R : \C :: x \smaller \T a \p = \ppp a \p \such \larger x : \no = \abs$. \s
-\s
-1. \s $(A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow x < \sup(A) = [(A \cap \{ z | z > x \}) \neq \varnothing]$. \s
-\s*
-2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$. \s
-\s
-2. \s $(A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \Big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \Big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[\forall u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \Big) \Big]$. \s
-\s*
-3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$. \s
-\s
-3. \s $( A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+ ) \rightarrow (x > \sup(A)) = [(x \nless \sup(A)) \wedge (x \neq \sup(A))] $. \s
-\end{translateSixCol}
+1. \s $a \smallIn \K \R \p x \smallIn \R : \C :: x \smaller \T a \p = \ppp a \p \such \larger x : \no = \abs$.
+\ENG
+1. \s $(A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow x < \sup(A) = [(A \cap \{ z | z > x \}) \neq \varnothing]$.
+\LAT
+2. \s $a \smallIn \K \R \p x \smallIn \R : \C ::: x = \T a \p = : \p : a \p \such \larger x : = \abs :: u \smallIn \R \p u \smaller x : \C_x \ppp a \p \such \larger u : \no = \abs$.
+\ENG
+2. \s $(A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+) \rightarrow ( x = \sup(A) ) = \Big[ [(A \cap \{ z | z > x \}) = \varnothing] \wedge \Big( (u \in \mathbb{Q}^+ \wedge u < x) \xrightarrow[\forall u]{} [(A \cap \{ z | z \larger u \}) \neq \varnothing] \Big) \Big]$.
+\LAT
+3. \s $a \smallIn \K \R \p x \smallIn \R : \C \ppp x \larger \T a \p = : x \no \smaller \T a \p x \no = \T a$.
+\ENG
+3. \s $( A \in \setOfSets \mathbb{Q}^+ \wedge x \in \mathbb{Q}^+ ) \rightarrow (x > \sup(A)) = [(x \nless \sup(A)) \wedge (x \neq \sup(A))] $.
+\LAT
+\end{translateFourCol}
 
 \peanoPage{16} % page-number 16
 
@@ -3394,12 +3393,13 @@ If $A \in \setOfSets \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper bou
 \peanoHeadingSmall{Theorem.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-4. \s $x \smallIn \R \p \C :: x = \ppp \T : \R \p \such \smaller x$. \s
-\s
-4. \s $x \in \mathbb{Q}^+ \rightarrow  x = \sup(\mathbb{Q}^+ \cap \{z | z < x \})$. \s
-\end{translateSixCol}
+4. \s $x \smallIn \R \p \C :: x = \ppp \T : \R \p \such \smaller x$.
+\ENG
+4. \s $x \in \mathbb{Q}^+ \rightarrow  x = \sup(\mathbb{Q}^+ \cap \{z | z < x \})$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3426,24 +3426,25 @@ The symbol $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive re
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-5. \s $\Q = [x \smallIn] (a \smallIn \K \R : a \no = \abs : \R \smallIn \larger \T a \p \no = \abs : \T a = x \ppp \no = \abs)$. \s
-\s
-5. \s $\mathbb{R}^+ = \{x | [A \in \setOfSets \mathbb{Q}^+ \wedge A \neq \varnothing \wedge (\mathbb{Q}^+ \cap \{ z | z > \sup(A) \}) = \varnothing \wedge \sup(A) = x] \neq \bot \}$. \s
-\s*
-6. \s $a,b \smallIn \Q \p \C :: a = b \p = \ppp \R \p \such \smaller a : = : \R \p \such \smaller b$. \s
-\s
-6. \s $a,b \in \mathbb{R}^+ \rightarrow (a = b) = [( \mathbb{Q}^+ \cap \{ z | z < a \}) = (\mathbb{Q}^+ \cap \{ z | z < b \})]$ \s
-\s*
-7. \s $a,b \smallIn \Q \p \C :: a \smaller b \p = \ppp \R \p \such \larger a \p \such \smaller b : \no = \abs$. \s
-\s
-7. \s $a,b \in \mathbb{R}^+ \rightarrow a < b = [(\mathbb{Q}^+ \cap \{z | z > a \} \cap \{ z | z < b \}) \neq \varnothing]$. \s
-\s*
-8. \s $a,b \smallIn \Q \p \C : b \larger a \p = \p a \smaller b$. \s
-\s
-8. \s $a,b \in \mathbb{R}^+ \rightarrow b > a = a < b$. \s
-\end{translateSixCol}
+5. \s $\Q = [x \smallIn] (a \smallIn \K \R : a \no = \abs : \R \smallIn \larger \T a \p \no = \abs : \T a = x \ppp \no = \abs)$.
+\ENG
+5. \s $\mathbb{R}^+ = \{x | [A \in \setOfSets \mathbb{Q}^+ \wedge A \neq \varnothing \wedge (\mathbb{Q}^+ \cap \{ z | z > \sup(A) \}) \neq \varnothing \wedge \sup(A) = x] \neq \bot \}$.
+\LAT
+6. \s $a,b \smallIn \Q \p \C :: a = b \p = \ppp \R \p \such \smaller a : = : \R \p \such \smaller b$.
+\ENG
+6. \s $a,b \in \mathbb{R}^+ \rightarrow (a = b) = [( \mathbb{Q}^+ \cap \{ z | z < a \}) = (\mathbb{Q}^+ \cap \{ z | z < b \})]$
+\LAT
+7. \s $a,b \smallIn \Q \p \C :: a \smaller b \p = \ppp \R \p \such \larger a \p \such \smaller b : \no = \abs$.
+\ENG
+7. \s $a,b \in \mathbb{R}^+ \rightarrow a < b = [(\mathbb{Q}^+ \cap \{z | z > a \} \cap \{ z | z < b \}) \neq \varnothing]$.
+\LAT
+8. \s $a,b \smallIn \Q \p \C : b \larger a \p = \p a \smaller b$.
+\ENG
+8. \s $a,b \in \mathbb{R}^+ \rightarrow b > a = a < b$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3454,26 +3455,25 @@ The symbol $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive re
 \peanoHeadingSmall{Theorems.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-9. \s $a \smallIn \Q \p \C \ppp \R \p \such \smaller a : \no = \abs$. \s
-\s
-9. \s $a \in \mathbb{R}^+ \rightarrow (\mathbb{Q}^+ \cap \{ z | z < a \}) \neq \varnothing$. \s
-\s*
-10. \s $a \smallIn \Q \p \C \ppp \R \p \such \larger a : \no = \abs$. \s
-\s
-10. \s $a \in \mathbb{R}^+ \rightarrow (\mathbb{Q}^+ \cap \{z | z > a \}) \neq \varnothing$. \s
-\s*
-11. \s $\R \C \Q$. \s
-\s
-11. \s $\mathbb{Q}^+ \subset \mathbb{R}^+$. \s
-\s*
-\vspace{1em}
-\s Subsistunt quoque propositiones quae a P17, 28, 29 in \S8 obtinentur, si loco $\R$ legatur $\Q$. \s
-\s
-\vspace{1em}
-\s The propositions obtained from P17, 28, 29 in \S8 also hold, by reading $\mathbb{R}^+$ for $\mathbb{Q}^+$. \s
-\end{translateSixCol}
+9. \s $a \smallIn \Q \p \C \ppp \R \p \such \smaller a : \no = \abs$.
+\ENG
+9. \s $a \in \mathbb{R}^+ \rightarrow (\mathbb{Q}^+ \cap \{ z | z < a \}) \neq \varnothing$.
+\LAT
+10. \s $a \smallIn \Q \p \C \ppp \R \p \such \larger a : \no = \abs$.
+\ENG
+10. \s $a \in \mathbb{R}^+ \rightarrow (\mathbb{Q}^+ \cap \{z | z > a \}) \neq \varnothing$.
+\LAT
+11. \s $\R \C \Q$.
+\ENG
+11. \s $\mathbb{Q}^+ \subset \mathbb{R}^+$.
+\LAT
+\vspace{1em} \s Subsistunt quoque propositiones quae a P17, 28, 29 in \S8 obtinentur, si loco $\R$ legatur $\Q$.
+\ENG
+\vspace{1em} \s The propositions obtained from P17, 28, 29 in \S8 also hold, by reading $\mathbb{R}^+$ for $\mathbb{Q}^+$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3484,28 +3484,25 @@ The symbol $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive re
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-12. \s $a,b \smallIn Q \p \C \p a + b = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$. \s
-\s
-12. \s $a,b \in \mathbb{R}^+ \rightarrow  a + b = \sup\Big( \Big\{z \Big| \{(x,y) | (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \Big\} \Big)$. \s
-\s*
-13. \s $a,b \smallIn Q \p \C \p ab = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$. \s
-\s
-13. \s $a,b \in \mathbb{R}^+ \rightarrow ab = \sup\Big( \Big\{ z \Big| \{(x,y) |  (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \Big\} \Big)$. \s
-\s*
-\vspace{1em}
-\s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \smallIn \R$. \s
-\s
-\vspace{1em}
-\s In order for these definitions to have meaning, it must be proved that propositions 12 and 13 hold, if $a,b \smallIn \mathbb{Q}^+$. \s
-\s*
-\vspace{1em}
-\s Substractionem et divisionem ut operationes inversas additiones et multiplicationis definire licet, illarumque proprietas demonstrare. \s
-\s
-\vspace{1em}
-\s Subtraction and division could be defined as the inverse operations to addition and multiplication, and their properties could be proved. \s
-\end{translateSixCol}
+12. \s $a,b \smallIn Q \p \C \p a + b = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p x + y = z \ppp \no = \abs)$.
+\ENG
+12. \s $a,b \in \mathbb{R}^+ \rightarrow  a + b = \sup\Big( \Big\{z \Big| \{(x,y) | (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge x + y = z \} \neq \varnothing \Big\} \Big)$.
+\LAT
+13. \s $a,b \smallIn Q \p \C \p ab = \T [z \smallIn] ([(x,y) \smallIn] : x,y \smallIn \R \p x \smaller a \p y \smaller b \p xy = z \ppp \no = \abs)$.
+\ENG
+13. \s $a,b \in \mathbb{R}^+ \rightarrow ab = \sup\Big( \Big\{ z \Big| \{(x,y) |  (x,y \in \mathbb{Q}^+) \wedge x < a \wedge y < b \wedge xy = z \} \neq \varnothing \Big\} \Big)$.
+\LAT
+\vspace{1em} \s Ut valeant hae definitiones, demonstrandum est subsistere propositiones 12 et 13, si $a,b \smallIn \R$.
+\ENG
+\vspace{1em} \s In order for these definitions to have meaning, it must be proved that propositions 12 and 13 hold, if $a,b \smallIn \mathbb{Q}^+$.
+\LAT
+\vspace{1em} \s Substractionem et divisionem ut operationes inversas additiones et multiplicationis definire licet, illarumque proprietas demonstrare.
+\ENG
+\vspace{1em} \s Subtraction and division could be defined as the inverse operations to addition and multiplication, and their properties could be proved.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering
@@ -3540,20 +3537,21 @@ If $A \in \setOfSets \mathbb{R}^+$, the symbols $\interior(A)$, $\exterior(A)$, 
 \peanoHeadingSmall{Definitions.}
 \end{translateTwoCol}
 
-\begin{translateSixCol}{0.1}{0.3}{0.1}{0.1}{0.3}{0.1}
+\begin{translateFourCol}{0.08}{0.42}{0.08}{0.42}
 \raggedright
-1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([(u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$. \s
-\s
-1. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \interior(A) = \mathbb{R}^+ \cap \Big\{ x \Big| \{ (u,v) | (u,v \in \mathbb{R}^+) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \Big\}$. \s
-\s*
-2. \s $a \smallIn \K \Q \p \C \p \E a = \I (\no a)$. \s
-\s
-2. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \exterior(A) = \interior\!\Big( \overline{A} \Big)$. \s
-\s*
-3. \s $a \smallIn \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$. \s
-\s
-3. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \boundary(A) = \overline{\interior(A)} \cap \overline{\exterior(A)}$. \s
-\end{translateSixCol}
+1. \s $a \smallIn \K \Q \p \C \I a = \Q [x \smallIn] ([(u,v) \smallIn] :: u,v \smallIn \Q \ppp u \smaller x \smaller v \ppp \such \larger u \p \such \smaller v : \C : a : \p : \no = \abs)$.
+\ENG
+1. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \interior(A) = \mathbb{R}^+ \cap \Big\{ x \Big| \{ (u,v) | (u,v \in \mathbb{R}^+) \wedge ( u < x < v ) \wedge (\{ z | z > u \} \cap \{ z | z < v \}) \subset A \} \neq \varnothing \Big\}$.
+\LAT
+2. \s $a \smallIn \K \Q \p \C \p \E a = \I (\no a)$.
+\ENG
+2. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \exterior(A) = \interior\!\Big( \overline{A} \Big)$.
+\LAT
+3. \s $a \smallIn \K \Q \p \C \p \Lfat a = (\no \I a) (\no \E a)$.
+\ENG
+3. \s $A \in \setOfSets \mathbb{R}^+ \rightarrow \boundary(A) = \overline{\interior(A)} \cap \overline{\exterior(A)}$.
+\LAT
+\end{translateFourCol}
 
 \begin{translateTwoCol}
 \centering

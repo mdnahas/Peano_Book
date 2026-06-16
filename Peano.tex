@@ -105,6 +105,17 @@
 \newcommand{\prop}{\mathord{\text{{\footnotesize \textbf{PROP}}}}}
 \newcommand{\func}{\mathord{\text{{\footnotesize \textbf{FUNC}}}}}
 
+% Define \xeq, which is an equal sign that stretches to fit text under or over it
+% ======================
+% Source - https://tex.stackexchange.com/a/4817
+% Posted by Philipp, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-06-13, License - CC BY-SA 4.0
+\makeatletter
+\newcommand*{\Relbarfill@}{\arrowfill@\Relbar\Relbar\Relbar}
+\newcommand*{\xeq}[2][]{\ext@arrow 0055\Relbarfill@{#1}{#2}}
+\makeatother
+% ======================
+
 
 \DeclareMathOperator{\interior}{int}
 \DeclareMathOperator{\exterior}{ext}
@@ -745,7 +756,7 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $\text{P}$; tunc $-a$ est negatio
 \LAT Signum $\C$ significat \emph{deducitur}; ita $a$ $\C$ $b$ significat quod $b$ C $a$. Si propositiones $a$, $b$ entia indeterminata continent $x$, $y$,..., scilicet sunt inter ipsa entia conditiones, tunc $a$ $\C_{x,y,...}$ $b$ significat: quaecumque sunt $x,y,...,$ a propositione $a$ deducitur $b$. Si vero ambiguitatis periculum absit, loco $\C_{x,y,...}$, scribemus solum $\C$.
 \ENG The symbol $\rightarrow$ means \emph{one deduces}; thus $a \rightarrow b$ means the same as $b \leftarrow a$. If the propositions $a,b$ contain the variables $x,y,...$, that is, express conditions on these objects, then $a \xrightarrow[\forall x,y,...]{} b$ means: whatever the $x$, $y$,..., from propositions $a$ one deduces $b$. If indeed there is no danger of ambiguity, instead of $\xrightarrow[\forall x,y,...]{}$, we write only $\rightarrow$.
 \LAT Signum = significat \emph{est aequalis}. Sint $a,b$ propositiones; tunc $a=b$ idem significat quod $a$ $\C$ $b$ $.$ $b$ $\C$ $a$; propositio $a=_{x,y,...} b$ idem significat quod $a$ $ \C_{x,y,...} b$ $.$ $b$ $\C_{x,y,...} a$.
-\ENG The symbol = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\underset{\forall x,y,...}=b$ means the same as ($a \xrightarrow[\forall x,y,...]{} b) \wedge (b \xrightarrow[\forall x,y,...]{} a)$.
+\ENG The symbol = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\xeq[\forall x,y,...]{} b$ means the same as ($a \xrightarrow[\forall x,y,...]{} b) \wedge (b \xrightarrow[\forall x,y,...]{} a)$.
 \end{translateTwoCol}
 
 \begin{translateTwoCol}

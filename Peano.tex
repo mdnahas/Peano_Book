@@ -14,10 +14,6 @@
 
 % * Many long equations have a line break at a bad location.
 
-% * The symbol $\text{M}\such\D$ has too much space in it.
-
-
-
 % Set paper and layout
 %
 \usepackage[landscape, top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
@@ -84,6 +80,11 @@
 \newcommand{\mult}{\mathop{\reflectbox{D}}}
 \newcommand{\smallIn}{\ensuremath{\mathrel{\epsilon}}}
 \newcommand{\primeWith}{\ensuremath{\mathbin{\uppi}}}
+
+% \divSet = \such \D
+% \maxDiv = \text{M}\such\D
+\newcommand{\divSet}{\mathop{\rotatebox[origin=c]{180}{$\epsilon$}\mkern-1mu\text{D}}}
+\newcommand{\maxDiv}{\mathop{\text{M}\mkern-1mu\rotatebox[origin=c]{180}{$\epsilon$}\mkern-1mu\text{D}}}
 
 \newcommand{\I}{\mathop{\textbf{I}}}
 \newcommand{\E}{\mathop{\textbf{E}}}
@@ -676,10 +677,10 @@ $-<$ \s non est minor \s
 \s $\nless$ \s is not less than \s
 \s* $=\cup>$ \s est aequalis aut maior \s
 \s $\geq$ \s is equal to or greater than \s
-\s* $\such \D$ \s divisor \s
-\s $\such \D$ \s is a divisor \s
-\s* $\text{M}\such\D$ \s maximus divisor \s
-\s $\text{M}\such\D$ \s is the greatest divisor \s
+\s* $\divSet$ \s divisor \s
+\s $\divSet$ \s is a divisor \s
+\s* $\maxDiv$ \s maximus divisor \s
+\s $\maxDiv$ \s is the greatest divisor \s
 \end{translateSixCol}
 
 \peanoPage{VII} % page-number VII

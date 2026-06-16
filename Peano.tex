@@ -88,7 +88,7 @@
 \newcommand{\EE}{\mathop{\textbf{E\hspace{0.02cm}E}}}
 \newcommand{\LfatLfat}{\mathop{\textbf{L\hspace{0.02cm}L}}}
 
-\newcommand{\setOfSets}{\mathord{\text{{\footnotesize \textbf{SET}}}}}
+\newcommand{\setOfSets}{\mathop{\text{{\footnotesize \textbf{SET}}}}}
 \newcommand{\prop}{\mathord{\text{{\footnotesize \textbf{PROP}}}}}
 \newcommand{\func}{\mathord{\text{{\footnotesize \textbf{FUNC}}}}}
 
@@ -750,7 +750,7 @@ Signum $-$ legitur \emph{non}. Sit $a$ quaedam $\text{P}$; tunc $-a$ est negatio
 \ENG The symbol = means \emph{equals}. Let $a,b$ be propositions; then $a=b$ means the same as $(a \rightarrow b) \wedge (b \rightarrow a)$; proposition $a\xeq[\forall x,y,...]{} b$ means the same as ($a \xrightarrow[\forall x,y,...]{} b) \wedge (b \xrightarrow[\forall x,y,...]{} a)$.
 \LAT
 \ENG
-\commentary{We render the quantified deduction as $a \xrightarrow[\forall x,\ldots]{} b$, with the ``$\forall$'' tucked under the arrow, rather than $\forall x,\ldots\,(a \rightarrow b)$, to preserve Peano's usage of $\C$ as a binary relation between the two propositions with the bound variables as a subscript. The same applies to the quantified equality $a \xeq[\forall x,\ldots]{} b$.}
+\commentary{The universal quantifier is rendered as $a \xrightarrow[\forall x,\ldots]{} b$, with the ``$\forall$'' tucked under the arrow, rather than $\forall x,\ldots\,(a \rightarrow b)$, to preserve Peano's usage of $\C$ as a binary relation between the two propositions with the bound variables as a subscript. The same applies to the quantified equality $a \xeq[\forall x,\ldots]{} b$.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1612,8 +1612,6 @@ Formulas that do not fit on one line are continued on the next line without any 
 \peanoHeadingSmall{Axiomata.}
 \ENG
 \peanoHeadingSmall{Axioms.}
-\raggedright
-\commentary{These axioms are now commonly refered to as the Peano Axioms. Notably, Axiom 9 defines mathematical induction in the second-order, requiring an arbitrary set.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -1652,6 +1650,8 @@ Formulas that do not fit on one line are continued on the next line without any 
 9. \hspace{0.6cm} $k \smallIn \K \ppp 1 \smallIn k \ppp x \smallIn \N \p x \smallIn k : \C_x \p x + 1 \smallIn k : : \C \p \N \C k$.
 \ENG
 9. \hspace{0.6cm} $\Big(A \in \setOfSets \wedge 1 \in A \wedge [(x \in \mathbb{N} \wedge x \in A) \xrightarrow[\forall x]{} (x + 1 \in A)] \Big) \rightarrow \mathbb{N} \subset A$.
+
+\commentary{Axiom 9 defines mathematical induction in the second-order, requiring an arbitrary set. Modern formalizations define induction in the first-order using axiom schemas.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -2200,13 +2200,13 @@ From this definition, and the preceding, we deduce that:
 \ENG
 22. \s $(a,b \in \mathbb{N} \wedge a > b \wedge a < b) = \bot$.
 \LAT
-\s
-\ENG
-\s \commentary{This is the law of trichotomy, that of $a < b$, $a = b$, $a > b$, exactly one holds for any naturals $a, b$.}
-\LAT
 23. \s $a,b \smallIn \N : \C : a < b \p \cup \p a = b \p \cup \p a > b$.
 \ENG
 23. \s $(a,b \in \mathbb{N}) \rightarrow [(a < b) \vee (a = b) \vee (a > b)]$.
+\LAT
+\s
+\ENG
+\s \commentary{This is the law of trichotomy, that of $a < b$, $a = b$, $a > b$, exactly one holds for any naturals $a, b$.}
 \LAT
 \emph{Dem} \s $a \smallIn \N \p$ P18 $: \C \p 1 \smallIn [b \smallIn]$ Ts. \hfill (1)
 \ENG
@@ -2267,7 +2267,7 @@ From this definition, and the preceding, we deduce that:
 \raggedright
 Sit $a \smallIn \K N$, hoc est sit $a$ quaedam numerorum classis; tunc $M a$ legatur \emph{maximus inter} $a$, et $\mini a$ legatur \emph{minimus inter a}.
 \s
-Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; then $\max(A)$ is read \emph{greatest among} $A$, and $\min(A)$ is read \emph{least among A}.
+Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; then $\max(A)$ is read \emph{greatest among} $A$, and $\min(A)$ is read \emph{least among A}. 
 \s*
 \centering
 \phantomsection
@@ -2288,6 +2288,10 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 2. \s $A \in \setOfSets \mathbb{N} \rightarrow \min(A) = \Big\{x \Big| x \in A \wedge [(A \cap \{ z | z < x \}) = \varnothing]\Big\}$.
 \LAT
 \end{translateFourCol}
+\begin{translateTwoCol}
+  \LAT \ENG
+  \commentary{Peano identifies a singleton set with its element, i.e. that $A=x=\{x\}$, and $\max(A)$ is used interchangeably with what it contains.}
+\end{translateTwoCol}
 
 \peanoPage{7} % page-number 7
 
@@ -2333,10 +2337,6 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \s $(2)(7) \p \S1$ P9 $: \C : n \smallIn \N \p \C \p$ Hp $\C$ Ts. \hfill (Th.)
 \ENG
 \s $[(2) \wedge (7) \wedge \S1\ \text{P9}] \rightarrow [n \in \mathbb{N} \rightarrow (\text{Hp} \rightarrow \text{Ts})]$. \hfill (Th.)
-\LAT
-\s
-\ENG
-\s \commentary{Peano identifies a singleton set with its element, i.e. the $A = 1$ above means $A = \{1\}$, and $\max(A)$ is used interchangeably with what it contains.}
 \LAT
 4. \s $a \smallIn \K \N \p a \no = \abs : \C \p \mini a \smallIn N$.
 \ENG
@@ -2659,7 +2659,7 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 
 \begin{translateTwoCol}
 \ENG
-\commentary{Many of Peano's arithmetical relations are difficult to give modern notations. In particular, we keep Peano's own signs for $\mult$ ({is a multiple of}) and $\primeWith$ ({is coprime to}), as well as his divisor- and multiple-sets. GCD $\maxDiv$ and LCM $\mini \such \mult$ have common modern notations, but we follow Peano in substituting in terms of $\D$ and $\mult$ when necessary (hence why $\primeWith$ is kept over $\operatorname{gcd}(\cdot, \cdot)=1$).}
+\commentary{Some of Peano's operators cannot be translated to a modern equivalent, because the modern notation is a function.  For example, $x \pi y$, which indicates $x$ and $y$ are coprime, might be written today as $gcd(x,y)=1$.  Thus, we keep Peano's operators $\D$ and $\mult$.}
 \end{translateTwoCol}
 
 \peanoPage{10} % page-number 10
@@ -2843,7 +2843,7 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \LAT
 \s
 \ENG
-\s \commentary{That $a, b$ and $b, a-b$ have the same common divisors is the key step (antenairesis) of the Euclidean algorithm for the greatest common divisor (cf.\ Euclid VII, 1--2).}
+\s \commentary{The following theorem is important for Euclid's greatest common divisor algorithm.  It states that if $a$ and $b$ have common divisors, those are the same common divisors as $b$ and $a-b$.  The algorithm can be found in Euclid's "Elements", Book VII, Propositions 1 and 2.}
 \LAT
 34. \s $a,b \smallIn \N \p a > b : \C \p \divSet (a,b) = \divSet (b,a - b)$.
 \ENG
@@ -2996,13 +2996,13 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \ENG
 \s $a,b \in \mathbb{N} \wedge m = M \such\,|\,(a,b) \rightarrow a / m \primeWith b / m$.
 \LAT
-\s
-\ENG
-\s \commentary{Euclid's lemma.}
-\LAT
 13. \s $ a \smallIn \Np \p b,c \smallIn \N \p a \D b c : \C : a \D b \p \cup \p a \D c$. \hfill (Eucl. VII, 30)
 \ENG
 \s $a \in \mathbb{P} \wedge b,c \in \mathbb{N} \wedge (a | bc) \rightarrow \big[ (a | b) \vee (a | c) \big]$. \hfill (Eucl. VII, 30)
+\LAT
+\s
+\ENG
+\s \commentary{Above is known as Euclid's lemma.}
 \LAT
 14. \s $a \smallIn \Np \p b,n \smallIn \N : \C : a \D b^n \p = \p a \D b$. \hfill (Eucl. IX, 12)
 \ENG
@@ -3028,13 +3028,13 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \ENG
 \s $a,b \in \mathbb{N} \rightarrow \mini \such \mult (a,b) \in \mathbb{N}$.
 \LAT
-\s
-\ENG
-\s \commentary{$\operatorname{lcm}(a,b)\times\operatorname{gcd}(a,b)= ab$. }
-\LAT
 20. \s $a,b \smallIn \N \p \C \p \mini \such \mult (a,b) = ab / \maxDiv (a,b)$. \hfill (Eucl. VII, 34)
 \ENG
 \s $a,b \in \mathbb{N} \rightarrow \mini \such \mult (a,b) = ab / M \such\,|\,(a,b)$. \hfill (Eucl. VII, 34)
+\LAT
+\s
+\ENG
+\s \commentary{In modern notation, $\operatorname{lcm}(a,b)\operatorname{gcd}(a,b)= ab$. }
 \LAT
 21. \s $ a,b,c \smallIn \N \p c \mult a \p c \mult b : \C : c \mult \mini \divSet (a,b)$. \hfill (Eucl. VII, 35)
 \ENG
@@ -3044,22 +3044,21 @@ Let $A \smallIn \setOfSets \mathbb{N}$, that is, let $A$ be a set of numbers; th
 \ENG
 \s $x \in \mathbb{N} \wedge x < 41 \rightarrow 41 - x + x^2 \in \mathbb{P}$.
 \LAT
-\s
-\ENG
-\s \commentary{Euclid's theorem: $\max(\mathbb{P}) = \varnothing$ asserts there is no greatest prime, i.e. the primes are infinite.}
-\LAT
 23. \s $M \p \Np : = \abs$. \hfill (Eucl. IX, 20)
 \ENG
 \s $\max(\mathbb{P}) = \varnothing$. \hfill (Eucl. IX, 20)
 \LAT
 \s
 \ENG
-\s \commentary{Fermat's Little Theorem}
+\s \commentary{This is called Euclid's theorem: $\max(\mathbb{P}) = \varnothing$ asserts there is no greatest prime, i.e. the primes are infinite.}
 \LAT
 23. \s $n \smallIn \Np \p a \smallIn \N \p a \no \mult n : \C \p a^{n-1} - 1 \mult n$. \hfill (Fermat)
 \ENG
 \s $n \in \mathbb{P} \wedge a \in \mathbb{N} \wedge \neg (a \mult n) \rightarrow a^{n-1} - 1 \mult n$. \hfill (Fermat)
 \LAT
+\s
+\ENG
+\s \commentary{Above is known as Fermat's Little Theorem}
 \end{translateFourCol}
 
 \begin{translateTwoCol}
@@ -3414,11 +3413,6 @@ If $A \in \setOfSets \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper bou
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
-\ENG
-\commentary{In this section Peano builds the positive reals $\mathbb{R}^+$ as suprema of bounded sets of rationals (definition 5), a construction close to the cuts of \emph{Dedekind}, whose \emph{Was sind und was sollen die Zahlen} he credits in the preface.}
-\end{translateTwoCol}
-
-\begin{translateTwoCol}
 \centering
 \phantomsection
 \addcontentsline{toc}{subsection}{Definitions}
@@ -3476,6 +3470,8 @@ If $A \in \setOfSets \mathbb{Q}^+$, the symbol $\sup(A)$ is read \emph{upper bou
 Signum $\Q$ legitur \emph{quantitas}, numerosque indicat reales positivos, rationales aut irrationales, $0$ et $\infty$ exceptis.
 \s
 The symbol $\mathbb{R}^+$ is read \emph{quantity}, and indicates the positive real numbers, rational or irrational, with the exception of $0$ and $\infty$.
+
+\commentary{In this section Peano builds the positive reals $\mathbb{R}^+$ as suprema of bounded sets of rationals (definition 5), a construction close to the cuts of Dedekind, whose book ``Was sind und was sollen die Zahlen'' he credits in the preface.}
 \end{translateTwoCol}
 
 \begin{translateTwoCol}
@@ -3589,7 +3585,7 @@ If $A \in \setOfSets \mathbb{R}^+$, the symbols $\interior(A)$, $\exterior(A)$, 
 
 \begin{translateTwoCol}
 \ENG
-\commentary{This closing section is an early exercise in point-set topology. Peano attributes these notions to Cantor's \emph{Punktmenge} in the preface.}
+\commentary{This closing section is mostly point-set topology. Peano attributes Cantor's notion of \emph{Punktmenge} as influential in the preface.}
 \end{translateTwoCol}
 
 \peanoPage{17} % page-number 17

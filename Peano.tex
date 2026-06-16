@@ -856,7 +856,7 @@ Let $a,b,c,...$ be propositions. We have:
 \LAT
 18. \hspace{0.67cm} $a$ $\C$ $b$ . $a$ $\C$ $c$ : = . $a$ $\C$ $bc$
 \ENG
-18. \hspace{0.67cm} $[(a \rightarrow b) \wedge (a \rightarrow c)]=[(a \rightarrow (b \wedge c)]$
+18. \hspace{0.67cm} $[(a \rightarrow b) \wedge (a \rightarrow c)]=[a \rightarrow (b \wedge c)]$
 \LAT
 19. \hspace{0.67cm} $a$ = $b$ . $c$ = $d$ : $\C$ . $ac$ = $bd$
 \ENG
@@ -1090,11 +1090,11 @@ which are at the same time in $A$ and $B$; $A \cup B$ is the set composed of ind
 \LAT
 47. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $x$ \smallIn . $a$ $b$ : = : $x \smallIn a$ . $x \smallIn b$
 \ENG
-47. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow [(x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]$
+47. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow [x \in (A \cap B)] = [(x \in A) \wedge (x \in B)]$
 \LAT
 48. \hspace{0.67cm} $a$, $b \smallIn \K$ . $\C$ $\pppNoSpace$ $a$ $\cup$ $x$ \smallIn . $a$ $\cup$ $b$ : = : $x \smallIn a$ . $\cup$ . $x \smallIn b$
 \ENG
-48. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow  [(x \in (A \cup B)] = [(x \in A) \vee (x \in B)]$
+48. \hspace{0.67cm} $(A, B \in \setOfSets) \rightarrow  [x \in (A \cup B)] = [(x \in A) \vee (x \in B)]$
 \LAT
 \quad Signum $\abs$ indicat classem quae nullum continet individuum. Ita:
 \ENG
@@ -1235,7 +1235,7 @@ Propositions 1-41 also hold if $a,b,...$ indicate sets. In addition, we have:
 \LAT
 66. \hspace{0.67cm} $[(x, y)\smallIn]$ $\alpha$ $-$ = $\abs$ . = $\pppNoSpace$ $[x\smallIn]$ . $[y\smallIn]$ $\alpha$ $-$ = $\abs$ : $-$ = $\abs$
 \ENG
-66. \hspace{0.67cm} $\Big( \{ (x,y) | \alpha \} \neq \varnothing \Big) = \Big( \{ x | \{ y | \alpha \} \neq \varnothing \} \} \neq \varnothing \Big)$   %% TODO: Does this need a \forall x under the middle \neq?
+66. \hspace{0.67cm} $\Big( \{ (x,y) | \alpha \} \neq \varnothing \Big) = \Big( \{ x | \{ y | \alpha \} \neq \varnothing \} \neq \varnothing \Big)$   %% TODO: Does this need a \forall x under the middle \neq?
 \LAT
 \quad 3. Sit $x$ $\alpha$ $y$ relatio inter indeterminata $x$ et $y$ (ex. g. in logica relationes $x = y$, $x$ $- = y$, $x$ $\C$ $y$; in arithmetica $x < y$, $x > y$, etc). Tunc signo $[\smallIn$ $\alpha]$ $y$ ea $x$ indicamus, quae relationi $x$ $\alpha$ $y$ satisfaciunt. Commoditatis causa, loco $[\smallIn]$, signo $\such$ utimur. Ita $\such$ $\alpha$ $y$ . = : $[x$ $\smallIn ]$ . $x$ $\alpha$ $y$, et signum $\such$ legitur \emph{qui}, vel \emph{quae}. Ex. gr. sit $y$ numerus; tunc $\such$ $< y$ classem indicat numeris $x$ compositam qui conditioni $x<y$ satisfaciunt, scilicet, \emph{qui sunt minores} $y$, vel simpliciter \emph{minores} $y$. Similiter, quum signum $\D$ significet \emph{dividit}, vel \emph{est divisor}, formula $\such$D significat \emph{qui dividunt} vel {divisores}. Deducitur $x$ $\smallIn$ $\such$ $\alpha$ $y$ $=$ $x$ $\alpha$ $y$.
 \ENG
@@ -1430,7 +1430,7 @@ contained in $S$; then $\upvarphi C$ denotes the set consisting of all $\upvarph
 \LAT
 Sive \hspace{0.25cm} $s \smallIn \K$ $.$ $k \smallIn \K$ $.$ $k$ $\C$ $s$ $.$ $\upvarphi$ $\smallIn$ $F'$ $s$ $:$ $\C$ $.$ $\upvarphi$ $k$ $=$ $[y $\smallIn$]$ $([x\smallIn]$ $:$ $x$ $\smallIn$ $k$ $.$ $[\upvarphi]x$ $=$ $y$ $\pppNoSpace$ $-$ $=$ $\abs$)
 \ENG
-Or \hspace{0.25cm} $S \in \setOfSets \wedge K \in \setOfSets \wedge K \subset S \wedge \upvarphi \in \func'$ $s \rightarrow \upvarphi K = \{ y | \{ x | x \in K \wedge [\upvarphi]x = y \} \neq \varnothing \}$
+Or \hspace{0.25cm} $S \in \setOfSets \wedge K \in \setOfSets \wedge K \subset S \wedge \upvarphi \in \func'$ $S \rightarrow \upvarphi K = \{ y | \{ x | x \in K \wedge [\upvarphi]x = y \} \neq \varnothing \}$
 \LAT
 \emph{Def.} \hspace{0.25cm} $s \smallIn \K$ $.$ $k \smallIn \K$ $.$ $k$ $\C$ $s$ $.$ $\upvarphi$ $\smallIn$ $s$ $'F$ $:$ $\C$ $.$ $k$ $\upvarphi$ $=$ $[y $\smallIn$]$ $(k$ $.$ $y$ $[\upvarphi]$ $:$ $-$ $=$ $\abs$)
 \ENG
@@ -1761,7 +1761,7 @@ or
 12. \hspace{0.67cm} $3, 4, ... \in \mathbb{N}$.
 \LAT
 \ENG
-\commentary{Below, L\# refers to a proposition of logic from the first half of this book.  The text ``theorem'', ``Theor'' or ``Th'' refers to what is to be proven.  If the theorem is an implication, ``hypothesis'' or ``Hyp'' refers to its antecedent and ``thesis'', ``Thes'' or ``Ts'' refers to its consequent.}
+\commentary{Below, L\# refers to a proposition of logic from the first half of this book.  The text ``theorem'', ``Theor'' or ``Th'' refers to what is to be proven.  If the theorem is an implication, ``hypothesis'', ``Hyp'' or ``Hp'' refers to its antecedent and ``thesis'', ``Thes'' or ``Ts'' refers to its consequent.}
 \LAT
 13. \hspace{0.67cm} $a,b,c,d \smallIn \N \p a = b \p b = c \p c = d : \C : a = d$.
 \ENG
@@ -1828,7 +1828,7 @@ From this definition, and the preceding, we deduce that:
 \LAT
 \hspace{1.4cm} $a \smallIn \N \p \C \ppp a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
 \ENG
-\hspace{1.4cm} $a \in \N \rightarrow a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
+\hspace{1.4cm} $a \in \mathbb{N} \rightarrow a + 3 = a + (2 + 1) = (a + 2) + 1$, etc.
 \end{translateTwoCol}
 
 \peanoPage{3} % page-number 3

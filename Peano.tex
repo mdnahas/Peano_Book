@@ -16,10 +16,6 @@
 
 % * The symbol $\text{M}\such\D$ has too much space in it.
 
-% * Most of the symbols used in Latin math have very hacked spacing
-%   with \thinspace and such.  This means equations have lots of $s.
-%   It'd be nice to define these with \mathrel or \mathbin to clean
-%   it all up.  
 
 
 % Set paper and layout
@@ -79,34 +75,33 @@
 \newcommand{\pppNoSpace}{\leavevmode\lower0ex\hbox{.}\kern-0.1em\raise0.7ex\hbox{.}\kern-0.1em\lower0ex\hbox{.}} % arranging three points in a triangle
 \newcommand{\ppp}{\thinspace \pppNoSpace\thinspace} % arranging three points in a triangle
 
-%TODO: Some of these might be better off with mathrel or mathbin instead of mathop
 \newcommand{\no}{\mathop{\thinspace \scalebox{1.5}{-}}}
 \newcommand{\abs}{\mathop{\rotatebox[origin=c]{180}{V}}}
 \newcommand{\mini}{\mathop{\rotatebox[origin=c]{180}{M}}}
-\newcommand{\larger}{\mathop{\thinspace > \thinspace}}
-\newcommand{\smaller}{\mathop{\thinspace < \thinspace}}
+\newcommand{\larger}{\mathrel{>}}
+\newcommand{\smaller}{\mathrel{<}}
 \newcommand{\such}{\thinspace \rotatebox[origin=c]{180}{$\epsilon$}}
 \newcommand{\mult}{\mathop{\reflectbox{D}}}
 \newcommand{\smallIn}{\ensuremath{\mathrel{\epsilon}}}
 \newcommand{\primeWith}{\ensuremath{\mathbin{\uppi}}}
 
-\newcommand{\I}{\mathop{\thinspace \textbf{I} \thinspace}}
-\newcommand{\E}{\mathop{\thinspace \textbf{E} \thinspace}}
-\newcommand{\Lfat}{\mathop{\thinspace \textbf{L} \thinspace}}
-\newcommand{\D}{\mathop{\thinspace \text{D} \thinspace}}
+\newcommand{\I}{\mathop{\textbf{I}}}
+\newcommand{\E}{\mathop{\textbf{E}}}
+\newcommand{\Lfat}{\mathop{\textbf{L}}}
+\newcommand{\D}{\mathrel{\text{D}}}
 \newcommand{\K}{\mathop{\thinspace \text{K} \thinspace}}
 \newcommand{\R}{\mathop{\thinspace \text{R} \thinspace}}
-\newcommand{\M}{\mathop{\thinspace \text{M} \thinspace}}
+\newcommand{\M}{\mathop{\text{M}}}
 \newcommand{\N}{\mathop{\thinspace \text{N} \thinspace}}
 \newcommand{\Np}{\mathop{\thinspace \text{Np} \thinspace}}
 \newcommand{\Q}{\mathop{\thinspace \text{Q} \thinspace}}
-\newcommand{\T}{\mathop{\thinspace \text{T} \thinspace}}
+\newcommand{\T}{\mathop{\text{T}}}
 
-\newcommand{\II}{\mathop{\thinspace \textbf{I\hspace{0.02cm}I} \thinspace}}
-\newcommand{\EE}{\mathop{\thinspace \textbf{E\hspace{0.02cm}E} \thinspace}}
-\newcommand{\LfatLfat}{\mathop{\thinspace \textbf{L\hspace{0.02cm}L} \thinspace}}
+\newcommand{\II}{\mathop{\textbf{I\hspace{0.02cm}I}}}
+\newcommand{\EE}{\mathop{\textbf{E\hspace{0.02cm}E}}}
+\newcommand{\LfatLfat}{\mathop{\textbf{L\hspace{0.02cm}L}}}
 
-\newcommand{\setOfSets}{\mathord{\text{{\footnotesize \textbf{SET}}}}}
+\newcommand{\setOfSets}{\mathop{\text{{\footnotesize \textbf{SET}}}}}
 \newcommand{\prop}{\mathord{\text{{\footnotesize \textbf{PROP}}}}}
 \newcommand{\func}{\mathord{\text{{\footnotesize \textbf{FUNC}}}}}
 
